@@ -1,0 +1,10 @@
+name: drupal-postgre
+recipe: drupal8
+config:
+  php: '7.2'
+  webroot: web
+  database: postgres
+  
+
+
+  
