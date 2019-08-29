@@ -1,0 +1,14 @@
+uuid: c99707f6-8a6e-4f5b-bd8b-8fae8f22df40
+name: PostgreSQL
+mail: sgonzalez11@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
