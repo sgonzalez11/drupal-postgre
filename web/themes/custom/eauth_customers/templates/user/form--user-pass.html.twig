@@ -1,0 +1,34 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+
+<div class="container ss-form ss-my-user-login">
+  <div class="row">
+	<div class="row ss-my-user-login__title">
+		<div class="col-sm-12">
+			<h1>{{ "Recuperar contraseña"|t }}</h1>
+		</div>
+	</div>
+    <div class="col-md-12">
+		<form{{ attributes }}>
+			{{ children }}
+		</form>
+    </div>
+  </div>
+</div>
+<div class="ss-form ss-form-footer ss-my-user-registration">
+	<p>¿Ya tienes usuario? <a href="/user/login">Ingresa</a></p>
+</div>
+
+
+
+

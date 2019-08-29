@@ -1,0 +1,63 @@
+<?php
+
+/**
+ * @file
+ * Contains eauthority_parties.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function eauthority_parties_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the eauthority_parties module.
+    case 'help.page.eauthority_parties':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('eAuthority Portal - Parties') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function eauthority_parties_theme() {
+  $theme = [];
+  
+  $theme['eauthority_parties'] = [
+      'render element' => 'children',
+  ];
+
+$theme['party'] = [
+    'render element' => 'elements',
+    'file' => 'party.page.inc',
+    'template' => 'party',
+  ];
+  $theme['party_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'party.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+* Implements hook_theme_suggestions_HOOK().
+*/
+function eauthority_parties_theme_suggestions_party(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#party'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'party__' . $sanitized_view_mode;
+  $suggestions[] = 'party__' . $entity->bundle();
+  $suggestions[] = 'party__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'party__' . $entity->id();
+  $suggestions[] = 'party__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}

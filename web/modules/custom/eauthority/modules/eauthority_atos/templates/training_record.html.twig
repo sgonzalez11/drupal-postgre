@@ -1,0 +1,150 @@
+{#
+/*
+ * @file training_record.html.twig
+ * Default theme implementation to present Training Record data.
+ *
+ * This template is used when viewing Training Record pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_training_record()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% set classes = [
+   'training_record',
+   'container',
+   ] %}
+ 
+<div class="ss-training-record-view">
+   
+	<div {{ attributes.addClass(classes) }}>
+
+	  <div class="row">
+		<div class="col-sm-3">
+			{# <span class="ss-field__label-views">Identifier</span>  #}
+			<div class="ss-field__value-views ss-field__line-bottom ss-field__line-bottom--common">{{ content.number }}</div>
+		</div>
+		<div class="col-sm-3 col-sm-offset-6">
+			<span class="ss-field__label-views">Status</span>
+			<div class="ss-field__value-views ss-field__line-bottom ss-field__line-bottom--common">{{ content.entity_status.0 }}</div>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-sm-12">
+			{# <span class="ss-field__label-views">Training Course</span> #}
+			<div class="ss-field__value-views">{{ content.training_course }}</div>
+		</div>
+	  </div>
+	  
+	  <div class="row">
+		<div class="col-sm-12">
+			{# <span class="ss-field__label-views">Location</span> #}
+			<div class="ss-field__value-views ss-field__line-bottom ss-field__line-bottom--common">{{ content.location }}</div>
+		</div>
+	  </div>
+	  
+	  <div class="row">
+		<div class="col-sm-6">
+			<span class="ss-field__title-views">
+				Schedule
+			</span>
+		</div>
+		<div class="col-sm-6">
+			<span class="ss-field__title-views">
+				Real Execution
+			</span>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-sm-6">
+			<span class="ss-field__label-views"></span>
+			<div class="ss-field__value-views">{{ content.estimated_start_date }}</div>
+		</div>
+		<div class="col-sm-6">
+			<span class="ss-field__label-views"></span>
+			<div class="ss-field__value-views">{{ content.estimated_finish_date }}</div>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-sm-6">
+			<span class="ss-field__label-views"></span>
+			<div class="ss-field__value-views ss-field__line-bottom ss-field__line-bottom--common">{{ content.start_date }}</div>
+		</div>
+		<div class="col-sm-6">
+			<span class="ss-field__label-views"></span>
+			<div class="ss-field__value-views ss-field__line-bottom ss-field__line-bottom--common">{{ content.finish_date }}</div>
+		</div>
+	  </div>
+	  
+	  <div class="row">
+		<div class="col-sm-12">
+			<span class="ss-field__label-views">Remarks</span>
+			<div class="ss-field__value-views ss-field__line-bottom ss-field__line-bottom--common">{{ content.remarks }}</div>
+		</div>
+	  </div>
+	  
+	  <div class="row">
+		<div class="col-sm-12">
+			{# <span class="ss-field__label-views">Attendees</span> #}
+			<div class="ss-field__value-views ss-field__line-bottom ss-field__line-bottom--common">{{ content.training_record_attendee }}</div>
+		</div>
+	  </div>
+	  
+	  <div class="row">
+		<div class="col-sm-12">
+			{# <span class="ss-field__label-views">Attendees</span> #}
+			<div class="ss-field__value-views ss-field__line-bottom ss-field__line-bottom--common">{{ content.training_record_attendee }}</div>
+		</div>
+	  </div>
+	  
+	  <div class="row">
+		<div class="col-sm-12">
+			{# <span class="ss-field__label-views">Attendees</span> #}
+			<div class="ss-field__value-views ss-field__line-bottom ss-field__line-bottom--common">{{ content.training_record_attendee }}</div>
+		</div>
+	  </div>
+	  
+	  <div class="row">
+		<div class="col-sm-12">
+			<span class="ss-field__title-views">
+				Cancellation
+			</span>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-sm-6">
+			<span class="ss-field__label-views">Date</span>
+			<div class="ss-field__value-views">{{ content.cancellation_date }}</div>
+		</div>
+		<div class="col-sm-6">
+			<span class="ss-field__label-views">User</span>
+			<div class="ss-field__value-views">{{ content.cancellation_user }}</div>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-sm-12">
+			<span class="ss-field__label-views">Reason</span>
+			<div class="ss-field__value-views ss-field__line-bottom ss-field__line-bottom--common">{{ content.cancellation_reason }}</div>
+		</div>
+	  </div>
+	  
+	  <div class="row">
+		<div class="col-sm-12">
+			<span class="ss-field__label-views">Remarks</span>
+			<div class="ss-field__value-views">{{ content.prefix }}</div>
+		</div>
+	  </div>
+	  
+	  <div class="row">
+		<div class="col-sm-12">{{ content.number }}</div>
+	  </div>
+	  
+	</div>
+	
+</div>

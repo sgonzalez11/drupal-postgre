@@ -1,0 +1,43 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+<div class="container-fluid">
+    {% set entitystatus = form['#entityStatus'] %}
+    
+    <div class="row">
+        <div class="col-sm-12">{{ form.name }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">{{ form.customer }}</div>
+    </div>
+
+    {% if entitystatus == "CMP" or entitystatus == "IPR" or entitystatus == null %}
+        <div class="row">
+            <div class="col-sm-12">{{ form.result_set_value }}</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">{{ form.certificates }}</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">{{ form.training_record_attendee_exps }}</div>
+        </div>
+    {% endif %}
+
+
+    <div class="row">
+        <div class="col-sm-12">{{ form.actions }}</div>
+    </div>
+
+    {{ form.form_build_id }}
+    {{ form.form_token }}
+    {{ form.form_id }}
+</div>

@@ -1,0 +1,107 @@
+eauthority.admin:
+  path: '/admin/eauthority'
+  defaults:
+    _controller: '\Drupal\eauthority\Controller\EauthorityController::eauthorityAdminMenuBlockPage'
+    _title: 'eAuthority'
+  requirements:
+    _permission: 'access eauthority toolbar'
+eauthority.operations:
+  path: '/admin/eauthority/operations'
+  defaults:
+    _controller: '\Drupal\eauthority\Controller\EauthorityController::eauthorityAdminMenuBlockPage'
+    _title: 'eAuthority Operations'
+  requirements:
+    _permission: 'access eauthority toolbar'
+eauthority.operations.training:
+  path: '/training'
+  defaults:
+    _controller: '\Drupal\eauthority\Controller\EauthorityController::eauthorityAdminMenuBlockPage'
+    _title: 'eAuthority Training'
+  requirements:
+    _permission: 'access eauthority toolbar'
+eauthority.operations.medical:
+  path: '/medical'
+  defaults:
+    _controller: '\Drupal\eauthority\Controller\EauthorityController::eauthorityAdminMenuBlockPage'
+    _title: 'eAuthority Medical'
+  requirements:
+    _permission: 'access eauthority toolbar'
+eauthority.operations.customer_management:
+  path: '/customer-management'
+  defaults:
+    _controller: '\Drupal\eauthority\Controller\EauthorityController::eauthorityAdminMenuBlockPage'
+    _title: 'eAuthority Customer Management'
+  requirements:
+    _permission: 'access eauthority toolbar'
+eauthority.operations.settings:
+  path: '/settings'
+  defaults:
+    _controller: '\Drupal\eauthority\Controller\EauthorityController::eauthorityAdminMenuBlockPage'
+    _title: 'eAuthority Settings'
+  requirements:
+    _permission: 'access eauthority toolbar'
+eauthority.settings:
+  path: '/admin/eauthority/settings'
+  defaults:
+    _controller: '\Drupal\eauthority\Controller\EauthorityController::eauthorityAdminMenuBlockPage'
+    _title: 'eAuthority Settings'
+  requirements:
+    _permission: 'access eauthority toolbar'
+eauthority.settings.general_settings:
+  path: '/admin/eauthority/settings'
+  defaults:
+    _title: 'eAuthority General Settings'
+  requirements:
+    _permission: 'access eauthority toolbar'
+eauthority.operations.identifier_type:
+  path: '/identity'
+  defaults:
+    _controller: '\Drupal\eauthority\Controller\EauthorityController::eauthorityAdminMenuBlockPage'
+    _title: 'eAuthority Identifier Type'
+  requirements:
+    _permission: 'access eauthority toolbar'
+# Links to extend User Profile
+eauthority.user.my_taskconsole:
+  path: '/user/my-tasks/{highlightQueueID}'
+  defaults:
+    _controller: '\Drupal\eauthority\Controller\ProfileExtension::getTasks'
+    _title: 'My Tasks'
+    highlightQueueID: '0'
+  requirements:
+    _permission: 'view maestro task console'
+    user: \d+
+  options:
+    no_cache: TRUE
+eauthority.user.transactions:
+  path: '/user/{user}/transactions'
+  defaults:
+    _controller: '\Drupal\eauthority\Controller\ProfileExtension::getTransactions'
+    _title: 'My Transactions'
+  requirements:
+    _permission: 'access content'
+    user: \d+
+eauthority.user.appointments:
+  path: '/user/{user}/appointments'
+  defaults:
+    _controller: '\Drupal\eauthority\Controller\ProfileExtension::getAppointments'
+    _title: 'My Appointments'
+  requirements:
+    _permission: 'access content'
+    user: \d+
+eauthority.user.notifications:
+  path: '/user/{user}/notifications'
+  defaults:
+    _controller: '\Drupal\eauthority\Controller\ProfileExtension::getNotifications'
+    _title: 'My Notifications'
+  requirements:
+    _permission: 'access content'
+    user: \d+
+eauthority.eauthority_settings_form:
+  path: '/admin/config/eauthority/eauthoritysettings'
+  defaults:
+    _form: '\Drupal\eauthority\Form\EauthoritySettingsForm'
+    _title: 'eAuthority Settings'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

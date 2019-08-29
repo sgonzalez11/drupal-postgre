@@ -1,0 +1,172 @@
+# Training Course routing definition
+training_course.settings_tab:
+  route_name: training_course.settings
+  title: 'Settings'
+  base_route: training_course.settings
+
+entity.training_course.canonical:
+  route_name: entity.training_course.canonical
+  base_route: entity.training_course.canonical
+  title: 'View'
+
+entity.training_course.edit_form:
+  route_name: entity.training_course.edit_form
+  base_route: entity.training_course.canonical
+  title: 'Edit'
+
+entity.training_course.delete_form:
+  route_name:  entity.training_course.delete_form
+  base_route:  entity.training_course.canonical
+  title: Delete
+  weight: 10
+
+# Training Record routing definition
+training_record.settings_tab:
+  route_name: training_record.settings
+  title: 'Settings'
+  base_route: training_record.settings
+
+entity.training_record.canonical:
+  route_name: entity.training_record.canonical
+  base_route: entity.training_record.canonical
+  title: 'View'
+
+entity.training_record.edit_form:
+  route_name: entity.training_record.edit_form
+  base_route: entity.training_record.canonical
+  title: 'Edit'
+
+entity.training_record.delete_form:
+  route_name:  entity.training_record.delete_form
+  base_route:  entity.training_record.canonical
+  title: Delete
+  weight: 10
+
+entity.training_record.cancel_form:
+  route_name:  entity.training_record.cancel_form
+  base_route:  entity.training_record.canonical
+  title: 'Cancel'
+  weight: 9
+
+entity.training_record.report_start_date_form:
+  route_name:  entity.training_record.report_start_date_form
+  base_route:  entity.training_record.canonical
+  title: 'Report Start Date'
+  weight: 8
+
+entity.training_record.finish_course_form:
+  route_name:  entity.training_record.finish_course_form
+  base_route:  entity.training_record.canonical
+  title: 'Finish Course'
+  weight: 7
+
+# Attendee routing definition
+training_record_attendee.settings_tab:
+  route_name: training_record_attendee.settings
+  title: 'Settings'
+  base_route: training_record_attendee.settings
+
+entity.training_record_attendee.canonical:
+  route_name: entity.training_record_attendee.canonical
+  base_route: entity.training_record_attendee.canonical
+  title: 'View'
+
+entity.training_record_attendee.edit_form:
+  route_name: entity.training_record_attendee.edit_form
+  base_route: entity.training_record_attendee.canonical
+  title: 'Edit'
+
+entity.training_record_attendee.delete_form:
+  route_name:  entity.training_record_attendee.delete_form
+  base_route:  entity.training_record_attendee.canonical
+  title: Delete
+  weight: 10
+  
+# Customer Training Course routing definition
+customer_training_courses.settings_tab:
+  route_name: customer_training_courses.settings
+  title: 'Settings'
+  base_route: customer_training_courses.settings
+
+entity.customer_training_courses.canonical:
+  route_name: entity.customer_training_courses.canonical
+  base_route: entity.customer_training_courses.canonical
+  title: 'View'
+
+entity.customer_training_courses.edit_form:
+  route_name: entity.customer_training_courses.edit_form
+  base_route: entity.customer_training_courses.canonical
+  title: 'Edit'
+
+entity.customer_training_courses.delete_form:
+  route_name:  entity.customer_training_courses.delete_form
+  base_route:  entity.customer_training_courses.canonical
+  title: Delete
+  weight: 10
+
+# Attendee Experience routing definition
+training_record_attendee_exp.settings_tab:
+  route_name: training_record_attendee_exp.settings
+  title: 'Settings'
+  base_route: training_record_attendee_exp.settings
+
+entity.training_record_attendee_exp.canonical:
+  route_name: entity.training_record_attendee_exp.canonical
+  base_route: entity.training_record_attendee_exp.canonical
+  title: 'View'
+
+entity.training_record_attendee_exp.edit_form:
+  route_name: entity.training_record_attendee_exp.edit_form
+  base_route: entity.training_record_attendee_exp.canonical
+  title: 'Edit'
+
+entity.training_record_attendee_exp.delete_form:
+  route_name:  entity.training_record_attendee_exp.delete_form
+  base_route:  entity.training_record_attendee_exp.canonical
+  title: Delete
+  weight: 10
+
+# Flight Experience Type routing definition
+flight_experience_type.settings_tab:
+  route_name: flight_experience_type.settings
+  title: 'Settings'
+  base_route: flight_experience_type.settings
+
+entity.flight_experience_type.canonical:
+  route_name: entity.flight_experience_type.canonical
+  base_route: entity.flight_experience_type.canonical
+  title: 'View'
+
+entity.flight_experience_type.edit_form:
+  route_name: entity.flight_experience_type.edit_form
+  base_route: entity.flight_experience_type.canonical
+  title: 'Edit'
+
+entity.flight_experience_type.delete_form:
+  route_name:  entity.flight_experience_type.delete_form
+  base_route:  entity.flight_experience_type.canonical
+  title: Delete
+  weight: 10
+
+# Training Record Attendee Results routing definition
+training_record_attendee_result.settings_tab:
+  route_name: training_record_attendee_result.settings
+  title: 'Settings'
+  base_route: training_record_attendee_result.settings
+
+entity.training_record_attendee_result.canonical:
+  route_name: entity.training_record_attendee_result.canonical
+  base_route: entity.training_record_attendee_result.canonical
+  title: 'View'
+
+entity.training_record_attendee_result.edit_form:
+  route_name: entity.training_record_attendee_result.edit_form
+  base_route: entity.training_record_attendee_result.canonical
+  title: 'Edit'
+
+entity.training_record_attendee_result.delete_form:
+  route_name:  entity.training_record_attendee_result.delete_form
+  base_route:  entity.training_record_attendee_result.canonical
+  title: Delete
+  weight: 10
+

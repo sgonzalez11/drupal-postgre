@@ -1,0 +1,63 @@
+<?php
+
+/**
+ * @file
+ * Contains eauthority_transactions.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function eauthority_transactions_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the eauthority_transactions module.
+    case 'help.page.eauthority_transactions':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('eAuthority Portal - Transactions') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function eauthority_transactions_theme() {
+  $theme = [];
+  
+  $theme['eauthority_transactions'] = [
+      'render element' => 'children',
+  ];
+  
+  $theme['transaction'] = [
+    'render element' => 'elements',
+    'file' => 'transaction.page.inc',
+    'template' => 'transaction',
+  ];
+  $theme['transaction_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'transaction.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+* Implements hook_theme_suggestions_HOOK().
+*/
+function eauthority_transactions_theme_suggestions_transaction(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#transaction'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'transaction__' . $sanitized_view_mode;
+  $suggestions[] = 'transaction__' . $entity->bundle();
+  $suggestions[] = 'transaction__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'transaction__' . $entity->id();
+  $suggestions[] = 'transaction__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}

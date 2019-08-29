@@ -1,0 +1,518 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+<div class="container ss-medical-assessment-crud ss-form">
+
+    {% set entitystatus = form.entity_status.widget['#value'].0 %}
+    {% set entitystatusoptions = form.entity_status.widget['#options'] %}
+    {% set entityId = form['#entityId'] %}
+
+    {% set statusvaluelabel = "" %}
+    {% for key, statuslabel in entitystatusoptions %}
+        {% if key == entitystatus %}
+            {% set statusvaluelabel = statuslabel %}
+        {% endif %}
+    {% endfor %}
+
+    {% if entitystatus == "OPN" or entitystatus == "SCH" or entitystatus == "IPR" or entitystatus == "PVA" or entitystatus == "PRE" or entitystatus == "CLO" %}
+        <div class="row text-right ss-form__action-bar">
+            <div class="col-sm-12 ss-action-bar ss-action-bar--top">
+                {% if entitystatus == "PVA" or entitystatus == "CLO" %}
+                    {% if user.hasPermission("allow user to view medical assessment's inform") %}
+                        <span class="ss-button ss-button--inverted">
+                            <a class="btn btn-default" href="/medical/medical_assessment/{{ entityId }}/report?destination={{ form['#destination'] }}" 
+                               data-drupal-link-system-path="medical/medical_assessment/{{ entityId }}/report">
+                                <i class=""></i>
+                                {{ "View medical assessment's inform"|t }}
+                            </a>
+                        </span>
+                    {% endif %}
+                {% endif %}
+                {% if entitystatus == "OPN" or entitystatus == "SCH" or entitystatus == "IPR" %}
+                    {% if user.hasPermission('allows users to cancel medical assessment entities') %}
+                        <span class="ss-button ss-button--inverted">
+                            <a class="btn btn-default" href="/medical/medical_assessment/{{ entityId }}/cancel?destination={{ form['#destination'] }}" 
+                               data-drupal-link-system-path="medical/medical_assessment/{{ entityId }}/cancel">
+                                <i class="fa fa-times-circle-o"></i>
+                                {{ "Cancelar"|t }}
+                            </a>
+                        </span>
+                    {% endif %}
+                {% endif %}
+                {% if entitystatus == "PVA" %}
+                    {% if user.hasPermission("edit responsible medical examiner's declaration page of the medical assessment form") %}
+                        <span class="ss-button ss-button--inverted">
+                            <a class="btn btn-default"href="/medical/medical_assessment/{{ entityId }}/send-to-authority?destination={{ form['#destination'] }}" 
+                               data-drupal-link-system-path="medical/medical_assessment/{{ entityId }}/send-to-authority">
+                                <i class="fa fa-envelope-o"></i>
+                                {{ "Enviar a la autoridad"|t }}
+                            </a>
+                        </span>
+                    {% endif %}
+                {% endif %}
+                {% if entitystatus == "PRE" %}
+                    {% if user.hasPermission("edit responsible medical assessor's declaration page of the medical assessment form") %}
+                        <span class="ss-button ss-button--inverted">
+                            <a class="btn btn-default"href="/medical/medical_assessment/{{ entityId }}/close?destination={{ form['#destination'] }}" 
+                               data-drupal-link-system-path="medical/medical_assessment/{{ entityId }}/close">
+                                <i class="fa fa-check-circle-o"></i>
+                                {{ "Cerrar"|t }}
+                            </a>
+                        </span>
+                    {% endif %}
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+
+    <div class="row ss-form__main-information">	
+        <div class="col-md-3 col-sm-6">
+            {{ form.name }}
+        </div>
+        <div class="col-md-3 col-md-offset-6 col-sm-6">
+            <div class="ss-input">
+                <div class="form-wrapper">
+                    <div class="form-group form-item field--status">
+                        <label class="ss-label" for="identifier-name">{{ "Estado"|t }}</label>
+                        <div class="form-group has-feedback">
+                            <input class="{{ entitystatus }} text-full input-lg form-control c-square c-theme form-text"
+                                   readonly="readonly"
+                                   type="text"
+                                   id="identifier-name"
+                                   value="{{ statusvaluelabel }}" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% if user.hasPermission("view cancelation section of the medical assessment form") %}
+        {% if entitystatus == "CAN" %}		
+            <div class="row ss-form__cancelation-block">
+                <div class="col-sm-12 accordion ss-accordion">
+                    <div class="card ss-card">
+                        <div class="card-header ss-card__header" id="assessmentCancelationBlockHeader">
+                            <a class="ss-card__header__content" data-toggle="collapse" href="#assessmentCancelationBlockBody" aria-expanded="false" aria-controls="assessmentCancelationBlockBody">
+                                <h5 class="mb-0">
+                                    {{ "Ficha de cancelación"|t }}
+                                    <i class="fa fa-angle-down"></i>
+                                </h5>
+                            </a>			
+                        </div>
+
+                        <div id="assessmentCancelationBlockBody" class="ss-card__body collapse in" aria-labelledby="assessmentCancelationBlockHeader" data-parent="#assessmentCancelationBlock">
+                            <div class="ss-card__body__content">
+                                <div class="row">
+                                    <div class="col-sm-12">{{ form.cancellation_reason }}</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6">{{ form.cancellation_user }}</div>
+                                    <div class="col-sm-12 col-md-6">{{ form.cancellation_date }}</div>
+                                </div>	
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endif %}
+
+    <div class="row ss-form__content-information">
+        <div class="col-sm-12 accordion ss-accordion">
+
+            {% if user.hasPermission("view general section of the medical assessment form") %}				
+                <div class="card ss-card">
+                    <div class="card-header ss-card__header" id="assessmentGeneralInformationHeader">
+                        <a class="ss-card__header__content" data-toggle="collapse" href="#assessmentGeneralInformationBody" aria-expanded="false" aria-controls="assessmentGeneralInformationBody">
+                            <h5 class="mb-0">
+                                {{ "Información general"|t }}
+                                <i class="fa fa-angle-down"></i>								
+                            </h5>
+                        </a>			
+                    </div>
+
+                    <div id="assessmentGeneralInformationBody" class="ss-card__body collapse in" aria-labelledby="assessmentGeneralInformationHeader" data-parent="#assessmentGeneralInformation">
+                        <div class="ss-card__body__content">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4">{{ form.class }}</div>
+                                <div class="col-sm-12 col-md-4">{{ form.scheduled_appointment_date }}</div>
+                                <div class="col-sm-12 col-md-4">{{ form.amo_examination_date }}</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <label class="ss-label">
+                                        {{ "Centro médico"|t }}
+                                    </label>
+                                    {{ form.customer_amo }}
+                                </div>
+                                <div class="col-sm-12 col-md-6">{{ form.amo_medical_examiner }}</div>
+                            </div> 			
+                        </div>
+                    </div>
+                </div>				
+            {% endif %}	
+
+            {% if user.hasPermission("view applicant information section of the medical assessment form") %}			
+                <div class="card ss-card">
+                    <div class="card-header ss-card__header" id="assessmentApplicantInformationHeader">
+                        <a class="ss-card__header__content" data-toggle="collapse" href="#assessmentApplicantInformation" aria-expanded="false" aria-controls="assessmentApplicantInformationBody">
+                            <h5 class="mb-0">
+                                {{ 'Información del solicitante'|t }}
+                                <i class="fa fa-angle-down"></i>								
+                            </h5>
+                        </a>			
+                    </div>
+
+                    <div id="assessmentApplicantInformation" class="ss-card__body collapse in" aria-labelledby="assessmentApplicantInformationHeader" data-parent="#assessmentApplicantInformation">
+                        <div class="ss-card__body__content">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4">
+                                    <div class="ss-input">
+                                        <div class="form-wrapper">
+                                            <div class="form-group form-item">
+                                                <label class="ss-label">{{ "Apellido y nombre"|t }}</label>
+                                                <div class="form-group has-feedback">
+                                                    <input class="text-full input-lg form-control c-square c-theme form-text"
+                                                           readonly="readonly"
+                                                           type="text"
+                                                           value="{{ form['#applicant_information'].getFirstName() }} {{ form['#applicant_information'].getLastName() }}" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-2">
+                                    <div class="ss-input">
+                                        <div class="form-wrapper">
+                                            <div class="form-group form-item">
+                                                <label class="ss-label">{{ "Edad"|t }}</label>
+                                                <div class="form-group has-feedback">
+                                                    <input class="text-full input-lg form-control c-square c-theme form-text"
+                                                           readonly="readonly"
+                                                           type="text"
+                                                           value="{{ form['#applicant_information'].getAge() }}" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-2">
+                                    <div class="ss-input">
+                                        <div class="form-wrapper">
+                                            <div class="form-group form-item">
+                                                <label class="ss-label">{{ "Sexo"|t }}</label>
+                                                <div class="form-group has-feedback">
+                                                    <input class="text-full input-lg form-control c-square c-theme form-text"
+                                                           readonly="readonly"
+                                                           type="text"
+                                                           value="{{ form['#applicant_information'].getGender() }}" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 hidden-sm hidden-xs form-no-label">
+                                    <a class="use-ajax btn btn-default col-sm-12" 
+                                       data-dialog-options="{&quot;width&quot;:800}" 
+                                       data-dialog-type="modal" 
+                                       href="/admin/structure/webform/manage/contact/submission/{{ form['#form_submission'].id() }}/table">
+                                        {{ "Historia médica"|t }}
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="ss-input">
+                                        <div class="form-wrapper">
+                                            <div class="form-group form-item">
+                                                <label class="ss-label">{{ "Cédula"|t }}</label>
+                                                <div class="form-group has-feedback">
+                                                    <input class="text-full input-lg form-control c-square c-theme form-text"
+                                                           readonly="readonly"
+                                                           type="text"
+                                                           value="{{ form['#applicant_information'].getIdType() }} - {{ form['#applicant_information'].getIdNumber() }}" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="ss-input">
+                                        <div class="form-wrapper">
+                                            <div class="form-group form-item">
+                                                <label class="ss-label">{{ "Fecha de nacimiento"|t }}</label>
+                                                <div class="form-group has-feedback">
+                                                    <input title="Date (e.g. 2019-06-18)" 
+                                                           readonly="readonly"
+                                                           type="date" 
+                                                           min="1900-01-01" 
+                                                           max="2050-12-31" 
+                                                           data-drupal-date-format="Y-m-d" 
+                                                           value="{{ form['#applicant_information'].getBirthDate() }}" 
+                                                           size="12" 
+                                                           class="form-date form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>			
+                            <div class="row">
+                                <div class="col-sm-12 col-md-8">
+                                    <div class="ss-input">
+                                        <div class="form-wrapper">
+                                            <div class="form-group form-item">
+                                                <label class="ss-label">{{ "Dirección"|t }}</label>
+                                                <div class="form-group has-feedback">
+                                                    <input class="text-full input-lg form-control c-square c-theme form-text"
+                                                           readonly="readonly"
+                                                           type="text"
+                                                           value="{{ form['#applicant_information'].getAddress() }}" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+                                    <div class="ss-input">
+                                        <div class="form-wrapper">
+                                            <div class="form-group form-item">
+                                                <label class="ss-label">{{ "Teléfono"|t }}</label>
+                                                <div class="form-group has-feedback">
+                                                    <input class="text-full input-lg form-control c-square c-theme form-text"
+                                                           readonly="readonly"
+                                                           type="text"
+                                                           value="{{ form['#applicant_information'].getTelephone() }}" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 visible-sm visible-xs">
+                                    <a class="use-ajax btn btn-default col-sm-12" 
+                                       data-dialog-options="{&quot;width&quot;:800}" 
+                                       data-dialog-type="modal" 
+                                       href="/admin/structure/webform/manage/contact/submission/{{ form['#form_submission'].id() }}/table">
+                                        {{ "Historia médica"|t }}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>				
+            {% endif %}
+
+            {% if user.hasPermission("view medical examinations section of the medical assessment form") %}
+                <div class="card ss-card">
+                    <div class="card-header ss-card__header" id="assessmentBundelTypeHeader">
+                        <a class="ss-card__header__content" data-toggle="collapse" href="#assessmentBundelTypeBody" aria-expanded="false" aria-controls="assessmentBundelTypeBody">
+                            <h5 class="mb-0">
+                                {{ "Exámenes"|t }}
+                                <i class="fa fa-angle-down"></i>								
+                            </h5>
+                        </a>			
+                    </div>
+
+                    <div class="row">
+                        <div id="assessmentBundelTypeBody" class="ss-card__body collapse in" aria-labelledby="assessmentBundelTypeHeader" data-parent="#assessmentBundelType">
+                            <div class="ss-card__body__content">
+                                {% for item in form['#examinationItems'] %}
+                                    <div class="col-md-4">
+                                        <h2>{{ item.bundle }}</h2>
+                                        <div class="ss-input">
+                                            <div class="form-wrapper">
+                                                <div class="form-group form-item">
+                                                    <label class="ss-label">{{ "Medical Examiner"|t }}</label>
+                                                    <div class="form-group has-feedback">
+                                                        <input class="text-full input-lg form-control c-square c-theme form-text"
+                                                               readonly="readonly"
+                                                               type="text"
+                                                               value="{{ item.medic }}" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ss-input">
+                                            <div class="form-wrapper">
+                                                <div class="form-group form-item">
+                                                    <label class="ss-label">{{ "Status"|t }}</label>
+                                                    <div class="form-group has-feedback">
+                                                        <input class="text-full input-lg form-control c-square c-theme form-text"
+                                                               readonly="readonly"
+                                                               type="text"
+                                                               value="{{ item.status }}" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <a class="use-ajax btn btn-default col-md-offset-1 col-md-10" 
+                                               data-dialog-options="{&quot;width&quot;:800}" 
+                                               data-dialog-type="modal" 
+                                               href="/medical/medical_examination/{{ item.id }}">
+                                                {{ "View"|t }}
+                                            </a>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-wrapper">
+                                                <div class="form-group form-item">
+                                                    <a class="btn btn-default col-md-offset-1 col-sm-10"
+                                                       href="/medical/medical_examination/{{ item.id }}/edit?destination={{ form['#destination'] }}">
+                                                        {{ "Edit"|t }}
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+
+            {% if user.hasPermission("view responsible medical examiner's declaration section of the medical assessment form") %}
+                <div class="card ss-card">
+                    <div class="card-header ss-card__header" id="assessmentResponsableHAMEHeader">
+                        <a class="ss-card__header__content" data-toggle="collapse" href="#assessmentResponsableHAMEBody" aria-expanded="false" aria-controls="assessmentResponsableHAMEBody">
+                            <h5 class="mb-0">
+                                {{ "Declaración del examinador médico responsable"|t }}
+                                <i class="fa fa-angle-down"></i>								
+                            </h5>
+                        </a>			
+                    </div>
+
+                    <div id="assessmentResponsableHAMEBody" class="ss-card__body collapse in" aria-labelledby="assessmentResponsableHAMEHeader" data-parent="#assessmentResponsableHAME">
+                        <div class="ss-card__body__content">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="ss-input">
+                                        <div class="form-wrapper">
+                                            <div class="form-group form-item">
+                                                <label class="ss-label">{{ "Apellido y nombre"|t }}</label>
+                                                <div class="form-group has-feedback">
+                                                    <input class="text-full input-lg form-control c-square c-theme form-text"
+                                                           readonly="readonly"
+                                                           type="text"
+                                                           value="{{ form['#amo_medical_examiner'].getName() }}" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-3">
+                                    <div class="ss-input">
+                                        <div class="form-wrapper">
+                                            <div class="form-group form-item">
+                                                <label class="ss-label">{{ "Cédula"|t }}</label>
+                                                <div class="form-group has-feedback">
+                                                    <input class="text-full input-lg form-control c-square c-theme form-text"
+                                                           readonly="readonly"
+                                                           type="text"
+                                                           value="{{ form['#amo_medical_examiner'].getIdNumber() }}" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-3">
+                                    {{ form.amo_examination_date }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label class="ss-label">{{ "Notas"|t }}</label>
+                                    {{ form.amo_examination_notes }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+
+
+            {% if user.hasPermission("view responsible medical assessor's declaration section of the medical assessment form") %}
+                <div class="card ss-card">
+                    <div class="card-header ss-card__header" id="assessmentResponsableCAAHAMHeader">
+                        <a class="ss-card__header__content" data-toggle="collapse" href="#assessmentResponsableCAAHAMBody" aria-expanded="false" aria-controls="assessmentResponsableCAAHAMBody">
+                            <h5 class="mb-0">
+                                {{ "Declaración del evaluador médico responsable"|t }}
+                                <i class="fa fa-angle-down"></i>								
+                            </h5>
+                        </a>			
+                    </div>
+
+                    <div id="assessmentResponsableCAAHAMBody" class="ss-card__body collapse in" aria-labelledby="assessmentResponsableCAAHAMHeader" data-parent="#assessmentResponsableCAAHAM">
+                        <div class="ss-card__body__content">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-8">
+                                    <label class="ss-label">{{ "Apellido y nombre"|t }}</label>
+                                    {{ form.assessment_medical_assessor }}
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+                                    {{ form.assessment_date }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label class="ss-label">{{ "Recomendación"|t }}</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">									
+                                    {{ form.assessment_recommendation }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <label class="ss-label">{{ "Limitaciones"|t }}</label>
+                                    {{ form.assessment_limitations }}
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <label class="ss-label">{{ "Notas"|t }}</label>
+                                    {{ form.assessment_notes }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>					
+                </div>		
+            {% endif %}				
+        </div>
+    </div>
+
+    <div class="row ss-form__action-bar">
+        <div class="col-sm-12 ss-action-bar ss-action-bar--bottom">
+            {{ form.actions.submit }}
+        </div>
+    </div>
+
+    {% if 'administrator' in user.getroles  %}
+        <h1>only ADMIN</h1>
+        <div class="row">
+            <div class="col-sm-2">{{ form.entity_status }}</div>
+            <div class="col-sm-4">{{ form.medical_history }}</div>
+            <div class="col-sm-2">{{ form.transaction }}</div>
+            <div class="col-sm-4">{{ form.customer_applicant }}</div>
+            <div class="col-sm-4">{{ form.assessment_type }}</div>
+        </div>
+    {% endif %}
+
+    {{ form.form_build_id }}
+    {{ form.form_token }}
+    {{ form.form_id }}
+
+</div>

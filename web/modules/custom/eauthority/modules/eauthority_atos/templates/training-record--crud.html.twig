@@ -1,0 +1,236 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+<div class="container ss-training-record-crud ss-form">
+
+    {% set entitystatus = form.entity_status.widget['#value'].0 %}
+    {% set entitystatusoptions = form.entity_status.widget['#options'] %}
+    {% set entityId = form['#entityId'] %}
+    {#{ dsm(entitystatus) }#}
+    {#{ kint(form.entity_status.widget['#value']) }#}
+    {#{ dsm(_context|keys) }#}
+
+    {#{ If entity status is equal to Draft }#}
+    {% if entitystatus == "DRF" %}
+        {#{ Do something }#}
+    {% endif %}
+
+    {% set statusvaluelabel = "" %}
+    {% for key, statuslabel in entitystatusoptions %}
+        {% if key == entitystatus %}
+            {% set statusvaluelabel = statuslabel %}
+        {% endif %}
+    {% endfor %}
+
+    {% if entitystatus == "DRF" or entitystatus == "SCH" or entitystatus == "IPR" %}
+        <div class="row ss-form__action-bar">
+            <div class="col-sm-12 ss-action-bar ss-action-bar--top">
+                {% if entitystatus == "SCH" or entitystatus == "IPR" %}
+                    <span class="ss-button ss-button--inverted">
+                        <a class="btn" href="/training/training_record/{{ entityId }}/cancel?destination={{ form['#destination'] }}" 
+                           data-drupal-link-system-path="training/training_record/{{ entityId }}/cancel">
+                            <i class="fa fa-times-circle-o"></i>
+                            {{ "Cancelar"|t }}
+                        </a>
+                    </span>
+                {% endif %}
+                {% if entitystatus == "DRF" %}
+                    <span class="ss-button ss-button--inverted">
+                        <a class="btn" href="/training/training_record/{{ entityId }}/delete" 
+                           data-drupal-link-system-path="training/training_record/{{ entityId }}/delete">
+                            <i class="fa fa-trash"></i>
+                            {{ "Borrar"|t }}
+                        </a>
+                    </span>
+                {% endif %}
+                {% if entitystatus == "DRF" %}
+                    <span class="ss-button ss-button--inverted">
+                        <a class="btn" href="/training/training_record/{{ entityId }}/report-start-date?destination={{ form['#destination'] }}" 
+                           data-drupal-link-system-path="training/training_record/{{ entityId }}/edit">
+                            <i class="fa fa-play"></i>
+                            {{ "Reportar comienzo"|t }}
+                        </a>
+                    </span>
+                {% endif %}
+                {% if entitystatus == "IPR" %}
+                    <span class="ss-button ss-button--inverted">
+                        <a class="btn" href="/training/training_record/{{ entityId }}/finish-course?destination={{ form['#destination'] }}" 
+                           data-drupal-link-system-path="training/training_record/{{ entityId }}/finish-course">
+                            <i class="fa fa-mortar-board"></i>
+                            {{ "Finalizar curso"|t }}
+                        </a>
+                    </span>
+                {% endif %}				
+            </div>
+        </div>
+    {% endif %}
+
+    <div class="row ss-form__main-information">
+        <div class="col-md-3 col-sm-6">
+            {{ form.name }}
+        </div>
+        <div class="col-md-3 col-md-offset-6 col-sm-6">
+            <div class="form-wrapper">
+                <div class="form-group form-item  field--status">
+                    <label for="identifier-name">{{ "Status"|t }}</label>
+                    <div class="form-group has-feedback">
+                        <input class="{{ entitystatus }} text-full input-lg form-control c-square c-theme form-text"
+                               readonly="readonly"
+                               type="text"
+                               id="identifier-name"
+                               value="{{ statusvaluelabel }}" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row ss-form__content-information">
+
+        <div class="col-sm-12 accordion ss-accordion">
+
+            <div class="card ss-card">
+                <div class="card-header ss-card__header" id="generalInformationHeader">
+                    <a class="ss-card__header__content" data-toggle="collapse" href="#generalInformationBody" aria-expanded="false" aria-controls="generalInformationBody">
+                        <h5 class="mb-0">
+                            {{ "Información general"|t }}
+                            <i class="fa fa-angle-down"></i>
+                        </h5>
+                    </a>			
+                </div>
+
+                <div id="generalInformationBody" class="ss-card__body collapse in" aria-labelledby="generalInformationHeader" data-parent="#generalInformation">
+                    <div class="ss-card__body__content">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">{{ form.cancellation_user }}</div>
+                            <div class="col-md-6 col-sm-12">{{ form.cancellation_date }}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">{{ form.cancellation_reason }}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">{{ form.location }}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="row ss-fieldset">						
+                                    <div class="col-sm-12">
+                                        <legend>{{ "Fechas estimadas"|t }}</legend>
+                                        {{ form.estimated_start_date}}
+                                        {{ form.estimated_finish_date}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="row ss-fieldset">						
+                                    <div class="col-sm-12">
+                                        <legend>{{ "Fechas reales"|t }}</legend>
+                                        {{ form.start_date}}
+                                        {{ form.finish_date}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">{{ form.training_course }}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">{{ form.accredit_flight_experience }}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">{{ form.remarks }}</div>
+                        </div>  			
+                    </div>
+                </div>
+            </div>
+
+            <div class="card ss-card">
+                <div class="card-header ss-card__header" id="attendeeInformationHeader">
+                    <a class="collapsed ss-card__header__content" data-toggle="collapse" href="#attendeeInformationBody" aria-expanded="false" aria-controls="attendeeInformationBody">
+                        <h5 class="mb-0">
+                            {{ "Alumnos"|t }}
+                            <i class="fa fa-angle-down"></i>
+                        </h5>
+                    </a>
+                </div>
+                <div id="attendeeInformationBody" class="ss-card__body collapse" aria-labelledby="attendeeInformationHeader" data-parent="#attendeeInformation">
+                    <div class="ss-card__body-content">
+                        <div class="row">
+                            <div class="col-sm-12">{{ form.training_record_attendee }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card ss-card">
+                <div class="card-header  ss-card__header" id="instructorsInformationHeader">
+                    <a class="collapsed ss-card__header__content" data-toggle="collapse" href="#instructorsInformationBody" aria-expanded="false" aria-controls="instructorsInformationBody">
+                        <h5 class="mb-0">
+                            {{ "Instructores"|t }}
+                            <i class="fa fa-angle-down"></i>
+                        </h5>
+                    </a>
+                </div>
+                <div id="instructorsInformationBody" class="ss-card__body collapse" aria-labelledby="instructorsInformationHeader" data-parent="#instructorsInformation">
+                    <div class="ss-card__body__content">
+                        <div class="row">
+                            <div class="col-sm-12">{{ form.instructors }}</div>
+                        </div>   			
+                    </div>
+                </div>
+            </div>
+
+            <div class="card ss-card">
+                <div class="card-header ss-card__header" id="aircraftInformationHeader">
+                    <a class="collapsed ss-card__header__content" data-toggle="collapse" href="#aircraftInformationHeaderBody" aria-expanded="false" aria-controls="aircraftInformationHeaderBody">
+                        <h5 class="mb-0">
+                            {{ "Aeronaves"|t }}
+                            <i class="fa fa-angle-down"></i>
+                        </h5>
+                    </a>
+                </div>
+                <div id="aircraftInformationHeaderBody" class="ss-card__body collapse" aria-labelledby="aircraftInformationHeader" data-parent="#aircraftInformation">
+                    <div class="ss-card__body__content">
+                        <div class="row">
+                            <div class="col-sm-12">{{ form.aircraft }}</div>
+                        </div>
+                    </div>      			
+                </div>
+            </div>
+        </div>
+
+        {% if entitystatus == "DRF" or entitystatus == "SCH" or entitystatus == "IPR" or entitystatus == "CAN" %}
+
+        {% elseif entitystatus == "CMP" or entitystatus == "CLO"%}
+
+        {% endif %}
+    </div>
+    
+    {% if 'administrator' in user.getroles or 'caa_admin' in user.getroles %}
+        <h1>only ADMIN</h1>
+        <div class="row">
+            <div class="col-sm-4">{{ form.entity_status }}</div>
+            <div class="col-sm-4">{{ form.customer }}</div>
+        </div> 
+    {% endif %}
+    
+    
+    
+    <div class="row ss-form__action-bar">
+        <div class="col-sm-12 ss-action-bar ss-action-bar--bottom">
+            {{ form.actions.submit }}
+        </div>
+    </div>
+    {{ form.form_build_id }}
+    {{ form.form_token }}
+    {{ form.form_id }}	
+</div>

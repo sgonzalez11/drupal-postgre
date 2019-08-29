@@ -1,0 +1,327 @@
+<?php
+
+use Drupal\file\Entity\File;
+use Drupal\taxonomy\Entity\Vocabulary;
+use Drupal\Core\Url;
+use Drupal\Core\Link;
+use Drupal\maestro\Engine\MaestroEngine;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\eauthority\ToolbarHandler;
+use Drupal\Core\Menu\MenuTreeParameters;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\field\Entity\FieldStorageConfig;
+
+/**
+ * Implements hook_help().
+ */
+function eauthority_help($route_name, RouteMatchInterface $route_match) {
+    switch ($route_name) {
+        // Main module help for the eauthority module.
+        case 'help.page.eauthority':
+            $output = '';
+            $output .= '<h3>' . t('About') . '</h3>';
+            $output .= '<p>' . t('eAuthority') . '</p>';
+            return $output;
+
+        default:
+    }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function eauthority_theme($existing, $type, $theme, $path) {
+    $themes['customer__crud'] = [
+        'render element' => 'form'
+    ];
+    $themes['customer-profiles__crud'] = [
+        'render element' => 'form'
+    ];
+    $themes['aircraft__crud'] = [
+        'render element' => 'form'
+    ];
+    $themes['document-parameter__crud'] = [
+        'render element' => 'form'
+    ];
+    $themes['my_user_registration'] = [
+      'render element' => 'form'
+    ];
+
+    return $themes;
+}
+
+/**
+ * Implements hook_toolbar().
+ */
+function eauthority_toolbar() {
+    return \Drupal::service('class_resolver')
+                    ->getInstanceFromDefinition(ToolbarHandler::class)
+                    ->toolbar();
+}
+
+function eauthority_prerender_toolbar_tray(array $element) {
+    /** @var \Drupal\toolbar\Menu\ToolbarMenuLinkTree $menu_tree */
+    $menu_tree = \Drupal::service('toolbar.menu_tree');
+
+    $parameters = new MenuTreeParameters();
+    $parameters->onlyEnabledLinks();
+
+    $tree = $menu_tree->load('eauthority', $parameters);
+
+    $manipulators = [
+        ['callable' => 'menu.default_tree_manipulators:checkAccess'],
+        ['callable' => 'menu.default_tree_manipulators:generateIndexAndSort'],
+    ];
+    $tree = $menu_tree->transform($tree, $manipulators);
+
+    $element['eauthority'] = $menu_tree->build($tree);
+
+    return $element;
+}
+
+/**
+ * Implements hook_form_alter() in order to hide the revision information section
+ */
+function eauthority_form_alter(&$form, $form_state, $form_id) {
+    switch ($form_id) {
+        case 'node_procedure_type_edit_form':
+            $form['revision_information']['#access'] = false;
+            break;
+    }
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function eauthority_form_user_register_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $form['#theme'] = ['my_user_registration'];
+}
+
+/**
+ * @param \Drupal\field\Entity\FieldStorageConfig $definition
+ * @param \Drupal\Core\Entity\ContentEntityInterface|NULL $entity
+ * @param $cacheable
+ *
+ * @return array
+ * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+ * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+ */
+function eauthority_allowed_values_function(FieldStorageConfig $definition, ContentEntityInterface $entity = NULL, $cacheable) {
+
+  $identifiers_types_person = Drupal::entityTypeManager()
+    ->getStorage('identifier_type')
+    ->loadByProperties(['applicable_to' => 'PER']);
+
+  $identifiers_types_all = Drupal::entityTypeManager()
+    ->getStorage('identifier_type')
+    ->loadByProperties(['applicable_to' => 'ALL']);
+
+  $options_person = array();
+  foreach($identifiers_types_person as $key => $value) {
+    $options_person[$key] = $value->getName();
+  }
+
+  $options_all = array();
+  foreach($identifiers_types_all as $key => $value) {
+    $options_all[$key] = $value->getName();
+  }
+
+  $options = $options_person + $options_all;
+
+  return $options;
+}
+
+
+/**
+ * Implements hook_maestro_interactive_handlers
+ *
+ * @return array
+ * array of function names and help text that will be displayed
+ * in the edit task form under the handler field
+ */
+function eauthority_maestro_interactive_handlers() {
+    return [
+        'eauthority_customer_form' => t('Customer dialog.'),
+        'customer_identity_validation_reject_form' => t('Validation Reject form - Notes'),
+    ];
+}
+
+/**
+ * Implements hook_maestro_batch_handlers().
+ */
+function eauthority_maestro_batch_handlers() {
+  return [
+    'maestro_debug_function' =>  t('Just a function that is useful for debug'),
+  ];
+}
+
+
+/**
+ * This is the Maestro Interactive Accept Only form.  This shows off how the interactive function task can fetch form elements
+ * based on the handler field in the queue (set by the template)
+ *
+ * The interactive function engine UI task passes the queue ID to the form and the user is
+ * responsible for managing the entire form at this point.
+ *
+ * @param array $form  The form you will create with this function
+ * @param int $queueID  The ID of the queue task ID you are executing
+ */
+function eauthority_customer_form(&$form, $queueID = 0, $obj) {
+
+    // read submission info
+
+    $queueEntry = MaestroEngine::getQueueEntryById($queueID);
+
+    $processId = $queueEntry->process_id->getString();
+
+    $sid = FALSE;  //This is the submission we're eventually after
+    $sid = MaestroEngine::getEntityIdentiferByUniqueID($processId, 'submission');
+
+    // load submission using the sid
+    $webform_submission = \Drupal\webform\Entity\WebformSubmission::load($sid);
+
+    // Get submission data.
+    $data = $webform_submission->getData();
+
+    $validationNotes = $data['notas_validacion'];
+
+    $form['queueID'] = array(
+        '#type' => 'hidden',
+        '#title' => 'Hidden Queue ID',
+        '#default_value' => $queueID,
+        '#description' => ('queueID'),
+    );
+
+    $form['information_text'] = array(
+        '#plain_text' => t('Por favor, revise la información enviada:'),
+        '#suffix' => '<br/><br/>',
+    );
+
+    $form['information_text2'] = array(
+        '#prefix' => '<b>',
+        '#plain_text' => $validationNotes,
+        '#suffix' => '</b><br/>',
+    );
+
+    $form['customer_answer'] = array(
+        '#type' => 'textarea',
+        '#title' => 'Ingrese su respuesta al requerimiento:',
+            //  '#default_value' => '',
+    );
+
+
+    //overriding the "Accept" default label with the "complete" text
+    $form['actions']['submit']['#value'] = 'Enviar';
+
+    return $form;
+}
+
+function customer_identity_validation_reject_form(&$form, $queueID = 0, $obj){
+
+  // read submission info
+  $queueEntry = MaestroEngine::getQueueEntryById($queueID);
+
+  $processId = $queueEntry->process_id->getString();
+
+  $sid = FALSE;  //This is the submission we're eventually after
+  $sid = MaestroEngine::getEntityIdentiferByUniqueID($processId, 'submission');
+
+  // load submission using the sid
+  $webform_submission = \Drupal\webform\Entity\WebformSubmission::load($sid);
+
+  // Get submission data.
+  $data = $webform_submission->getData();
+
+  $validationNotes = $data['notas_validacion'];
+
+  $form['reject_queueID'] = array(
+    '#type' => 'hidden',
+    '#title' => 'Hidden Queue ID',
+    '#default_value' => $queueID,
+    '#description' => ('queueID'),
+  );
+  $form['reject_information_text'] = array(
+    '#plain_text' => t('Por favor, revise la información enviada:'),
+    '#suffix' => '<br/><br/>',
+  );
+  $form['reject_information_text2'] = array(
+    '#prefix' => '<b>',
+    '#plain_text' => $validationNotes,
+    '#suffix' => '</b><br/>',
+  );
+  $form['reject_customer_answer'] = array(
+    '#type' => 'textarea',
+    '#title' => 'Ingrese su respuesta al requerimiento:',
+  );
+
+  $form['reject_customer_answer_file'] = array(
+    '#title' => 'Upload a file',
+    '#type' => 'managed_file',
+    '#description' => 'Use in case you need to upload a new file',
+    '#upload_location' => 'private://webform/validacion_de_identidad/'.$sid.'/',
+    '#upload_validators' => [
+    'file_validate_extensions' => array('gif png jpg jpeg pdf'),
+    ],
+  );
+
+  //overriding the "Accept" default label with the "complete" text
+  $form['actions']['submit']['#value'] = 'Enviar';
+
+  return $form;
+
+}
+
+function customer_identity_validation_reject_form_submit(&$form, &$form_state, $queueID = 0){
+
+  $reject_answer = $form_state->getValue('reject_customer_answer');
+  $reject_answer_file = $form_state->getValue('reject_customer_answer_file');
+
+  if (isset($reject_answer_file[0]) && !empty($reject_answer_file[0])) {
+    $file = File::load($reject_answer_file[0]);
+    $file->setPermanent();
+    $file->save();
+    $id_file = $file->id();
+  }
+
+  // Load the task's configuration so that we can determine which webform and unique identifier this
+  // particular task will be using.
+  $templateTask = MaestroEngine::getTemplateTaskByQueueID($queueID);
+
+  // $taskUniqueSubmissionId = $templateTask['data']['unique_id'];
+
+  $queueEntry = MaestroEngine::getQueueEntryById($queueID);
+  $processId = $queueEntry->process_id->getString();
+  $taskUniqueSubmissionId = MaestroEngine::getAllEntityIdentifiersForProcess($processId);
+
+  $submission = $taskUniqueSubmissionId['submission']['entity_id'];
+
+  // $sid = FALSE;  //This is the submission we're eventually after
+  // $sid = MaestroEngine::getEntityIdentiferByUniqueID($processId, $submission);
+
+  // load submission using the sid
+  $webform_submission = \Drupal\webform\Entity\WebformSubmission::load($submission);
+
+  // Get submission data.
+  $data = $webform_submission->getData();
+  $composite_rechazo = $data['composite_respuesta_rechazo'][0]['composite_respuesta'];
+
+  // Change submission data.
+  $data['composite_respuesta_rechazo'][0]['composite_respuesta'] = $composite_rechazo . PHP_EOL . $reject_answer;
+  $data['composite_respuesta_rechazo'][0]['composite_file'] = (isset($id_file)) ? $id_file : '';
+
+  // Set submission data.
+  $webform_submission->setData($data);
+
+  // Save submission.
+  $webform_submission->save();
+
+  return $form;
+
+}
+function maestro_debug_function($processID, $queueID) {
+  // maestro_spv_content_value_fetch:validacion_de_identidad,user
+  $variable = MaestroEngine::getProcessVariable('username_variable', $processID);
+  $lala = "hola";
+
+}

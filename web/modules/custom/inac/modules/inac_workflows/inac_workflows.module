@@ -1,0 +1,392 @@
+<?php
+
+/**
+ * @file
+ * Contains inac_workflows.module.
+ */
+
+use Drupal\file\Entity\File;
+use Drupal\taxonomy\Entity\Vocabulary;
+use Drupal\Core\Url;
+use Drupal\Core\Link;
+use Drupal\maestro\Engine\MaestroEngine;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\eauthority\ToolbarHandler;
+use Drupal\Core\Menu\MenuTreeParameters;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\Core\Routing\TrustedRedirectResponse;
+use Drupal\eauthority_amos\Entity\MedicalAssessment;
+
+
+const STATUS_REJECTED = "REJ";
+const STATUS_CLARIFICATION = "CLA";
+const STATUS_APPROVED = "APV";
+const STATUS_PENDING_VALIDATION = "PEV";
+const STATUS_NEW = "NEW";
+
+/**
+ * Implements hook_help().
+ */
+function inac_workflows_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the inac_workflows module.
+    case 'help.page.inac_workflows':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Inac Workflows') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function inac_workflows_theme() {
+  return [
+    'inac_workflows' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_maestro_batch_handlers().
+ */
+function inac_workflows_maestro_batch_handlers() {
+  return [
+    // FORMAT: ew + task type + workflow name + step name
+    'inac_batch_inac_identity_validation_medical_assessment'  =>  t('Chunk of code that just log a successful message'),
+    'inac_batch_inac_medical_certificate_medical_assessment'  =>  t('Chunk of code that create automatically a medical assessment'),
+  ];
+}
+
+/**
+ * Implements hook_maestro_interactive_handlers().
+ */
+function inac_workflows_maestro_interactive_handlers() {
+  return [
+    // FORMAT : inac + task type + machine name of workflow + step name
+    'inac_interactive_inac_identity_clarification_form' => t('Clarification form used in identity validation'),
+  ];
+}
+
+/*********************** WORKFLOW: Identity Validation ************************/
+/**
+ * Implements hook_maestro_webform_submission_form().
+ */
+function inac_workflows_maestro_webform_submission_form($queueID, &$form, $maestroWebFormTask)  {
+
+ $form['status_options'] = [
+    '#type' => 'radios',
+    '#title' => t('Please choose a option'),
+    '#required' => TRUE,
+    '#options' => [0 => t('Clarification'), 1 => t('Reject'), 2 => t('Approve')],
+  ];
+
+  $form['status_reason_clarification'] = [
+    '#type' => 'textarea',
+    '#title' => '<b>'.t('Clarification Reason:').'</b>',
+    '#rows' => 4,
+    '#cols' => 5,
+    '#states' => [
+      'visible' => [
+        ':input[name="status_options"]' => ['value' => 0],
+      ]
+    ],
+  ];
+
+  $form['status_reason_clarification_files'] = [
+    '#type' => 'radios',
+    '#title' => t('Attachments Required?'),
+    '#options' => [0 => 'No', 1 => 'Si', 2 => 'Multiple'],
+    '#states' => [
+      'visible' => [
+        ':input[name="status_options"]' => ['value' => 0],
+      ]
+    ],
+  ];
+
+  $form['status_reason_rejected'] = [
+    '#type' => 'textarea',
+    '#title' => '<b>'.t('Rejected Reason:').'</b>',
+    '#rows' => 4,
+    '#cols' => 5,
+    '#states' => [
+      'visible' => [
+        ':input[name="status_options"]' => ['value' => 1],
+      ]
+    ],
+  ];
+
+  $form['actions']['cancel'] = array(
+    '#title' => ('Cancel'),
+    '#type' => 'link',
+    '#url' => Url::fromUserInput('/taskconsole',['absolute' => TRUE]),
+  );
+
+  unset($form['actions']['reject']);
+  $form['actions']['submit']['#value'] = t('Save');
+  $form['actions']['#weight'] = 20;
+}
+
+/**
+ * Implements hook_maestro_webform_submission_form_submit().
+ */
+function inac_workflows_maestro_webform_submission_form_submit($queueID, &$form, &$form_state, $triggeringElement) {
+
+  $status_options = $form_state->getValue('status_options');
+//  $status_reason_clarification = $form_state->getValue('status_reason_clarification');
+//  $status_reason_clarification_files = $form_state->getValue('status_reason_clarification_files');
+//  $status_reason_rejected = $form_state->getValue('status_reason_rejected');
+
+  // Load the task's configuration so that we can determine which webform and unique identifier this
+  // particular task will be using.
+  $templateTask = MaestroEngine::getTemplateTaskByQueueID($queueID);
+  $taskUniqueSubmissionId = $templateTask['data']['unique_id'];
+
+  $queueEntry = MaestroEngine::getQueueEntryById($queueID);
+
+  $processId = $queueEntry->process_id->getString();
+
+  // CLARIFICATION CODE
+  if ($status_options === "0") {
+
+    $sid = FALSE;  //This is the submission we're eventually after
+    $sid = MaestroEngine::getEntityIdentiferByUniqueID($processId, $taskUniqueSubmissionId);
+    // load submission using the sid
+    $webform_submission = \Drupal\webform\Entity\WebformSubmission::load($sid);
+    // Get submission data.
+    $data = $webform_submission->getData();
+
+    // The First Time the array doesn't contain the key: "resolutions_history"
+    if(!isset($data['resolutions_history'])) {
+      $data['resolutions_history'][0]['validation_result'] = "Need Clarifications";
+      $data['resolutions_history'][0]['validation_note'] = $form_state->getValue('status_reason_clarification');
+      $data['resolutions_history'][0]['require_attachments'] = ($form_state->getValue('status_reason_clarification_files') == "0") ? 0 : 1;
+    } else {
+      $size = count($data['resolutions_history']);
+      $data['resolutions_history'][$size]['validation_result'] = "Need Clarifications";
+      $data['resolutions_history'][$size]['validation_note'] = $form_state->getValue('status_reason_clarification');
+      $data['resolutions_history'][$size]['require_attachments'] = ($form_state->getValue('status_reason_clarification_files') == "0") ? 0 : 1;
+    }
+
+    // Set submission data.
+    $webform_submission->setData($data);
+    // Save submission.
+    $webform_submission->save();
+
+    MaestroEngine::setProcessVariable('validation_result',STATUS_CLARIFICATION, $processId);
+    \Drupal::logger('inac_workflows')->notice("Validation Result: " . MaestroEngine::getProcessVariable('validation_result', $processId));
+
+  } elseif ($status_options === "1") {
+    // REJECTED CODE
+    MaestroEngine::setProcessVariable('validation_result',STATUS_REJECTED, $processId);
+    \Drupal::logger('inac_workflows')->notice("Validation Result: " . MaestroEngine::getProcessVariable('validation_result', $processId));
+  } elseif ($status_options === "2") {
+    // APPROVE CODE
+    MaestroEngine::setProcessVariable('validation_result',STATUS_APPROVED, $processId);
+    \Drupal::logger('inac_workflows')->notice("Validation Result: " . MaestroEngine::getProcessVariable('validation_result', $processId));
+
+  }
+  // if (strstr($triggeringElement['#id'], 'edit-submit') !== FALSE && $queueID > 0) {
+}
+
+/**
+ *
+ * @param $form
+ * @param int $queueID
+ * @param $obj
+ *
+ * @return mixed
+ */
+function inac_interactive_inac_identity_clarification_form(&$form, $queueID = 0, $obj) {
+
+  // read submission info
+  $queueEntry = MaestroEngine::getQueueEntryById($queueID);
+
+  $processId = $queueEntry->process_id->getString();
+
+  // load submission id
+  $sid = FALSE;  //This is the submission we're eventually after
+  $sid = MaestroEngine::getEntityIdentiferByUniqueID($processId, 'submission');
+
+  // load submission using the sid
+  $webform_submission = \Drupal\webform\Entity\WebformSubmission::load($sid);
+
+  // Get submission data.
+  $data = $webform_submission->getData();
+
+  $validation_note_number = count($data['resolutions_history']) - 1;
+
+  $validation_result = $data['resolutions_history'][$validation_note_number]['validation_result']; // done
+  $validation_note = $data['resolutions_history'][$validation_note_number]['validation_note']; // done
+  $require_attachments = $data['resolutions_history'][$validation_note_number]['require_attachments']; // done
+
+
+  $form['reject_queueID'] = array(
+    '#type' => 'hidden',
+    '#title' => 'Queue ID',
+    '#default_value' => $queueID,
+    '#description' => ('queueID'),
+  );
+  $form['validation_result'] = array(
+    '#type' => 'hidden',
+    '#title' => 'Validation Result',
+    '#default_value' => $require_attachments,
+  );
+  $form['require_attachments'] = array(
+    '#type' => 'hidden',
+    '#title' => t('Attachments Required?'),
+    '#default_value' => $require_attachments,
+  );
+  $form['reject_information_markup'] = array(
+    '#markup' => '<h2>' .  t('Por favor, revise la información enviada ') . '</h2>',
+    '#attributes' => array('class' => 'ss-title'),
+  );
+  $form['validation_note'] = array(
+    '#type' => 'textarea',
+    '#title' => '<strong>' . t('Motivo de Clarificacion: ') . '</strong>',
+    '#attributes' => array('readonly' => 'readonly'),
+    '#value' => $validation_note,
+  );
+  $form['response_text'] = array(
+    '#type' => 'textarea',
+    '#prefix' => '<strong>',
+    '#suffix' => '</strong>',
+    '#title' => t('Ingrese su respuesta al requerimiento: '),
+    '#required' => TRUE,
+  );
+  $form['response_text_file'] = array(
+    '#title' => t('Upload a file'),
+    '#type' => 'managed_file',
+    '#upload_location' => 'private://webform/validacion_de_identidad/'.$sid.'/',
+    '#upload_validators' => [
+      'file_validate_extensions' => array('gif png jpg jpeg pdf'),
+    ],
+  );
+
+
+
+  //overriding the "Accept" default label with the "complete" text
+  $form['actions']['submit']['#value'] = 'Enviar';
+
+  return $form;
+
+}
+
+/**
+ * This is the submit/return from the inac_interactive_inac_identity_clarification_form function.
+ * We inject the information from the user into the webform submission.
+ *
+ * @param array $form
+ * @param FormStateInterface $form_state
+ * @param int $queueID
+ *
+ * @throws \Drupal\Core\Entity\EntityStorageException
+ */
+function inac_interactive_inac_identity_clarification_form_submit(array &$form, FormStateInterface &$form_state, $queueID = 0) {
+
+  // Take the values from the client
+  $response_text = $form_state->getValue('response_text');
+  $response_text_file = $form_state->getValue('response_text_file');
+
+  // Check if the client upload some file
+  if (isset($response_text_file[0]) && !empty($response_text_file[0])) {
+    $file = File::load($response_text_file[0]);
+    $file->setPermanent();
+    $file->save();
+    $id_file = $file->id();
+  }
+
+  // Load the task's configuration so that we can determine which webform and unique identifier this
+  // particular task will be using.
+  $templateTask = MaestroEngine::getTemplateTaskByQueueID($queueID);
+
+  // $taskUniqueSubmissionId = $templateTask['data']['unique_id'];
+
+  $queueEntry = MaestroEngine::getQueueEntryById($queueID);
+  $processId = $queueEntry->process_id->getString();
+  $taskUniqueSubmissionId = MaestroEngine::getAllEntityIdentifiersForProcess($processId);
+
+  $submission = $taskUniqueSubmissionId['submission']['entity_id'];
+
+  // $sid = FALSE;  //This is the submission we're eventually after
+  // $sid = MaestroEngine::getEntityIdentiferByUniqueID($processId, $submission);
+
+  // Load submission using the sid
+  $webform_submission = \Drupal\webform\Entity\WebformSubmission::load($submission);
+
+  // Get submission data.
+  $data = $webform_submission->getData();
+
+  // Change submission data.
+  $validation_note_number = count($data['resolutions_history']) - 1;
+  $data['resolutions_history'][$validation_note_number]['response_text'] = $response_text;
+  $data['resolutions_history'][$validation_note_number]['response_files'] = (isset($id_file)) ? $id_file : '';
+
+  $webform_submission->setData($data);
+  $webform_submission->save();
+
+  if (isset($templateTask['data']['redirect_to'])) {
+    $response = new TrustedRedirectResponse($templateTask['data']['redirect_to']);
+    $form_state->setResponse($response);
+  }
+}
+
+
+function inac_batch_inac_identity_validation_medical_assessment($processID, $queueID) {
+
+}
+
+function inac_batch_inac_medical_certificate_medical_assessment($processID, $queueID) {
+
+  // Load the task's configuration so that we can determine which webform and unique identifier this
+  // particular task will be using.
+  $templateTask = MaestroEngine::getTemplateTaskByQueueID($queueID);
+
+  // $taskUniqueSubmissionId = $templateTask['data']['unique_id'];
+
+  $queueEntry = MaestroEngine::getQueueEntryById($queueID);
+  $processId = $queueEntry->process_id->getString();
+  $taskUniqueSubmissionId = MaestroEngine::getAllEntityIdentifiersForProcess($processId);
+
+  $submission = $taskUniqueSubmissionId['submission']['entity_id'];
+
+  // $sid = FALSE;  //This is the submission we're eventually after
+  // $sid = MaestroEngine::getEntityIdentiferByUniqueID($processId, $submission);
+
+  // Load submission using the sid
+  $webform_submission = \Drupal\webform\Entity\WebformSubmission::load($submission);
+
+  // Get submission data.
+  $data = $webform_submission->getData();
+
+  // The Method loadByProperties return an array of entity objects indexed by their ids.
+  $account = Drupal::entityTypeManager()
+    ->getStorage('user')
+    ->loadByProperties(['name' => $data['user']]);
+  foreach ($account as $key => $user) {
+    $cid = $user->get('field_customer')->getvalue();
+    break;
+  }
+
+  $class = 'C'.$data['certificado_medico'];
+  $customer_amo = $data['centro_medico'];
+  $customer_applicant = $cid[0];
+  // Create a Medical Assessment Programmatically
+  $medical_assessment = MedicalAssessment::create([
+    'class' => $class,
+    'customer_amo' => $customer_amo,
+    'customer_applicant' => $customer_applicant,
+    'medical_history' => $submission,
+  ]);
+
+  $medical_assessment->save();
+
+  return TRUE;
+
+}

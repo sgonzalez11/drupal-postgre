@@ -1,0 +1,205 @@
+.skin-black .wrapper, .skin-black .main-sidebar, .skin-black .left-side {
+    background-color: #364150    
+}
+
+.skin-black .main-header .navbar {
+    background-color: #2b3643;
+}
+
+.skin-black .main-header .navbar .sidebar-toggle {
+    color: #ccc;
+	border-right: 0;
+}
+
+.skin-black .main-header .navbar .nav>li>a {
+    color: #ddd;
+}
+
+.skin-black .main-header>.logo {
+    background-color: #2b3643;
+	border: 0;
+}
+
+.skin-black .main-header>.logo:hover {
+	background-color: #2b3643;
+}
+
+.skin-black .main-header .navbar .sidebar-toggle {
+	display: none;
+}
+
+.skin-black .main-header .navbar .sidebar-toggle:hover {
+	background-color: transparent;
+}
+
+
+/*   is this a (bad) fix??? */
+
+.main-sidebar, .left-side {
+
+    top: 50px;
+    padding-top: 0
+}
+
+.ss-label,
+.form-item label,
+.form-wrapper h4 {
+	font-weight: 300;
+	font-size: 15px;
+	color: #949494;
+}
+
+.ss-remove-label > .form-item > label,
+.ss-remove-label > .form-item > h4,
+.ss-remove-label > .form-wrapper > label,
+.ss-remove-label > .form-wrapper > h4,
+.ss-remove-label > .form-item > legend,
+.ss-remove-label > .form-wrapper > legend {
+	display: none;
+}
+
+.ss-form-inline-text {
+	padding: 17px 0;
+}
+
+.ss-remove-label {
+	background-color: red;
+}
+
+.ss-remove-label > .form-wrapper {
+	background-color: blue;
+}
+
+.ss-remove-label > .form-wrapper > fieldset legend {
+	background-color: green;
+}
+
+body {
+	height: 100vh;
+    width: 100vw;
+	padding: 0 !important;
+	overflow: hidden;
+	
+	.wrapper {
+		height: 100%;
+		
+		#toolbar-administration + div.dialog-off-canvas-main-canvas {
+			margin-top: 78px;
+			height: calc(100vh - 78px - 50px);
+			min-height: auto;
+		}
+		
+		& > div.dialog-off-canvas-main-canvas {
+			height: calc(100vh - 50px);
+			
+			& > .content-wrapper {
+				height: 100%;				
+				& > .content {	
+					overflow: auto;
+					height: 100%;
+				}
+			}
+		}
+	}
+	
+	/* Top bar (USER DATA MENU) */
+
+	
+	/* Side bar (MEGA MENU)*/
+	
+	.main-sidebar {	
+	    z-index: 500;
+		width: 230px;
+		float: left;
+		position: relative;
+		margin: 0;
+		padding: 0;
+		top: 0;
+		
+		.user-panel{
+			&.user-panel-custom {
+				display: none;
+			}
+		}
+		
+		.tb-megamenu .nav li.dropdown.active > .dropdown-toggle,
+		.tb-megamenu .nav li.dropdown.open.active > .dropdown-toggle,
+		.tb-megamenu .nav > li.dropdown.open.active > a:hover,
+		.tb-megamenu .nav > li.dropdown.open.active > span.tb-megamenu-no-link:hover,
+		.tb-megamenu .dropdown-menu .active > a, .tb-megamenu .dropdown-menu .active > a:hover,
+		.tb-megamenu .dropdown-menu .active > span.tb-megamenu-no-link,
+		.tb-megamenu .dropdown-menu .active > span.tb-megamenu-no-link:hover {
+			background-color: #e75b2e !important;
+		}
+		
+		
+		
+		.tb-megamenu {		
+			display: block;
+			position: relative;
+			width: 100%;
+			background-color: transparent;
+			
+			.nav li{
+				border-bottom: solid 1px #2b3643;
+				
+				&.dropdown.open > .dropdown-toggle,
+				a:hover,
+				a:focus	{
+					color: white;
+					background-color: #ed5f2a;
+				}
+				
+				&.dropdown > .dropdown-toggle {
+					.caret {
+						float: right;
+						transform: rotate(-90deg);
+						color: white;
+					}
+				}
+			}
+			
+			.level-1 .tb-megamenu-submenu {
+				left: 100%;				
+				background-color: #364150;
+				top: 0;
+				margin-top: -6px;
+			}
+			
+			.tb-megamenu-column-inner {
+				padding: 0 !important;
+			}
+			
+			.tb-megamenu-subnav .tb-megamenu-item a {
+				color: white;
+				padding: 10px;
+				border: 0;
+				background-image: none;
+				
+				&:hover {
+					background-color: #ed5f2a;
+				}				
+			}
+			
+			.tb-megamenu .dropdown-submenu > .dropdown-menu {
+			}
+				
+		}
+	}
+}
+	
+
+/* Menu */
+
+.tb-megamenu-nav.level-0 {
+	display: flex;
+	flex-direction: column;
+}
+
+/* Log in */
+
+#user-login-form {
+	.js-form-type-checkbox {
+		display: none;
+	}
+}

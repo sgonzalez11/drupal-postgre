@@ -1,0 +1,22 @@
+{#
+/**
+ * @file training_course.html.twig
+ * Default theme implementation to present Training Course data.
+ *
+ * This template is used when viewing Training Course pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_training_course()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('training_course') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

@@ -1,0 +1,180 @@
+eauthority.operations:
+  title: 'Operations'
+  description: 'List all the available operations'
+  route_name: eauthority.operations
+  menu_name: eauthority
+  
+eauthority.operations.customer_management:
+  title: 'Customer Management'
+  description: 'Customer Management'
+  route_name: eauthority.operations.customer_management
+  parent: eauthority.operations
+  menu_name: eauthority
+  weight: -40
+  
+eauthority.operations.training:
+  title: 'Training'
+  description: 'Training'
+  route_name: eauthority.operations.training
+  parent: eauthority.operations
+  menu_name: eauthority
+  weight: -30
+  
+eauthority.operations.medical:
+  title: 'Medical'
+  description: 'Medical'
+  route_name: eauthority.operations.medical
+  parent: eauthority.operations
+  menu_name: eauthority
+  weight: -20
+  
+eauthority.operations.settings:
+  title: 'Settings'
+  description: 'Settings'
+  route_name: eauthority.operations.settings
+  parent: eauthority.operations
+  menu_name: eauthority
+  weight: -10
+  
+eauthority.settings:
+  title: 'Settings'
+  description: 'eAuthority Settings'
+  route_name: eauthority.settings
+  menu_name: eauthority
+
+eauthority.settings.general_settings:
+  title: 'General Settings'
+  description: 'eAuthority General Settings'
+  route_name: eauthority.settings.general_settings
+  parent: eauthority.settings
+  menu_name: eauthority
+
+# Document Parameter menu items definition
+entity.document_parameter.collection:
+  title: 'Document Parameter list'
+  route_name: entity.document_parameter.collection
+  description: 'List Document Parameter entities'
+  parent: eauthority.operations.settings
+
+entity.document_parameter.collection.add:
+  title: 'Document Parameter add'
+  route_name: entity.document_parameter.add_form
+  description: 'Add Document Parameter entities'
+  parent: entity.document_parameter.collection
+
+document_parameter.admin.structure.settings:
+  title: 'Document Parameter settings'
+  description: 'Configure Document Parameter entities'
+  route_name: document_parameter.settings
+  parent: entity.document_parameter.collection
+
+# Customers menu items definition
+entity.customer.collection:
+  title: 'Customers list'
+  route_name: entity.customer.collection
+  description: 'List Customers entities'
+  parent: eauthority.operations.customer_management
+
+entity.customer.collection.add:
+  title: 'Customers add'
+  route_name: entity.customer.add_form
+  description: 'Add Customers entities'
+  parent: entity.customer.collection
+
+customer.admin.structure.settings:
+  title: 'Customers settings'
+  description: 'Configure Customers entities'
+  route_name: customer.settings
+  parent: entity.customer.collection
+
+# Aircraft menu items definition
+entity.aircraft.collection:
+  title: 'Aircraft list'
+  route_name: entity.aircraft.collection
+  description: 'List Aircraft entities'
+  parent: eauthority.operations.customer_management
+
+entity.aircraft.collection.add:
+  title: 'Aircraft add'
+  route_name: entity.aircraft.add_form
+  description: 'Add Aircraft entities'
+  parent: entity.aircraft.collection
+
+aircraft.admin.structure.settings:
+  title: 'Aircraft settings'
+  description: 'Configure Aircraft entities'
+  route_name: aircraft.settings
+  parent: entity.aircraft.collection
+  
+# Customer Profiles menu items definition
+entity.customer_profiles.collection:
+  title: 'Customer Profiles list'
+  route_name: entity.customer_profiles.collection
+  description: 'List Customer Profiles entities'
+  parent: eauthority.operations.customer_management
+
+entity.customer_profiles.collection.add:
+  title: 'Customer Profiles add'
+  route_name: entity.customer_profiles.add_form
+  description: 'Add Customer Profiles entities'
+  parent: entity.customer_profiles.collection
+
+customer_profiles.admin.structure.settings:
+  title: 'Customer Profiles settings'
+  description: 'Configure Customer Profiles entities'
+  route_name: customer_profiles.settings
+  parent: entity.customer_profiles.collection
+  
+# Customer User menu items definition
+entity.customer_user.collection:
+  title: 'Customer User list'
+  route_name: entity.customer_user.collection
+  description: 'List Customer User entities'
+  parent: eauthority.operations.customer_management
+
+entity.customer_user.collection.add:
+  title: 'Customer User add'
+  route_name: entity.customer_user.add_form
+  description: 'Add Customer User entities'
+  parent: entity.customer_user.collection
+
+customer_user.admin.structure.settings:
+  title: 'Customer User settings'
+  description: 'Configure Customer User entities'
+  route_name: customer_user.settings
+  parent: entity.customer_user.collection
+
+# Identifier Types menu items definition
+eauthority.operations.identifier_type:
+  title: 'Identifier Type'
+  description: 'Identifier Types'
+  route_name: eauthority.operations.identifier_type
+  parent: eauthority.operations
+  menu_name: eauthority
+  weight: 10
+
+entity.identifier_type.collection:
+  title: 'Identifier Types list'
+  route_name: entity.identifier_type.collection
+  description: 'List Identifier Types entities'
+  parent: eauthority.operations.identifier_type
+
+identifier_type.admin.structure.settings:
+  title: 'Identifier Types settings'
+  description: 'Configure Identifier Types entities'
+  route_name: identifier_type.settings
+  parent: eauthority.operations.identifier_type
+
+eauthority.eauthority_general:
+  title: 'eAuthority'
+  route_name: eauthority.eauthority_settings_form
+  description: 'eAuthority Section'
+  parent: system.admin_config
+  weight: 99
+
+eauthority.eauthority_settings_form:
+  title: 'General Settings'
+  route_name: eauthority.eauthority_settings_form
+  description: 'Manage eAuthority Settings'
+  parent: eauthority.eauthority_general
+  weight: 1

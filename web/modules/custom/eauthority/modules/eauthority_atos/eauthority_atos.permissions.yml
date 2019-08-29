@@ -1,0 +1,135 @@
+add training course entities:
+  title: 'Create new Training Course entities'
+
+administer training course entities:
+  title: 'Administer Training Course entities'
+  description: 'Allow to access the administration form to configure Training Course entities.'
+  restrict access: true
+
+delete training course entities:
+  title: 'Delete Training Course entities'
+
+edit training course entities:
+  title: 'Edit Training Course entities'
+
+view published training course entities:
+  title: 'View published Training Course entities'
+
+view unpublished training course entities:
+  title: 'View unpublished Training Course entities'
+
+add training record entities:
+  title: 'Create new Training Record entities'
+
+administer training record entities:
+  title: 'Administer Training Record entities'
+  description: 'Allow to access the administration form to configure Training Record entities.'
+  restrict access: true
+
+delete training record entities:
+  title: 'Delete Training Record entities'
+
+edit training record entities:
+  title: 'Edit Training Record entities'
+
+cancel training record entities:
+  title: 'Cancel Training Record entities'
+
+report start date training record entities:
+  title: 'Report Start Date Training Record entities'
+
+finish course training record entities:
+  title: 'Finish Course Training Record entities'
+
+view published training record entities:
+  title: 'View published Training Record entities'
+
+view unpublished training record entities:
+  title: 'View unpublished Training Record entities'
+
+add attendee entities:
+  title: 'Create new Attendee entities'
+
+administer attendee entities:
+  title: 'Administer Attendee entities'
+  description: 'Allow to access the administration form to configure Attendee entities.'
+  restrict access: true
+
+delete attendee entities:
+  title: 'Delete Attendee entities'
+
+edit attendee entities:
+  title: 'Edit Attendee entities'
+
+view published attendee entities:
+  title: 'View published Attendee entities'
+
+view unpublished attendee entities:
+  title: 'View unpublished Attendee entities'
+
+view my atos customer information:
+  title: 'View my ATO´s Customer Information'
+  
+view my atos training record:
+  title: 'View my ATO´s Training Record'
+  
+add attendee experience entities:
+  title: 'Create new Attendee Experience entities'
+
+administer attendee experience entities:
+  title: 'Administer Attendee Experience entities'
+  description: 'Allow to access the administration form to configure Attendee Experience entities.'
+  restrict access: true
+
+delete attendee experience entities:
+  title: 'Delete Attendee Experience entities'
+
+edit attendee experience entities:
+  title: 'Edit Attendee Experience entities'
+
+view published attendee experience entities:
+  title: 'View published Attendee Experience entities'
+
+view unpublished attendee experience entities:
+  title: 'View unpublished Attendee Experience entities'
+add flight experience type entities:
+  title: 'Create new Flight Experience Type entities'
+
+administer flight experience type entities:
+  title: 'Administer Flight Experience Type entities'
+  description: 'Allow to access the administration form to configure Flight Experience Type entities.'
+  restrict access: true
+
+delete flight experience type entities:
+  title: 'Delete Flight Experience Type entities'
+
+edit flight experience type entities:
+  title: 'Edit Flight Experience Type entities'
+
+view published flight experience type entities:
+  title: 'View published Flight Experience Type entities'
+
+view unpublished flight experience type entities:
+  title: 'View unpublished Flight Experience Type entities'
+
+edit training organization in training record entities:
+  title: 'Edit Training Organization in Training Record entities'
+add training record attendee results entities:
+  title: 'Create new Training Record Attendee Results entities'
+
+administer training record attendee results entities:
+  title: 'Administer Training Record Attendee Results entities'
+  description: 'Allow to access the administration form to configure Training Record Attendee Results entities.'
+  restrict access: true
+
+delete training record attendee results entities:
+  title: 'Delete Training Record Attendee Results entities'
+
+edit training record attendee results entities:
+  title: 'Edit Training Record Attendee Results entities'
+
+view published training record attendee results entities:
+  title: 'View published Training Record Attendee Results entities'
+
+view unpublished training record attendee results entities:
+  title: 'View unpublished Training Record Attendee Results entities'

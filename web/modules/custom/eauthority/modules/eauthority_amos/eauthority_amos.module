@@ -1,0 +1,486 @@
+<?php
+
+/**
+ * @file
+ * Contains eauthority_amos.module.
+ */
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\user\UserInterface;
+use Drupal\Core\Url;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Drupal\views\ViewExecutable;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+use Drupal\eauthority_amos\Entity\MedicalExamination;
+
+/**
+ * Implements hook_help().
+ */
+function eauthority_amos_help($route_name, RouteMatchInterface $route_match) {
+    switch ($route_name) {
+        // Main module help for the eauthority_amos module.
+        case 'help.page.eauthority_amos':
+            $output = '';
+            $output .= '<h3>' . t('About') . '</h3>';
+            $output .= '<p>' . t('eAuthority Portal - AMOs') . '</p>';
+            return $output;
+
+        default:
+    }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function eauthority_amos_theme($existing, $type, $theme, $path) {
+    $themes['eauthority_amos'] = [
+        'render element' => 'children',
+    ];
+
+    $themes['medical_assessment__crud'] = [
+        'render element' => 'form'
+    ];
+
+    $themes['medical_assessment__cancel'] = [
+        'render element' => 'form'
+    ];
+
+    $themes['medical_assessment__send_to_authority'] = [
+        'render element' => 'form'
+    ];
+
+    $themes['medical_assessment__close'] = [
+        'render element' => 'form'
+    ];
+
+    $themes['medical_assessment__report_amo'] = [
+      'template' => 'medical-assessment--report-amo',
+      'variables' => array('title' => '', 'medical_assessment' => '' , 'medical_examinations' => array(), 'medical_history' => array()),
+    ];
+
+    $themes['medical_examination'] = [
+        'render element' => 'elements',
+        'file' => 'medical_examination.page.inc',
+        'template' => 'medical_examination',
+    ];
+
+    $themes['medical_examination__crud'] = [
+        'render element' => 'form'
+    ];
+
+    $themes['medical_examination__cancel'] = [
+        'render element' => 'form'
+    ];
+
+    $themes['medical_examination__finish'] = [
+        'render element' => 'form'
+    ];
+
+    $themes['medical_examination__undo_completed'] = [
+        'render element' => 'form'
+    ];
+
+    $themes['medical_examination__undo_closed'] = [
+        'render element' => 'form'
+    ];
+
+    $themes['medical_examination__close'] = [
+        'render element' => 'form'
+    ];
+
+    $themes['medical_examination_content_add_list'] = [
+        'render element' => 'content',
+        'variables' => ['content' => NULL],
+        'file' => 'medical_examination.page.inc',
+    ];
+
+    $themes['medical_information'] = [
+        'template' => 'medical-information',
+        'variables' => array('organization' => array(), 'title' => '')
+    ];
+
+    return $themes;
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function eauthority_amos_preprocess_page_title(&$variables) {
+    $arg = explode('/', \Drupal::request()->getpathInfo());
+    if (isset($arg[3])) {
+        if ($arg[1] == "medical" && ($arg[2] == "medical_assessment" || $arg[2] == "medical_examination")) {
+            $pages = array('cancel','send-to-authority','close','finish','undo-completed','undo-closed');
+            if (isset($arg[4]) && in_array($arg[4], $pages)) {
+                $entity = \Drupal::entityTypeManager()->getStorage($arg[2])->load($arg[3]);
+                $entityName = str_replace('_', ' ', $arg[2]);
+                $variables['title'] = ucwords($entityName) . ' - ' . strip_tags($variables['title']->__tostring()) . ' ' . $entity->getName();
+            } else if(isset($arg[4]) && $arg[4] == "delete"){
+                $entity = \Drupal::entityTypeManager()->getStorage($arg[2])->load($arg[3]);
+                $entityName = str_replace('_', ' ', $arg[2]);
+                $variables['title'] = ucwords($entityName) . ' - ' . t('Delete') . ' ' . $entity->getName();
+            } else if(isset($arg[4]) && $arg[4] == "edit"){
+                $entityName = str_replace('_', ' ', $arg[2]);
+                $variables['title'] = ucwords($entityName) . ' - ' . strip_tags($variables['title']->__tostring());
+            }
+        }
+    }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function eauthority_amos_theme_suggestions_medical_examination(array $variables) {
+    $suggestions = [];
+    $entity = $variables['elements']['#medical_examination'];
+    $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+    $suggestions[] = 'medical_examination__' . $sanitized_view_mode;
+    $suggestions[] = 'medical_examination__' . $entity->bundle();
+    $suggestions[] = 'medical_examination__' . $entity->bundle() . '__' . $sanitized_view_mode;
+    $suggestions[] = 'medical_examination__' . $entity->id();
+    $suggestions[] = 'medical_examination__' . $entity->id() . '__' . $sanitized_view_mode;
+    return $suggestions;
+}
+
+/**
+ * Implements hook_theme_suggestions_alter().
+ */
+function eauthority_amos_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
+
+    if ($hook == 'form' & !empty($variables['element']['#id'])) {
+        $suggestions[] = 'form__' . str_replace('-', '_', $variables['element']['#id']);
+    }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function eauthority_amos_form_medical_assessment_edit_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+
+    $user = \Drupal::currentUser();
+    $entity = $form_state->getFormObject()->getEntity();
+    $status = $entity->getEntityStatus();
+
+    $form['#checkbox_active'] = 0;
+    $form['name']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+    $form['start_date']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+
+
+    //General
+    //Certificate Class
+    $form['class']['widget']['#disabled'] = 'disabled';
+    //Aero medical Center
+    $form['customer_amo']['widget']['target_id']['#disabled'] = 'disabled';
+    //Scheduled Appointment Date
+    $form['scheduled_appointment_date']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+    //Responsible Medical Examiner
+    if ($status === 'OPN' || $status === 'SCH' || $status === 'IPR' || $status === 'PVA') {
+        if (!$user->hasPermission('edit general section of the medical assessment form')) {
+            $form['amo_medical_examiner']['widget']['target_id']['#disabled'] = 'disabled';
+        }
+    } else {
+        $form['amo_medical_examiner']['widget']['target_id']['#disabled'] = 'disabled';
+    }
+
+
+    //Responsible Medical Examiner's Declaration
+    //Examination Notes
+    $form['amo_examination_notes']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+    //Examination Date
+    $form['amo_examination_date']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+
+
+    //Responsible Medical Assessor's Declaration
+    //Assessment Recommendation
+    $form['assessment_recommendation']['widget']['#disabled'] = 'disabled';
+    //Assessment Limitations
+    $form['assessment_limitations']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+    //Assessment Notes
+    $form['assessment_notes']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+    //Responsible Medical Assessor
+    $form['assessment_medical_assessor']['widget']['target_id']['#disabled'] = 'disabled';
+    //Assessment Date
+    $form['assessment_date']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+
+    // Cancel
+    //if ($status === 'CAN') {
+    $form['cancellation_date']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+    $form['cancellation_user']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+    $form['cancellation_reason']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+    //}
+}
+
+function MedicalExaminationApplyRules(&$form, $form_state) {
+
+    $user = \Drupal::currentUser();
+    $entity = $form_state->getFormObject()->getEntity();
+    $status = $entity->getEntityStatus();
+
+    $form['name']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+    $form['start_date']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+
+    //General
+    //Certificate Class
+    $form['class']['widget']['#disabled'] = 'disabled';
+    //Examination Date
+    $form['examination_date']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+    //Responsible Medical Examiner
+    if ($status === 'OPN' || $status === 'SCH') {
+        if (!$user->hasPermission('allows users to assign aviation medical examination')) {
+            $form['medical_examiner']['widget'][0]['target_id']['#disabled'] = 'disabled';
+        }
+    } else {
+        $form['medical_examiner']['widget'][0]['target_id']['#disabled'] = 'disabled';
+    }
+    //Responsible Medical Assessor
+    if ($status === 'PAS' || $status === 'ASC') {
+        if (!$user->hasPermission('allows users to assign a medical assessor')) {
+            $form['medical_assessor']['widget'][0]['target_id']['#disabled'] = 'disabled';
+        }
+    } else {
+        $form['medical_assessor']['widget'][0]['target_id']['#disabled'] = 'disabled';
+    }
+
+    //Each bundle edition by role and status
+    if ($status !== 'SCH' || !$user->hasPermission('allow users to edit ' . $entity->bundle() . ' examination')) {
+        foreach ($form as $key => $value) {
+            if (strpos($key, 'field_number_float') !== false) {
+                $form[$key]['widget']['#disabled'] = 'disabled';
+            }
+            if (strpos($key, 'field_text_list') !== false) {
+                $form[$key]['widget']['#disabled'] = 'disabled';
+            }
+            if (strpos($key, 'field_text_plain') !== false) {
+                $form[$key]['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+            }
+            if (strpos($key, 'field_text_plain_long') !== false) {
+                $form[$key]['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+            }
+        }
+    }
+
+    //Medical Examiner's Declaration
+    //Examination Notes
+    $form['examination_notes']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+
+    //Medical Assessor's Declaration
+    //Assessment Result
+    $form['assessment_result']['widget']['#disabled'] = 'disabled';
+    //Assessment Notes
+    $form['assessment_notes']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+    //Assessment Date
+    $form['assessment_date']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+
+    // Cancel
+    $form['cancellation_date']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+    $form['cancellation_user']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+    $form['cancellation_reason']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function eauthority_amos_form_medical_examination_examen_cardiovascular_edit_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+    MedicalExaminationApplyRules($form, $form_state);
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function eauthority_amos_form_medical_examination_examen_neurologico_edit_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+    MedicalExaminationApplyRules($form, $form_state);
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function eauthority_amos_form_medical_examination_examen_medico_general_edit_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+    MedicalExaminationApplyRules($form, $form_state);
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function eauthority_amos_form_medical_examination_examen_oftalmologico_edit_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+    MedicalExaminationApplyRules($form, $form_state);
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function eauthority_amos_form_medical_examination_examen_otorrinolaringologico_edit_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+    MedicalExaminationApplyRules($form, $form_state);
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function eauthority_amos_form_medical_examination_examen_psicologico_y_psicomotor_edit_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+    MedicalExaminationApplyRules($form, $form_state);
+}
+
+/**
+ * Implements hook_user_login().
+ */
+function eauthority_amos_user_login(UserInterface $account) {
+
+    unset($_SESSION["current_amo_id"]);
+    $host = Drupal::service('domain.negotiator')->getActiveDomain(TRUE);
+    $portal = substr($host->id(), 0, 4);
+
+    if ($portal === 'amos') {
+
+        $query = db_select('customer', 'c')->fields('c', array('id'));
+        $query->innerJoin('customer_field_data', 'cfd', "c.id = cfd.id");
+        $query->innerJoin('customer__customer_users', 'ccu', "c.id = ccu.entity_id");
+        $query->innerJoin('customer_user', 'cu', "ccu.customer_users_target_id = cu.id");
+        $query->innerJoin('customer_user_field_data', 'cufd', "cufd.id = cu.id");
+        $query->innerJoin('users', 'u', "u.uid = cufd.user");
+        $query->innerJoin('users_field_data', 'ufd', "ufd.uid = u.uid");
+        $query->innerJoin('customer__customer_profiles', 'ccp', "ccp.entity_id = cfd.id");
+        $query->innerJoin('customer_profiles_field_data', 'cpfd', "ccp.customer_profiles_target_id = cpfd.id");
+        $query->condition('cpfd.behaviour_as', 'AMO', "=");
+        $query->condition('u.uid', $account->id(), "=");
+        $result = $query->execute();
+
+        $item = array();
+        foreach ($result as $organization) {
+            $item[] = $organization->id;
+        }
+
+        if (isset($item[0]) && !isset($item[1])) {
+            $_SESSION["current_amo_id"] = $item[0];
+            $response = new RedirectResponse(Url::fromRoute('entity.medical_organization.my_information')->toString());
+            $response->send();
+        } else if (!isset($item[0])) {
+            $_SESSION["current_amo_id"] = 25;
+            $value = "There are NO Organization associated to user - Default Organization Added";
+            drupal_set_message(t($value), 'error');
+            $response = new RedirectResponse(Url::fromRoute('entity.medical_organization.my_information')->toString());
+            $response->send();
+        } else if (isset($item[1])) {
+            $_SESSION["current_amo_id"] = $item[0];
+            $value = "There are more than one Organization associated to user";
+            drupal_set_message(t($value), 'status');
+        }
+    }
+}
+
+/**
+ * Implements hook_user_logout().
+ */
+function eauthority_amos_user_logout(AccountInterface $account) {
+    unset($_SESSION["current_amo_id"]);
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function eauthority_amos_form_medical_examination_examen_medico_general_add_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+    $form['field_number_float_00']['widget']['0']['value']['#title_display'] = 'none';
+    $form['field_number_float_01']['widget']['0']['value']['#title_display'] = 'none';
+    $form['field_number_float_02']['widget']['0']['value']['#title_display'] = 'none';
+    $form['field_number_float_03']['widget']['0']['value']['#title_display'] = 'none';
+    $form['field_number_float_04']['widget']['0']['value']['#title_display'] = 'none';
+    $form['field_number_float_05']['widget']['0']['value']['#title_display'] = 'none';
+    $form['field_number_float_06']['widget']['0']['value']['#title_display'] = 'none';
+    $form['field_number_float_07']['widget']['0']['value']['#title_display'] = 'none';
+    $form['field_number_float_08']['widget']['0']['value']['#title_display'] = 'none';
+    $form['field_text_plain_02']['widget']['0']['value']['#title_display'] = 'none';
+}
+
+/**
+ * Implementation of hook_views_query_alter
+ * @param type $view
+ * @param type $query 
+ */
+function eauthority_amos_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+    if ($view->storage->get('id') === 'amos_all_medical_assessments' && $view->current_display === 'all_medical_assessment') {
+        $user = \Drupal::currentUser();
+        $allowedStatuses = array();
+        if ($user->hasPermission('view open medical assessment')) {
+            $allowedStatuses[] = 'OPN';
+        }
+        if ($user->hasPermission('view scheduled medical assessment')) {
+            $allowedStatuses[] = 'SCH';
+        }
+        if ($user->hasPermission('view in progress medical assessment')) {
+            $allowedStatuses[] = 'IPR';
+        }
+        if ($user->hasPermission('view pending validation medical assessment')) {
+            $allowedStatuses[] = 'PVA';
+        }
+        if ($user->hasPermission('view pending assessment medical assessment')) {
+            $allowedStatuses[] = 'PAS';
+        }
+        if ($user->hasPermission('view assessment scheduled medical assessment')) {
+            $allowedStatuses[] = 'ASC';
+        }
+        if ($user->hasPermission('view assessment in progress medical assessment')) {
+            $allowedStatuses[] = 'AIP';
+        }
+        if ($user->hasPermission('view pending recommendation medical assessment')) {
+            $allowedStatuses[] = 'PRE';
+        }
+        if ($user->hasPermission('view closed medical assessment')) {
+            $allowedStatuses[] = 'CLO';
+        }
+        if ($user->hasPermission('view canceled medical assessment')) {
+            $allowedStatuses[] = 'CAN';
+        }
+
+        foreach ($query->where as &$condition_group) {
+            _recursively_alter_query_conditions($condition_group['conditions'], $allowedStatuses);
+        }
+    }
+    if ($view->storage->get('id') === 'amos_all_medical_examinations' && $view->current_display === 'all_medical_examination') {
+        $user = \Drupal::currentUser();
+        $allowedStatuses = array();
+        if ($user->hasPermission('view open medical examination')) {
+            $allowedStatuses[] = 'OPN';
+        }
+        if ($user->hasPermission('view scheduled medical examination')) {
+            $allowedStatuses[] = 'SCH';
+        }
+        if ($user->hasPermission('view completed medical examination')) {
+            $allowedStatuses[] = 'CMP';
+        }
+        if ($user->hasPermission('view pending assessment medical examination')) {
+            $allowedStatuses[] = 'PAS';
+        }
+        if ($user->hasPermission('view assessment scheduled medical examination')) {
+            $allowedStatuses[] = 'ASC';
+        }
+        if ($user->hasPermission('view closed medical examination')) {
+            $allowedStatuses[] = 'CLO';
+        }
+        if ($user->hasPermission('view canceled medical examination')) {
+            $allowedStatuses[] = 'CAN';
+        }
+        foreach ($query->where as &$condition_group) {
+            _recursively_alter_query_conditions($condition_group['conditions'], $allowedStatuses);
+        }
+    }
+}
+
+function _recursively_alter_query_conditions(&$conditions, $allowedStatuses) {
+    foreach ($conditions as &$condition) {
+        if (isset($condition['field']) && is_a($condition['field'], 'Drupal\Core\Database\Query\Condition')) {
+            _recursively_alter_query_conditions($condition['field']->conditions(), $allowedStatuses);
+        } else {
+            _alter_query_condition($condition, $allowedStatuses);
+        }
+    }
+}
+
+function _alter_query_condition(&$condition, $allowedStatuses) {
+    if (isset($condition['field']) && ($condition['field'] === 'medical_assessment_field_data.entity_status') && $condition['value'] === 'XXX') {
+        $condition['value'] = $allowedStatuses;
+        $condition['operator'] = 'IN';
+    }
+    if (isset($condition['field']) && ($condition['field'] === 'medical_examination_field_data.entity_status') && $condition['value'] === 'XXX') {
+        $condition['value'] = $allowedStatuses;
+        $condition['operator'] = 'IN';
+    }
+}

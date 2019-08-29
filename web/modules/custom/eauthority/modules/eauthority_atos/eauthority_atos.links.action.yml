@@ -1,0 +1,35 @@
+entity.training_course.add_form:
+  route_name: entity.training_course.add_form
+  title: 'Add Training Course'
+  appears_on:
+    - entity.training_course.collection
+entity.training_record.add_form:
+  route_name: entity.training_record.add_form
+  title: 'Add Training Record'
+  appears_on:
+    - entity.training_record.collection
+entity.training_record_attendee.add_form:
+  route_name: entity.training_record_attendee.add_form
+  title: 'Add Attendee'
+  appears_on:
+    - entity.training_record_attendee.collection
+entity.customer_training_courses.add_form:
+  route_name: entity.customer_training_courses.add_form
+  title: 'Add Customer Training Course'
+  appears_on:
+    - entity.customer_training_courses.collection
+entity.training_record_attendee_exp.add_form:
+  route_name: entity.training_record_attendee_exp.add_form
+  title: 'Add Attendee Experience'
+  appears_on:
+    - entity.training_record_attendee_exp.collection
+entity.flight_experience_type.add_form:
+  route_name: entity.flight_experience_type.add_form
+  title: 'Add Flight Experience Type'
+  appears_on:
+    - entity.flight_experience_type.collection
+entity.training_record_attendee_result.add_form:
+  route_name: entity.training_record_attendee_result.add_form
+  title: 'Add Training Record Attendee Results'
+  appears_on:
+    - entity.training_record_attendee_result.collection

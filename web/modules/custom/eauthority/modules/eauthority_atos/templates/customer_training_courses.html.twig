@@ -1,0 +1,22 @@
+{#
+/**
+ * @file customer_training_courses.html.twig
+ * Default theme implementation to present Customer Training Course data.
+ *
+ * This template is used when viewing Customer Training Course pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_customer_training_courses()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('customer_training_courses') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

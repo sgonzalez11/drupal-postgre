@@ -1,0 +1,41 @@
+entity.training_record.cancel_form:
+  path: '/training/training_record/{training_record}/cancel'
+  defaults:
+    _title: 'Cancel Transaction'
+    _entity_form: training_record.cancel
+  requirements:
+    _permission: 'cancel training record entities'
+  options:
+    _admin_route: true
+entity.training_record.report_start_date_form:
+  path: '/training/training_record/{training_record}/report-start-date'
+  defaults:
+    _title: 'Report Start Date'
+    _entity_form: training_record.report_start_date
+  requirements:
+    _permission: 'report start date training record entities'
+  options:
+    _admin_route: true
+entity.training_record.finish_course_form:
+  path: '/training/training_record/{training_record}/finish-course'
+  defaults:
+    _title: 'Finish Course'
+    _entity_form: training_record.finish_course
+  requirements:
+    _permission: 'finish course training record entities'
+  options:
+    _admin_route: true
+entity.training_organization.my_information:
+  path: '/atos/my-information'
+  defaults:
+    _controller: '\Drupal\eauthority_atos\Controller\MyInformation::contentMyInformation'
+    _title: 'My Information'
+  requirements:
+      _permission: 'access content'
+entity.customer_training_course.check_type:
+  path: '/get/customer/customer_training_course/{tci}'
+  defaults:
+    _controller: '\Drupal\eauthority_atos\Controller\TrainingRecordHelper::checkCourseType'
+  methods: [GET]
+  requirements:
+      _permission: 'access content'

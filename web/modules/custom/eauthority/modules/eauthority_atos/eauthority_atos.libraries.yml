@@ -1,0 +1,6 @@
+eauthority-atos-library:
+  version: 1.x
+  js:
+    js/eauthority_atos.js: {}
+  dependencies:
+  - core/jquery

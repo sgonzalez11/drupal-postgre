@@ -1,0 +1,100 @@
+entity.medical_assessment.cancel_form:
+  path: '/medical/medical_assessment/{medical_assessment}/cancel'
+  defaults:
+    _title: 'Cancel'
+    _entity_form: medical_assessment.cancel
+  requirements:
+    _permission: 'allows users to cancel medical assessment entities'
+  options:
+    _admin_route: true
+entity.medical_assessment.send_to_authority_form:
+  path: '/medical/medical_assessment/{medical_assessment}/send-to-authority'
+  defaults:
+    _title: 'Send to Authority'
+    _entity_form: medical_assessment.send_to_authority
+  requirements:
+    _permission: "edit responsible medical examiner's declaration page of the medical assessment form"
+  options:
+    _admin_route: true
+entity.medical_assessment.close_form:
+  path: '/medical/medical_assessment/{medical_assessment}/close'
+  defaults:
+    _title: 'Close'
+    _entity_form: medical_assessment.close
+  requirements:
+    _permission: "edit responsible medical assessor's declaration page of the medical assessment form"
+  options:
+    _admin_route: true
+entity.medical_assessment.report:
+  path: '/medical/medical_assessment/{medical_assessment}/report'
+  defaults:
+    _controller: '\Drupal\eauthority_amos\Controller\MedicalAssessmentReportAmo::getReport'
+  options:
+    parameters:
+      medical_assessment:
+        type: entity:medical_assessment
+    _admin_route: true
+  requirements:
+    _permission: "allow user to view medical assessment's inform"  
+entity.medical_examination.cancel_form:
+  path: '/medical/medical_examination/{medical_examination}/cancel'
+  defaults:
+    _title: 'Cancel'
+    _entity_form: medical_examination.cancel
+  requirements:
+    _permission: 'allows users to cancel medical examination entities'
+  options:
+    _admin_route: true
+entity.medical_examination.finish_form:
+  path: '/medical/medical_examination/{medical_examination}/finish'
+  defaults:
+    _title: 'Finish'
+    _entity_form: medical_examination.finish
+  requirements:
+    _permission: "allows users to finish an medical examination"
+  options:
+    _admin_route: true
+entity.medical_examination.undo_completed_form:
+  path: '/medical/medical_examination/{medical_examination}/undo-completed'
+  defaults:
+    _title: 'Undo'
+    _entity_form: medical_examination.undo_completed
+  requirements:
+    _permission: "allows users to undo completed examination"
+  options:
+    _admin_route: true
+entity.medical_examination.undo_closed_form:
+  path: '/medical/medical_examination/{medical_examination}/undo-closed'
+  defaults:
+    _title: 'Undo'
+    _entity_form: medical_examination.undo_closed
+  requirements:
+    _permission: "allows users to undo closed examination"
+  options:
+    _admin_route: true
+entity.medical_examination.close_form:
+  path: '/medical/medical_examination/{medical_examination}/close'
+  defaults:
+    _title: 'Close'
+    _entity_form: medical_examination.close
+  requirements:
+    _permission: "allows users to close a medical examination"
+  options:
+    _admin_route: true
+entity.medical_organization.my_information:
+  path: '/amos/my-information'
+  defaults:
+    _controller: '\Drupal\eauthority_amos\Controller\MyInformation::contentMyInformation'
+    _title: 'My Information'
+  requirements:
+    _permission: 'access content'
+eauthority_amos.my_taskconsole:
+  path: '/my-request/{highlightQueueID}'
+  defaults:
+    _controller: '\Drupal\eauthority_amos\Controller\EauthorityTaskConsole::getTasks'
+    _title: 'Mis Solicitudes'
+    highlightQueueID: '0'
+  requirements:
+    _permission: 'view maestro task console'
+  options:
+    no_cache: TRUE

@@ -1,0 +1,116 @@
+# Medical Assessment routing definition
+medical_assessment.settings_tab:
+  route_name: medical_assessment.settings
+  title: 'Settings'
+  base_route: medical_assessment.settings
+
+entity.medical_assessment.canonical:
+  route_name: entity.medical_assessment.canonical
+  base_route: entity.medical_assessment.canonical
+  title: 'View'
+
+entity.medical_assessment.edit_form:
+  route_name: entity.medical_assessment.edit_form
+  base_route: entity.medical_assessment.canonical
+  title: 'Edit Assessment'
+
+entity.medical_assessment.report:
+  route_name: entity.medical_assessment.report
+  base_route: entity.medical_assessment.canonical
+  title: "View medical assessment's inform"
+  weight: 11
+
+entity.medical_assessment.delete_form:
+  route_name:  entity.medical_assessment.delete_form
+  base_route:  entity.medical_assessment.canonical
+  title: Delete
+  weight: 10
+
+entity.medical_assessment.cancel_form:
+  route_name:  entity.medical_assessment.cancel_form
+  base_route:  entity.medical_assessment.canonical
+  title: 'Cancel'
+  weight: 9
+
+entity.medical_assessment.send_to_authority_form:
+  route_name:  entity.medical_assessment.send_to_authority_form
+  base_route:  entity.medical_assessment.canonical
+  title: 'Send to Authority'
+  weight: 8
+
+entity.medical_assessment.close_form:
+  route_name:  entity.medical_assessment.close_form
+  base_route:  entity.medical_assessment.canonical
+  title: 'Close'
+  weight: 7
+
+# Medical Examination routing definition
+
+entity.medical_examination.canonical:
+  route_name: entity.medical_examination.canonical
+  base_route: entity.medical_examination.canonical
+  title: 'View'
+
+entity.medical_examination.edit_form:
+  route_name: entity.medical_examination.edit_form
+  base_route: entity.medical_examination.canonical
+  title: 'Edit Examination'
+
+entity.medical_examination.delete_form:
+  route_name:  entity.medical_examination.delete_form
+  base_route:  entity.medical_examination.canonical
+  title: Delete
+  weight: 10
+
+entity.medical_examination.cancel_form:
+  route_name:  entity.medical_examination.cancel_form
+  base_route:  entity.medical_examination.canonical
+  title: 'Cancel'
+  weight: 9
+
+entity.medical_examination.finish_form:
+  route_name:  entity.medical_examination.finish_form
+  base_route:  entity.medical_examination.canonical
+  title: 'Finish'
+  weight: 8
+
+entity.medical_examination.undo_completed_form:
+  route_name:  entity.medical_examination.undo_completed_form
+  base_route:  entity.medical_examination.canonical
+  title: 'Undo'
+  weight: 7
+
+entity.medical_examination.undo_closed_form:
+  route_name:  entity.medical_examination.undo_closed_form
+  base_route:  entity.medical_examination.canonical
+  title: 'Undo'
+  weight: 6
+
+entity.medical_examination.close_form:
+  route_name:  entity.medical_examination.close_form
+  base_route:  entity.medical_examination.canonical
+  title: 'Close'
+  weight: 5
+
+# Medical Assessment Recommendations routing definition
+med_assessmt_recommendation.settings_tab:
+  route_name: med_assessmt_recommendation.settings
+  title: 'Settings'
+  base_route: med_assessmt_recommendation.settings
+
+entity.med_assessmt_recommendation.canonical:
+  route_name: entity.med_assessmt_recommendation.canonical
+  base_route: entity.med_assessmt_recommendation.canonical
+  title: 'View'
+
+entity.med_assessmt_recommendation.edit_form:
+  route_name: entity.med_assessmt_recommendation.edit_form
+  base_route: entity.med_assessmt_recommendation.canonical
+  title: 'Edit'
+
+entity.med_assessmt_recommendation.delete_form:
+  route_name:  entity.med_assessmt_recommendation.delete_form
+  base_route:  entity.med_assessmt_recommendation.canonical
+  title: Delete
+  weight: 10
+

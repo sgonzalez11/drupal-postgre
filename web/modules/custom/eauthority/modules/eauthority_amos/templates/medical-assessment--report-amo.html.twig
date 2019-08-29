@@ -1,0 +1,135 @@
+{#
+foreach($examenes as $key => $examen{7
+    $tipo_de_examination = $examen['tipo_bundle'];
+{% include '@eauthority_amos/medical-examination--print--$tipo_de_examination.html.twig' %}
+}
+#}
+{#<p>{{ kint(medical_assessment.customer_applicant.entity|keys) }}</p>#}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-item">
+                <label>{{ medical_assessment.customer_applicant.entity.last_name.fieldDefinition.label }}</label>
+                <p>{{ medical_assessment.customer_applicant.entity.last_name.value }}</p>
+            </div>
+            <div class="form-item">
+                <label>{{ medical_assessment.customer_applicant.entity.first_name.fieldDefinition.label }}</label>
+                <p>{{ medical_assessment.customer_applicant.entity.first_name.value }} {{ ' ' }} {{ medical_assessment.customer_applicant.entity.middle_name.value }}</p>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-item">
+                <label>{{ medical_assessment.customer_applicant.entity.id_type.value }}</label>
+                <p>{{ medical_assessment.customer_applicant.entity.id_number.value }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="form-item">
+                <label>{{ medical_assessment.customer_applicant.entity.gender.fieldDefinition.label }}</label>
+                <p>{{ medical_assessment.customer_applicant.entity.gender.value }}</p>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="form-item">
+                <label>{{ medical_assessment.customer_applicant.entity.address.fieldDefinition.label }}</label>
+                <p>{{ medical_assessment.customer_applicant.entity.address.value }}</p>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="form-item">
+                <label>{{medical_assessment.customer_applicant.entity.telephone.fieldDefinition.label }}</label>
+                <p>{{ medical_assessment.customer_applicant.entity.telephone.value }}</p>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="form-item">
+                <label>{{ medical_assessment.class.fieldDefinition.label }}</label>
+                {% set class = medical_assessment.class.value %}
+                {% if class == 'C1'%}
+                    <p>{{ 'Clase 1' }}</p>
+                {% elseif class == 'C2' %}
+                    <p>{{ 'Clase 2' }}</p>
+                {% elseif class == 'C3' %}
+                    <p>{{ 'Clase 3' }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% include '@eauthority_amos/medical-examination--print--medical-history.html.twig' %}
+    {% for item in medical_examinations %}
+        {% set medical_type = item.type.value[0].target_id %}
+        {% include '@eauthority_amos/medical-examination--print--' ~ medical_type ~ '.html.twig' %}
+    {% endfor %}
+
+</div>
+
+
+{#
+<label>{{ 'User ID' }}</label>
+<p>{{ medical_assessment.id.value }}</p>
+<label>{{ 'Name' }}</label>
+<p>{{ medical_assessment.name.value }}</p>
+<label>{{ 'Entity Status' }}</label>
+{% set status = medical_assessment.entity_status.value %}
+{% if status == 'IPR' %}
+    <p>{{ 'In Progress' }}</p>
+{% elseif status == 'OPN' %}
+    <p>{{ 'Open' }}</p>
+{% endif %}
+<label>{{ 'Customer AMO' }}</label>
+<p>{{ medical_assessment.customer_amo.entity.name.value }}</p>
+{# same thing using twig tweak - JUST FOR REFERENCE
+{% set cid = medical_assessment.customer_amo.target_id %}
+<p>{{ drupal_field('name', 'customer', cid) }}</p>
+<label>{{ 'Tipo Assessment'|t }}</label>
+<p>{{ medical_assessment.assessment_type.value }}</p>
+<label>{{ 'Medical History' }}</label>
+<p>{{ medical_assessment.medical_history.value }}</p>
+<label>{{ 'Creation Date' }}</label>
+<p>{{ medical_assessment.creation_date.value }}</p>
+<label>{{ 'Scheduled Appointment Date' }}</label>
+<p>{{ medical_assessment.scheduled_appointment_date.value }}</p>
+<label>{{ 'Medical Examiner' }}</label>
+<p>{{ medical_assessment.amo_medical_examiner.value }}</p>
+<label>{{ 'Medical Examination Date' }}</label>
+<p>{{ medical_assessment.amo_examination_date.value }}</p>
+<label>{{ 'Assessment Note' }}</label>
+<p>{{ medical_assessment.assessment_notes.value }}</p>
+<label>{{ 'Assessment Recommendation' }}</label>
+<p>{{ medical_assessment.assessment_recommendation.value }}</p>#}
+{#<p>{{ medical_assessment.customer_applicant.entity.birth_date.value }}</p>#}
+{#
+"id"
+"uuid"
+"langcode"
+"user_id"
+"name"
+"prefix"
+"number"
+"entity_status"
+"class"
+"assessment_type"
+"customer_amo"
+"customer_applicant"
+"medical_history"
+"creation_date"
+"scheduled_appointment_date"
+"amo_medical_examiner"
+"amo_examination_date"
+"amo_examination_notes"
+"transaction"
+"assessment_medical_assessor"
+"assessment_date"
+"assessment_notes"
+"assessment_recommendation"
+"assessment_limitations"
+"cancellation_date"
+"cancellation_user"
+"cancellation_reason"
+"status"
+"created"
+"changed"
+"default_langcode"
+#}

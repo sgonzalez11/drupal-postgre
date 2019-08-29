@@ -1,0 +1,7 @@
+name: 'INAC'
+type: module
+description: 'Inac Module'
+core: 8.x
+package: 'Inac'
+dependencies:
+  - maestro

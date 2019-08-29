@@ -1,0 +1,10 @@
+name: 'eAuthority Appointments'
+type: module
+description: 'eAuthority Portal - Appointments'
+package: 'eAuthority'
+core: 8.x
+dependencies:
+  - bat:bat_booking
+  - bat:bat_event_ui
+  - eauthority:eauthority
+  - office_hours:office_hours

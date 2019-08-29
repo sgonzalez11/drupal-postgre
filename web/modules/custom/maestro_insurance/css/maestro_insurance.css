@@ -1,0 +1,13 @@
+table#edit-list-claims-items button.btn-success {
+	display: none;
+}
+
+table#edit-list-claims-items a.tabledrag-handle {
+	display: none;
+}
+
+table#edit-list-claims-items button.tabledrag-toggle-weight {
+	display: none;
+}
+
+

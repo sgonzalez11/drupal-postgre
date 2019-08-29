@@ -1,0 +1,7 @@
+name: Maestro Insurance Workflow Module
+type: module
+description: Glue logic, Maestro functions and workflow mechanisms
+core: 8.x
+package: Maestro
+dependencies:
+  - maestro

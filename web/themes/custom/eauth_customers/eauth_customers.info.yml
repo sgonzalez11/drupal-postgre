@@ -1,0 +1,21 @@
+name: 'eAuthority Customers'
+type: theme
+description: 'eAuthority Responsive Drupal 8 Theme.'
+core: 8.x
+base theme: jango
+regions:
+  header: Header
+  highlighted: Highlighted
+  page_top: 'Page Top'
+  content: Content
+  sidebar: Sidebar
+  content_full: 'Content Full Width'
+  page_bottom: 'Page Bottom'
+  footer: Footer
+libraries:
+  - eauth_customers/global-styling
+#libraries-override:
+#  global-scripts:
+#    js:
+#      assets/plugins/gmaps/gmaps.js: false
+#      assets/plugins/gmaps/api.js: false

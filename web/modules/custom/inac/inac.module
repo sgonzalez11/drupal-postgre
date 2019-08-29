@@ -1,0 +1,54 @@
+<?php
+
+/**
+ * @file
+ * Contains inac.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function inac_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the inac module.
+    case 'help.page.inac':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Inac Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function inac_theme() {
+  return [
+    'inac' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function inac_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'inac/inac-all-domains';
+
+  $theme_name = \Drupal::theme()->getActiveTheme()->getName();
+  if ($theme_name === "eauth_customers"){
+    $attachments['#attached']['library'][] = 'inac/inac-customers';
+  }elseif ($theme_name === "eauth_amos") {
+    $attachments['#attached']['library'][] = 'inac/inac-amos';
+  }elseif($theme_name === "eauth_atos") {
+    $attachments['#attached']['library'][] = 'inac/inac-atos';
+  }elseif ($theme_name === "druadmin_lte_theme") {
+    $attachments['#attached']['library'][] = 'inac/inac-admin';
+  }
+
+}

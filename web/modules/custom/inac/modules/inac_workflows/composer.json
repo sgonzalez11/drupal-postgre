@@ -1,0 +1,14 @@
+{
+  "name": "drupal/inac_workflows",
+  "type": "drupal-module",
+  "description": "Inac Workflows",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/inac_workflows",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/inac_workflows",
+    "source": "http://cgit.drupalcode.org/inac_workflows"
+  },
+  "require": { }
+}

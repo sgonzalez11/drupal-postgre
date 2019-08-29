@@ -1,0 +1,5 @@
+eauthority_dashboards_css:
+  css:
+    theme:
+      css/eauthority_dashboards.css: {}  
+      

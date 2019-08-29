@@ -1,0 +1,69 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-sm-3">{{ form.name }}</div>
+        <div class="col-sm-3">{{ form.id_type }}</div>
+        <div class="col-sm-3">{{ form.id_number }}</div>
+        <div class="col-sm-3">{{ form.type }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">{{ form.party_name }}</div>
+        <div class="col-sm-3">{{ form.first_name }}</div>
+        <div class="col-sm-3">{{ form.middle_name }}</div>
+        <div class="col-sm-3">{{ form.last_name }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">{{ form.birth_date }}</div>
+        <div class="col-sm-3">{{ form.gender }}</div>
+        <div class="col-sm-6">{{ form.is_active }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">{{ form.address }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">{{ form.telephone }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">{{ form.party_image }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">{{ form.aircraft }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">{{ form.instructors }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">{{ form.training_courses }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">{{ form.customer_profiles }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">{{ form.customer_users }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">{{ form.customer_training_courses }}</div>
+    </div>
+    
+    <div class="row">
+        <div class="col-sm-12">{{ form.actions }}</div>
+    </div>
+    {# Don't forget to add printing form special info at the end.
+    Without this data form will not working propertly.
+    #}
+    {{ form.form_build_id }}
+    {{ form.form_token }}
+    {{ form.form_id }}
+</div>

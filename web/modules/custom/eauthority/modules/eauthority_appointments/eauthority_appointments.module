@@ -1,0 +1,96 @@
+<?php
+
+function eauthority_appointments_user_login($account) {
+    // Getting eauthority_token
+    $token = _eauthority_appointments_get_token();
+    $tempstore = \Drupal::service('user.private_tempstore')->get('eauthority_appointments');
+    $tempstore->set('eauthority_token', $token);
+}
+
+/**
+ * Implements hook_theme().
+ */
+function eauthority_appointments_theme($existing, $type, $theme, $path) {
+    $themes['appointment__crud'] = [
+        'render element' => 'form'
+    ];
+    $themes['appointment__confirmation'] = [
+        'variables' => ['event' => ''],
+    ];
+
+    return $themes;
+}
+
+function _eauthority_appointments_get_token() {
+    $client = \Drupal::httpClient();
+    $method = 'POST';
+    $url = 'http://demo08.seaburysolutions.com/security/connect/token';
+    $options = [
+        'verify' => false,
+        'form_params' => [
+            'client_id' => 'mobile',
+            'client_secret' => 'mobileclient',
+            'scope' => 'sscore openid all_claims',
+            'grant_type' => 'password',
+            'username' => 'desarrollo',
+            'password' => 'desarrollo',
+            'acr_values' => 'idp:sscore',
+        ],
+        'headers' => [
+            'Content-Type' => 'application/x-www-form-urlencoded',
+        ],
+    ];
+
+    try {
+        $response = $client->request($method, $url, $options);
+        $code = $response->getStatusCode();
+        if ($code == 200) {
+            $body = json_decode($response->getBody()->getContents());
+            return $body->access_token;
+        }
+    } catch (RequestException $e) {
+        watchdog_exception('eauthority_appointments', $e);
+    }
+
+    return null;
+}
+
+function _eauthority_appointments_get_values($url, $query = '') {
+    // Get the stored token in the user session
+    $tempstore = \Drupal::service('user.private_tempstore')->get('eauthority_appointments');
+    $token = $tempstore->get('eauthority_token');
+    // Get the data from the specified URL.
+    // To-do: move eauthority code to a custom class.
+    $client = \Drupal::httpClient();
+    $method = 'GET';
+    $options = [
+        'verify' => false,
+        'headers' => [
+            'Authorization' => 'Bearer ' . $token,
+        ]
+    ];
+
+    try {
+        if (isset($query)) {
+            // Append $query to $url
+            $options['query'] = [
+                'q' => 'qf:controlGuideName=%' . $query . '*',
+            ];
+        }
+
+        $response = $client->request($method, $url, $options);
+
+        $code = $response->getStatusCode();
+        if ($code == 200) {
+            $body = json_decode($response->getBody()->getContents());
+            $options = [];
+            foreach ($body->value as $id => $row) {
+                $options[$row->controlGuideId] = $row->controlGuideName;
+            }
+            return $options;
+        }
+    } catch (RequestException $e) {
+        watchdog_exception('eauthority_appointments', $e);
+        return [];
+    }
+}

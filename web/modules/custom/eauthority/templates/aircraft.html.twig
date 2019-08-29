@@ -1,0 +1,22 @@
+{#
+/**
+ * @file aircraft.html.twig
+ * Default theme implementation to present Aircraft data.
+ *
+ * This template is used when viewing Aircraft pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_aircraft()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('aircraft') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

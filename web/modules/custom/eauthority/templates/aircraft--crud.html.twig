@@ -1,0 +1,38 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-sm-5">{{ form.name }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">{{ form.registration }}</div>
+        <div class="col-sm-4">{{ form.serial_number }}</div>
+        <div class="col-sm-4">{{ form.manufacturer }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">{{ form.model }}</div>
+        <div class="col-sm-3">{{ form.type }}</div>
+        <div class="col-sm-3">{{ form.variant }}</div>
+        <div class="col-sm-3">{{ form.designator }}</div>
+    </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-sm-12">{{ form.actions }}</div>
+    </div>
+    
+    {{ form.form_build_id }}
+    {{ form.form_token }}
+    {{ form.form_id }}
+</div>

@@ -1,0 +1,22 @@
+{#
+/**
+ * @file customer_user.html.twig
+ * Default theme implementation to present Customer User data.
+ *
+ * This template is used when viewing Customer User pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_customer_user()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('customer_user') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

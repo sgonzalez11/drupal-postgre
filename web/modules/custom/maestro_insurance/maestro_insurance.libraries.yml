@@ -1,0 +1,4 @@
+maestro-insurance-css:
+  css:
+    component:
+      css/maestro_insurance.css: {}

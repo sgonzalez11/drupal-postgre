@@ -1,0 +1,22 @@
+{#
+/**
+ * @file med_assessmt_recommendation.html.twig
+ * Default theme implementation to present Medical Assessment Recommendations data.
+ *
+ * This template is used when viewing Medical Assessment Recommendations pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_med_assessmt_recommendation()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('med_assessmt_recommendation') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

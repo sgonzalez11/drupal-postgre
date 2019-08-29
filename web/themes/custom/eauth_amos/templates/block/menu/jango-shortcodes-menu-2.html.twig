@@ -1,0 +1,277 @@
+<header class="c-layout-header {{ type }}" data-minimize-offset="80">
+
+	<input type="hidden" id="body-classes" value="{{ body_classes }}"/>
+  
+	<div class="eauth-common-bar">  
+		<div class="c-topbar">
+			<div class="container">
+				<div class="row c-top-menu">
+					{% if login %}
+					{% if is_authenticated %}
+						<ul class="c-links c-theme-ul c-font-uppercase c-font-bold">
+							{% set items = simplify_menu(header_top_menu) %}
+							{% for menu_item in items.menu_tree %}
+								{% if loop.last %}
+									<li class="last">
+										<a href="{{ menu_item.url }}">{{ menu_item.text }}</a>
+									</li>
+								{% else %}
+									<li>
+										<a href="{{ menu_item.url }}">{{ menu_item.text }}</a>
+									</li>
+									<li class="c-divider"></li>
+								{% endif %}
+							{% endfor %}
+							{% if login %}
+								<li>
+									{% if is_authenticated %}
+									{% set user_menu_title = 'Cerrar Sesión' %}
+									<a href="{{ url('user.logout') }}" class="btn c-theme-btn c-btn-square c-btn-uppercase c-btn-bold ss-session-button">
+										{{ user_menu_title|t }}
+									</a>
+									{% else %}
+									{% set user_menu_title = 'Iniciar Sesión' %}
+									<a href="{{ url('user.login') }}" class="btn c-theme-btn c-btn-square c-btn-uppercase c-btn-bold ss-session-button">
+										{{ user_menu_title|t }}
+									</a>
+									{% endif %}
+								</li>
+							{% endif %}
+						</ul>			
+					
+						<div class="ss-user-data-container c-links">
+							<div class="container">
+								<div class="row show-flex flex-content-right flex-align-center">
+									<div class="ss-notifications-topbar">
+										<button type="button" class="btn">
+											<i class="fa fa-envelope-o"></i>
+										</button>
+										<span class="label label-default c-font-slim"> 0 </span>						
+									</div>
+									<div class="ss-user-info-topbar">
+										<div>
+											<p>{{ "Bienvenido,"|t }}</p>
+										</div>
+										<div>
+											<a href="{{ url('user.page') }}" class="c-theme-btn c-btn-bold">
+												{{ user_name }}
+											</a>
+										</div>
+									</div>
+									<div class="ss-user-image-topbar">
+										{% if user_picture %}
+											<img src="{{ file_url(user_picture) }}" alt="AMOs Portal" />
+										{% else %}
+											<i class="fa fa-user"></i>
+										{% endif  %}	
+									</div>
+								</div>
+							</div>
+						</div>
+					{% endif %}
+					{% endif %}
+				</div>
+
+				<div class="c-brand">
+					<a href="{{ url('<front>') }}" class="c-logo">
+						<img src="{{ logo }}" alt="{{ site_name }}" class="c-desktop-logo">
+						<img src="{{ logo }}" alt="{{ site_name }}" class="c-desktop-logo-inverse">
+						<img src="{{ logo }}" alt="{{ site_name }}" class="c-mobile-logo">
+					</a>
+					<button class="c-topbar-toggler" type="button">
+						<i class="fa fa-ellipsis-v"></i>
+					</button>
+					<button class="c-hor-nav-toggler" type="button" data-target=".c-mega-menu">
+						<i class="fa fa-bars"></i>
+					</button>
+					<button class="c-search-toggler" type="button">
+						<i class="fa fa-search"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+		
+		{% if login %}
+		{% if is_authenticated %}
+		<div class="c-navbar">
+			<div class="back-outher">
+				<div class="col-md-5 col-sm-12">
+				</div>
+				<div class="col-md-7 col-sm-12">
+				</div>
+			</div>
+			<div class="container">
+				<div class="wrapper col-md-5 col-sm-12 eauth-back-fisrt">
+					<div class="btn-group">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+							{{ training_organization['name'] }}
+							<span class="fa fa-angle-down"></span>
+						</button>
+						{% set items = simplify_menu('amos-organization') %}
+						<ul class="dropdown-menu">
+						{% for menu_item in items.menu_tree %}
+							<li class="last">
+								<a href="{{ menu_item.url }}">{{ menu_item.text }}</a>
+							 </li>
+						{% endfor %}
+						</ul>
+					</div>
+				</div>
+				
+				<div class="c-navbar-wrapper col-md-7 col-sm-12 eauth-back-second clearfix">
+					{% if (search and search_block != FALSE) %}
+						{{ search_block }}
+					{% endif %}
+					<nav class="c-mega-menu c-pull-right c-mega-menu-dark c-mega-menu-dark-mobile c-mega-menu-onepage c-fonts-uppercase c-fonts-bold" data-onepage-animation-speed="700">
+						<ul class="nav navbar-nav c-theme-nav">
+							{{ menu }}
+							{% if search %}
+							<li class="c-search-toggler-wrapper">
+								<a href="#" class="c-btn-icon c-search-toggler">
+									<i class="fa fa-search"></i>
+								</a>
+							</li>
+							{% endif %}
+						</ul>
+					</nav>			
+				</div>
+			</div>
+		</div>
+		{% endif %}
+		{% endif %}
+	</div>
+	  
+	<div class="eauth-responsive-bar">
+	  
+		<div class="c-topbar">
+		
+			<div class="container">	
+			
+				<div class="c-brand">
+					<a href="{{ url('<front>') }}" class="c-logo">
+						<img src="{{ logo }}" alt="{{ site_name }}" class="c-desktop-logo">
+						<img src="{{ logo }}" alt="{{ site_name }}" class="c-desktop-logo-inverse">
+						<img src="{{ logo }}" alt="{{ site_name }}" class="c-mobile-logo">
+					</a>
+				</div>	
+				
+				<div class="row c-top-menu">	
+				{% if login %}
+				{% if is_authenticated %}
+					<ul class="c-links c-theme-ul c-font-uppercase c-font-bold">
+						{% set items = simplify_menu(header_top_menu) %}
+						{% for menu_item in items.menu_tree %}
+							{% if loop.last %}
+							<li class="last">
+								<a href="{{ menu_item.url }}">{{ menu_item.text }}</a>
+							</li>
+							{% else %}
+							<li>
+								<a href="{{ menu_item.url }}">{{ menu_item.text }}</a>
+							</li>
+							<li class="c-divider"></li>
+							{% endif %}
+						{% endfor %}
+						{# <li class="c-divider"></li>
+							<li>
+								<button class="c-search-toggler" type="button" data-target=".c-quick-search">
+									<i class="fa fa-search"></i>
+								</button>
+							<li> #}
+						{% if login %}
+							<li>
+							{% if is_authenticated %}
+								{% set user_menu_title = 'Cerrar Sesión' %}
+							{% else %}
+								{% set user_menu_title = 'Iniciar Sesión' %}
+							{% endif %}
+								<a href="{{ url('user.page') }}" class="btn c-theme-btn c-btn-square c-btn-uppercase c-btn-bold ss-session-button">
+									{{ user_menu_title|t }}
+								</a>
+							</li>
+						{% endif %}
+						<li>
+							<button class="c-hor-nav-toggler" type="button" data-target=".c-mega-menu">
+								<i class="fa fa-bars"></i>
+							</button>
+						</li>
+					</ul>		
+				
+					<div class="ss-user-data-container c-links">
+						<div class="container">
+							<div class="row show-flex flex-content-right flex-align-center">
+								<div class="ss-notifications-topbar">
+									<button type="button" class="btn">
+											<i class="fa fa-envelope"></i>
+									</button>
+									<span class="label label-default c-font-slim"> 0 </span>						
+								</div>
+								<div class="ss-user-info-topbar">
+									<div>
+										<p>{{ "Bienvenido,"|t }}</p>
+										</div>
+									<div>
+										<a href="{{ url('user.page') }}" class="c-theme-btn c-btn-bold">
+											{{ user_name }}
+										</a>
+									</div>
+								</div>
+								<div class="ss-user-image-topbar">
+										{% if user_picture %}
+											<img src="{{ file_url(user_picture) }}" alt="AMOs Portal" />
+										{% else %}
+											<i class="fa fa-user"></i>
+										{% endif  %}	
+									</div>
+							</div>
+						</div>
+					</div>
+				{% endif %}
+				{% endif %}
+				
+				</div>
+			</div>
+		</div>
+		
+		{% if login %}
+		{% if is_authenticated %}
+		<div class="c-navbar">
+		
+			<div class="container-fluid">
+			
+				<div class="wrapper eauth-back-fisrt">
+					<div class="btn-group">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+							{{ training_organization['name'] }}
+							<span class="fa fa-angle-down"></span>
+						</button>
+						{% set items = simplify_menu('atos-organization') %}
+						<ul class="dropdown-menu">
+						{% for menu_item in items.menu_tree %}
+							<li class="last">
+								<a href="{{ menu_item.url }}">{{ menu_item.text }}</a>
+							 </li>
+						{% endfor %}
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div class="container-fluid">
+				<div class="c-navbar-wrapper clearfix">
+					{% if (search and search_block != FALSE) %}
+						{{ search_block }}
+					{% endif %}
+					<nav class="c-mega-menu c-pull-right c-mega-menu-dark c-mega-menu-dark-mobile c-mega-menu-onepage c-fonts-uppercase c-fonts-bold" data-onepage-animation-speed="700">
+						<ul class="nav navbar-nav c-theme-nav">
+							{{ menu }}
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		{% endif %}
+		{% endif %}
+	</div>
+
+</header>

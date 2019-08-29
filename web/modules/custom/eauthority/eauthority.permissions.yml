@@ -1,0 +1,124 @@
+access eauthority toolbar:
+  title: 'Access eAuthority toolbar'
+  description: 'Access to the menu point of eAuthority.'
+  restrict access: TRUE
+
+add document parameter entities:
+  title: 'Create new Document Parameter entities'
+
+administer document parameter entities:
+  title: 'Administer Document Parameter entities'
+  description: 'Allow to access the administration form to configure Document Parameter entities.'
+  restrict access: true
+
+delete document parameter entities:
+  title: 'Delete Document Parameter entities'
+
+edit document parameter entities:
+  title: 'Edit Document Parameter entities'
+
+view published document parameter entities:
+  title: 'View published Document Parameter entities'
+
+view unpublished document parameter entities:
+  title: 'View unpublished Document Parameter entities'
+
+add customers entities:
+  title: 'Create new Customers entities'
+
+administer customers entities:
+  title: 'Administer Customers entities'
+  description: 'Allow to access the administration form to configure Customers entities.'
+  restrict access: true
+
+delete customers entities:
+  title: 'Delete Customers entities'
+
+edit customers entities:
+  title: 'Edit Customers entities'
+
+view published customers entities:
+  title: 'View published Customers entities'
+
+view unpublished customers entities:
+  title: 'View unpublished Customers entities'
+
+add aircraft entities:
+  title: 'Create new Aircraft entities'
+
+administer aircraft entities:
+  title: 'Administer Aircraft entities'
+  description: 'Allow to access the administration form to configure Aircraft entities.'
+  restrict access: true
+
+delete aircraft entities:
+  title: 'Delete Aircraft entities'
+
+edit aircraft entities:
+  title: 'Edit Aircraft entities'
+
+view published aircraft entities:
+  title: 'View published Aircraft entities'
+
+view unpublished aircraft entities:
+  title: 'View unpublished Aircraft entities'
+
+add customer profiles entities:
+  title: 'Create new Customer Profiles entities'
+
+administer customer profiles entities:
+  title: 'Administer Customer Profiles entities'
+  description: 'Allow to access the administration form to configure Customer Profiles entities.'
+  restrict access: true
+
+delete customer profiles entities:
+  title: 'Delete Customer Profiles entities'
+
+edit customer profiles entities:
+  title: 'Edit Customer Profiles entities'
+
+view published customer profiles entities:
+  title: 'View published Customer Profiles entities'
+
+view unpublished customer profiles entities:
+  title: 'View unpublished Customer Profiles entities'
+
+add customer user entities:
+  title: 'Create new Customer User entities'
+
+administer customer user entities:
+  title: 'Administer Customer User entities'
+  description: 'Allow to access the administration form to configure Customer User entities.'
+  restrict access: true
+
+delete customer user entities:
+  title: 'Delete Customer User entities'
+
+edit customer user entities:
+  title: 'Edit Customer User entities'
+
+view published customer user entities:
+  title: 'View published Customer User entities'
+
+view unpublished customer user entities:
+  title: 'View unpublished Customer User entities'
+
+add identifier types entities:
+  title: 'Create new Identifier Types entities'
+
+administer identifier types entities:
+  title: 'Administer Identifier Types entities'
+  description: 'Allow to access the administration form to configure Identifier Types entities.'
+  restrict access: true
+
+delete identifier types entities:
+  title: 'Delete Identifier Types entities'
+
+edit identifier types entities:
+  title: 'Edit Identifier Types entities'
+
+view published identifier types entities:
+  title: 'View published Identifier Types entities'
+
+view unpublished identifier types entities:
+  title: 'View unpublished Identifier Types entities'

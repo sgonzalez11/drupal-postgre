@@ -1,0 +1,198 @@
+add medical assessment entities:
+  title: 'Create new Medical Assessment entities'
+
+administer medical assessment entities:
+  title: 'Administer Medical Assessment entities'
+  description: 'Allow to access the administration form to configure Medical Assessment entities.'
+  restrict access: true
+
+delete medical assessment entities:
+  title: 'Delete Medical Assessment entities'
+
+edit medical assessment entities:
+  title: 'Edit Medical Assessment entities'
+
+view published medical assessment entities:
+  title: 'View published Medical Assessment entities'
+
+view unpublished medical assessment entities:
+  title: 'View unpublished Medical Assessment entities'
+add medical examination entities:
+  title: 'Create new Medical Examination entities'
+
+administer medical examination entities:
+  title: 'Administer Medical Examination entities'
+  description: 'Allow to access the administration form to configure Medical Examination entities.'
+  restrict access: true
+
+delete medical examination entities:
+  title: 'Delete Medical Examination entities'
+
+edit medical examination entities:
+  title: 'Edit Medical Examination entities'
+
+view published medical examination entities:
+  title: 'View published Medical Examination entities'
+
+view unpublished medical examination entities:
+  title: 'View unpublished Medical Examination entities'
+add medical assessment recommendations entities:
+  title: 'Create new Medical Assessment Recommendations entities'
+
+administer medical assessment recommendations entities:
+  title: 'Administer Medical Assessment Recommendations entities'
+  description: 'Allow to access the administration form to configure Medical Assessment Recommendations entities.'
+  restrict access: true
+
+delete medical assessment recommendations entities:
+  title: 'Delete Medical Assessment Recommendations entities'
+
+edit medical assessment recommendations entities:
+  title: 'Edit Medical Assessment Recommendations entities'
+
+view published medical assessment recommendations entities:
+  title: 'View published Medical Assessment Recommendations entities'
+
+view unpublished medical assessment recommendations entities:
+  title: 'View unpublished Medical Assessment Recommendations entities'
+
+view general section of the medical assessment form:
+  title: 'View General section of the Medical Assessment form'
+  
+allow user to view medical assessment's inform:
+    title: "Allow user to view medical assessment's inform"
+
+view applicant information section of the medical assessment form:
+  title: 'View Applicant Information section of the Medical Assessment form'
+
+view medical examinations section of the medical assessment form:
+  title: 'View Medical Examinations section of the Medical Assessment form'
+
+view responsible medical examiner's declaration section of the medical assessment form:
+  title: "View Responsible Medical Examiner's Declaration section of the Medical Assessment form"
+
+view responsible medical assessor's declaration section of the medical assessment form:
+  title: "View Responsible Medical Assessor's Declaration section of the Medical Assessment form"
+
+view cancelation section of the medical assessment form:
+  title: "View Cancelation section of the Medical Assessment form"
+
+edit responsible medical examiner's declaration page of the medical assessment form:
+  title: "Edit Responsible Medical Examiner's Declaration page of the Medical Assessment form"
+
+edit responsible medical assessor's declaration page of the medical assessment form:
+  title: "Edit Responsible Medical Assessor's Declaration page of the Medical Assessment form"
+
+allows users to cancel medical assessment entities:
+  title: "Allows users to cancel Medical Assessment entities"
+
+view general section of the medical examination form:
+  title: "View General section of the Medical Examination form"
+  
+view applicant information section of the medical examination form:
+  title: "View Applicant Information section of the Medical Examination form"
+  
+view examination type section of the medical examination form:
+  title: "View Examination Type section of the Medical Examination form"
+  
+view medical examiner's declaration section of the medical examination form:
+  title: "View Medical Examiner's Declaration section of the Medical Examination form"
+  
+view medical assessor's declaration section of the medical examination form:
+  title: "View Medical Assessor's Declaration section of the Medical Examination form"
+  
+view cancelation section of the medical examination form:
+  title: "View Cancelation section of the Medical Examination form"
+  
+edit general section of the medical examination form:
+  title: "Edit General section of the Medical Examination form"
+  
+allows users to assign a medical assessor:
+  title: "Allows users to assign a Medical Assessor"
+  
+edit medical examiner's declaration page of the medical examination form:
+  title: "Edit Medical Examiner's Declaration page of the Medical Examination form"
+  
+edit medical assessor's declaration page of the medical examination form:
+  title: "Edit Medical Assessor's Declaration page of the Medical Examination form"
+  
+allows users to cancel medical examination entities:
+  title: "Allows users to cancel Medical Examination entities"
+  
+allows users to finish an medical examination:
+  title: "Allows users to Finish an Medical Examination"
+  
+allows users to close a medical examination:
+  title: "Allows users to Close a Medical Examination"
+  
+allows users to undo completed examination:
+  title: "Allows users to Undo Completed Examination"
+
+allows users to assign aviation medical examination:
+  title: "Allows users to assign Aviation Medical Examination"
+
+allows users to undo closed examination:
+  title: "Allows users to Undo Closed Examination"
+
+view open medical assessment:
+  title: "View open medical assessment"
+
+view scheduled medical assessment:
+  title: "View scheduled medical assessment"
+
+view in progress medical assessment:
+  title: "View in progress medical assessment"
+
+view pending validation medical assessment:
+  title: "View pending validation medical assessment"
+
+view pending assessment medical assessment:
+  title: "View pending assessment medical assessment"
+
+view assessment scheduled medical assessment:
+  title: "View assessment scheduled medical assessment"
+
+view assessment in progress medical assessment:
+  title: "View assessment in progress medical assessment"
+
+view pending recommendation medical assessment:
+  title: "View pending recommendation medical assessment"
+
+view closed medical assessment:
+  title: "View closed medical assessment"
+
+view canceled medical assessment:
+  title: "View canceled medical assessment"
+
+view open medical examination:
+  title: "View open medical examination"
+
+view scheduled medical examination:
+  title: "View scheduled medical examination"
+
+view completed medical examination:
+  title: "View completed medical examination"
+
+view pending assessment medical examination:
+  title: "View pending assessment medical examination"
+
+view assessment scheduled medical examination:
+  title: "View assessment scheduled medical examination"
+
+view closed medical examination:
+  title: "View closed medical examination"
+
+view canceled medical examination:
+  title: "View canceled medical examination"
+
+allow user to undo examination:
+  title: "Allow user to Undo Examination"
+
+view responsible medical examiner's declaration section of the medical examination form:
+  title: "View Responsible Medical Examiner's Declaration section of the Medical Examination form"
+
+view responsible medical assessor's declaration section of the medical examination form:
+  title: "View Responsible Medical Assessor's Declaration section of the Medical Examination form"
+
+permission_callbacks:
+  - Drupal\eauthority_amos\EauthorityAmosPermissions::permissions

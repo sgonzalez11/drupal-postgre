@@ -1,0 +1,7 @@
+name: 'eAuthority Parties'
+type: module
+description: 'eAuthority Portal - Parties'
+core: 8.x
+package: 'eAuthority'
+dependencies:
+  - eauthority:eauthority

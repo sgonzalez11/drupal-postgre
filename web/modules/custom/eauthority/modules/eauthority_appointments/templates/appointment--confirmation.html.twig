@@ -1,0 +1,13 @@
+<div class="container-fluid">
+    <div class="row">
+        {{ "Reservacion Aceptada: "|t }}
+        <div class="col-sm-12">{{ "Paciente: "|t }}{{ event.customerFirstName }} {{ event.customerLastName }}</div>
+        <div class="col-sm-12">{{ "Lugar: "|t }}{{ event.unitTypeName }}</div>
+        <div class="col-sm-12">{{ "Linea de atención: "|t }}{{ event.unitName }}</div>
+        <div class="col-sm-12">{{ "Tipo de tramite: "|t }}{{ event.transaction }}</div>
+        <div class="col-sm-12">{{ "Tipo de certificado: "|t }}{{ event.service }}</div>
+        <div class="col-sm-12">{{ "Fecha inicio: "|t }}{{ event.eventDateStart }}</div>
+        <div class="col-sm-12">{{ "Fecha fin: "|t }}{{ event.eventDatEnd }}</div>
+        <div class="col-sm-12">{{ "Estado de turno: "|t }}{{ event.eventState }}</div>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+eauthority_dashboards.taskconsole:
+  path: '/my-dashboard/{highlightQueueID}'
+  defaults:
+    _controller: '\Drupal\eauthority_dashboards\Controller\PortalDashboardController::getTasks'
+    _title: 'Mi Panel Principal'
+    highlightQueueID: '0'
+  requirements:
+    _permission: 'view portal dashboard'
+  options:
+    no_cache: TRUE
+
+eauthority_dashboards.admin_taskconsole:
+  path: '/admin/my-dashboard/{highlightQueueID}'
+  defaults:
+    _controller: '\Drupal\eauthority_dashboards\Controller\PortalDashboardController::getTasks'
+    _title: 'Mi Panel Principal'
+    highlightQueueID: '0'
+  requirements:
+    _permission: 'view portal dashboard'
+  options:
+    no_cache: TRUE
+    _admin_route: TRUE
+    
+eauthority_dashboards.status_ajax_open:
+  path: '/portal/taskconsole/ajax/status/{processID}/{queueID}'
+  defaults:
+    _controller: '\Drupal\eauthority_dashboards\Controller\PortalDashboardController::getStatus'
+    _title: 'Portal Task Console Status'
+    processID: '0'
+    queueID: '0'
+  requirements:
+    _permission: 'view portal dashboard'
+  options:
+    no_cache: TRUE
+    
+eauthority_dashboards.status_ajax_close:
+  path: '/portal/taskconsole/ajax/status/close/{processID}/{queueID}'
+  defaults:
+    _controller: '\Drupal\eauthority_dashboards\Controller\PortalDashboardController::closeStatus'
+    _title: 'Portal Task Console Status Close'
+    processID: '0'
+    queueID: '0'
+  requirements:
+    _permission: 'view portal dashboard'
+  options:
+    no_cache: TRUE         

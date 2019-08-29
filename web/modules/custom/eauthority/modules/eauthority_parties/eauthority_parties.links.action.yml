@@ -1,0 +1,11 @@
+entity.party.add_form:
+  route_name: entity.party.add_page
+  title: 'Add Party'
+  appears_on:
+    - entity.party.collection
+entity.party_type.add_form:
+  route_name: entity.party_type.add_form
+  title: 'Add Party type'
+  appears_on:
+    - entity.party_type.collection
+

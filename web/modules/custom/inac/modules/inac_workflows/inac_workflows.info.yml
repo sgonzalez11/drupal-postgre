@@ -1,0 +1,8 @@
+name: 'INAC Workflows'
+type: module
+description: 'Inac Workflows'
+core: 8.x
+package: 'Inac'
+dependencies:
+  - maestro
+  - inac

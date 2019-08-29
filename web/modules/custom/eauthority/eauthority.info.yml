@@ -1,0 +1,7 @@
+name: 'eAuthority Portal'
+type: module
+description: 'eAuthority Portal'
+core: 8.x
+package: 'eAuthority'
+dependencies:
+  - drupal:toolbar

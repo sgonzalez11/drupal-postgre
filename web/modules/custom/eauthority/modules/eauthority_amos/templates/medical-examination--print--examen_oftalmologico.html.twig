@@ -1,0 +1,328 @@
+<div class="container">
+    <strong><h2 class="text-center">{{ 'Examen Oftalmológico'|t }}</h2></strong>
+    <div class="row">
+        <div class="col-md-offset-6 col-md-6">
+            <h4 class="text-center">{{ 'Hallazgos: Descripción en detalle cada anormalidad encontrada.'|t }}</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-offset-2">
+            <div class="row">
+                <div class="col-sm-2">
+                    <h4> {{ 'Ojo Derecho'|t }}</h4>
+                    <h5> {{ 'Normal&nbsp'|t }}{{ '&nbsp|&nbsp' }}{{ '&nbspAnormal'|t }}</h5>
+                </div>
+                <div class="col-sm-2">
+                    <h4> {{ 'Ojo Izquierdo'|t }}</h4>
+                    <h5> {{ 'Normal&nbsp'|t }}{{ '&nbsp|&nbsp' }}{{ '&nbspAnormal'|t }}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-2">
+                    <p>{{ item.field_text_plain_long_00.fieldDefinition.label }}</p>
+                </div>
+                <div class="col-lg-2">
+                    {% if item.field_text_plain_00.value %}
+                        <p> {{ item.field_text_plain_00.value }}</p>
+                    {% endif %}
+                    {% if item.field_text_plain_01.value %}
+                        {{ item.field_text_plain_01.value }}
+                    {% endif %}
+                </div>
+
+                <div class="col-lg-2">
+                    {% if item.field_text_plain_02.value %}
+                        {{ item.field_text_plain_02.value }} 
+                    {% endif %}
+                    {% if item.field_text_plain_03.value %}
+                        {{ item.field_text_plain_03.value }}
+                    {% endif %}
+                </div>
+                <div class="col-lg-3">
+                    {{ item.field_text_plain_long_00.value }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-2">
+                    <p>{{ item.field_text_plain_long_01.fieldDefinition.label }}</p>
+                </div>
+                <div class="col-lg-2">
+                    {% if item.field_text_plain_04.value %}
+                        {{ item.field_text_plain_04.value }}
+                    {% endif %}
+                    {% if item.field_text_plain_05.value %}
+                        {{ item.field_text_plain_05.value }}
+                    {% endif %}
+                </div>
+
+                <div class="col-lg-2">
+                    {% if item.field_text_plain_06.value %}
+                        {{ item.field_text_plain_06.value }} 
+                    {% endif %}
+                    {% if item.field_text_plain_07.value %}
+                        {{ item.field_text_plain_07.value }}
+                    {% endif %}
+                </div>
+                <div class="col-lg-3">
+                    {{ item.field_text_plain_long_01.value }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-2">
+                    <p>{{ item.field_text_plain_long_02.fieldDefinition.label }}</p>
+                </div>
+                <div class="col-lg-2">
+                    {% if item.field_text_plain_08.value %}
+                        {{ item.field_text_plain_08.value }}
+                    {% endif %}
+                    {% if item.field_text_plain_09.value %}
+                        {{ item.field_text_plain_09.value }}
+                    {% endif %}
+                    {{ item.field_text_plain_12.value }}
+                </div>
+
+                <div class="col-lg-2">
+                    {% if item.field_text_plain_10.value %}
+                        {{ item.field_text_plain_10.value }} 
+                    {% endif %}
+                    {% if item.field_text_plain_11.value %}
+                        {{ item.field_text_plain_11.value }}
+                    {% endif %}
+                    {{ item.field_text_plain_13.value }}
+                </div>
+                <div class="col-lg-3">
+                    {{ item.field_text_plain_long_02.value }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-2">
+                    <p>{{ item.field_text_plain_long_03.fieldDefinition.label }}</p>
+                </div>
+                <div class="col-lg-2">
+                    {% if item.field_text_plain_14.value %}
+                        {{ item.field_text_plain_14.value }}
+                    {% endif %}
+                    {% if item.field_text_plain_15.value %}
+                        {{ item.field_text_plain_15.value }}
+                    {% endif %}
+                </div>
+
+                <div class="col-lg-2">
+                    {% if item.field_text_plain_16.value %}
+                        {{ item.field_text_plain_16.value }} 
+                    {% endif %}
+                    {% if item.field_text_plain_17.value %}
+                        {{ item.field_text_plain_17.value }}
+                    {% endif %}
+                </div>
+                <div class="col-lg-3">
+                    {{ item.field_text_plain_long_03.value }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-2">
+                    <p>{{ item.field_text_plain_long_04.fieldDefinition.label }}</p>
+                </div>
+                <div class="col-lg-2">
+                    {{ '20/' ~ item.field_text_plain_18.value }}
+                    {{ '20/' ~ item.field_text_plain_19.value }}
+                </div>
+                <div class="col-lg-2">
+                    {{  '20/' ~ item.field_text_plain_20.value }} 
+                    {{  '20/' ~ item.field_text_plain_21.value }}
+                </div>
+                <div class="col-lg-2"> {{ 'O.D.I'|t }}
+                    {{  '20/' ~ item.field_text_plain_22.value }} 
+                    {{  '20/' ~ item.field_text_plain_23.value }}
+                </div>
+                <div class="col-lg-3">
+                    {{ item.field_text_plain_long_04.value }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-2">
+                    <p>{{ item.field_text_plain_long_05.fieldDefinition.label }}</p>
+                </div>
+                <div class="col-lg-2">
+                    {{ 'J ' ~ item.field_text_plain_24.value }}
+                    {{ 'J ' ~ item.field_text_plain_25.value }}
+                </div>
+                <div class="col-lg-2">
+                    {{  'J ' ~ item.field_text_plain_26.value }} 
+                    {{  'J ' ~ item.field_text_plain_27.value }}
+                </div>
+                <div class="col-lg-2"> {{ 'O.D.I'|t }}
+                    {{  'J ' ~ item.field_text_plain_28.value }} 
+                    {{  'J ' ~ item.field_text_plain_29.value }}
+                </div>
+                <div class="col-lg-3">
+                    {{ item.field_text_plain_long_05.value }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-2">
+                    <p>{{ item.field_text_plain_long_06.fieldDefinition.label }}</p>
+                </div>
+                <div class="col-lg-2">
+                    {{ item.field_text_list_t_correccion.value }}
+                </div>
+                <div class="col-lg-2">
+                    {{  'Tolerancia: '|t }} {{ item.field_text_plain_30.value }}
+                </div>
+                <div class="col-lg-3">
+                    {{ item.field_text_plain_long_06.value }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-2">
+                    <p>{{ item.field_text_plain_long_07.fieldDefinition.label }}</p>
+                </div>
+                <div class="col-lg-2">
+                    {{ item.field_text_plain_31.value }} {{  ' D'|t }}
+                </div>
+                <div class="col-lg-2">
+                    {{ item.field_text_plain_32.value }}{{  ' D'|t }}
+                </div>
+                <div class="col-lg-3">
+                    {{ item.field_text_plain_long_07.value }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-2">
+                    <p>{{ item.field_text_plain_long_08.fieldDefinition.label }}</p>
+                </div>
+                <div class="col-lg-2">
+                    {{ item.field_text_plain_33.value }} 
+                </div>
+                <div class="col-lg-3">
+                    {{ item.field_text_plain_long_08.value }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-2">
+                    <p>{{ item.field_text_plain_long_09.fieldDefinition.label }}</p>
+                </div>
+                <div class="col-lg-2">
+                    {{ item.field_text_plain_34.value }} {{ ' mmHg'|t }}
+                </div>
+                <div class="col-lg-2">
+                    {{ item.field_text_plain_35.value }} {{ ' mmHg'|t }}
+                </div>
+                <div class="col-lg-3">
+                    {{ item.field_text_plain_long_08.value }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-2">
+                    <p>{{ item.field_text_plain_long_10.fieldDefinition.label }}</p>
+                </div>
+                <div class="col-lg-2">
+                    {{ item.field_text_plain_36.value }} 
+                </div>
+                <div class="col-lg-2">
+                    {{ item.field_text_plain_37.value }} 
+                </div>
+                <div class="col-lg-3">
+                    {{ item.field_text_plain_long_10.value }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-2">
+                    <p>{{ item.field_text_plain_long_11.fieldDefinition.label }}</p>
+                </div>
+                <div class="col-lg-2">
+                    {{ item.field_text_list_oft_00.value }} 
+                </div>
+                <div class="col-lg-3">
+                    {{ item.field_text_plain_long_11.value }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-2">
+                    <p>{{ item.field_text_plain_long_12.fieldDefinition.label }}</p>
+                </div>
+                <div class="col-lg-2">
+                    {{ item.field_text_list_oft_01.value }} 
+                </div>
+                <div class="col-lg-2">
+                    {{ item.field_text_list_oft_02.fieldDefinition.label ~ ': ' }} {{ item.field_text_list_oft_02.value }} 
+                </div>
+                <div class="col-lg-3">
+                    {{ item.field_text_plain_long_12.value }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-2">
+                    <p>{{ item.field_text_plain_long_13.fieldDefinition.label }}</p>
+                </div>
+                <div class="col-lg-2">
+                    {{ item.field_text_list_oft_03.value }} 
+                </div>
+                <div class="col-lg-2">
+                    {{ ' Corregida: '|t }}{{ item.field_text_list_oft_04.value }} 
+                </div>
+                <div class="col-lg-3">
+                    {{ ' Método: '|t }}{{ item.field_text_plain_long_13.value }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>

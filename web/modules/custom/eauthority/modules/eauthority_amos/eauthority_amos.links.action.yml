@@ -1,0 +1,21 @@
+entity.medical_assessment.add_form:
+  route_name: entity.medical_assessment.add_form
+  title: 'Add Medical Assessment'
+  appears_on:
+    - entity.medical_assessment.collection
+entity.medical_examination.add_form:
+  route_name: entity.medical_examination.add_page
+  title: 'Add Medical Examination'
+  appears_on:
+    - entity.medical_examination.collection
+entity.medical_examination_type.add_form:
+  route_name: entity.medical_examination_type.add_form
+  title: 'Add Medical Examination type'
+  appears_on:
+    - entity.medical_examination_type.collection
+
+entity.med_assessmt_recommendation.add_form:
+  route_name: entity.med_assessmt_recommendation.add_form
+  title: 'Add Medical Assessment Recommendations'
+  appears_on:
+    - entity.med_assessmt_recommendation.collection

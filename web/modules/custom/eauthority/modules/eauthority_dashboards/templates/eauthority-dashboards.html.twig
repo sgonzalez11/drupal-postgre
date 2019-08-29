@@ -1,0 +1,13 @@
+<h2>DATOS PERSONALES</h2>
+
+<p>Cuenta de Usuario: {{ drupal_token('current-user:account-name') }}</p>
+
+<p>Nombre: {{ drupal_token('current-user:field_first_name:value') }}</p>
+<p>Apellido: {{ drupal_token('current-user:field_last_name:value') }}</p> 
+
+<br/>
+<h2>LISTADO DE TAREAS</h2>
+
+<div>
+    {{ taskconsole }}
+</div>

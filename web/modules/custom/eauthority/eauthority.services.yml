@@ -1,0 +1,12 @@
+services:
+  eauthority.manager:
+    class: Drupal\eauthority\EauthorityManager
+    arguments: ['@menu.link_tree', '@menu.active_trail']
+  eauthority.redirect_subscriber:
+    class: \Drupal\eauthority\EventSubscriber\RedirectSubscriber
+    arguments: ['@domain.negotiator', '@current_user', '@current_route_match', '@language_manager', '@request_stack']
+    tags:
+    - {name: event_subscriber}
+  eauthority.storage:
+    class: Drupal\eauthority\Services\EauthorityService
+    arguments: ['@domain.negotiator', '@entity_type.manager', '@database', '@language_manager']

@@ -1,0 +1,280 @@
+<?php
+
+/**
+ * @file
+ * Contains eauthority_atos.module.
+ */
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Render\Element;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\user\UserInterface;
+use Drupal\Core\Url;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+
+/**
+ * Implements hook_help().
+ */
+function eauthority_atos_help($route_name, RouteMatchInterface $route_match) {
+    switch ($route_name) {
+        // Main module help for the eauthority_atos module.
+        case 'help.page.eauthority_atos':
+            $output = '';
+            $output .= '<h3>' . t('About') . '</h3>';
+            $output .= '<p>' . t('eAuthority Portal') . '</p>';
+            return $output;
+
+        default:
+    }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function eauthority_atos_theme($existing, $type, $theme, $path) {
+
+    $themes['training_record__crud'] = [
+        'render element' => 'form'
+    ];
+
+    $themes['training_record__cancel'] = [
+        'render element' => 'form'
+    ];
+
+    $themes['training_record__report_start_date'] = [
+        'render element' => 'form'
+    ];
+
+    $themes['training_record__finish_course'] = [
+        'render element' => 'form'
+    ];
+
+    $themes['training_course__crud'] = [
+        'render element' => 'form'
+    ];
+
+    $themes['eauthority_atos'] = [
+        'render element' => 'children'
+    ];
+
+    $themes['training_record'] = [
+        'template' => 'training_record', // defines base template as /training_record.html.twig
+        'render element' => 'elements',
+    ];
+
+    $themes['training_record_attendee'] = [
+        'template' => 'training_record_attendee', // defines base template as /training_record_attendee.html.twig
+        'render element' => 'elements',
+    ];
+
+    $themes['training_record_attendee__crud'] = [
+        'render element' => 'form',
+    ];
+
+    $themes['my_information'] = [
+        'template' => 'my_information',
+        'variables' => array('organization' => array(), 'courses' => array(), 'title' => '')
+    ];
+
+    $themes['training_record_attendee_exp__crud'] = [
+        'render element' => 'form'
+    ];
+
+    return $themes;
+}
+
+/**
+ * Implements hook_theme_suggestions_alter().
+ */
+function eauthority_atos_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
+
+    if ($hook == 'form' & !empty($variables['element']['#id'])) {
+        $suggestions[] = 'form__' . str_replace('-', '_', $variables['element']['#id']);
+    }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function eauthority_atos_preprocess_training_record(&$variables) {
+
+    // Helpful $content variable for templates.
+    $variables['content'] = [];
+    foreach (\Drupal\Core\Render\Element::children($variables['elements']) as $key) {
+        $variables['content'][$key] = $variables['elements'][$key];
+    }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function eauthority_atos_preprocess_training_record_attendee(&$variables) {
+
+    // Helpful $content variable for templates.
+    $variables['content'] = [];
+    foreach (\Drupal\Core\Render\Element::children($variables['elements']) as $key) {
+        $variables['content'][$key] = $variables['elements'][$key];
+    }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function eauthority_atos_form_training_record_edit_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+
+    $entity = $form_state->getFormObject()->getEntity();
+    $status = $entity->getEntityStatus();
+    $form['name']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+    $form['start_date']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+
+    // Attendee rules
+    /* if ($status === 'IPR' || $status === 'CMP' || $status === 'CLO' || $status === 'CAN') {
+      unset($form['training_record_attendee']['widget']['actions']['ief_add']);
+      foreach ($form['training_record_attendee']['widget']['entities'] as $key => $value) {
+      if (is_numeric($key)) {
+      unset($form['training_record_attendee']['widget']['entities'][$key]['actions']['ief_entity_edit']);
+      unset($form['training_record_attendee']['widget']['entities'][$key]['actions']['ief_entity_remove']);
+      }
+      }
+      } */
+
+    // Attendee delete 'edit' bu
+    /* foreach ($form['training_record_attendee']['widget']['entities'] as $key => $value) {
+      if (is_numeric($key)) {
+      unset($form['training_record_attendee']['widget']['entities'][$key]['actions']['ief_entity_edit']);
+      }
+      } */
+
+    // Aircraft rules
+    if ($status === 'CMP' || $status === 'CLO' || $status === 'CAN') {
+        unset($form['aircraft']['widget']['add_more']);
+        foreach ($form['aircraft']['widget'] as $key => $value) {
+            if (is_numeric($key)) {
+                if (isset($form['aircraft']['widget'][$key]['target_id']['#default_value'])) {
+                    $form['aircraft']['widget'][$key]['target_id']['#disabled'] = 'disabled';
+                } else {
+                    unset($form['aircraft']['widget'][$key]);
+                }
+            }
+        }
+    }
+
+    // Instructors rules
+    if ($status === 'CMP' || $status === 'CLO' || $status === 'CAN') {
+        unset($form['instructors']['widget']['add_more']);
+        foreach ($form['instructors']['widget'] as $key => $value) {
+            if (is_numeric($key)) {
+                if (isset($form['instructors']['widget'][$key]['target_id']['#default_value'])) {
+                    $form['instructors']['widget'][$key]['target_id']['#disabled'] = 'disabled';
+                } else {
+                    unset($form['instructors']['widget'][$key]);
+                }
+            }
+        }
+    }
+
+    // Draft Status
+    if ($status !== 'DRF') {
+        $form['training_course']['widget'][0]['target_id']['#disabled'] = 'disabled';
+        $form['location']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+        $form['estimated_start_date']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+        $form['estimated_finish_date']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+        $form['remarks']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+    }
+
+    // In Progress Status
+    if ($status !== 'IPR') {
+        $form['finish_date']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+    }
+
+    // Cancel Status
+    if ($status === 'CAN') {
+        $form['cancellation_date']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+        $form['cancellation_user']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+        $form['cancellation_reason']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+    }
+
+    // Closed, Cancel Statuses
+    if ($status === 'CLO' || $status === 'CAN') {
+        //$form['remarks']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+    }
+
+    // See inline_entity_form.module theme_inline_entity_form_entity_table().
+    /*    $cols = &$form['training_record_attendee']['widget']['entities']['#table_fields'];
+      $cols['customer'] = [
+      'type' => 'field',
+      'label' => t('Customer'),
+      'weight' => 105,
+      ];
+
+      if ($status === 'IPR' || $status === 'CMP' || $status === 'CLO') {
+      $cols['result_set_value'] = [
+      'type' => 'field',
+      'label' => t('Result'),
+      'weight' => 106,
+      ];
+      }
+      unset($cols['label']); */
+}
+
+function eauthority_atos_form_training_record_add_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+
+    $form['name']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+    $form['start_date']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+    $form['finish_date']['widget'][0]['value']['#attributes']['readonly'] = 'readonly';
+}
+
+/**
+ * Implements hook_user_login().
+ */
+function eauthority_atos_user_login(UserInterface $account) {
+    
+    unset($_SESSION["current_ato_id"]);
+    $host = Drupal::service('domain.negotiator')->getActiveDomain(TRUE);
+    $portal = substr($host->id(), 0, 4);
+
+    if ($portal === 'atos') {
+
+        $query = db_select('customer', 'c')->fields('c', array('id'));
+        $query->innerJoin('customer_field_data', 'cfd', "c.id = cfd.id");
+        $query->innerJoin('customer__customer_users', 'ccu', "c.id = ccu.entity_id");
+        $query->innerJoin('customer_user', 'cu', "ccu.customer_users_target_id = cu.id");
+        $query->innerJoin('customer_user_field_data', 'cufd', "cufd.id = cu.id");
+        $query->innerJoin('users', 'u', "u.uid = cufd.user");
+        $query->innerJoin('users_field_data', 'ufd', "ufd.uid = u.uid");
+        $query->innerJoin('customer__customer_profiles', 'ccp', "ccp.entity_id = cfd.id");
+        $query->innerJoin('customer_profiles_field_data', 'cpfd', "ccp.customer_profiles_target_id = cpfd.id");
+        $query->condition('cpfd.behaviour_as', 'ATO', "=");
+        $query->condition('u.uid', $account->id(), "=");
+        $result = $query->execute();
+
+        $item = array();
+        foreach ($result as $organization) {
+            $item[] = $organization->id;
+        }
+
+        if (isset($item[0]) && !isset($item[1])) {
+            $_SESSION["current_ato_id"] = $item[0];
+            $response = new RedirectResponse(Url::fromRoute('entity.training_organization.my_information')->toString());
+            $response->send();
+        } else if (!isset($item[0])) {
+            $_SESSION["current_ato_id"] = 11;
+            $value = "There are NO Organization associated to user - Default Organization Added";
+            drupal_set_message(t($value), 'error');
+            $response = new RedirectResponse(Url::fromRoute('entity.training_organization.my_information')->toString());
+            $response->send();
+        } else if (isset($item[1])) {
+            //TO-DO:
+            $_SESSION["current_ato_id"] = $item[0];
+            $value = "There are more than one Organization associated to user";
+            drupal_set_message(t($value), 'status');
+        }
+    }
+
+}
+
+/**
+ * Implements hook_user_logout().
+ */
+function eauthority_atos_user_logout(AccountInterface $account) {
+    unset($_SESSION["current_ato_id"]);
+}

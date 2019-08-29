@@ -1,0 +1,18 @@
+# Party routing definition
+
+entity.party.canonical:
+  route_name: entity.party.canonical
+  base_route: entity.party.canonical
+  title: 'View'
+
+entity.party.edit_form:
+  route_name: entity.party.edit_form
+  base_route: entity.party.canonical
+  title: 'Edit'
+
+entity.party.delete_form:
+  route_name:  entity.party.delete_form
+  base_route:  entity.party.canonical
+  title: Delete
+  weight: 10
+

@@ -1,0 +1,14 @@
+{
+  "name": "drupal/inac",
+  "type": "drupal-module",
+  "description": "Inac Module",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/inac",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/inac",
+    "source": "http://cgit.drupalcode.org/inac"
+  },
+  "require": { }
+}

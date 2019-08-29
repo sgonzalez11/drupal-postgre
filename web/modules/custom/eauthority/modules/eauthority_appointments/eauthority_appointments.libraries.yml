@@ -1,0 +1,11 @@
+eauthority_js:
+  version: VERSION
+  js:
+    js/eauthority_appointments.js: {}
+  css:
+    theme:
+      css/eauthority_appointments.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    

@@ -1,0 +1,26 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Render\Element;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\user\UserInterface;
+use Drupal\Core\Url;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+
+/**
+ * Implements hook_help().
+ */
+function eauthority_workflows_help($route_name, RouteMatchInterface $route_match) {
+
+  switch ($route_name) {
+    case 'help.page.eauthority_workflows':
+      $output = '';
+      $output .= '<h3>' . t('eAuthority Workflows') . '</h3>';
+      $output .= '<p>' . t('Description eAuthority Workflows') . '</p>';
+      return $output;
+
+    default:
+  }
+
+}
+

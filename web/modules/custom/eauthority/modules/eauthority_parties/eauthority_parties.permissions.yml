@@ -1,0 +1,19 @@
+add party entities:
+  title: 'Create new Party entities'
+
+administer party entities:
+  title: 'Administer Party entities'
+  description: 'Allow to access the administration form to configure Party entities.'
+  restrict access: true
+
+delete party entities:
+  title: 'Delete Party entities'
+
+edit party entities:
+  title: 'Edit Party entities'
+
+view published party entities:
+  title: 'View published Party entities'
+
+view unpublished party entities:
+  title: 'View unpublished Party entities'

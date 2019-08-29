@@ -1,0 +1,22 @@
+{#
+/**
+ * @file document_parameter.html.twig
+ * Default theme implementation to present Document Parameter data.
+ *
+ * This template is used when viewing Document Parameter pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_document_parameter()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('document_parameter') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

@@ -1,0 +1,5 @@
+name: 'eAuthority Workflows'
+type: module
+description: 'Contains all the workflows related to the different sites of eAuthority'
+core: 8.x
+package: 'eAuthority'

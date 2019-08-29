@@ -1,0 +1,8 @@
+maestro_insurance.confirm_cancel_process:
+  path: '/maestro/insurance/confirm/cancel/{processID}'
+  defaults:
+    _title: 'Confirm Cancellation of this Submission'
+    _form: '\Drupal\maestro_insurance\Form\CancelProcessConfirm'
+    processID: 0
+  requirements:
+    _role: 'internal'

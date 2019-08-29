@@ -1,0 +1,7 @@
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      css/custom.css: { weight: 2500 }
+  js:
+    js/custom.js: {}

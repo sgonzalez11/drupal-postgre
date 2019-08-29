@@ -1,0 +1,69 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+<div class="container-fluid">
+
+    {% set entitystatus = form.entity_status.widget['#value'].0 %}
+    {% set entitystatusoptions = form.entity_status.widget['#options'] %}
+    {% set entityId = form['#entityId'] %}
+
+    {% set statusvaluelabel = "" %}
+    {% for key, statuslabel in entitystatusoptions %}
+        {% if key == entitystatus %}
+            {% set statusvaluelabel = statuslabel %}
+        {% endif %}
+    {% endfor %}
+
+    <div class="row">
+        <div class="col-sm-3">{{ form.name }}</div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-wrapper">
+                <div class="form-group form-item field--status">
+                    <label for="identifier-name">{{ "Status"|t }}</label>
+                    <div class="form-group has-feedback">
+                        <input class="{{ entitystatus }} text-full input-lg form-control c-square c-theme form-text"
+                               readonly="readonly"
+                               type="text"
+                               id="identifier-name"
+                               value="{{ statusvaluelabel }}" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <label>{{ "Notes"|t }}</label>
+        <div class="col-sm-12">{{ form.examination_notes }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <input class="form-checkbox" 
+                   {% if form['#checkbox_active'] != 1 %} disabled="disabled" {% endif %}
+                   type="checkbox" id="certify_checkbox" value="0">
+            <label for="certify_checkbox">
+                {{ "I certify that I have examined the above applicant and that this report contains, in factual and complete form, all my findings."|t }}
+            </label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 {% if form['#checkbox_active'] == 1 %}checkbox-active{% endif %}">{{ form.actions.submit }}{{ form.actions.cancel }}</div>
+    </div>
+    
+    {{ form.form_build_id }}
+    {{ form.form_token }}
+    {{ form.form_id }}
+</div>

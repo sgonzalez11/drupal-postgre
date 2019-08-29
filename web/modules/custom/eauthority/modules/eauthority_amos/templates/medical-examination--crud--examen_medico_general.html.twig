@@ -1,0 +1,293 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+
+<div class="row">    
+	<div class="col-sm-12 col-md-6">
+		<label class="ss-label">
+			{{ form.field_number_float_00['widget']['#title'] }}
+		</label>
+		<div class="row">				
+			<div class="col-sm-10">
+				{{ form.field_number_float_00 }}
+			</div>
+			<div class="col-sm-2 ss-form-inline-text">
+				grs.
+			</div>
+		</div>  
+	</div>
+	<div class="col-sm-12 col-md-6">
+		<label class="ss-label">
+			{{ form.field_number_float_01['widget']['#title'] }}
+		</label>
+		<div class="row">
+			<div class="col-sm-10">					
+				{{ form.field_number_float_01 }}
+			</div>
+			<div class="col-sm-2 ss-form-inline-text">
+				cms.
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3>
+			{{ "Frecuencia cardíaca"|t }}
+		</h3>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12 col-md-6">
+		<label class="ss-label">
+			{{ form.field_number_float_02['widget']['#title'] }}
+		</label>
+		<div class="row">
+			<div class="col-sm-10">					
+				{{ form.field_number_float_02 }}
+			</div>
+			<div class="col-sm-2 ss-form-inline-text">
+				rpm.
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-12 col-md-6">
+		<label class="ss-label">
+			{{ form.field_number_float_03['widget']['#title'] }}
+		</label>
+		<div class="row">
+			<div class="col-sm-10">
+				{{ form.field_number_float_03 }}
+			</div>
+			<div class="col-sm-2 ss-form-inline-text">
+				lpm.
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3>
+			{{ "Presión arterial"|t }}
+		</h3>
+	</div>
+</div>	
+<div class="row">
+	<div class="col-sm-5">
+		<label class="ss-label">
+			{{ form.field_number_float_04['widget']['#title'] }}
+		</label>
+		<div class="row">
+			<div class="col-sm-5">
+				{{ form.field_number_float_04 }}
+			</div>
+			<div class="col-sm-5">
+				{{ form.field_number_float_05 }}
+			</div>
+			<div class="col-sm-2 ss-form-inline-text"> 
+				mm.
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-7">
+		<label class="ss-label">
+			{{ form.field_number_float_06['widget']['#title'] }}
+		</label>
+		<div class="row">
+			<div class="col-sm-3">
+				{{ form.field_number_float_06 }}
+			</div>
+			<div class="col-sm-3 ">
+				{{ form.field_number_float_07 }}
+			</div>
+			<div class="col-sm-1">
+				<div class="ss-form-inline-text">/</div>
+			</div>
+			<div class="col-sm-3">
+				{{ form.field_number_float_08 }}
+			</div>
+			<div class="col-sm-2 ss-form-inline-text">
+				mm. / Hg.
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3>
+			{{ form.field_text_plain_long_00['widget']['#title'] }}
+		</h3>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-6 ss-selectbox-horizontal">{{ form.field_text_list_00 }}</div>
+	<div class="col-sm-6">{{ form.field_text_plain_long_00 }}</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3>
+			{{ form.field_text_plain_long_01['widget']['#title'] }}
+		</h3>
+	</div>
+</div>	
+<div class="row">
+	<div class="col-sm-6 ss-selectbox-horizontal">{{ form.field_text_list_01 }}</div>
+	<div class="col-sm-6">{{ form.field_text_plain_long_01 }}</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3>
+			{{ form.field_text_plain_long_02['widget']['#title'] }}
+		</h3>
+	</div>
+</div>	
+<div class="row">
+	<div class="col-sm-6 ss-selectbox-horizontal">{{ form.field_text_list_02 }}</div>
+	<div class="col-sm-6">{{ form.field_text_plain_long_02 }}</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3>
+			{{ form.field_text_plain_long_03['widget']['#title'] }}
+		</h3>
+	</div>
+</div>	
+<div class="row">
+	<div class="col-sm-6 ss-selectbox-horizontal">{{ form.field_text_list_03 }}</div>
+	<div class="col-sm-6">{{ form.field_text_plain_long_03 }}</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3>
+			{{ form.field_text_plain_long_04['widget']['#title'] }}
+		</h3>
+	</div>
+</div>	
+<div class="row">
+	<div class="col-sm-6 ss-selectbox-horizontal">{{ form.field_text_list_04 }}</div>
+	<div class="col-sm-6">{{ form.field_text_plain_long_04 }}</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3>
+			{{ form.field_text_plain_long_05['widget']['#title'] }}
+		</h3>
+	</div>
+</div>	
+<div class="row">
+	<div class="col-sm-6 ss-selectbox-horizontal">{{ form.field_text_list_05 }}</div>
+	<div class="col-sm-6">{{ form.field_text_plain_long_05 }}</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3>
+			{{ form.field_text_plain_long_06['widget']['#title'] }}
+		</h3>
+	</div>
+</div>	
+<div class="row">
+	<div class="col-sm-6 ss-selectbox-horizontal">{{ form.field_text_list_06 }}</div>
+	<div class="col-sm-6">{{ form.field_text_plain_long_06 }}</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3>
+			{{ form.field_text_plain_long_07['widget']['#title'] }}
+		</h3>
+	</div>
+</div>	
+<div class="row">
+	<div class="col-sm-6 ss-selectbox-horizontal">{{ form.field_text_list_07 }}</div>
+	<div class="col-sm-6">{{ form.field_text_plain_long_07 }}</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3>
+			{{ form.field_text_plain_long_08['widget']['#title'] }}
+		</h3>
+	</div>
+</div>	
+<div class="row">
+	<div class="col-sm-6 ss-selectbox-horizontal">{{ form.field_text_list_08 }}</div>
+	<div class="col-sm-6">{{ form.field_text_plain_long_08 }}</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3>
+			{{ form.field_text_plain_long_09['widget']['#title'] }}
+		</h3>
+	</div>
+</div>	
+<div class="row">
+	<div class="col-sm-6 ss-selectbox-horizontal">{{ form.field_text_list_09 }}</div>
+	<div class="col-sm-6">{{ form.field_text_plain_long_09 }}</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3>
+			{{ form.field_text_plain_long_10['widget']['#title'] }}
+		</h3>
+	</div>
+</div>	
+<div class="row">
+	<div class="col-sm-6 ss-selectbox-horizontal">{{ form.field_text_list_10 }}</div>
+	<div class="col-sm-6">{{ form.field_text_plain_long_10 }}</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3>
+			{{ form.field_text_plain_long_11['widget']['#title'] }}
+		</h3>
+	</div>
+</div>	
+<div class="row">
+	<div class="col-sm-6 ss-selectbox-horizontal">{{ form.field_text_list_11 }}</div>
+	<div class="col-sm-6">{{ form.field_text_plain_long_11 }}</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3>
+			{{ form.field_text_plain_long_12['widget']['#title'] }}
+		</h3>
+	</div>
+</div>	
+<div class="row">
+	<div class="col-sm-6 ss-selectbox-horizontal">{{ form.field_text_list_12 }}</div>
+	<div class="col-sm-6">{{ form.field_text_plain_long_12 }}</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3>
+			{{ form.field_text_plain_long_13['widget']['#title'] }}
+		</h3>
+	</div>
+</div>	
+<div class="row">
+	<div class="col-sm-6 ss-selectbox-horizontal">{{ form.field_text_list_13 }}</div>
+	<div class="col-sm-6">{{ form.field_text_plain_long_13 }}</div>
+</div>

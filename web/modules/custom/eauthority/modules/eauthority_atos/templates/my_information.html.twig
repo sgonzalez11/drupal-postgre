@@ -1,0 +1,44 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+<div class="ss-my_information_twig ss-my-information_twig--atos container">
+    <div class="row">
+        <div class="ss-my_information_twig__files col-sm-12 col-md-5">
+            <h3>{{ 'Datos generales:'|t }}</h3>
+            <p><i class="fa fa-file-o"></i><a href="#" target="_blank">{{ 'Ver Certificado'|t }}</a></p>
+            <p><i class="fa fa-file-o"></i><a href="#" target="_blank">{{ 'Ver Especificaciones de Operaciones'|t }}</a></p>
+        </div>
+        <div class="ss-my_information_twig__data col-sm-12 col-md-7">
+            <div class="row">
+                <div class="data-block__text col-sm-12 col-md-7">
+                    <h3>{{ 'Nombre de la Organizacion:'|t }}</h3>
+                    <p>{{ organization['name'] }}</p>
+                    <h3>{{ 'Certificado:'|t }}</h3>
+                    <p>{{  'CIA-41'|t }}</p>
+                    <h3>{{ 'Fecha de Inicio:'|t }}</h3>
+                    <p>{{ '15 de Abril 2016'|t }}</p>
+                    <h3>{{ 'Cursos Habilitados:'|t }}</h3>
+                    {% for item in courses %}
+                        <div class="child-wrapper">- {{ item.0 }}</div>
+                    {% endfor %}
+                </div>
+                <div class="data-block__image col-sm-12 col-md-5">
+                    <div class="child-wrapper">
+                        {% if organization['uri']|trim is not empty %}
+                            <img src="{{ file_url(organization['uri']) }}" />
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

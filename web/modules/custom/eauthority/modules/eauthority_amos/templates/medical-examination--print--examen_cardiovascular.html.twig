@@ -1,0 +1,175 @@
+<div class="container">
+    <strong><h2 class="text-center">{{ 'Examen Cardiovascular'|t }}</h2></strong>
+    <div class="row">
+        <h4 class="text-center col-lg-6"> {{ 'Frecuencia cardíaca'|t }}</h4><h4 class="text-center col-lg-5"> {{ 'Presión arterial'|t }}</h4>
+        <div class="col-lg-3 text-center">
+            <p>{{ item.field_number_float_00.fieldDefinition.label }}</p>
+        </div>
+        <div class="col-lg-3 text-center">
+            <p>{{ item.field_number_float_01.fieldDefinition.label }}</p>
+        </div>
+        <div class="col-lg-2 text-center">
+            <p>{{ item.field_number_float_02.fieldDefinition.label }}</p>
+        </div>
+        <div class="col-lg-3 text-center">
+            <p> {{ item.field_number_float_04.fieldDefinition.label }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 text-center">
+            {{ item.field_number_float_00.value }}
+        </div>
+        <div class="col-lg-3 text-center">
+            {{ item.field_number_float_01.value }}</p>
+        </div>
+        <div class="col-lg-1 text-center">
+            {{ 'Derecho'|t }} 
+        </div>
+        <div class="col-lg-1 text-center">
+            {{ 'Izquierdo'|t }}
+        </div>
+        <div class="col-lg-3 text-center">
+            {{ item.field_number_float_04.value }}{{ ' /'|t }}
+            {{ item.field_number_float_05.value }}{{ ' mm'|t }}
+            {{ 'Hg '|t }}{{ item.field_number_float_06.value }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-offset-6 col-lg-1 text-center">
+            {{ item.field_number_float_02.value }}
+        </div>
+        <div class="col-lg-1 text-center">
+            {{ item.field_number_float_03.value }}
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-offset-6 col-md-6">
+            <h4 class="text-center">{{ 'Hallazgos: Descripción en detalle cada anormalidad encontrada.'|t }}</h4>
+        </div>
+    </div>
+    <div>
+        <div class="row">
+            <div class="col-lg-4">
+                <p>{{ item.field_text_list_00.fieldDefinition.label }}</p> 
+            </div>
+            <div class="col-lg-3">
+                {{ item.field_text_list_00.value }} 
+            </div>
+            <div class="col-lg-5">
+                {{ item.field_text_plain_long_00.value }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <p>{{ item.field_text_list_01.fieldDefinition.label }}</p>
+            </div>
+            <div class="col-lg-3">
+                {{ item.field_text_list_01.value }}
+            </div>
+            <div class="col-lg-5">
+                {{ item.field_text_plain_long_01.value }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <p>{{ item.field_text_list_02.fieldDefinition.label }}</p>
+            </div>
+            <div class="col-lg-3">
+                {{ item.field_text_list_02.value }}
+            </div>
+            <div class="col-lg-5">
+                {{ item.field_text_plain_long_02.value }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <p>  {{ item.field_text_list_03.fieldDefinition.label }}</p>
+            </div>
+            <div class="col-lg-3">
+                {{ item.field_text_list_03.value }}
+            </div>
+            <div class="col-lg-5">
+                {{ item.field_text_plain_long_03.value }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <p> {{ item.field_text_list_04.fieldDefinition.label }}</p>
+            </div>
+            <div class="col-lg-3">
+                {{ item.field_text_list_04.value }}
+            </div>
+            <div class="col-lg-5">
+                {{ item.field_text_plain_long_04.value }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <p> {{ item.field_text_list_05.fieldDefinition.label }}</p>
+            </div>
+            <div class="col-lg-3">
+                {{ item.field_text_list_05.value }}
+            </div>
+            <div class="col-lg-5">
+                {{ item.field_text_plain_long_05.value }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <p>{{ item.field_text_list_06.fieldDefinition.label }}</p>
+            </div>
+            <div class="col-lg-3">
+                {{ item.field_text_list_06.value }}
+            </div>
+            <div class="col-lg-5">
+                {{ item.field_text_plain_long_06.value }} 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <p>{{ item.field_text_list_07.fieldDefinition.label }}</p>
+            </div>
+            <div class="col-lg-3">
+                {{ item.field_text_list_07.value }}
+            </div>
+            <div class="col-lg-5">
+                {{ item.field_text_plain_long_07.value }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <p> {{ item.field_text_list_08.fieldDefinition.label }}</p>
+            </div>
+            <div class="col-lg-3">
+                {{ item.field_text_list_08.value }}
+            </div>
+            <div class="col-lg-5">
+                {{ item.field_text_plain_long_08.value }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <p>  {{ item.field_text_list_09.fieldDefinition.label }}</p>
+            </div>
+            <div class="col-lg-3">
+                {{ item.field_text_list_09.value }}
+            </div>
+            <div class="col-lg-5">
+                {{ item.field_text_plain_long_09.value }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <p> {{ item.field_text_list_10.fieldDefinition.label }}</p>
+            </div>
+            <div class="col-lg-3">
+                {{ item.field_text_list_10.value }}
+            </div>
+            <div class="col-lg-5">
+                {{ item.field_text_plain_long_10.value }} 
+            </div>
+        </div>
+    </div>
+    <br>
+</div>

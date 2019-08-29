@@ -1,0 +1,33 @@
+
+# Transaction menu items definition
+entity.transaction.collection:
+  title: 'Transaction list'
+  route_name: entity.transaction.collection
+  description: 'List Transaction entities'
+  parent: eauthority.operations.customer_management
+
+# Transaction type menu items definition
+entity.transaction_type.collection:
+  title: 'Transaction type'
+  route_name: entity.transaction_type.collection
+  description: 'List Transaction type (bundles)'
+  parent: entity.transaction.collection
+
+# Transaction Status menu items definition
+entity.transaction_status.collection:
+  title: 'Transaction Status list'
+  route_name: entity.transaction_status.collection
+  description: 'List Transaction Status entities'
+  parent: eauthority.operations.customer_management
+
+entity.transaction_status.collection.add:
+  title: 'Transaction Status add'
+  route_name: entity.transaction_status.add_form
+  description: 'Add Transaction Status entities'
+  parent: entity.transaction_status.collection
+
+transaction_status.admin.structure.settings:
+  title: 'Transaction Status settings'
+  description: 'Configure Transaction Status entities'
+  route_name: transaction_status.settings
+  parent: entity.transaction_status.collection

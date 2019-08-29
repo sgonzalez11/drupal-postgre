@@ -1,0 +1,22 @@
+{#
+/**
+ * @file identifier_type.html.twig
+ * Default theme implementation to present Identifier Types data.
+ *
+ * This template is used when viewing Identifier Types pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_identifier_type()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('identifier_type') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

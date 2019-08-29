@@ -1,0 +1,479 @@
+<?php
+
+use Drupal\maestro\Engine\MaestroEngine;
+use Drupal\maestro\Form\MaestroInteractiveFormBase;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\TrustedRedirectResponse;
+use Drupal\maestro_webform\Plugin\EngineTasks\MaestroWebformTask;
+use \Drupal\node\Entity\Node;
+use \Drupal\user\Entity\User;
+
+/**
+ * Implements hook_maestro_batch_handlers
+ */
+function maestro_insurance_maestro_batch_handlers() {
+  return [
+    'maestro_insurance_create_user_from_webform' => t('Creates a new user from the webform inputs.'),
+    'maestro_insurance_create_insurance_quote_content' => t('Creates quote content type and bogus PDF.'),
+  ];
+  //return $handlers;
+}
+
+/**
+ * Implements hook_maestro_interactive_handlers
+ */
+function maestro_insurance_maestro_interactive_handlers() {
+  return [
+    'maestro_insurance_needs_clarification_form' => t('Needs Clarification from Quote Submitter.'),
+  ];
+}
+
+
+/**
+ * Implements hook_page_attachments
+ */
+function maestro_insurance_page_attachments(array &$page) {
+  //we're adding our css to every page just for this demo.
+  $page['#attached']['library'][] = 'maestro_insurance/maestro-insurance-css';
+}
+
+
+function maestro_insurance_user_login(\Drupal\user\UserInterface $account) {
+  // Default login destination to the dashboard if not admin
+  if ($account->hasRole('administrator') === FALSE) {
+    $current_request = \Drupal::service('request_stack')->getCurrentRequest();
+    if (!$current_request->query->get('destination')) {
+      if ($account->hasRole('internal') === FALSE) {   //we are not an internal employee (agent/underwriter)    
+        $current_request->query->set(
+          'destination', '/my-dashboard'
+        );
+      }
+      else {  //we are an agent or underwriter
+        $current_request->query->set(
+          'destination', '/taskconsole'
+          );
+      }
+    }
+  }
+}
+
+
+/**
+ * Implements hook_toolbar().
+ * Add the Link to my-dashboard to the Maestro toolbar
+ */
+function maestro_insurance_toolbar() {
+  $items = [];
+
+  // Need at least this permission to view the maestro toolbar
+  if (!\Drupal::currentUser()->hasPermission('view maestro task console')) {
+    return $items;
+  }
+
+  $items['Maestro']['tray']['configuration'][] = [
+    '#type' => 'link',
+    '#title' => 'My Dashboard',
+    '#url' => \Drupal\Core\Url::fromUri("internal:/my-dashboard"),
+  ];
+
+  $items['Maestro']['tray']['configuration'][] = [
+    '#type' => 'link',
+    '#title' => 'My To-do List',
+    '#url' => \Drupal\Core\Url::fromUri("internal:/your-to-dos"),
+  ];
+
+  return $items;
+
+}
+
+/**
+ * Batch Function Handler for Maestro Insurance workflow.
+ * Handler creates a new user from the submission webform.
+ * @param int $queueID
+ * @param int $processID
+ * @return boolean
+ */
+function maestro_insurance_create_user_from_webform($processID, $queueID) {
+  global $base_url;
+  //Our implementation of this workflow batch function handler uses the fact that
+  //a Webform submission is injected into the entity identifiers entity with a unique_ID of "submission".
+  //We will read that entry, and use the entity_id from it to load our Webform submission.
+  $user = NULL;  $sid = FALSE;
+
+  $webform_submission = NULL;
+  $sid = MaestroEngine::getEntityIdentiferByUniqueID($processID, 'submission');
+  if ($sid) {
+    $webform_submission = \Drupal\webform\Entity\WebformSubmission::load($sid);
+  }
+  if ($webform_submission) {
+    $email = $webform_submission->getElementData('email_address');
+    $user = user_load_by_mail($email);
+    $mailManager = \Drupal::service('plugin.manager.mail');
+    $langcode = \Drupal::languageManager()->getCurrentLanguage()->getId();
+    if ($user === FALSE) {  //if this is false, create the user otherwise the user already exists
+      //we also assume here that you don't need the user information.
+      $fullName = $webform_submission->getElementData('your_full_name');
+      //Create the user based on the information provided in the webform
+      $temp_password = user_password();
+      $user = User::create();
+      $user->setPassword($temp_password);  //generate a password
+      $user->enforceIsNew();
+      $user->setEmail($email);
+      $user->setUsername($email);
+      $user->activate();
+      $user->save();
+
+
+      $params = array();
+      $message['subject'] = t('Thank you for your quote submission.');
+      $params['message'] =
+        "Thank you for your Maestro Insurance Quote Submission! \n\n<br><br>" .
+        "You can log into the site with your new account and monitor your progress " .
+        "<a href='" . $base_url . "/my-dashboard'>by clicking here.</a>\n\n<br><br>" .
+        "Username: " . $email . "\n<br>" .
+        "Password: " . $temp_password;
+
+      //$user->addRole('some role here'); //should we attach to a role?
+      //$user->save();
+    }
+    else {
+      $params = array();
+      $message['subject'] = t('Thank you for your quote submission.');
+      $params['message'] =
+        "Thank you for your Maestro Insurance Quote Submission! \n\n<br><br>" .
+        "You can log into the site with your existing account " .
+        "<a href='" . $base_url . "/my-dashboard'>by clicking here.</a>\n\n<br><br>" .
+        "Username: " . $email . "\n<br>";
+    }
+
+    $mailManager->mail('maestro_insurance', 'generated_user', $email, $langcode, $params, NULL, TRUE);
+    //now set the owner of the webform to the submitted user
+    $webform_submission->setOwner($user);
+    $webform_submission->save();
+   
+  }
+  else {
+    //There's been an error somewhere. 
+    //We will set the status message to denote an issue.
+    MaestroEngine::setProcessVariable('workflow_current_stage_message', t('Error! Unable to fetch the Quote Submission!'), $processID);
+  }
+
+  if ($user) {
+    MaestroEngine::setProcessVariable('quote_submission_username', $email, $processID);
+    MaestroEngine::setProcessVariable('initiator', $email, $processID);  //since we get anonymous and "demo" entries done by other users, this sets the initiator properly
+    $quote_type = 'Homeowners';
+    if (MaestroEngine::getProcessVariable('type_of_quote', $processID) != 'homeowners') {
+      $quote_type = 'Automotive';
+    }
+    MaestroEngine::setProcessLabel($processID, $quote_type . ' Insurance Quote For ' . $email);
+    return TRUE;  //Looks OK, let the engine know we're completing the task
+  }
+  else {
+    MaestroEngine::setProcessVariable('workflow_current_stage_message', t('Error! Unable to create an account for the submitting user!'), $processID);
+  }
+  return FALSE; //pauses execution at this task.  Returning FALSE means that the task is NOT complete.
+}
+
+/**
+ * Batch Function Handler for Maestro Insurance workflow.
+ * Handler creates a new insurance quote.
+ * @param int $queueID
+ * @param int $processID
+ * @return boolean
+ */
+function maestro_insurance_create_insurance_quote_content($processID, $queueID) {
+  $handler = \Drupal::service('module_handler');
+  $path = $handler->getModule('maestro_insurance')->getPath();
+  $data = file_get_contents($path . '/assets/sample.pdf');
+  $file = file_save_data($data, 'public://quote-' . $queueID . '.pdf', FILE_EXISTS_REPLACE);
+  $email = MaestroEngine::getProcessVariable('quote_submission_username', $processID);
+  $user = user_load_by_mail($email);
+  $webform_submission = NULL;
+  $fullname = NULL;
+  $sid = MaestroEngine::getEntityIdentiferByUniqueID($processID, 'submission');
+  if ($sid) $webform_submission = \Drupal\webform\Entity\WebformSubmission::load($sid);
+  if ($webform_submission) $fullname = $webform_submission->getElementData('your_full_name');
+  
+  // Create policy_quote node object with attached file.
+  $node = Node::create(['type' => 'policy_quote', 'uid' => $user->id()]);
+  $node->set('title', t('Your quote for an insurance policy'));
+  $node->set('field_policy_quote', $file->id());
+  $node->set('field_applicant', $user->id());
+  $node->set('field_quote_reference_number', $queueID);
+  $node->set('field_submittor_full_name', $fullname);
+  
+  $node->enforceIsNew();
+  $node->save();
+
+
+  //add the node to our entity identifiers so we can call it up for view in the next task.
+  MaestroEngine::createEntityIdentifier($processID, 'node', 'policy_quote', 'policy-quote', $node->nid);
+  if ($node) {
+    return TRUE;
+  }
+}
+
+/**
+ * Interactive task handler for showing the submission user the clarification form.
+ *
+ * @param int $processID
+ * @param int $queueID
+ */
+function maestro_insurance_needs_clarification_form(&$form, $queueID, MaestroInteractiveFormBase $obj) {
+  //First we load the submission so we can provide context for the response to question textarea
+
+  $webform_submission = NULL;
+  $processID = MaestroEngine::getProcessIdFromQueueId($queueID);
+  $sid = MaestroEngine::getEntityIdentiferByUniqueID($processID, 'submission');
+  if ($sid) {
+    $webform_submission = \Drupal\webform\Entity\WebformSubmission::load($sid);
+  }
+  if ($webform_submission) {
+    $form['question'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Question from your agent'),
+    ];
+
+    $form['question']['agent_question'] = [
+      '#markup' => $webform_submission->getElementData('review_notes_and_questions'),
+    ];
+  }
+
+
+  $form['response_to_question'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Your Response'),
+    '#description' => t('Please respond to the questions from your Agent'),
+  );
+
+  $form['#title'] = t('Your agent has some questions about your submission');
+
+  //overriding the "Accept" default label with the "Send to Agent" text
+  $form['actions']['submit']['#value'] = t('Send to Agent');
+
+  return $form;
+}
+
+/**
+ * This is the submit/return from the maestro_insurance_needs_clarification_form function.
+ * We inject the information from the user into the webform submission.
+ *
+ * @param array $form
+ * @param FormStateInterface $form_state
+ * @param number $queueID
+ */
+function maestro_insurance_needs_clarification_form_submit(&$form, &$form_state, $queueID = 0) {
+  $processID = MaestroEngine::getProcessIdFromQueueId($queueID);
+  $task = MaestroEngine::getTemplateTaskByQueueID($queueID);
+  if ($task['id'] == 'need_more_information' || $task['id'] == 'need_underwriting_clarification') {
+    $response = $form_state->getValue('response_to_question');
+    $sid = FALSE;
+    $webform_submission = NULL;
+    $sid = MaestroEngine::getEntityIdentiferByUniqueID($processID, 'submission');
+    if ($sid) {
+      $webform_submission = \Drupal\webform\Entity\WebformSubmission::load($sid);
+    }
+    if ($webform_submission) {
+      $data = $webform_submission->getData();
+      $data['response_from_prospective_client'] = $response;
+
+      //now lets set the previous_questions_and_answers field with the original question and answer
+      $data['previous_questions_and_answers'][] = str_repeat('-', 15) . "\nQuestion: \n" . $webform_submission->getElementData('review_notes_and_questions') .
+        "\n\nAnswer:\n" . $response;
+      $webform_submission->setData($data);
+      $webform_submission->save();
+      if (isset($task['data']['redirect_to'])) {
+        $response = new TrustedRedirectResponse($task['data']['redirect_to']);
+        $form_state->setResponse($response);
+      }
+
+    }
+    else {
+      MaestroEngine::setProcessVariable('workflow_current_stage_message', t('Error! Unable to fetch the Quote Submission!'), $processID);
+    }
+  }
+
+}
+
+/**
+ * Implements Maestro Webform API for maestro_webform_submission_form
+ * Sets extra form parameters if need be.
+ *
+ * @param int $queueID
+ * @param array $form
+ * @param MaestroWebformTask $obj (see Drupal\maestro_webform\Plugin\EngineTasks\MaestroWebformTask)
+ */
+function maestro_insurance_maestro_webform_submission_form($queueID, &$form, MaestroWebformTask $obj) {
+  $task = MaestroEngine::getTemplateTaskByQueueID($queueID);
+
+  /**
+   * Initial review of the quote submission by the agent
+   */
+  if ($task['id'] == 'review_submission') { //We target our initial review submission with this submission form mechanism.
+    $form['question_to_client'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Any Questions or Notes?'),
+      '#description' => t('When rejecting this quote submission, the applicant will be sent the questions and notes you enter in this field.'),
+      '#weight' => 0,
+    );
+    $form['actions']['reject']['#value'] = t('Send back to Client for review');
+    $form['actions']['#weight'] = 10;
+    $form['actions']['cancel_quote'] = array(
+      '#type' => 'submit',
+      '#value' => t('Cancel This Quote'),
+    );
+    $form['#title'] = t('Quote Submission Review');
+  }
+
+  /**
+   * Homeowner's underwriting presentation
+   */
+  if ($task['id'] == 'homeowners_underwriting') { //The underwriting review for the homeowner's quote request.
+    $form['question_to_client'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Any Questions or Notes?'),
+      '#description' => t('When rejecting this quote submission, the applicant will be sent the questions and notes you enter in this field.'),
+      '#weight' => 0,
+    );
+    $form['actions']['submit']['#value'] = t('Accept Quote and Generate Underwriting Documents');
+    $form['actions']['reject']['#value'] = t('Send back to Client for review');
+    $form['actions']['#weight'] = 10;
+    $form['actions']['cancel_quote'] = array(
+      '#type' => 'submit',
+      '#value' => t('Cancel This Quote'),
+    );
+    $form['#title'] = t('Homeowners Underwriting Review');
+  }
+
+  /**
+   * Automotive underwriting presentation
+   */
+  if ($task['id'] == 'automotive_underwriting') { //The underwriting review for the automotive quote request.
+    $form['question_to_client'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Any Questions or Notes?'),
+      '#description' => t('When rejecting this quote submission, the applicant will be sent the questions and notes you enter in this field.'),
+      '#weight' => 0,
+    );
+    $form['actions']['submit']['#value'] = t('Accept Quote and Generate Underwriting Documents');
+    $form['actions']['reject']['#value'] = t('Send back to Client for review');
+    $form['actions']['#weight'] = 10;
+    $form['actions']['cancel_quote'] = array(
+      '#type' => 'submit',
+      '#value' => t('Cancel This Quote'),
+    );
+    $form['#title'] = t('Automotive Underwriting Review');
+  }
+
+}
+
+
+/**
+ * Implements Maestro Webform API for maestro_webform_submission_set_cancel_completion_status
+ * We use the triggeringElement and the completeTask flag to determine in our case, IF we should be completing the task
+ * Since this is a cancel event and not a sure-fire complete task event.
+ *
+ * In our case, since we have a cancel-quote option, we don't want to complete the task as we ask the "Are you sure" question
+ * to the user if they really want to cancel the quote.  If they opt out, they are returned to their task console where the
+ * task should still remain active and not completed.
+ *
+ *
+ * @param int $queueID
+ * @param array $form
+ * @param FormStateInterface $form_state
+ * @param string $triggeringElement
+ * @param boolean $completeTask
+ */
+function maestro_insurance_maestro_webform_submission_set_cancel_completion_status($queueID, &$form, FormStateInterface &$form_state, $triggeringElement, &$completeTask) {
+  if (strstr($triggeringElement['#id'], 'edit-cancel-quote') !== FALSE && $queueID > 0) {
+    $completeTask = FALSE;
+  }
+}
+
+
+/**
+ * Implements Maestro Webform API for maestro_webform_submission_form_submit
+ * We use the extra form parameters to set the webform submission's agent/admin questions
+ *
+ * @param int $queueID
+ * @param array $form
+ * @param FormStateInterface $form_state
+ * @param array|NULL $triggeringElement
+ */
+function maestro_insurance_maestro_webform_submission_form_submit($queueID, &$form, FormStateInterface &$form_state, $triggeringElement) {
+  $processID = MaestroEngine::getProcessIdFromQueueId($queueID);
+  $question = $form_state->getValue('question_to_client');
+  $webform_submission = NULL;
+  $sid = MaestroEngine::getEntityIdentiferByUniqueID($processID, 'submission');
+  if ($sid) {
+    $webform_submission = \Drupal\webform\Entity\WebformSubmission::load($sid);
+  }
+  if ($webform_submission) {
+    $data = $webform_submission->getData();
+    $data['review_notes_and_questions'] = $question;
+    $data['response_from_prospective_client'] = '';
+    $webform_submission->setData($data);
+    $webform_submission->save();
+  }
+  else {
+    MaestroEngine::setProcessVariable('workflow_current_stage_message', t('Error! Unable to fetch the Quote Submission!'), $processID);
+  }
+
+  if (strstr($triggeringElement['#id'], 'edit-cancel-quote') !== FALSE && $queueID > 0) {
+    //The operator has decided to cancel this quote.
+    //We need to shunt this to an "are you sure" confirmation form.
+    $response = new TrustedRedirectResponse(\Drupal\Core\Url::fromRoute('maestro_insurance.confirm_cancel_process', ['processID' => $processID])
+      ->toString());
+    $form_state->setResponse($response);
+  }
+
+}
+
+/**
+ * Implements hook_mail().
+ */
+function maestro_insurance_mail($key, &$message, $params) {
+  $options = array(
+    'langcode' => $message['langcode'],
+  );
+
+  //Dev note:
+  //use hook_mail_alter to set a different subject line
+
+  $message['headers']['Content-Type'] = 'text/html; charset=UTF-8; format=flowed; delsp=yes';
+
+  switch ($key) {
+    case 'generated_user':
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = t('Thank you for your quote submission.');
+      $message['body'][] = \Drupal\Component\Utility\Html::escape($params['message']);
+      $message['headers']['Content-Type'] = 'text/html; charset=UTF-8; format=flowed; delsp=yes';
+      break;
+  }
+}
+
+
+/**
+ * Implements hook_mail_alter
+ *
+ * For the purposes of sending out client emails, we alter the subject line to be more
+ * user friendly
+ *
+ */
+function maestro_insurance_mail_alter(&$message) {
+  if ($message['id'] == 'maestro_assignment_notification') {
+    $queueID = $message['params']['queueID'];
+    $task = MaestroEngine::getTemplateTaskByQueueID($queueID);
+    if ($task['id'] == 'need_more_information') {
+      $message['subject'] = t('We Need More Information to Process Your Insurance Quote');
+    }
+    if ($task['id'] == 'present_quote') {
+      $message['subject'] = t('Your Maestro Insurance Quote is ready!');
+    }
+
+  }
+}
+
+
+
+

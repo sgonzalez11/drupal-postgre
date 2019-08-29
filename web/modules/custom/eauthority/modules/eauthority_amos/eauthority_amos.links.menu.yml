@@ -1,0 +1,52 @@
+
+# Medical Assessment menu items definition
+entity.medical_assessment.collection:
+  title: 'Medical Assessment list'
+  route_name: entity.medical_assessment.collection
+  description: 'List Medical Assessment entities'
+  parent: eauthority.operations.medical
+
+entity.medical_assessment.collection.add:
+  title: 'Medical Assessment add'
+  route_name: entity.medical_assessment.add_form
+  description: 'Add Medical Assessment entities'
+  parent: entity.medical_assessment.collection
+
+medical_assessment.admin.structure.settings:
+  title: 'Medical Assessment settings'
+  description: 'Configure Medical Assessment entities'
+  route_name: medical_assessment.settings
+  parent: entity.medical_assessment.collection
+
+# Medical Examination menu items definition
+entity.medical_examination.collection:
+  title: 'Medical Examination list'
+  route_name: entity.medical_examination.collection
+  description: 'List Medical Examination entities'
+  parent: eauthority.operations.medical
+
+# Medical Examination type menu items definition
+entity.medical_examination_type.collection:
+  title: 'Medical Examination type'
+  route_name: entity.medical_examination_type.collection
+  description: 'List Medical Examination type (bundles)'
+  parent: entity.medical_examination.collection
+
+# Medical Assessment Recommendations menu items definition
+entity.med_assessmt_recommendation.collection:
+  title: 'Medical Assessment Recommendations list'
+  route_name: entity.med_assessmt_recommendation.collection
+  description: 'List Medical Assessment Recommendations entities'
+  parent: eauthority.operations.medical
+
+entity.med_assessmt_recommendation.collection.add:
+  title: 'Medical Assessment Recommendations add'
+  route_name: entity.med_assessmt_recommendation.add_form
+  description: 'Add Medical Assessment Recommendations entities'
+  parent: entity.med_assessmt_recommendation.collection
+
+med_assessmt_recommendation.admin.structure.settings:
+  title: 'Medical Assessment Recommendations settings'
+  description: 'Configure Medical Assessment Recommendations entities'
+  route_name: med_assessmt_recommendation.settings
+  parent: entity.med_assessmt_recommendation.collection

@@ -1,0 +1,7 @@
+name: 'eAuthority Transactions'
+type: module
+description: 'eAuthority Portal - Transactions'
+core: 8.x
+package: 'eAuthority'
+dependencies:
+  - eauthority:eauthority

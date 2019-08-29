@@ -1,0 +1,30 @@
+# Autocomplete.
+eauthority_appointments.element.autocomplete:
+  path: '/webform/{webform}/autocomplete/{key}'
+  defaults:
+    _controller: '\Drupal\eauthority_appointments\Controller\AutocompleteRestElementController::autocomplete'
+  options:
+    parameters:
+      webform:
+        type: 'entity:webform'
+  requirements:
+    _entity_access: 'webform.submission_page'
+
+#appointment form
+eauthority_appointments.appointment:
+  path: '/appointments/new'
+  defaults:
+    _form: '\Drupal\eauthority_appointments\Form\AppointmentForm'
+    _title: 'Appointment'
+  requirements:
+    _permission: 'access content'
+
+# Confirmation page
+eauthority_appointments.confirmation:
+  path: '/confirmation/{appointment_id}'
+  defaults:
+    _controller: '\Drupal\eauthority_appointments\Controller\ConfirmationController::content'
+    _title: 'Confirmation'
+    appointment_id: ''
+  requirements:
+    _permission: 'access content'

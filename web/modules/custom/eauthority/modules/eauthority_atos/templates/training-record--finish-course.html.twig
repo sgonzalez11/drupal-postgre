@@ -1,0 +1,61 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+<div class="container-fluid">
+
+    {% set entitystatus = form.entity_status.widget['#value'].0 %}
+    {% set entitystatusoptions = form.entity_status.widget['#options'] %}
+    {% set entityId = form['#entityId'] %}
+    {#{ kint(form.entity_status.widget['#value']) }#}
+    {# {{ dsm(_context|keys) }} #}
+
+    {% if entitystatus == "DRF" %}
+        {#{ Do something }#}
+    {% endif %}
+
+    {% set statusvaluelabel = "" %}
+    {% for key, statuslabel in entitystatusoptions %}
+        {% if key == entitystatus %}
+            {% set statusvaluelabel = statuslabel %}
+        {% endif %}
+    {% endfor %}
+
+    <div class="row">
+        <div class="col-sm-3">{{ form.name }}</div>
+        <div class="col-sm-4 col-sm-offset-1">{{ form.group_real_execution.start_date }}</div>
+        <div class="col-sm-4">{{ form.group_real_execution.finish_date }}</div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">{{ form.training_course }}</div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">{{ form.training_record_attendee }}</div>
+    </div>
+
+    {% if 'administrator' in user.getroles  %}
+        <div class="row">
+            <div class="col-sm-2">{{ form.entity_status }}</div>
+        </div>
+    {% endif %}
+
+    <div class="row">
+        <div class="col-sm-12">{{ form.actions.submit }}{{ form.actions.cancel }}</div>
+    </div>
+    {# Don't forget to add printing form special info at the end.
+    Without this data form will not working propertly.
+    #}
+    {{ form.form_build_id }}
+    {{ form.form_token }}
+    {{ form.form_id }}
+</div>

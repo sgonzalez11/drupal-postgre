@@ -1,0 +1,30 @@
+entity.document_parameter.add_form:
+  route_name: entity.document_parameter.add_form
+  title: 'Add Document Parameter'
+  appears_on:
+    - entity.document_parameter.collection
+entity.customer.add_form:
+  route_name: entity.customer.add_form
+  title: 'Add Customers'
+  appears_on:
+    - entity.customer.collection
+entity.aircraft.add_form:
+  route_name: entity.aircraft.add_form
+  title: 'Add Aircraft'
+  appears_on:
+    - entity.aircraft.collection
+entity.customer_profiles.add_form:
+  route_name: entity.customer_profiles.add_form
+  title: 'Add Customer Profiles'
+  appears_on:
+    - entity.customer_profiles.collection
+entity.customer_user.add_form:
+  route_name: entity.customer_user.add_form
+  title: 'Add Customer User'
+  appears_on:
+    - entity.customer_user.collection
+entity.identifier_type.add_form:
+  route_name: entity.identifier_type.add_form
+  title: 'Add Identifier Types'
+  appears_on:
+    - entity.identifier_type.collection

@@ -1,0 +1,133 @@
+# Training Record menu items definition
+entity.training_record.collection:
+  title: 'Training Records'
+  route_name: entity.training_record.collection
+  description: 'List Training Record entities'
+  parent: eauthority.operations.training
+
+entity.training_record.collection.add:
+  title: 'Training Record add'
+  route_name: entity.training_course.add_form
+  description: 'Add Training Record entities'
+  parent: entity.training_record.collection
+
+training_record.admin.structure.settings:
+  title: 'Training Record settings'
+  description: 'Configure Training Record entities'
+  route_name: training_record.settings
+  parent: entity.training_record.collection
+
+# Attendee menu items definition
+entity.training_record_attendee.collection:
+  title: 'Attendee list'
+  route_name: entity.training_record_attendee.collection
+  description: 'List Attendee entities'
+  parent: eauthority.operations.training
+
+entity.training_record_attendee.collection.add:
+  title: 'Attendee add'
+  route_name: entity.training_record_attendee.add_form
+  description: 'Add Attendee entities'
+  parent: entity.training_record_attendee.collection
+
+training_record_attendee.admin.structure.settings:
+  title: 'Attendee settings'
+  description: 'Configure Attendee entities'
+  route_name: training_record_attendee.settings
+  parent: entity.training_record_attendee.collection
+
+# Training Course menu items definition
+entity.training_course.collection:
+  title: 'Training Course list'
+  route_name: entity.training_course.collection
+  description: 'List Training Course entities'
+  parent: eauthority.operations.training
+
+entity.training_course.collection.add:
+  title: 'Training Course add'
+  route_name: entity.training_course.add_form
+  description: 'Add Training Course entities'
+  parent: entity.training_course.collection
+
+training_course.admin.structure.settings:
+  title: 'Training Course settings'
+  description: 'Configure Training Course entities'
+  route_name: training_course.settings
+  parent: entity.training_course.collection
+  
+# Training Course menu items definition
+entity.customer_training_courses.collection:
+  title: 'Customer Training Course list'
+  route_name: entity.customer_training_courses.collection
+  description: 'List Customer Training Course entities'
+  parent: eauthority.operations.training
+
+entity.customer_training_courses.collection.add:
+  title: 'Customer Training Course add'
+  route_name: entity.customer_training_courses.add_form
+  description: 'Add Customer Training Course entities'
+  parent: entity.customer_training_courses.collection
+
+customer_training_courses.admin.structure.settings:
+  title: 'Customer Training Course settings'
+  description: 'Configure Customer Training Course entities'
+  route_name: customer_training_courses.settings
+  parent: entity.customer_training_courses.collection
+
+# Attendee Experience menu items definition
+entity.training_record_attendee_exp.collection:
+  title: 'Attendee Experience list'
+  route_name: entity.training_record_attendee_exp.collection
+  description: 'List Attendee Experience entities'
+  parent: eauthority.operations.training
+
+entity.training_record_attendee_exp.collection.add:
+  title: 'Attendee Experience add'
+  route_name: entity.training_record_attendee_exp.add_form
+  description: 'Add Attendee Experience'
+  parent: entity.training_record_attendee_exp.collection
+  weight: -46
+
+training_record_attendee_exp.admin.structure.settings:
+  title: 'Attendee Experience settings'
+  description: 'Configure Attendee Experience entities'
+  route_name: training_record_attendee_exp.settings
+  parent: entity.training_record_attendee_exp.collection
+
+# Flight Experience Type menu items definition
+entity.flight_experience_type.collection:
+  title: 'Flight Experience Type list'
+  route_name: entity.flight_experience_type.collection
+  description: 'List Flight Experience Type entities'
+  parent: eauthority.operations.training
+
+entity.flight_experience_type.collection.add:
+  title: 'Flight Experience Type add'
+  route_name: entity.flight_experience_type.add_form
+  description: 'Add Flight Experience Type'
+  parent: entity.flight_experience_type.collection
+
+flight_experience_type.admin.structure.settings:
+  title: 'Flight Experience Type settings'
+  description: 'Configure Flight Experience Type entities'
+  route_name: flight_experience_type.settings
+  parent: entity.flight_experience_type.collection
+
+# Training Record Attendee Results menu items definition
+entity.training_record_attendee_result.collection:
+  title: 'Training Record Attendee Results list'
+  route_name: entity.training_record_attendee_result.collection
+  description: 'List Training Record Attendee Results entities'
+  parent: eauthority.operations.training
+
+entity.training_record_attendee_result.collection.add:
+  title: 'Training Record Attendee Results add'
+  route_name: entity.training_record_attendee_result.add_form
+  description: 'Add Training Record Attendee Results'
+  parent: entity.training_record_attendee_result.collection
+
+training_record_attendee_result.admin.structure.settings:
+  title: 'Training Record Attendee Results settings'
+  description: 'Configure Training Record Attendee Results entities'
+  route_name: training_record_attendee_result.settings
+  parent: entity.training_record_attendee_result.collection

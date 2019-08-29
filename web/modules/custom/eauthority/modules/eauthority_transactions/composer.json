@@ -1,0 +1,14 @@
+{
+  "name": "drupal/eauthority_transactions",
+  "type": "drupal-module",
+  "description": "eAuthority Portal - Transactions",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/eauthority_transactions",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/eauthority_transactions",
+    "source": "http://cgit.drupalcode.org/eauthority_transactions"
+  },
+  "require": { }
+}

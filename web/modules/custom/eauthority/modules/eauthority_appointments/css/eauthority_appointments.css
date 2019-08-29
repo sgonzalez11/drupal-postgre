@@ -1,0 +1,16 @@
+.calendar-set .fc-past {
+  background: rgba(200, 200, 200, 1);
+}
+
+#edit-event-start,
+#edit-event-id,
+#edit-event-title,
+#edit-event-end,
+.confirmation-button, 
+#edit-submit {
+  display: none;
+}
+
+.ui-dialog-content .confirmation-button {
+  display: block;
+}

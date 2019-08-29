@@ -1,0 +1,524 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+
+<div class="ss-form-bundle ss-examen_otorrinolaringologico">
+{{ "Evaluación: no omita respuestas. Si un aparte no ha sido examinado marque NE." | t  }}
+{{ "Hallazgos: Describa en detalle cada anormalidad encontrada. Refiérase al Nro. correspondiente." | t  }}
+    <label class="">
+        {{ form.field_text_plain_long_00['widget']['#title'] }}
+    </label>
+
+    <div class="row">
+
+        <div class="col-sm-6">{{ form.field_text_list_00 }}</div>
+
+        <div class="col-sm-6">{{ form.field_text_plain_long_00 }}</div>
+    </div>
+
+
+
+    <label class="">
+        {{ form.field_text_plain_long_01['widget']['#title'] }}
+    </label>
+
+    <div class="row">
+        <div class="col-sm-6">{{ form.field_text_list_01 }}</div>
+        <div class="col-sm-6">{{ form.field_text_plain_long_01 }}</div>
+    </div>
+
+    <label class="">
+        {{ form.field_text_plain_long_02['widget']['#title'] }}
+    </label>
+
+    <div class="row">
+        <div class="col-sm-6">{{ form.field_text_list_02 }}</div>
+        <div class="col-sm-6">{{ form.field_text_plain_long_02 }}</div>
+    </div>
+
+    <label class="">
+        {{ form.field_text_plain_long_03['widget']['#title'] }}
+    </label>
+
+    <div class="row">
+        <div class="col-sm-6">{{ form.field_text_list_03 }}</div>
+        <div class="col-sm-6">{{ form.field_text_plain_long_03 }}</div>
+    </div>
+
+    <label class="">
+        {{ form.field_text_plain_long_04['widget']['#title'] }}
+    </label>
+
+    <div class="row">
+        <div class="col-sm-6">{{ form.field_text_list_04 }}</div>
+        <div class="col-sm-6">{{ form.field_text_plain_long_04 }}</div>
+    </div>
+
+    <label class="">
+        {{ form.field_text_plain_long_05['widget']['#title'] }}
+    </label>
+
+    <div class="row">
+        <div class="col-sm-6">{{ form.field_text_list_05 }}</div>
+        <div class="col-sm-6">{{ form.field_text_plain_long_05 }}</div>
+    </div>
+
+    <label class="">
+        {{ form.field_text_plain_long_06['widget']['#title'] }}
+    </label>
+
+    <div class="row">
+        <div class="col-sm-6">{{ form.field_text_list_06 }}</div>
+        <div class="col-sm-6">{{ form.field_text_plain_long_06 }}</div>
+    </div>
+
+    <label class="">
+        {{ form.field_text_plain_long_07['widget']['#title'] }}
+    </label>
+
+    <div class="row">
+        <div class="col-sm-6">{{ form.field_text_list_07 }}</div>
+        <div class="col-sm-6">{{ form.field_text_plain_long_07 }}</div>
+    </div>
+
+    <label class="">
+        {{ form.field_text_plain_long_08['widget']['#title'] }}
+    </label>
+
+    <div class="row">
+        <div class="col-sm-6">{{ form.field_text_list_08 }}</div>
+        <div class="col-sm-6">{{ form.field_text_plain_long_08 }}</div>
+    </div>
+
+    <label class="">
+        {{ form.field_text_plain_long_09['widget']['#title'] }}
+    </label>
+
+    <div class="row">
+        <div class="col-sm-6">{{ form.field_text_list_09 }}</div>
+        <div class="col-sm-6">{{ form.field_text_plain_long_09 }}</div>
+    </div>
+
+    <label class="">
+        {{ form.field_text_plain_long_10['widget']['#title'] }}
+    </label>
+
+    <div class="row">
+        <div class="col-sm-6">{{ form.field_text_list_10 }}</div>
+        <div class="col-sm-6">{{ form.field_text_plain_long_10 }}</div>
+    </div>
+
+    <label class="">
+        {{ form.field_text_plain_long_11['widget']['#title'] }}
+    </label>
+
+    <div class="row">
+        <div class="col-sm-6">{{ form.field_text_list_11 }}</div>
+        <div class="col-sm-6">{{ form.field_text_plain_long_11 }}</div>
+    </div>
+
+    <label class="">
+        {{ form.field_text_plain_long_12['widget']['#title'] }}
+    </label>
+
+    <div class="row">
+        <div class="col-sm-6">{{ form.field_text_list_12 }}</div>
+        <div class="col-sm-6">{{ form.field_text_plain_long_12 }}</div>
+    </div>
+
+
+
+
+    <h3> Audiometría </h3>
+
+    <div class="col-sm-6">
+        <div class="row">    
+            <div class="col-sm-2">
+                <div class="ss-form-inline-text">Via osea</div>
+            </div>
+
+            <div class="col-sm-2">
+                <label class="">
+                    <div class="ss-form-inline-text">0.5K</div>
+                </label>
+                <div class="row">
+                    <div class="col-sm-10">
+                        {{ form.field_number_float_00 }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <label class="">
+                    <div class="ss-form-inline-text">1K</div>
+                </label>
+                <div class="row">
+                    <div class="col-sm-10">
+                        {{ form.field_number_float_01 }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <label class="">
+                    <div class="ss-form-inline-text">2K</div>
+                </label>
+                <div class="row">
+                    <div class="col-sm-10">
+                        {{ form.field_number_float_02 }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <label class="">
+                    <div class="ss-form-inline-text">3K</div>
+                </label>
+                <div class="row">
+                    <div class="col-sm-10">
+                        {{ form.field_number_float_03 }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <label class="">
+                    <div class="ss-form-inline-text">4K</div>
+                </label>
+                <div class="row">
+                    <div class="col-sm-10">
+                        {{ form.field_number_float_04 }}
+                    </div>
+                </div>
+            </div>
+        </div>        
+
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="ss-form-inline-text">Via aerea</div>
+            </div>       
+            <div class="col-sm-2">
+                <div class="row">
+                    <div class="col-sm-10">
+                        {{ form.field_number_float_05 }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="row">
+                    <div class="col-sm-10">
+                        {{ form.field_number_float_06 }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="row">
+                    <div class="col-sm-10">
+                        {{ form.field_number_float_07 }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="row">
+                    <div class="col-sm-10">
+                        {{ form.field_number_float_08 }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="row">
+                    <div class="col-sm-10">
+                        {{ form.field_number_float_09 }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="col-sm-6">
+        <div class="row">    
+            <div class="col-sm-2">
+                <div class="ss-form-inline-text">Via osea</div>
+            </div>
+
+            <div class="col-sm-2">
+                <label class="">
+                    <div class="ss-form-inline-text">0.5K</div>
+                </label>
+                <div class="row">
+                    <div class="col-sm-10">
+                        {{ form.field_number_float_10 }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <label class="">
+                    <div class="ss-form-inline-text">1K</div>
+                </label>
+                <div class="row">
+                    <div class="col-sm-10">
+                        {{ form.field_number_float_11 }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <label class="">
+                    <div class="ss-form-inline-text">2K</div>
+                </label>
+                <div class="row">
+                    <div class="col-sm-10">
+                        {{ form.field_number_float_12 }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <label class="">
+                    <div class="ss-form-inline-text">3K</div>
+                </label>
+                <div class="row">
+                    <div class="col-sm-10">
+                        {{ form.field_number_float_13 }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <label class="">
+                    <div class="ss-form-inline-text">4K</div>
+                </label>
+                <div class="row">
+                    <div class="col-sm-10">
+                        {{ form.field_number_float_14 }}
+                    </div>
+                </div>
+            </div>
+        </div>        
+
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="ss-form-inline-text">Via aerea</div>
+            </div>       
+            <div class="col-sm-2">
+                <div class="row">
+                    <div class="col-sm-10">
+                        {{ form.field_number_float_15 }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="row">
+                    <div class="col-sm-10">
+                        {{ form.field_number_float_16 }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="row">
+                    <div class="col-sm-10">
+                        {{ form.field_number_float_17 }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="row">
+                    <div class="col-sm-10">
+                        {{ form.field_number_float_18 }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="row">
+                    <div class="col-sm-10">
+                        {{ form.field_number_float_19 }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="col-sm-6">
+        <div class="row">    
+            <div class="col-sm-2">
+                <div class="ss-form-inline-text">Oido derecho</div>
+            </div>
+
+            <div class="col-sm-2">
+                <label class="">
+                    <div class="ss-form-inline-text">250</div>
+                </label>
+                <div class="row">
+                    <div class="col-sm-10">
+                        {{ form.field_number_float_20 }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <label class="">
+                    <div class="ss-form-inline-text">500</div>
+                </label>
+                <div class="row">
+                    <div class="col-sm-10">
+                        {{ form.field_number_float_21 }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <label class="">
+                    <div class="ss-form-inline-text">1000</div>
+                </label>
+                <div class="row">
+                    <div class="col-sm-10">
+                        {{ form.field_number_float_22 }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <label class="">
+                    <div class="ss-form-inline-text">2000</div>
+                </label>
+                <div class="row">
+                    <div class="col-sm-10">
+                        {{ form.field_number_float_23 }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <label class="">
+                    <div class="ss-form-inline-text">3000</div>
+                </label>
+                <div class="row">
+                    <div class="col-sm-10">
+                        {{ form.field_number_float_24 }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <label class="">
+                    <div class="ss-form-inline-text">4000</div>
+                </label>
+                <div class="row">
+                    <div class="col-sm-10">
+                        {{ form.field_number_float_25 }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <label class="">
+                    <div class="ss-form-inline-text">5000</div>
+                </label>
+                <div class="row">
+                    <div class="col-sm-10">
+                        {{ form.field_number_float_26 }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <label class="">
+                    <div class="ss-form-inline-text">6000</div>
+                </label>
+                <div class="row">
+                    <div class="col-sm-10">
+                        {{ form.field_number_float_27 }}
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>   
+
+
+    <div class="row">    
+        <div class="col-sm-2">
+            <div class="ss-form-inline-text">Oido izquierdo</div>
+        </div>
+
+        <div class="col-sm-2">
+            <label class="">
+                <div class="ss-form-inline-text">250</div>
+            </label>
+            <div class="row">
+                <div class="col-sm-10">
+                    {{ form.field_number_float_28 }}
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <label class="">
+                <div class="ss-form-inline-text">500</div>
+            </label>
+            <div class="row">
+                <div class="col-sm-10">
+                    {{ form.field_number_float_29 }}
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <label class="">
+                <div class="ss-form-inline-text">1000</div>
+            </label>
+            <div class="row">
+                <div class="col-sm-10">
+                    {{ form.field_number_float_30 }}
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <label class="">
+                <div class="ss-form-inline-text">2000</div>
+            </label>
+            <div class="row">
+                <div class="col-sm-10">
+                    {{ form.field_number_float_31 }}
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <label class="">
+                <div class="ss-form-inline-text">3000</div>
+            </label>
+            <div class="row">
+                <div class="col-sm-10">
+                    {{ form.field_number_float_32 }}
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <label class="">
+                <div class="ss-form-inline-text">4000</div>
+            </label>
+            <div class="row">
+                <div class="col-sm-10">
+                        {{ form.field_number_float_33 }}
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <label class="">
+                <div class="ss-form-inline-text">5000</div>
+            </label>
+            <div class="row">
+                <div class="col-sm-10">
+                    {{ form.field_number_float_34 }}
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <label class="">
+                <div class="ss-form-inline-text">6000</div>
+            </label>
+            <div class="row">
+                <div class="col-sm-10">
+                    {{ form.field_number_float_35 }}
+                </div>
+            </div>
+        </div>
+    </div>         

@@ -1,0 +1,113 @@
+{# Webform Submission #}
+<br>
+<div class="row">
+    <div class="col-lg-3">
+        <div class="form-item">
+            <label>{{ 'Ocupación'|t }}</label>
+            <p>{{ medical_history.data.ocupacion_ }}</p>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="form-item">
+            <label>{{ 'En Relación a licencia para:'|t }}</label>
+            {% set relacion_licencia = medical_history.data.en_relacion_a_licencia %}
+            <ul>
+                {% if relacion_licencia %}
+                    {% for licencia in relacion_licencia %}
+                        <li>{{ licencia }}</li>
+                        {% endfor %}
+                    {% endif %}
+                    {% if medical_history.data.checkboxes_otro == '1' %}
+                    <div>
+                        <p>{{ medical_history.data.checkboxes_otro_text }}</p>
+                    </div>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="form-item">
+            <label>{{ 'Tipo de Aeronave que actualmente vuela'|t }}</label>
+            {% set tipo_de_aeronave = medical_history.data.tipo_de_aeronave %}
+            <ul>
+                {% if tipo_de_aeronave %}
+                    {% for tipo in tipo_de_aeronave %}
+                        <li>{{ tipo }}</li>
+                        {% endfor %}
+                    {% endif %}
+                    {% if medical_history.data.checkboxes_otro_2 == '1' %}
+                    <div>
+                        <p>{{ medical_history.data.checkboxes_otro_text_2 }}</p>
+                    </div>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="form-item">
+            <label>{{ '¿Le ha sido alguna vez limitado, restringido, negado, suspendido o revocado un Certificado Médico?'|t }}</label>
+            {% set estado_certificado = medical_history.data.estado_certificado %}
+            {% if estado_certificado == "1" %}
+                <p>{{ '- SI, '|t }}{{ medical_history.data._por_que_ }}</p>
+            {% else %}
+                <p>{{ '- NO'|t }}</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-lg-3">
+        <div class="form-item">
+            <label>{{ 'Total de horas voladas'|t }}</label>
+            <p>{{ medical_history.data.total_de_horas_voladas_ }}</p>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="form-item">
+            <label>{{ 'Últimos 6 meses'|t }}</label>
+            <p>{{ medical_history.data.ult_6_meses }}</p>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="form-item">
+            <label>{{ '¿Ha tenido usted algún accidente aéreo? (últimos 5 años)?'|t }}</label>
+            {% set accidente = medical_history.data.accidente %}
+            {% if accidente == "1" %}
+                <p>{{ '- SI, '|t }}{{ medical_history.data.lugar_y_fecha }}</p>
+            {% else %}
+                <p>{{ '- NO'|t }}</p>
+            {% endif %}
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="form-item">
+            <label>{{ '¿Hubo lesiones?'|t }}</label>
+            {% set lesiones = medical_history.data._hubo_lesiones_ %}
+            {% if lesiones == "1" %}
+                <p>{{ '- SI, '|t }}{{ medical_history.data._cuales_ }}</p>
+            {% else %}
+                <p>{{ '- NO'|t }}</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-lg-6">
+        <div class="form-item">
+            {% set condiciones = medical_history.data.question2 %}
+            {% for key, item in condiciones %}
+                <p>{{ key }} : {{ item }}</p>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="form-item">
+            {% set condiciones2 = medical_history.data.question3 %}
+            {% for key, item in condiciones2 %}
+                <p>{{ key }} : {{ item }}</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>

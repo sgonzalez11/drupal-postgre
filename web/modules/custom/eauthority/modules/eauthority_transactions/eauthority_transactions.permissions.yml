@@ -1,0 +1,38 @@
+add transaction entities:
+  title: 'Create new Transaction entities'
+
+administer transaction entities:
+  title: 'Administer Transaction entities'
+  description: 'Allow to access the administration form to configure Transaction entities.'
+  restrict access: true
+
+delete transaction entities:
+  title: 'Delete Transaction entities'
+
+edit transaction entities:
+  title: 'Edit Transaction entities'
+
+view published transaction entities:
+  title: 'View published Transaction entities'
+
+view unpublished transaction entities:
+  title: 'View unpublished Transaction entities'
+add transaction status entities:
+  title: 'Create new Transaction Status entities'
+
+administer transaction status entities:
+  title: 'Administer Transaction Status entities'
+  description: 'Allow to access the administration form to configure Transaction Status entities.'
+  restrict access: true
+
+delete transaction status entities:
+  title: 'Delete Transaction Status entities'
+
+edit transaction status entities:
+  title: 'Edit Transaction Status entities'
+
+view published transaction status entities:
+  title: 'View published Transaction Status entities'
+
+view unpublished transaction status entities:
+  title: 'View unpublished Transaction Status entities'

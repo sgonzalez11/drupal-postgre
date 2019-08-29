@@ -1,0 +1,22 @@
+{#
+/**
+ * @file customer_profiles.html.twig
+ * Default theme implementation to present Customer Profiles data.
+ *
+ * This template is used when viewing Customer Profiles pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_customer_profiles()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('customer_profiles') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

@@ -1,0 +1,21 @@
+name: 'Inac Customers'
+type: theme
+description: 'Inac Customers. Theme Based on eauth_customers.'
+core: 8.x
+base theme: eauth_customers
+regions:
+  header: Header
+  highlighted: Highlighted
+  page_top: 'Page Top'
+  content: Content
+  sidebar: Sidebar
+  content_full: 'Content Full Width'
+  page_bottom: 'Page Bottom'
+  footer: Footer
+libraries:
+  - inac_customers/global-styling
+#libraries-override:
+#  global-scripts:
+#    js:
+#      assets/plugins/gmaps/gmaps.js: false
+#      assets/plugins/gmaps/api.js: false

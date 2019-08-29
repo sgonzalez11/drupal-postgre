@@ -1,0 +1,35 @@
+inac-all-domains:
+  version: '1.0'
+  css:
+    theme:
+      css/all-domains.theme.css: {}
+  js:
+    js/all-domains.js: {}
+inac-customers:
+  version: '1.0'
+  css:
+    theme:
+      css/customers.theme.css: {}
+  js:
+    js/customers.js: {}
+inac-amos:
+  version: '1.0'
+  css:
+    theme:
+      css/amos.theme.css: {}
+  js:
+    js/amos.js: {}
+inac-atos:
+  version: '1.0'
+  css:
+    theme:
+      css/atos.theme.css: {}
+  js:
+    js/atos.js: {}
+inac-admin:
+  version: '1.0'
+  css:
+    theme:
+      css/admin.theme.css: {}
+  js:
+    js/admin.js: {}

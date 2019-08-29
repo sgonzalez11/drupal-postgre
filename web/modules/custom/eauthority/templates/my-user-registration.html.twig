@@ -1,0 +1,73 @@
+{#
+/**
+ * @file aircraft.html.twig
+ * Default theme implementation to present Aircraft data.
+ *
+ * This template is used when viewing Aircraft pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_aircraft()
+ *
+ * @ingroup themeable
+ */
+#}
+
+
+<div class="container ss-form ss-my-user-registration">
+	<div class="row ss-my-user-registration__title">
+		<div class="col-sm-12">
+			<h1>{{ "Formulario de registro"|t }}</h1>
+		</div>
+	</div>
+	<div class="row ss-my-user-registration__user-information">
+		<div class="col-sm-6">
+			{{ form.field_first_name }}
+			{{ form.field_last_name }}
+		</div>
+		<div class="col-sm-6">
+			<label class="ss-label">Avatar</label>
+			{{ form.user_picture }}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-6 col-sm-offset-3 ss-bootstrap-divider">
+		</div>
+	</div>
+	<div class="row ss-my-user-registration__registration-information">
+		<div class="col-sm-6">
+			{{ form.account.mail }}
+			{{ form.account.conf_mail }}
+		</div>
+		<div class="col-sm-6">
+			{{ form.account.pass }}
+		</div>
+	</div>	
+	<div class="row ss-my-user-registration__captcha">
+		<div class="col-sm-12">
+			{{ form.captcha }}
+		</div>
+	</div>
+	<div class="row ss-my-user-registration__submit">
+		<div class="col-sm-12">
+			{{ form.actions.submit }}
+		</div>
+	</div>
+</div>
+<div class="ss-form ss-form-footer ss-my-user-registration">
+	<p>¿Ya tienes usuario? <a href="./login">Ingresa</a></p>
+</div>
+
+
+
+{# Don't forget to add printing form special info at the end.
+Without this data form will not working propertly.
+#}
+{{ form.form_build_id }}
+{{ form.form_token }}
+{{ form.form_id }}
+
+

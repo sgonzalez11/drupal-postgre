@@ -1,0 +1,11 @@
+eauthority-amos-library:
+  version: 1.x
+  js:
+    js/eauthority_amos.js: {}
+  dependencies:
+  - core/drupal.dialog.ajax
+  - core/jquery.form
+medical-assessment-close:
+  version: 1.x
+  js:
+    js/medical_assessment_close.js: {}

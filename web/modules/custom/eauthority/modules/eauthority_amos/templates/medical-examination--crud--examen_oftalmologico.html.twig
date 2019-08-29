@@ -1,0 +1,479 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+{{ "Evaluación: No omita respuestas. Si un aparte no ha sido examinado explique en comentarios. " | t  }}
+{{ "Hallazgos: Describa en detalle cada anormalidad encontrada. Refiérase al Nro. correspondiente." | t  }}
+
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3>
+			{{ form.field_text_plain_long_00['widget']['#title'] }}
+		</h3>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-6 col-md-3">
+		<div class="text-center"><strong><em>{{ "Oído derecho"|t }}</em></strong></div>
+		<label class="ss-label">{{ "Normal"|t }}</label>
+		{{ form.field_text_plain_00 }}
+		<label class="ss-label">{{ "Anormal"|t }}</label>
+		{{ form.field_text_plain_01 }}
+	</div>	
+	<div class="col-sm-6 col-md-3">	
+		<div class="text-center"><strong><em>{{ "Oído izquierdo"|t }}</em></strong></div>
+		<label class="ss-label">{{ "Normal"|t }}</label>
+		{{ form.field_text_plain_02 }}
+		<label class="ss-label">{{ "Anormal"|t }}</label>
+		{{ form.field_text_plain_03 }}
+	</div>
+	<div class="col-sm-12 col-md-6">
+		{{ form.field_text_plain_long_00 }}
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3>
+			{{ form.field_text_plain_long_01['widget']['#title'] }}
+		</h3>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-6 col-md-3">
+		<div class="text-center"><strong><em>{{ "Oído derecho"|t }}</em></strong></div>
+		<label class="ss-label">{{ "Normal"|t }}</label>
+		{{ form.field_text_plain_04 }}
+		<label class="ss-label">{{ "Anormal"|t }}</label>
+		{{ form.field_text_plain_05 }}
+	</div>	
+	<div class="col-sm-6 col-md-3">	
+		<div class="text-center"><strong><em>{{ "Oído izquierdo"|t }}</em></strong></div>
+		<label class="ss-label">{{ "Normal"|t }}</label>
+		{{ form.field_text_plain_06 }}
+		<label class="ss-label">{{ "Anormal"|t }}</label>
+		{{ form.field_text_plain_07 }}
+	</div>
+	<div class="col-sm-12 col-md-6">
+		{{ form.field_text_plain_long_01 }}
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3>
+			{{ form.field_text_plain_long_02['widget']['#title'] }}
+		</h3>
+	</div>
+</div>	
+<div class="row">
+	<div class="col-sm-6 col-md-3">	
+		<div class="text-center"><strong><em>{{ "Oído derecho"|t }}</em></strong></div>
+		<label class="ss-label">{{ "Normal"|t }}</label>
+		{{ form.field_text_plain_08 }}
+		<label class="ss-label">{{ "Anormal"|t }}</label>
+		{{ form.field_text_plain_09 }}
+		<div class="row">
+			<div class="col-sm-10">
+				{{ form.field_text_plain_12 }}
+			</div>
+			<div class="col-sm-2 ss-form-input-extra-text">
+				{{ "D" | t }}
+			</div>
+		</div>
+	</div>	
+	<div class="col-sm-6 col-md-3">	
+		<div class="text-center"><strong><em>{{ "Oído izquierdo"|t }}</em></strong></div>
+		<label class="ss-label">{{ "Normal"|t }}</label>
+		{{ form.field_text_plain_10 }}
+		<label class="ss-label">{{ "Anormal"|t }}</label>
+		{{ form.field_text_plain_11 }}
+		<div class="row">
+			<div class="col-sm-10">
+				{{ form.field_text_plain_13 }}
+			</div>
+			<div class="col-sm-2 ss-form-input-extra-text">
+				{{ "D" | t }}
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-12 col-md-6">
+		{{ form.field_text_plain_long_02 }}
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3>
+			{{ form.field_text_plain_long_03['widget']['#title'] }}
+		</h3>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-6 col-md-3">
+		<div class="text-center"><strong><em>{{ "Oído derecho"|t }}</em></strong></div>
+		<label class="ss-label">{{ "Normal"|t }}</label>
+		{{ form.field_text_plain_14 }}
+		<label class="ss-label">{{ "Anormal"|t }}</label>
+		{{ form.field_text_plain_15 }}
+	</div>	
+	<div class="col-sm-6 col-md-3">	
+		<div class="text-center"><strong><em>{{ "Oído izquierdo"|t }}</em></strong></div>
+		<label class="ss-label">{{ "Normal"|t }}</label>
+		{{ form.field_text_plain_16 }}
+		<label class="ss-label">{{ "Anormal"|t }}</label>
+		{{ form.field_text_plain_17 }}
+	</div>
+	<div class="col-sm-12 col-md-6">
+		{{ form.field_text_plain_long_03 }}
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3>
+			{{ form.field_text_plain_long_04['widget']['#title'] }}
+		</h3>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-6 col-md-3">
+		<div class="text-center"><strong><em>{{ "Oído derecho"|t }}</em></strong></div>
+		<div class="row">
+			<div class="col-sm-2 ss-form-input-extra-text">
+				{{ "20/" | t }}
+			</div>
+			<div class="col-sm-10">
+				{{ form.field_text_plain_18 }}
+			</div>			
+		</div>
+		<div class="row">
+			<div class="col-sm-2 ss-form-input-extra-text">
+				{{ "20/" | t }}
+			</div>
+			<div class="col-sm-10">
+				{{ form.field_text_plain_19 }}
+			</div>			
+		</div>
+	</div>	
+	<div class="col-sm-6 col-md-3">	
+		<div class="text-center"><strong><em>{{ "Oído izquierdo"|t }}</em></strong></div>
+		<div class="row">
+			<div class="col-sm-2 ss-form-input-extra-text">
+				{{ "20/" | t }}
+			</div>
+			<div class="col-sm-10">
+				{{ form.field_text_plain_20 }}
+			</div>			
+		</div>
+		<div class="row">
+			<div class="col-sm-2 ss-form-input-extra-text">
+				{{ "20/" | t }}
+			</div>
+			<div class="col-sm-10">
+				{{ form.field_text_plain_21 }}
+			</div>			
+		</div>
+	</div>
+	<div class="col-sm-6 col-md-3">	
+		<div class="text-center"><strong><em>{{ "Oído derecho/izquierdo"|t }}</em></strong></div>
+		<div class="row">
+			<div class="col-sm-2 ss-form-input-extra-text">
+				{{ "20/" | t }}
+			</div>
+			<div class="col-sm-10">
+				{{ form.field_text_plain_22 }}
+			</div>			
+		</div>
+		<div class="row">
+			<div class="col-sm-2 ss-form-input-extra-text">
+				{{ "20/" | t }}
+			</div>
+			<div class="col-sm-10">
+				{{ form.field_text_plain_23 }}
+			</div>			
+		</div>
+	</div>
+	<div class="col-sm-12 col-md-3">
+		{{ form.field_text_plain_long_04 }}
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3>
+			{{ form.field_text_plain_long_05['widget']['#title'] }}
+		</h3>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-6 col-md-3">
+		<div class="text-center"><strong><em>{{ "Oído derecho"|t }}</em></strong></div>
+		<div class="row">
+			<div class="col-sm-2 ss-form-input-extra-text">
+				{{ "J" | t }}
+			</div>
+			<div class="col-sm-10">
+				{{ form.field_text_plain_24 }}
+			</div>			
+		</div>
+		<div class="row">
+			<div class="col-sm-2 ss-form-input-extra-text">
+				{{ "J" | t }}
+			</div>
+			<div class="col-sm-10">
+				{{ form.field_text_plain_25 }}
+			</div>			
+		</div>
+	</div>	
+	<div class="col-sm-6 col-md-3">	
+		<div class="text-center"><strong><em>{{ "Oído izquierdo"|t }}</em></strong></div>
+		<div class="row">
+			<div class="col-sm-2 ss-form-input-extra-text">
+				{{ "J" | t }}
+			</div>
+			<div class="col-sm-10">
+				{{ form.field_text_plain_26 }}
+			</div>			
+		</div>
+		<div class="row">
+			<div class="col-sm-2 ss-form-input-extra-text">
+				{{ "J" | t }}
+			</div>
+			<div class="col-sm-10">
+				{{ form.field_text_plain_27 }}
+			</div>			
+		</div>
+	</div>
+	<div class="col-sm-6 col-md-3">	
+		<div class="text-center"><strong><em>{{ "Oído derecho/izquierdo"|t }}</em></strong></div>
+		<div class="row">
+			<div class="col-sm-2 ss-form-input-extra-text">
+				{{ "J" | t }}
+			</div>
+			<div class="col-sm-10">
+				{{ form.field_text_plain_28 }}
+			</div>			
+		</div>
+		<div class="row">
+			<div class="col-sm-2 ss-form-input-extra-text">
+				{{ "J" | t }}
+			</div>
+			<div class="col-sm-10">
+				{{ form.field_text_plain_29 }}
+			</div>			
+		</div>
+	</div>
+	<div class="col-sm-12 col-md-3">
+		{{ form.field_text_plain_long_05 }}
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3>
+			{{ form.field_text_plain_long_06['widget']['#title'] }}
+		</h3>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-6 ss-selectbox-horizontal">
+		{{ form.field_text_list_t_correccion }}
+		<label class="ss-label">{{ "Tolerancia especifique" }}</label>
+		{{ form.field_text_plain_30 }}
+	</div>
+	<div class="col-sm-6">
+		{{ form.field_text_plain_long_06 }}
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3>
+			{{ form.field_text_plain_long_07['widget']['#title'] }}
+		</h3>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-6 col-md-3">
+		<div class="text-center"><strong><em>{{ "Oído derecho"|t }}</em></strong></div>
+		<div class="row">
+			<div class="col-sm-10">
+				{{ form.field_text_plain_31 }}
+			</div>
+			<div class="col-sm-2 ss-form-input-extra-text">
+				{{ "D" | t }}
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-6 col-md-3">
+		<div class="text-center"><strong><em>{{ "Oído izquierdo"|t }}</em></strong></div>	
+		<div class="row">
+			<div class="col-sm-10">
+				{{ form.field_text_plain_32 }}
+			</div>
+			<div class="col-sm-2 ss-form-input-extra-text">
+				{{ "D" | t }}
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-6">
+		{{ form.field_text_plain_long_07 }}
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3>
+			{{ form.field_text_plain_long_08['widget']['#title'] }}
+		</h3>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-6">
+		{{ form.field_text_plain_33 }}
+	</div>
+	<div class="col-sm-6">
+		{{ form.field_text_plain_long_08 }}
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3>
+			{{ form.field_text_plain_long_09['widget']['#title'] }}
+		</h3>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-6 col-md-3">
+		<div class="text-center"><strong><em>{{ "Oído derecho"|t }}</em></strong></div>
+		<div class="row">
+			<div class="col-sm-9">
+				{{ form.field_text_plain_34 }}
+			</div>
+			<div class="col-sm-3 ss-form-input-extra-text">
+				{{ "mmHg" }}
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-6 col-md-3">
+		<div class="text-center"><strong><em>{{ "Oído izquierdo"|t }}</em></strong></div>	
+		<div class="row">
+			<div class="col-sm-9">
+				{{ form.field_text_plain_35 }}
+			</div>
+			<div class="col-sm-3 ss-form-input-extra-text">
+				{{ "mmHg" }}
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-6">
+		{{ form.field_text_plain_long_09 }}
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3>
+			{{ form.field_text_plain_long_10['widget']['#title'] }}
+		</h3>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-6 col-md-3">
+		<div class="text-center"><strong><em>{{ "Oído derecho"|t }}</em></strong></div>
+		{{ form.field_text_plain_36 }}
+	</div>
+	<div class="col-sm-6 col-md-3">
+		<div class="text-center"><strong><em>{{ "Oído izquierdo"|t }}</em></strong></div>	
+		{{ form.field_text_plain_37 }}
+	</div>
+	<div class="col-sm-6">
+		{{ form.field_text_plain_long_10 }}
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3>
+			{{ form.field_text_plain_long_11['widget']['#title'] }}
+		</h3>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-6 ss-selectbox-horizontal">
+		{{ form.field_text_list_oft_00 }}
+	</div>
+	<div class="col-sm-6">
+		<label class="ss-label">{{"Método:" |t}}</label>
+		{{ form.field_text_plain_long_11 }}
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3>
+			{{ "Reflejos"|t }}
+		</h3>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-6 col-md-3 ss-selectbox-horizontal text-center">
+		<label class="ss-label">{{ "Reflejo fotomotor"|t }}</label>
+		{{ form.field_text_list_oft_01 }}
+	</div>
+	<div class="col-sm-6 col-md-3 ss-selectbox-horizontal text-center">
+		<label class="ss-label">{{ "Reflejo consensual"|t }}</label>
+		{{ form.field_text_list_oft_02 }}
+	</div>
+	<div class="col-sm-12 col-md-6">
+		{{ form.field_text_plain_long_12 }}
+	</div>	
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3>
+			{{ form.field_text_plain_long_13['widget']['#title'] }}
+		</h3>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-6 col-md-3 ss-selectbox-horizontal text-center">
+		<label class="ss-label"></label>
+		{{ form.field_text_list_oft_03 }}
+	</div>
+	<div class="col-sm-6 col-md-3 ss-selectbox-horizontal text-center">
+		<label class="ss-label">{{ "Corregida"|t }}</label>
+		{{ form.field_text_list_oft_04 }}
+	</div>
+	<div class="col-sm-12 col-md-6">
+		<label class="ss-label">{{"Método:" |t}}</label>
+		{{ form.field_text_plain_long_13 }}
+	</div>	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

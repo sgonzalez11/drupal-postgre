@@ -1,0 +1,14 @@
+{
+  "name": "drupal/eauthority_amos",
+  "type": "drupal-module",
+  "description": "eAuthority Portal - AMOs",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/eauthority_amos",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/eauthority_amos",
+    "source": "http://cgit.drupalcode.org/eauthority_amos"
+  },
+  "require": { }
+}

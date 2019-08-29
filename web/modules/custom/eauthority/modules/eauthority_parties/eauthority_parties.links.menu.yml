@@ -1,0 +1,15 @@
+
+# Party menu items definition
+entity.party.collection:
+  title: 'Party list'
+  route_name: entity.party.collection
+  description: 'List Party entities'
+  parent: eauthority.operations.settings
+
+# Party type menu items definition
+entity.party_type.collection:
+  title: 'Party type'
+  route_name: entity.party_type.collection
+  description: 'List Party type (bundles)'
+  parent: entity.party.collection
+
