@@ -1,0 +1,20 @@
+uuid: a8265ce2-1a50-49c3-aa28-f436d0ba42cc
+langcode: en
+status: true
+dependencies:
+  theme:
+    - inac_atos
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: inac_atos_local_actions
+theme: inac_atos
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

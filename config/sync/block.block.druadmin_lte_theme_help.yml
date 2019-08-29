@@ -1,0 +1,22 @@
+uuid: 7f0e9347-d91c-4fcd-bdfe-cabbde96da84
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - druadmin_lte_theme
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: druadmin_lte_theme_help
+theme: druadmin_lte_theme
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

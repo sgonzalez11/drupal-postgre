@@ -1,0 +1,22 @@
+uuid: c874468a-b35c-4e82-a315-90ae0ae67e64
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - druadmin_lte_theme
+_core:
+  default_config_hash: za-39d5WDUg6XvbyqSnuVYEeq6QM4qKJxW8MnoAha5A
+id: druadmin_lte_theme_search
+theme: druadmin_lte_theme
+region: brand
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+visibility: {  }

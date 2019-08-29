@@ -1,0 +1,20 @@
+uuid: dca83476-1d0e-4e6e-b6c2-4d04bfc9e82c
+langcode: en
+status: true
+dependencies:
+  theme:
+    - druadmin_lte_theme
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: druadmin_lte_theme_page_title
+theme: druadmin_lte_theme
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,17 @@
+uuid: e36d4131-24c4-4d51-be43-70704941c354
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: zvXPpZGB9cBXSmreGM12--Y_YyAVspXcM_GY2vtjMyU
+name: md_slider_thumb
+label: 'MD Slider Thumb'
+effects:
+  md_slider_imgeffect_slider_thumb:
+    uuid: md_slider_imgeffect_slider_thumb
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 160
+      height: 160
+      anchor: center-center

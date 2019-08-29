@@ -1,0 +1,20 @@
+uuid: f083fac5-a152-4378-8477-b54a286f2dfd
+langcode: en
+status: true
+dependencies:
+  theme:
+    - inac_atos
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: inac_atos_page_title
+theme: inac_atos
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -7,6 +7,7 @@ module:
   block: 0
   block_content: 0
   breakpoint: 0
+  captcha: 0
   ckeditor: 0
   color: 0
   comment: 0
@@ -28,6 +29,7 @@ module:
   embed: 0
   entity: 0
   entity_browser: 0
+  entity_browser_entity_form: 0
   entity_embed: 0
   entity_reference_revisions: 0
   facets: 0
@@ -35,15 +37,25 @@ module:
   field_group: 0
   field_ui: 0
   file: 0
+  file_entity: 0
   filter: 0
+  fullcalendar_library: 0
   hal: 0
   help: 0
   history: 0
+  ief_table_view_mode: 0
   image: 0
+  imce: 0
   inline_entity_form: 0
   language: 0
   link: 0
   locale: 0
+  maestro: 0
+  maestro_taskconsole: 0
+  maestro_template_builder: 0
+  maestro_utilities: 0
+  maestro_webform: 0
+  md_slider: 0
   menu_ui: 0
   node: 0
   office_hours: 0
@@ -53,14 +65,19 @@ module:
   plugin: 0
   quickedit: 0
   rdf: 0
+  recaptcha: 0
+  redirect_after_login: 0
   reg_confirm_email: 0
   role_delegation: 0
   search: 0
   search_api: 0
   serialization: 0
   services: 0
+  shortcode: 0
+  shortcode_basic_tags: 0
   shortcut: 0
   shs: 0
+  simple_user_management: 0
   simplify_menu: 0
   smtp: 0
   state_machine: 0
@@ -98,8 +115,14 @@ module:
 theme:
   stable: 0
   classy: 0
-  bartik: 0
-  seven: 0
+  druadmin_lte_theme: 0
+  jango: 0
+  eauth_customers: 0
+  eauth_amos: 0
+  eauth_atos: 0
+  inac_amos: 0
+  inac_customers: 0
+  inac_atos: 0
 profile: standard
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

@@ -1,4 +1,4 @@
-admin: seven
-default: bartik
+admin: druadmin_lte_theme
+default: eauth_customers
 _core:
   default_config_hash: fOjer9hADYYnbCJVZMFZIIM1azTFWyg84ZkFDHfAbUg
