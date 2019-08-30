@@ -3,3 +3,5 @@ type: module
 description: 'eAuthority Portal - AMOs'
 core: 8.x
 package: 'eAuthority'
+dependencies:
+- eauthority:eauthority

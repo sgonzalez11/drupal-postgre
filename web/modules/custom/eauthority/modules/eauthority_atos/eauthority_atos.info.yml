@@ -3,3 +3,5 @@ type: module
 description: 'eAuthority Portal - ATOs'
 core: 8.x
 package: 'eAuthority'
+dependencies:
+  - eauthority:eauthority
