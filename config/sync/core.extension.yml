@@ -149,7 +149,6 @@ module:
 theme:
   stable: 0
   classy: 0
-  bartik: 0
   druadmin_lte_theme: 0
   jango: 0
   eauth_customers: 0
