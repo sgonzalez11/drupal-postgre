@@ -1,0 +1,24 @@
+uuid: 116a14e5-15cf-42ac-be2a-c5d560a97bef
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.nd_service
+_core:
+  default_config_hash: bLA_g0zyr0Lqu8EF5ABwy3-3sxsuz-U2YhZCDZ3iDbo
+id: node.nd_service.promote
+field_name: promote
+entity_type: node
+bundle: nd_service
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

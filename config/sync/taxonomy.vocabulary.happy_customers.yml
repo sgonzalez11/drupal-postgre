@@ -1,0 +1,11 @@
+uuid: b8d5abf5-6f59-4664-9668-4a101688bffd
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: anMqWKIrACmPqwrV3fnGWiARRGEtnmOunK0i-aIH2N4
+name: 'Happy customers'
+vid: happy_customers
+description: ''
+hierarchy: 0
+weight: 0

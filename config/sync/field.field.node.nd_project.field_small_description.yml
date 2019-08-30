@@ -1,0 +1,23 @@
+uuid: 7f436a28-4ca1-46c1-9a45-7120f14b706b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_small_description
+    - node.type.nd_project
+  module:
+    - text
+_core:
+  default_config_hash: qt1-Ww6u1vUHspzbm3NFH6BCl10w-cx3Xie9yhk3A0Q
+id: node.nd_project.field_small_description
+field_name: field_small_description
+entity_type: node
+bundle: nd_project
+label: 'Small Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

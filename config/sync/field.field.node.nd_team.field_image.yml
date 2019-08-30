@@ -1,0 +1,40 @@
+uuid: b312abba-6b24-49e8-8ff4-7709e737b7ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - node.type.nd_team
+  module:
+    - image
+_core:
+  default_config_hash: XD4mH_uoOXjRdMLQqBY5xFWySn2ISp5LQ9fk8viS4ZU
+id: node.nd_team.field_image
+field_name: field_image
+entity_type: node
+bundle: nd_team
+label: Image
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

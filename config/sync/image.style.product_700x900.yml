@@ -1,0 +1,17 @@
+uuid: 7a3e2d28-2b86-47ab-8a43-bc396cfaef28
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: JD_2dfdJaXl5xDIqsYNpR1oSyaYdMn11WaO7S5Csiw8
+name: product_700x900
+label: 'Product (700x900)'
+effects:
+  6e6811ca-fc2e-49cb-9564-1fcd1c15415b:
+    uuid: 6e6811ca-fc2e-49cb-9564-1fcd1c15415b
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 700
+      height: 900
+      anchor: center-center

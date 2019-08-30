@@ -1,0 +1,16 @@
+uuid: a5cf17af-b965-4c73-bad0-56ca079644f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - shortcode
+name: 'Shortcodes Dynamic'
+format: shortcode_dynamic
+weight: -10
+filters:
+  shortcode:
+    id: shortcode
+    provider: shortcode
+    status: true
+    weight: 0
+    settings: {  }

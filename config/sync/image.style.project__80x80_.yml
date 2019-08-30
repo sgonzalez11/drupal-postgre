@@ -1,0 +1,17 @@
+uuid: 218708a5-92ed-4a8d-8d53-ae263f74c6b9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: LSrhCUptswSP4KRdcvmYd2cLnpqD-Kx86d3TfzaxsJs
+name: project__80x80_
+label: 'Project (80x80)'
+effects:
+  8263b3ac-d603-4322-b2af-1c3d96fc17a7:
+    uuid: 8263b3ac-d603-4322-b2af-1c3d96fc17a7
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 80
+      height: 80
+      anchor: center-center

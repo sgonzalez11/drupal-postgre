@@ -1,0 +1,19 @@
+uuid: 427860e5-dd8a-445f-966a-b47479505c17
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: DmxlVGfOdRqchhzvdWgCQZ3mA-yHrcf_VSYAGhy3WBo
+name: Team
+type: nd_team
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

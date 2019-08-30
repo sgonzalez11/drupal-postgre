@@ -1,0 +1,21 @@
+uuid: c6e4050b-b1f2-4975-a2c4-1d7d189ed7e8
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+_core:
+  default_config_hash: Dk2-00yGE5Bi7TP_QtXc-FGep5_AgfjnfpM3WIfU_mg
+id: node.field_social_links
+field_name: field_social_links
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

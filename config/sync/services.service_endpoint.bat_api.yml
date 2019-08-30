@@ -1,0 +1,9 @@
+uuid: 90b7c300-6164-4556-917e-c805db3e288e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: VOyBfSk3k7GnQ57Ldw6tvOK775Sneoeu5OMN7_C0ZAo
+id: bat_api
+label: 'Bat api'
+endpoint: bat_api

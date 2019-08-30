@@ -1,0 +1,10 @@
+uuid: 7d2ceeda-2a3a-4bfb-873b-6f964920e404
+langcode: en
+status: true
+dependencies:
+  module:
+    - bat_unit
+id: bat_unit.ief_table
+label: 'Inline Entity Form Table'
+targetEntityType: bat_unit
+cache: true

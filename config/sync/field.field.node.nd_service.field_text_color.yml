@@ -1,0 +1,21 @@
+uuid: 77dc4b6e-f541-4601-9985-fb840b67cc17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_text_color
+    - node.type.nd_service
+_core:
+  default_config_hash: PJfxLBoSwJLbwq4q2SQTaCjQc0DN3D8X_lc76YRVNCI
+id: node.nd_service.field_text_color
+field_name: field_text_color
+entity_type: node
+bundle: nd_service
+label: 'Text Color'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

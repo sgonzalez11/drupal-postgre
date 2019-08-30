@@ -1,0 +1,11 @@
+uuid: b7a6ce25-e1f2-4e5d-8585-70911287a469
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: tU5Op_AZXJhWr1gBhBuu03wqdF3agHqRKaM92jj6UFk
+name: 'Taxonomy Categories'
+vid: taxonomy_categories
+description: ''
+hierarchy: 0
+weight: 0

@@ -1,0 +1,30 @@
+uuid: a611b2b6-1e50-4ca4-9f9c-debef17d34d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_link
+    - taxonomy.vocabulary.happy_customers
+  module:
+    - link
+_core:
+  default_config_hash: RexEAcPSUki8f2rNveBZ-IpAJz5erUlaFY0x1IEJFUM
+id: taxonomy_term.happy_customers.field_link
+field_name: field_link
+entity_type: taxonomy_term
+bundle: happy_customers
+label: Link
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    attributes: {  }
+    uri: 'internal:#'
+    title: ''
+    options: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

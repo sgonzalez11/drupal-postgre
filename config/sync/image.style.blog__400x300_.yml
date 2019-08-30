@@ -1,0 +1,17 @@
+uuid: 695d6dc9-abdd-407f-91e4-5b6dcb8785eb
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: nTeSAOzXFjbAQV_ZzHB3yVpHk_dos9gv34VjCbnIuiA
+name: blog__400x300_
+label: 'Blog (400x300)'
+effects:
+  7e669fbc-4f35-48c7-92ff-2234ee7ef20d:
+    uuid: 7e669fbc-4f35-48c7-92ff-2234ee7ef20d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 300
+      anchor: center-center

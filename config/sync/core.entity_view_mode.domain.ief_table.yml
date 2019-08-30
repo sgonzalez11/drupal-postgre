@@ -1,0 +1,10 @@
+uuid: f534ddcb-59a0-46b6-b381-feebc3197fdb
+langcode: en
+status: true
+dependencies:
+  module:
+    - domain
+id: domain.ief_table
+label: 'Inline Entity Form Table'
+targetEntityType: domain
+cache: true

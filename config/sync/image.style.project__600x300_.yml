@@ -1,0 +1,17 @@
+uuid: e824f04e-ff07-48db-abcb-b6ed26c8417e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 6DHkgssKkHGNtMfkvqEn-1bqFeeGhWw1EJj54_ymmh0
+name: project__600x300_
+label: 'Project (600x300)'
+effects:
+  73653397-4ee8-4df1-87b4-ffa1e0f78cde:
+    uuid: 73653397-4ee8-4df1-87b4-ffa1e0f78cde
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 300
+      anchor: center-center

@@ -1,0 +1,24 @@
+uuid: 3ff72b82-f842-41c0-b890-3fdfd301cf9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.nd_team
+  module:
+    - text
+_core:
+  default_config_hash: 7jiEAwe59G9RWVo6tGTqaycPOkLGyzs_uKGXmOmsCNA
+id: node.nd_team.body
+field_name: body
+entity_type: node
+bundle: nd_team
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

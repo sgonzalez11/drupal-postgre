@@ -1,0 +1,21 @@
+uuid: cfe52a55-6416-4216-8b8b-cd6e0553d4ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video
+    - node.type.nd_project
+_core:
+  default_config_hash: _ZaG79uv9N4Gv9LssxvNTAKULcsXNbY6Ai3KnNFXYCA
+id: node.nd_project.field_video
+field_name: field_video
+entity_type: node
+bundle: nd_project
+label: Video
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

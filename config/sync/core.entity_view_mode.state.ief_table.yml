@@ -1,0 +1,10 @@
+uuid: 295c408e-e2fa-4051-82b5-bb4066906fc9
+langcode: en
+status: true
+dependencies:
+  module:
+    - bat_event
+id: state.ief_table
+label: 'Inline Entity Form Table'
+targetEntityType: state
+cache: true

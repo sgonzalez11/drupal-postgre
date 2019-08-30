@@ -1,0 +1,19 @@
+uuid: 94646a2d-a2d5-465b-819c-d55347afe4fb
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: IxL4QQFyxlku5NICcctvQ0hhOEp5I-rNHQArTyZSdjU
+name: Project
+type: nd_project
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

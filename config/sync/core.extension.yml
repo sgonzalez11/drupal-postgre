@@ -2,6 +2,16 @@ module:
   admin_toolbar: 0
   admin_toolbar_tools: 0
   automated_cron: 0
+  bat: 0
+  bat_api: 0
+  bat_booking: 0
+  bat_booking_example: 0
+  bat_calendar_reference: 0
+  bat_event: 0
+  bat_event_ui: 0
+  bat_facets: 0
+  bat_fullcalendar: 0
+  bat_unit: 0
   better_exposed_filters: 0
   big_pipe: 0
   block: 0
@@ -16,14 +26,28 @@ module:
   contact: 0
   contextual: 0
   ctools: 0
+  ctools_entity_mask: 0
   currency: 0
   currency_intl: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
+  domain: 0
+  domain_access: 0
+  domain_alias: 0
+  domain_config: 0
+  domain_theme_switch: 0
   dropzonejs: 0
   dropzonejs_eb_widget: 0
   dynamic_page_cache: 0
+  eauthority: 0
+  eauthority_amos: 0
+  eauthority_appointments: 0
+  eauthority_atos: 0
+  eauthority_dashboards: 0
+  eauthority_parties: 0
+  eauthority_transactions: 0
+  eauthority_workflows: 0
   editor: 0
   email_registration: 0
   embed: 0
@@ -39,6 +63,7 @@ module:
   file: 0
   file_entity: 0
   filter: 0
+  fixed_block_content: 0
   fullcalendar_library: 0
   hal: 0
   help: 0
@@ -46,8 +71,14 @@ module:
   ief_table_view_mode: 0
   image: 0
   imce: 0
+  inac: 0
+  inac_workflows: 0
   inline_entity_form: 0
+  jango_cms: 0
+  jango_main_features: 0
+  jango_shortcodes: 0
   language: 0
+  libraries: 0
   link: 0
   locale: 0
   maestro: 0
@@ -57,11 +88,14 @@ module:
   maestro_webform: 0
   md_slider: 0
   menu_ui: 0
+  nd_visualshortcodes: 0
+  nikadevs_cms: 0
   node: 0
   office_hours: 0
   options: 0
   page_cache: 0
   path: 0
+  permissions_filter: 0
   plugin: 0
   quickedit: 0
   rdf: 0
@@ -115,14 +149,8 @@ module:
 theme:
   stable: 0
   classy: 0
-  druadmin_lte_theme: 0
-  jango: 0
-  eauth_customers: 0
-  eauth_amos: 0
-  eauth_atos: 0
-  inac_amos: 0
-  inac_customers: 0
-  inac_atos: 0
+  bartik: 0
+  seven: 0
 profile: standard
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

@@ -1,0 +1,31 @@
+uuid: de66d0be-a669-4d36-81f7-7705d105e269
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser_list
+    - field.field.node.nd_team.body
+    - field.field.node.nd_team.field_domain_access
+    - field.field.node.nd_team.field_domain_all_affiliates
+    - field.field.node.nd_team.field_image
+    - field.field.node.nd_team.field_position
+    - field.field.node.nd_team.field_social_links
+    - node.type.nd_team
+  module:
+    - user
+_core:
+  default_config_hash: y_svLp5iPBPeJbRf2p-pZ3nNZ0uJ5U8jmb1e4W1E16g
+id: node.nd_team.teaser_list
+targetEntityType: node
+bundle: nd_team
+mode: teaser_list
+content: {  }
+hidden:
+  body: true
+  field_domain_access: true
+  field_domain_all_affiliates: true
+  field_image: true
+  field_position: true
+  field_social_links: true
+  langcode: true
+  links: true

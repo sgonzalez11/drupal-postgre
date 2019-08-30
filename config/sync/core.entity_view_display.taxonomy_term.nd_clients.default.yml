@@ -1,0 +1,49 @@
+uuid: a2cdb767-b351-4cf2-87cd-89904de3e651
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.nd_clients.field_image_client_logo
+    - field.field.taxonomy_term.nd_clients.field_link
+    - taxonomy.vocabulary.nd_clients
+  module:
+    - image
+    - link
+    - text
+_core:
+  default_config_hash: 9vLDWuTqERmMqsprERB4clscX03HVA6VNVDk_CttSl0
+id: taxonomy_term.nd_clients.default
+targetEntityType: taxonomy_term
+bundle: nd_clients
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_image_client_logo:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_link:
+    weight: 2
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  langcode: true

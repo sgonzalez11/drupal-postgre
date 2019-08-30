@@ -1,0 +1,11 @@
+uuid: d6ca017e-57d6-4f62-b60b-628ce1e79ad4
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: zGp-joJ_YpwkH2XRnHiI9-ilugRHHqTaE0vDVMmZdpI
+name: Clients
+vid: nd_clients
+description: ''
+hierarchy: 0
+weight: 0

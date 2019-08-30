@@ -1,0 +1,10 @@
+uuid: 5be9f0b5-a726-4054-b217-e8f8670221a6
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: u1cCuk1CuEdZeVEF1A6HhDLCQGRfLBJUts2SagghUy0
+id: eauthority
+label: eAuthority
+description: 'Menu for eAuthority Toolbar'
+locked: false

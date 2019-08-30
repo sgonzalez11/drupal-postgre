@@ -1,0 +1,17 @@
+uuid: 0ec4a2b6-d224-4ddd-a4e3-3f81c0ebeb26
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: u2P5yjy5zfU36CgyxTjVf2EeA5Qjxjit1wvoO81AW7k
+name: portfolio_long__285x590_
+label: 'Portfolio Long (285x590)'
+effects:
+  ab0e2e60-eb43-493d-8e43-4118649ad84d:
+    uuid: ab0e2e60-eb43-493d-8e43-4118649ad84d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 285
+      height: 590
+      anchor: center-center

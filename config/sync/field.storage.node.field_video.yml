@@ -1,0 +1,23 @@
+uuid: 55ce5333-534d-4bdb-b8dd-7b7b00ace546
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: Ut_HlBu4tXixMdeC6DfxEdSyJQCgfWTTQbndVJQji84
+id: node.field_video
+field_name: field_video
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

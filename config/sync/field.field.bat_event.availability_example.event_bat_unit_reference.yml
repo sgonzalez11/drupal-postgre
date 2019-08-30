@@ -1,0 +1,21 @@
+uuid: 6c1aabfb-d219-48b1-9015-deef58705421
+langcode: en
+status: true
+dependencies:
+  config:
+    - bat_event.event_type.availability_example
+    - field.storage.bat_event.event_bat_unit_reference
+id: bat_event.availability_example.event_bat_unit_reference
+field_name: event_bat_unit_reference
+entity_type: bat_event
+bundle: availability_example
+label: Unit
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:bat_unit'
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: 98f8306e-f479-48b4-8d33-9d2fdbf5e93d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_position
+    - node.type.nd_team
+_core:
+  default_config_hash: TAM7z5ZUOrhvR5xn5i0wA1d8I4gBorpA6ikjKHCsrZM
+id: node.nd_team.field_position
+field_name: field_position
+entity_type: node
+bundle: nd_team
+label: Position
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

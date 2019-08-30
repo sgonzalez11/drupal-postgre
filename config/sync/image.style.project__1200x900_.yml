@@ -1,0 +1,17 @@
+uuid: 8065a13c-d157-46a5-a210-e51d6ec9315f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 0C0hi-6avnupKaRNUoxFtibrT9DuyamysKO0c8p2y14
+name: project__1200x900_
+label: 'Project (1200x900)'
+effects:
+  2f732b53-7983-478d-9c09-10761816a497:
+    uuid: 2f732b53-7983-478d-9c09-10761816a497
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 900
+      anchor: center-center
