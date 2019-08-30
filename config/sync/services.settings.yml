@@ -5,3 +5,4 @@ default_authentication:
 default_no_cache: false
 _core:
   default_config_hash: yc5YKO-MODUc-FVbspHMphVI_H4mibzzfZVjM7YapO4
+langcode: es

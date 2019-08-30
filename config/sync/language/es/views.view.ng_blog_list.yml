@@ -1,0 +1,69 @@
+display:
+  default:
+    display_title: Máster
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Aplicar
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« Primero'
+            last: 'Último »'
+          expose:
+            items_per_page_label: 'Elementos por página'
+            items_per_page_options_all_label: '- Todo -'
+            offset_label: Desplazamiento
+      fields:
+        title:
+          separator: ', '
+  block_2:
+    display_options:
+      fields:
+        field_images:
+          separator: ', '
+        title:
+          separator: ', '
+        created:
+          separator: ', '
+  block_3:
+    display_options:
+      fields:
+        field_images:
+          separator: ', '
+        title:
+          separator: ', '
+        created:
+          separator: ', '
+  block_4:
+    display_options:
+      fields:
+        field_images:
+          separator: ', '
+        title:
+          separator: ', '
+        body:
+          separator: ', '
+  page:
+    display_title: Lista
+  page_1:
+    display_title: Cuadrícula
+  recent_posts_slider:
+    display_options:
+      fields:
+        title:
+          separator: ', '
+        body:
+          separator: ', '
+        created:
+          separator: ', '
+        field_tags:
+          separator: ', '
+        name:
+          separator: ', '

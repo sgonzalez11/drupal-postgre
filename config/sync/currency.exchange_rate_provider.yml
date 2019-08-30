@@ -7,3 +7,4 @@ plugins:
     status: true
 _core:
   default_config_hash: TrKWV8zxs3oIJUC4bRlCJZrOFimdU4FgrGrFusfxJME
+langcode: es

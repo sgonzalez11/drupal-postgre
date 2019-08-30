@@ -4,3 +4,4 @@ login_paths: "/user/login\r\n/user/password"
 css_classes: ''
 _core:
   default_config_hash: SqO3jj5-PrHcRrGib_iucdsk_VvSs5jeCtrmeZL93vg
+langcode: es

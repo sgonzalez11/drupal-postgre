@@ -1,0 +1,26 @@
+label: 'Team (grid)'
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Apply
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      fields:
+        field_image:
+          separator: ', '
+        title:
+          separator: ', '
+        field_social_links:
+          separator: ', '
+        field_position:
+          separator: ', '
+        body:
+          separator: ', '
+      title: 'Team (grid)'
+  block:
+    display_title: Block

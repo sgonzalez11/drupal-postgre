@@ -10,3 +10,4 @@ menu_icons: "Administration|fa-gears\r\nHome|fa-home\r\nMy account|fa-user\r\nLo
 skin: blue
 _core:
   default_config_hash: mdCoJ3Ix8047Dsw8vGpqcrGZtmBom6gYAuNl6e7-rHY
+langcode: es

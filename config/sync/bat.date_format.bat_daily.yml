@@ -1,7 +1,7 @@
 id: bat_daily
 label: 'BAT Daily Date format'
 status: true
-langcode: en
+langcode: es
 locked: true
 pattern: Y-m-d
 _core:

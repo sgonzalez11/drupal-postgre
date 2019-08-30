@@ -1,0 +1,81 @@
+label: Blog
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Apply
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page_label: 'Items per page'
+            items_per_page_options_all_label: '- All -'
+            offset_label: Offset
+      fields:
+        title:
+          separator: ', '
+      title: 'Blog list'
+  block_1:
+    display_title: 'Simple List'
+  block_2:
+    display_title: 'Recent Posts'
+    display_options:
+      fields:
+        field_images:
+          separator: ', '
+        title:
+          separator: ', '
+        created:
+          alter:
+            text: "<div class = \"c-post\">\n<span class = \"c-title\">{{ title }}</span>\n<div class = \"c-date\">{{ created }}</div>\n</div>"
+          separator: ', '
+  block_3:
+    display_title: 'Popular Posts'
+    display_options:
+      fields:
+        field_images:
+          separator: ', '
+        title:
+          separator: ', '
+        created:
+          alter:
+            text: "<div class = \"c-post\">\n<span class = \"c-title\">{{ title }}</span>\n<div class = \"c-date\">{{ created }}</div>\n</div>"
+          separator: ', '
+  block_4:
+    display_title: 'Latest Posts'
+    display_options:
+      fields:
+        field_images:
+          separator: ', '
+        title:
+          separator: ', '
+        body:
+          separator: ', '
+  page:
+    display_title: List
+  page_1:
+    display_title: Grid
+  recent_posts_slider:
+    display_title: 'Recent Posts Slider'
+    display_options:
+      fields:
+        title:
+          separator: ', '
+        body:
+          separator: ', '
+        created:
+          separator: ', '
+        field_tags:
+          separator: ', '
+        name:
+          separator: ', '

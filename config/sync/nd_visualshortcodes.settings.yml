@@ -10,3 +10,4 @@ confirm_delete: 0
 html_default_format: full_html
 _core:
   default_config_hash: OXwY8ETpWEirds9BdHmGc3QNu8oEtcvWFoUjYj8HHG4
+langcode: es

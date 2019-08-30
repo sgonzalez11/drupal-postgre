@@ -1,0 +1,30 @@
+label: 'Services We Do(colorless)'
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Apply
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      fields:
+        field_background_and_arrow_color:
+          separator: ', '
+        field_background_and_arrow_color_1:
+          separator: ', '
+        title:
+          separator: ', '
+        body:
+          separator: ', '
+        view_node:
+          text: More
+        field_text_color:
+          separator: ', '
+        field_arrow:
+          separator: ', '
+      title: 'Services We Do'
+  block:
+    display_title: Block

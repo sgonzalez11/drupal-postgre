@@ -1,0 +1,115 @@
+display:
+  default:
+    display_title: Máster
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Aplicar
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Elementos por página'
+            items_per_page_options_all_label: '- Todo -'
+            offset_label: Desplazamiento
+      fields:
+        id:
+          separator: ', '
+        task_label:
+          label: Etiqueta
+          separator: ', '
+        process_id_1:
+          label: 'ID de proceso'
+          separator: ', '
+        process_name:
+          separator: ', '
+        task_class_name:
+          separator: ', '
+        task_id:
+          label: 'Nombre de sistema'
+          separator: ', '
+        created:
+          label: Creado
+          separator: ', '
+        changed:
+          label: Modificado
+          separator: ', '
+        is_interactive:
+          separator: ', '
+        handler:
+          label: Manejador
+          separator: ', '
+        num_escalations_sent:
+          separator: ', '
+        num_reminders_sent:
+          separator: ', '
+        last_escalation_time:
+          separator: ', '
+        admin_operations:
+          label: Operaciones
+      header:
+        area:
+          admin_label: Introducción
+  maestro_all_active_tasks_full:
+    display_options:
+      fields:
+        id:
+          separator: ', '
+        task_label:
+          label: Etiqueta
+          separator: ', '
+        process_id_1:
+          label: 'ID de proceso'
+          separator: ', '
+        process_name:
+          separator: ', '
+        task_class_name:
+          separator: ', '
+        task_id:
+          label: 'Nombre de sistema'
+          separator: ', '
+        created:
+          label: Creado
+          separator: ', '
+        is_interactive:
+          separator: ', '
+        handler:
+          label: Manejador
+          separator: ', '
+        num_escalations_sent:
+          separator: ', '
+        num_reminders_sent:
+          separator: ', '
+        last_escalation_time:
+          separator: ', '
+        admin_operations:
+          label: Operaciones
+  maestro_all_active_tasks_lean:
+    display_options:
+      fields:
+        id:
+          separator: ', '
+        task_label:
+          separator: ', '
+        process_id_1:
+          label: 'ID de proceso'
+          separator: ', '
+        process_name:
+          separator: ', '
+        task_class_name:
+          separator: ', '
+        task_id:
+          label: 'Nombre de sistema'
+          separator: ', '
+        created:
+          label: Creado
+          separator: ', '
+        is_interactive:
+          separator: ', '
+        active_handler:
+          label: Manejador
+        admin_operations:
+          label: Operaciones

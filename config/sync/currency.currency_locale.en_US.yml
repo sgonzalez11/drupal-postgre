@@ -3,3 +3,4 @@ groupingSeparator: ','
 locale: en_US
 pattern: '¤#,##0.00;(¤#,##0.00)'
 uuid: 8e813dbb-9796-45f5-a21b-7de22157a02d
+langcode: es

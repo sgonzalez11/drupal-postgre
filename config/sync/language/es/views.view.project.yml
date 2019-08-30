@@ -1,0 +1,215 @@
+display:
+  default:
+    display_title: Máster
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Aplicar
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      fields:
+        title:
+          separator: ', '
+        field_small_description:
+          separator: ', '
+        field_images:
+          separator: ', '
+        field_categories:
+          separator: ', '
+        field_video:
+          separator: ', '
+  block_1:
+    display_options:
+      fields:
+        field_images:
+          separator: ', '
+  classic_porfolio_page:
+    display_options:
+      fields:
+        title:
+          separator: ', '
+        field_small_description:
+          separator: ', '
+        field_images:
+          separator: ', '
+        field_video:
+          separator: ', '
+  extended_portfolio:
+    display_options:
+      fields:
+        title:
+          separator: ', '
+        field_small_description:
+          separator: ', '
+        field_images:
+          separator: ', '
+        field_categories:
+          separator: ', '
+        field_video:
+          separator: ', '
+  isotope_grid:
+    display_options:
+      fields:
+        title:
+          separator: ', '
+        field_images:
+          separator: ', '
+        body:
+          separator: ', '
+        nid:
+          separator: ', '
+  isotope_grid_overlay:
+    display_options:
+      fields:
+        title:
+          separator: ', '
+        field_images:
+          separator: ', '
+        body:
+          separator: ', '
+        nid:
+          separator: ', '
+  latest_portfolio_block:
+    display_options:
+      fields:
+        nid:
+          separator: ', '
+        title:
+          separator: ', '
+        field_small_description:
+          separator: ', '
+        field_images:
+          separator: ', '
+        field_categories:
+          separator: ', '
+        field_video:
+          separator: ', '
+        field_images_1:
+          separator: ', '
+        jango_cms_image_field_attributes_1:
+          label: URL
+  latest_portfolio_block_fullwidth:
+    display_options:
+      fields:
+        title:
+          separator: ', '
+        field_small_description:
+          separator: ', '
+        field_images:
+          separator: ', '
+        field_categories:
+          separator: ', '
+        field_video:
+          separator: ', '
+  masonry_gallery:
+    display_options:
+      fields:
+        title:
+          separator: ', '
+        field_small_description:
+          separator: ', '
+        field_images:
+          separator: ', '
+        field_categories:
+          separator: ', '
+        field_video:
+          separator: ', '
+  page_1:
+    display_options:
+      fields:
+        title:
+          separator: ', '
+        field_images:
+          separator: ', '
+        body:
+          separator: ', '
+        nid:
+          separator: ', '
+  page_2:
+    display_options:
+      fields:
+        title:
+          separator: ', '
+        field_images:
+          separator: ', '
+        body:
+          separator: ', '
+  page_2col_portfolio:
+    display_options:
+      fields:
+        title:
+          separator: ', '
+        field_small_description:
+          separator: ', '
+        field_images:
+          separator: ', '
+        field_video:
+          separator: ', '
+  page_3:
+    display_options:
+      fields:
+        nid:
+          separator: ', '
+        title:
+          separator: ', '
+        body:
+          separator: ', '
+        field_images:
+          separator: ', '
+  page_3_2:
+    display_options:
+      fields:
+        nid:
+          separator: ', '
+        title:
+          separator: ', '
+        body:
+          separator: ', '
+        field_images:
+          separator: ', '
+  page_4:
+    display_options:
+      fields:
+        field_images:
+          separator: ', '
+        field_video:
+          separator: ', '
+  page_index_gallery:
+    display_options:
+      fields:
+        title:
+          separator: ', '
+        field_small_description:
+          separator: ', '
+        field_images:
+          separator: ', '
+        field_video:
+          separator: ', '
+  page_lightbox_gallery:
+    display_options:
+      fields:
+        title:
+          separator: ', '
+        field_small_description:
+          separator: ', '
+        field_images:
+          separator: ', '
+        field_video:
+          separator: ', '
+        field_client:
+          separator: ', '
+        nid:
+          separator: ', '
+  page_masonry_portfolio:
+    display_options:
+      fields:
+        title:
+          separator: ', '
+        field_small_description:
+          separator: ', '
+        field_images:
+          separator: ', '
+        field_video:
+          separator: ', '

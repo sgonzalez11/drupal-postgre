@@ -1,0 +1,28 @@
+display:
+  default:
+    display_title: Máster
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Aplicar
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      fields:
+        field_background_and_arrow_color:
+          separator: ', '
+        field_background_and_arrow_color_1:
+          separator: ', '
+        title:
+          separator: ', '
+        body:
+          separator: ', '
+        view_node:
+          text: Más
+        field_text_color:
+          separator: ', '
+        field_arrow:
+          separator: ', '
+  block:
+    display_title: Bloque

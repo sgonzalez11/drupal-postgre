@@ -1,0 +1,64 @@
+display:
+  default:
+    display_title: Máster
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Aplicar
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Elementos por página'
+            items_per_page_options_all_label: '- Todo -'
+            offset_label: Desplazamiento
+      fields:
+        queue_id_1:
+          separator: ', '
+        task_label:
+          label: Tarea
+          separator: ', '
+        process_name:
+          separator: ', '
+        assign_id:
+          separator: ', '
+        active_handler:
+          label: Manejador
+        handler:
+          label: Manejador
+          separator: ', '
+        created_1:
+          separator: ', '
+        created:
+          separator: ', '
+        admin_operations:
+          label: Operaciones
+      header:
+        area:
+          admin_label: Introducción
+  taskconsole_display:
+    display_options:
+      fields:
+        queue_id_1:
+          separator: ', '
+        task_label:
+          label: Tarea
+          separator: ', '
+        process_name:
+          separator: ', '
+        assign_id:
+          separator: ', '
+        handler:
+          label: Manejador
+          separator: ', '
+        created_1:
+          separator: ', '
+        created:
+          separator: ', '
+      arguments:
+        process_id:
+          exception:
+            title: Todo(s)

@@ -180,7 +180,7 @@ requirements:
 contribute:
   account_type: user
   account_id: null
-langcode: en
+langcode: es
 third_party_settings:
   captcha:
     replace_administration_mode: true

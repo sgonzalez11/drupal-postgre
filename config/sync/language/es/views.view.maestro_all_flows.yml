@@ -1,0 +1,38 @@
+display:
+  default:
+    display_title: Máster
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Aplicar
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Elementos por página'
+            items_per_page_options_all_label: '- Todo -'
+            offset_label: Desplazamiento
+      fields:
+        process_id:
+          separator: ', '
+        process_name:
+          separator: ', '
+        template_id:
+          separator: ', '
+        created:
+          label: Creado
+          separator: ', '
+        completed:
+          label: Completado
+          separator: ', '
+        admin_operations:
+          label: Operaciones
+      filters:
+        template_id_filter:
+          expose:
+            label: 'Nombre de Plantilla'
+  all_flows_full:
+    display_title: Página

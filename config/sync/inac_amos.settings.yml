@@ -624,3 +624,4 @@ nikadevs_cms_layout:
             - col-md-12
 _core:
   default_config_hash: Kms67Zm6fHUwWtzNuil5zfEig-j9Bd5aAxKxU2onUTM
+langcode: es

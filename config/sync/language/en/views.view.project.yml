@@ -1,0 +1,303 @@
+label: Project
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Apply
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      fields:
+        title:
+          separator: ', '
+        field_small_description:
+          separator: ', '
+        field_images:
+          separator: ', '
+        jango_cms_image_field_attributes:
+          admin_label: 'field_images: URL'
+        field_categories:
+          separator: ', '
+        field_video:
+          separator: ', '
+      title: 'Full Width Gallery'
+  block_1:
+    display_title: '3 Columns, Small Images'
+    display_options:
+      title: 'Latest Works'
+      fields:
+        field_images:
+          separator: ', '
+  classic_porfolio_page:
+    display_title: '4 columns portfolio'
+    display_options:
+      title: '4 Columns Portfolio'
+      fields:
+        title:
+          separator: ', '
+        field_small_description:
+          separator: ', '
+        field_images:
+          separator: ', '
+        jango_cms_image_field_attributes:
+          admin_label: 'field_images: URL'
+        field_categories:
+          separator: '/ '
+        field_video:
+          separator: ', '
+      menu:
+        title: '4 Columns Portfolio'
+  extended_portfolio:
+    display_title: 'Extended portfolio'
+    display_options:
+      display_description: page-extended-portfolio
+      title: 'Latest Works'
+      fields:
+        title:
+          separator: ', '
+        field_small_description:
+          separator: ', '
+        field_images:
+          separator: ', '
+        jango_cms_image_field_attributes:
+          admin_label: 'field_images: URL'
+        field_categories:
+          separator: ', '
+        field_video:
+          separator: ', '
+      block_description: 'Extended portfolio'
+  full_width_gallery:
+    display_title: 'Full Width Gallery'
+    display_options:
+      display_description: Masonry
+      menu:
+        title: 'Full width gallery'
+  isotope_grid:
+    display_title: 'Isotope Grid: 4 Cols, Paddings, Borders'
+    display_options:
+      title: 'Masonry Portfolio'
+      fields:
+        title:
+          separator: ', '
+        field_images:
+          separator: ', '
+        body:
+          separator: ', '
+        nid:
+          separator: ', '
+  isotope_grid_overlay:
+    display_title: 'Isotope Grid: 4 Cols, Paddings, Overlay'
+    display_options:
+      title: 'Masonry Portfolio'
+      fields:
+        title:
+          separator: ', '
+        field_images:
+          separator: ', '
+        body:
+          separator: ', '
+        nid:
+          separator: ', '
+  latest_portfolio_block:
+    display_title: 'Block Latest Portfolio'
+    display_options:
+      title: 'Latest Portfolio'
+      fields:
+        nid:
+          separator: ', '
+        title:
+          separator: ', '
+        field_small_description:
+          separator: ', '
+        field_images:
+          separator: ', '
+        field_categories:
+          separator: ', '
+        field_video:
+          separator: ', '
+        field_images_1:
+          separator: ', '
+        jango_cms_image_field_attributes:
+          label: 'Target ID'
+        jango_cms_image_field_attributes_1:
+          label: URL
+      header:
+        area_text_custom:
+          content: "        <h3 class=\"c-center c-font-uppercase c-font-bold\">Latest Portfolio</h3>\n        <div class=\"c-line-center c-theme-bg\"></div>\n        <p class=\"c-center c-font-uppercase\">Showcasing your latest designs, sketches, photographs or videos.</p>\n "
+  latest_portfolio_block_fullwidth:
+    display_title: 'Block Latest Portfolio overflow-hide'
+    display_options:
+      title: 'Latest Portfolio (fullwidth)'
+      fields:
+        title:
+          separator: ', '
+        field_small_description:
+          separator: ', '
+        field_images:
+          separator: ', '
+        jango_cms_image_field_attributes:
+          admin_label: 'field_images: URL'
+        field_categories:
+          separator: ', '
+        field_video:
+          separator: ', '
+  masonry_gallery:
+    display_title: 'Masonry gallery'
+    display_options:
+      display_description: Masonry
+      title: 'Masonry gallery 16 Items'
+      fields:
+        title:
+          separator: ', '
+        field_small_description:
+          separator: ', '
+        field_images:
+          separator: ', '
+        jango_cms_image_field_attributes:
+          admin_label: 'field_images: URL'
+        field_categories:
+          separator: ', '
+        field_video:
+          separator: ', '
+      menu:
+        title: 'Masonry Gallery'
+  page_1:
+    display_title: 'Isotope Gallery: Filter, 5 Cols, Borders'
+    display_options:
+      title: 'Masonry Portfolio'
+      fields:
+        title:
+          separator: ', '
+        field_images:
+          separator: ', '
+        field_categories:
+          separator: '/ '
+        body:
+          separator: ', '
+        nid:
+          separator: ', '
+  page_2:
+    display_title: 'Isotope Gallery: 5 Cols, Borders, Paddings'
+    display_options:
+      title: 'Masonry Portfolio'
+      fields:
+        title:
+          separator: ', '
+        field_images:
+          separator: ', '
+        body:
+          separator: ', '
+  page_2col_portfolio:
+    display_title: '2 Columns Portfolio'
+    display_options:
+      title: '2 Columns Portfolio'
+      fields:
+        title:
+          separator: ', '
+        field_small_description:
+          separator: ', '
+        field_images:
+          separator: ', '
+        field_categories:
+          separator: '/ '
+        field_video:
+          separator: ', '
+      menu:
+        title: '2 Columns Portfolio'
+  page_3:
+    display_title: 'Isotope Gallery: 5 Cols, No Borders, No Paddings'
+    display_options:
+      title: 'Masonry Portfolio'
+      fields:
+        nid:
+          separator: ', '
+        title:
+          separator: ', '
+        body:
+          separator: ', '
+        field_images:
+          separator: ', '
+  page_3_2:
+    display_title: 'Isotope Gallery: 5 Cols, No Borders, No Paddings, 10Items'
+    display_options:
+      title: 'Masonry Portfolio'
+      fields:
+        nid:
+          separator: ', '
+        title:
+          separator: ', '
+        body:
+          separator: ', '
+        field_images:
+          separator: ', '
+  page_4:
+    display_title: 'Isotope Gallery: 2 Cols, Video Popup'
+    display_options:
+      title: 'Masonry Portfolio'
+      fields:
+        field_images:
+          separator: ', '
+        field_video:
+          separator: ', '
+  page_index_gallery:
+    display_title: 'Gallery Index'
+    display_options:
+      display_description: Gallery
+      title: 'Index Gallery'
+      menu:
+        title: 'Gallery Index'
+      fields:
+        title:
+          separator: ', '
+        field_small_description:
+          separator: ', '
+        field_images:
+          separator: ', '
+        field_categories:
+          separator: '/ '
+        field_video:
+          separator: ', '
+  page_lightbox_gallery:
+    display_title: 'Lightbox Gallery'
+    display_options:
+      display_description: Gallery
+      title: 'Lightbox Gallery'
+      fields:
+        title:
+          separator: ', '
+        field_small_description:
+          separator: ', '
+        field_images:
+          separator: ', '
+        field_categories:
+          separator: '/ '
+        field_video:
+          separator: ', '
+        field_client:
+          separator: ', '
+        nid:
+          separator: ', '
+      menu:
+        title: 'Lightbox Gallery'
+  page_masonry_portfolio:
+    display_title: 'Masonry Portfolio'
+    display_options:
+      title: 'Masonry Portfolio'
+      menu:
+        title: 'Masonry Portfolio'
+      fields:
+        title:
+          separator: ', '
+        field_small_description:
+          separator: ', '
+        field_images:
+          separator: ', '
+        jango_cms_image_field_attributes:
+          admin_label: 'field_images: URL'
+        field_categories:
+          separator: '/ '
+        field_video:
+          separator: ', '
