@@ -1,0 +1,22 @@
+uuid: 8ed91cab-f3b9-4879-9a30-77fc2b335099
+langcode: en
+status: true
+dependencies:
+  theme:
+    - eauth_customers
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: eauth_customers_local_tasks
+theme: eauth_customers
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

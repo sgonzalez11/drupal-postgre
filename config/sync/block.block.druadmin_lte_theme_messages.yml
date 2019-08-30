@@ -1,0 +1,22 @@
+uuid: 200824ce-b0b9-4ee4-9b6d-fb84d7bd4db2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - druadmin_lte_theme
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: druadmin_lte_theme_messages
+theme: druadmin_lte_theme
+region: brand
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: 7dc95a62-9f98-4c31-9ccb-1b2371d0115f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - eauth_customers
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: eauth_customers_local_actions
+theme: eauth_customers
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

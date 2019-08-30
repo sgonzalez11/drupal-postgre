@@ -1,0 +1,22 @@
+uuid: b1ffafd9-8c25-49c3-aa14-841288d60970
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - inac_amos
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: inac_amos_messages
+theme: inac_amos
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

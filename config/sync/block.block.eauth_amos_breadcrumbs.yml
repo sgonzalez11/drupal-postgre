@@ -1,0 +1,22 @@
+uuid: e3b8cec7-0b9f-4231-b42f-c64ed000840b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - eauth_amos
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: eauth_amos_breadcrumbs
+theme: eauth_amos
+region: header
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

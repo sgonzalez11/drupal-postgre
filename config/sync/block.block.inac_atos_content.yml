@@ -1,0 +1,22 @@
+uuid: 678507a4-0864-475c-a668-76ab6492d808
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - inac_atos
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: inac_atos_content
+theme: inac_atos
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

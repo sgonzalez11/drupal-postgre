@@ -1,0 +1,22 @@
+uuid: 2ac48284-fe48-4076-9a02-a9df9ab0ef4c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - eauth_customers
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: eauth_customers_breadcrumbs
+theme: eauth_customers
+region: header
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

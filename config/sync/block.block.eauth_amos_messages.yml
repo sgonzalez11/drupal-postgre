@@ -1,0 +1,22 @@
+uuid: b823bc84-4b98-4811-8b60-439bfabe286b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - eauth_amos
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: eauth_amos_messages
+theme: eauth_amos
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

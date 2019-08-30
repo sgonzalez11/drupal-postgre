@@ -1,0 +1,22 @@
+uuid: a92bcd65-a975-4d0d-b51b-7ef551415c43
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - inac_customers
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: inac_customers_content
+theme: inac_customers
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

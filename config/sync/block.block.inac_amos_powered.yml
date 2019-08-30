@@ -1,0 +1,22 @@
+uuid: c2971272-2f41-4ead-8fae-a7bdd0ad5582
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - inac_amos
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: inac_amos_powered
+theme: inac_amos
+region: header
+weight: 10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -150,7 +150,14 @@ theme:
   stable: 0
   classy: 0
   bartik: 0
-  seven: 0
+  druadmin_lte_theme: 0
+  jango: 0
+  eauth_customers: 0
+  eauth_atos: 0
+  eauth_amos: 0
+  inac_atos: 0
+  inac_customers: 0
+  inac_amos: 0
 profile: standard
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

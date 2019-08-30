@@ -1,0 +1,22 @@
+uuid: bb7054d2-0352-41f4-b995-06d0ee6255b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - jango
+_core:
+  default_config_hash: za-39d5WDUg6XvbyqSnuVYEeq6QM4qKJxW8MnoAha5A
+id: jango_search
+theme: jango
+region: header
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+visibility: {  }

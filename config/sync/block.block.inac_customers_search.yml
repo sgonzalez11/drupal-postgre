@@ -1,0 +1,22 @@
+uuid: 01aaeece-7f5f-4f56-b68c-7dfab7688a83
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - inac_customers
+_core:
+  default_config_hash: za-39d5WDUg6XvbyqSnuVYEeq6QM4qKJxW8MnoAha5A
+id: inac_customers_search
+theme: inac_customers
+region: header
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+visibility: {  }

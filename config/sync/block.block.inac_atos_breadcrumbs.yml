@@ -1,0 +1,22 @@
+uuid: c1195f09-31b5-42fb-b442-b4a01c89168a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - inac_atos
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: inac_atos_breadcrumbs
+theme: inac_atos
+region: header
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

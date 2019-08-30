@@ -1,0 +1,25 @@
+uuid: 9bfd3bca-318a-4f5d-b456-cad6871f2f22
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - inac_customers
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: inac_customers_branding
+theme: inac_customers
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

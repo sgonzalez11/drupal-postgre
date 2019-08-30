@@ -1,0 +1,22 @@
+uuid: 31669ef0-aa83-43de-979f-71e1e09f3613
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - jango
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: jango_help
+theme: jango
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

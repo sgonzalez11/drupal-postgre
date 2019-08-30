@@ -1,0 +1,22 @@
+uuid: 4bf56ee9-23a2-43d7-a076-4e2594755b31
+langcode: en
+status: true
+dependencies:
+  theme:
+    - eauth_amos
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: eauth_amos_local_tasks
+theme: eauth_amos
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

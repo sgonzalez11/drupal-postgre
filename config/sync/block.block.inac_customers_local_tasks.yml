@@ -1,0 +1,22 @@
+uuid: e153c9d4-2e2c-4a76-8f72-aef1ee2f2806
+langcode: en
+status: true
+dependencies:
+  theme:
+    - inac_customers
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: inac_customers_local_tasks
+theme: inac_customers
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

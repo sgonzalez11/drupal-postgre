@@ -1,0 +1,20 @@
+uuid: 29a79994-780f-4413-93fd-026e993c554a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - eauth_atos
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: eauth_atos_local_actions
+theme: eauth_atos
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }
