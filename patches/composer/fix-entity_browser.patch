@@ -1,0 +1,38 @@
+diff --git a/entity_browser.module b/entity_browser.module
+index 8e3c5c4..251886f 100644
+--- a/entity_browser.module
++++ b/entity_browser.module
+@@ -112,6 +112,20 @@ function entity_browser_preprocess_page__entity_browser__iframe(&$variables) {
+  */
+ function entity_browser_preprocess_page__entity_browser__modal(&$variables) {
+   entity_browser_preprocess_page__entity_browser__iframe($variables);
++
++  $theme_name = \Drupal::theme()->getActiveTheme()->getName();
++  switch ($theme_name) {
++    case "druadmin_lte_theme":
++      break;
++    case "eauth_customers":
++    case "eauth_atos":
++    case "eauth_amos":
++    case "inac_customers":
++    case "inac_atos":
++    case "inac_amos":
++      jango_preprocess_html($variables);
++      break;
++  }
+ }
+ 
+ /**
+diff --git a/src/Plugin/Field/FieldWidget/EntityReferenceBrowserWidget.php b/src/Plugin/Field/FieldWidget/EntityReferenceBrowserWidget.php
+index e2ee1cd..0546d6a 100644
+--- a/src/Plugin/Field/FieldWidget/EntityReferenceBrowserWidget.php
++++ b/src/Plugin/Field/FieldWidget/EntityReferenceBrowserWidget.php
+@@ -173,7 +173,7 @@ class EntityReferenceBrowserWidget extends WidgetBase implements ContainerFactor
+       }
+     }
+ 
+-    $id = Html::getId($this->fieldDefinition->getName()) . '-field-widget-display-settings-ajax-wrapper-' . md5($this->fieldDefinition->get('uuid'));
++    $id = Html::getId($this->fieldDefinition->getName()) . '-field-widget-display-settings-ajax-wrapper-' . md5($this->fieldDefinition->getUniqueIdentifier());
+     $element['field_widget_display'] = [
+       '#title' => $this->t('Entity display plugin'),
+       '#type' => 'radios',

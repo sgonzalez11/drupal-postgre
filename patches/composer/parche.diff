@@ -1,0 +1,25 @@
+diff --git a/web/entity_browser.module b/web/entity_browser.module
+index d87b874..923a560 100644
+--- a/web/entity_browser.module
++++ b/web/entity_browser.module
+@@ -112,6 +112,20 @@ function entity_browser_preprocess_page__entity_browser__iframe(&$variables) {
+  */
+ function entity_browser_preprocess_page__entity_browser__modal(&$variables) {
+   entity_browser_preprocess_page__entity_browser__iframe($variables);
++
++  $theme_name = \Drupal::theme()->getActiveTheme()->getName();
++  switch ($theme_name) {
++    case "druadmin_lte_theme":
++      break;
++    case "eauth_customers":
++    case "eauth_atos":
++    case "eauth_amos":
++    case "inac_customers":
++    case "inac_atos":
++    case "inac_amos":
++      jango_preprocess_html($variables);
++      break;
++  }
+ }
+ 
+ /**

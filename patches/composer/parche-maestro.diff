@@ -1,0 +1,13 @@
+diff --git a/modules/maestro_webform/src/Plugin/EngineTasks/MaestroWebformTask.php b/modules/maestro_webform/src/Plugin/EngineTasks/MaestroWebformTask.php
+index 65d343c..bddb756 100644
+--- a/modules/maestro_webform/src/Plugin/EngineTasks/MaestroWebformTask.php
++++ b/modules/maestro_webform/src/Plugin/EngineTasks/MaestroWebformTask.php
+@@ -235,7 +235,7 @@ class MaestroWebformTask extends PluginBase implements MaestroEngineTaskInterfac
+         MaestroEngine::setTaskStatus($queueID, TASK_STATUS_CANCEL);
+       }
+     }
+-   
++    $templateTask = MaestroEngine::getTemplateTaskByQueueID($this->queueID);
+     // Redirect based on where the task told us to go.
+     if(isset($templateTask['data']['redirect_to']) && $templateTask['data']['redirect_to'] != '') {
+       $response = new TrustedRedirectResponse('/' . $templateTask['data']['redirect_to']);
