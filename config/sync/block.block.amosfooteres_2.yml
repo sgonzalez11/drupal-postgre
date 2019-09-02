@@ -1,0 +1,30 @@
+uuid: a95199b5-274b-4541-a3d3-05b10d1491f1
+langcode: es
+status: true
+dependencies:
+  config:
+    - fixed_block_content.fixed_block_content.amos_footer_es
+  module:
+    - domain
+    - fixed_block_content
+  theme:
+    - inac_amos
+id: amosfooteres_2
+theme: inac_amos
+region: footer
+weight: 0
+provider: null
+plugin: 'fixed_block_content:amos_footer_es'
+settings:
+  id: 'fixed_block_content:amos_footer_es'
+  label: 'AMOs Footer ES'
+  provider: fixed_block_content
+  label_display: '0'
+  view_mode: ''
+visibility:
+  domain:
+    id: domain
+    domains:
+      amos_portal: amos_portal
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,32 @@
+uuid: c0a96fa2-bc72-45ea-8f8d-ec01797f59af
+langcode: en
+status: true
+dependencies: {  }
+id: caa_medical_administrative
+label: 'CAA Medical Administrative'
+weight: 1
+is_admin: null
+permissions:
+  - 'allows users to assign a medical assessor'
+  - 'view any webform submission'
+  - 'view applicant information section of the medical assessment form'
+  - 'view applicant information section of the medical examination form'
+  - 'view assessment in progress medical assessment'
+  - 'view assessment scheduled medical assessment'
+  - 'view assessment scheduled medical examination'
+  - 'view cancelation section of the medical assessment form'
+  - 'view cancelation section of the medical examination form'
+  - 'view canceled medical assessment'
+  - 'view canceled medical examination'
+  - 'view general section of the medical assessment form'
+  - 'view general section of the medical examination form'
+  - 'view maestro task console'
+  - 'view medical assessor''s declaration section of the medical examination form'
+  - 'view medical examinations section of the medical assessment form'
+  - 'view medical examiner''s declaration section of the medical examination form'
+  - 'view pending assessment medical assessment'
+  - 'view pending assessment medical examination'
+  - 'view published customers entities'
+  - 'view responsible medical assessor''s declaration section of the medical assessment form'
+  - 'view responsible medical examiner''s declaration section of the medical assessment form'
+  - 'view webform submissions any node'

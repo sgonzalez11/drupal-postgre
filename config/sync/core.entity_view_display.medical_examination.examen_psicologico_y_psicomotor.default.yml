@@ -1,0 +1,285 @@
+uuid: 79384c2b-7c2b-46a5-9a6f-631124a83ee5
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_psicologico_y_psicomotor
+    - field.field.medical_examination.examen_psicologico_y_psicomotor.field_text_plain_00
+    - field.field.medical_examination.examen_psicologico_y_psicomotor.field_text_plain_01
+    - field.field.medical_examination.examen_psicologico_y_psicomotor.field_text_plain_02
+    - field.field.medical_examination.examen_psicologico_y_psicomotor.field_text_plain_03
+    - field.field.medical_examination.examen_psicologico_y_psicomotor.field_text_plain_04
+    - field.field.medical_examination.examen_psicologico_y_psicomotor.field_text_plain_05
+    - field.field.medical_examination.examen_psicologico_y_psicomotor.field_text_plain_06
+    - field.field.medical_examination.examen_psicologico_y_psicomotor.field_text_plain_07
+    - field.field.medical_examination.examen_psicologico_y_psicomotor.field_text_plain_long_00
+    - field.field.medical_examination.examen_psicologico_y_psicomotor.field_text_plain_long_01
+    - field.field.medical_examination.examen_psicologico_y_psicomotor.field_text_plain_long_02
+    - field.field.medical_examination.examen_psicologico_y_psicomotor.field_text_plain_long_03
+    - field.field.medical_examination.examen_psicologico_y_psicomotor.field_text_plain_long_04
+    - field.field.medical_examination.examen_psicologico_y_psicomotor.field_text_plain_long_05
+    - field.field.medical_examination.examen_psicologico_y_psicomotor.field_text_plain_long_06
+    - field.field.medical_examination.examen_psicologico_y_psicomotor.field_text_plain_long_07
+  module:
+    - datetime
+    - file
+    - options
+id: medical_examination.examen_psicologico_y_psicomotor.default
+targetEntityType: medical_examination
+bundle: examen_psicologico_y_psicomotor
+mode: default
+content:
+  assessment_date:
+    label: inline
+    type: datetime_default
+    settings:
+      format_type: medium
+      timezone_override: ''
+    weight: 4
+    region: content
+    third_party_settings: {  }
+  assessment_notes:
+    label: inline
+    type: basic_string
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  assessment_reassessment_required:
+    label: inline
+    type: boolean
+    weight: 8
+    region: content
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+  assessment_result:
+    label: inline
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  cancellation_date:
+    label: inline
+    type: datetime_default
+    settings:
+      format_type: medium
+      timezone_override: ''
+    weight: -1
+    region: content
+    third_party_settings: {  }
+  cancellation_reason:
+    label: inline
+    type: basic_string
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  cancellation_user:
+    label: inline
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  documents:
+    label: inline
+    weight: 0
+    region: content
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+  entity_status:
+    label: inline
+    weight: -4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  examination_date:
+    label: inline
+    type: datetime_default
+    settings:
+      format_type: medium
+      timezone_override: ''
+    weight: -10
+    region: content
+    third_party_settings: {  }
+  examination_notes:
+    label: inline
+    type: basic_string
+    weight: -6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_text_plain_00:
+    weight: 12
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_text_plain_01:
+    weight: 13
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_text_plain_02:
+    weight: 15
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_text_plain_03:
+    weight: 17
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_text_plain_04:
+    weight: 19
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_text_plain_05:
+    weight: 21
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_text_plain_06:
+    weight: 23
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_text_plain_07:
+    weight: 25
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_text_plain_long_00:
+    weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_text_plain_long_01:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_text_plain_long_02:
+    weight: 16
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_text_plain_long_03:
+    weight: 18
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_text_plain_long_04:
+    weight: 20
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_text_plain_long_05:
+    weight: 22
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_text_plain_long_06:
+    weight: 24
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_text_plain_long_07:
+    weight: 26
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  medical_assessor:
+    label: inline
+    weight: 2
+    region: content
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  medical_examination_type:
+    label: inline
+    weight: -4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  medical_examiner:
+    label: inline
+    weight: -12
+    region: content
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  name:
+    label: inline
+    type: string
+    weight: -20
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  scheduled_appointment_date:
+    label: inline
+    type: datetime_default
+    settings:
+      format_type: medium
+      timezone_override: ''
+    weight: -14
+    region: content
+    third_party_settings: {  }
+hidden:
+  creation_date: true
+  langcode: true
+  medical_assessment: true
+  number: true
+  prefix: true

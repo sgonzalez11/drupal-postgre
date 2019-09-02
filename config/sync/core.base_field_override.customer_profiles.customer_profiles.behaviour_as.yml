@@ -1,0 +1,21 @@
+uuid: e7e605c0-872e-44e1-b489-c2ca2a0acfcd
+langcode: en
+status: true
+dependencies:
+  module:
+    - eauthority
+    - options
+id: customer_profiles.customer_profiles.behaviour_as
+field_name: behaviour_as
+entity_type: customer_profiles
+bundle: customer_profiles
+label: 'Behaviour As'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,32 @@
+uuid: 56b11926-9b26-4d9c-9cd4-a22240c82f6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.228_planned_destination.field_taxonomy_number
+    - taxonomy.vocabulary.228_planned_destination
+  module:
+    - text
+id: taxonomy_term.228_planned_destination.default
+targetEntityType: taxonomy_term
+bundle: 228_planned_destination
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_taxonomy_number:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  langcode: true

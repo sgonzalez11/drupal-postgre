@@ -1,0 +1,14 @@
+uuid: 507b11a8-49c4-4475-b6b1-127df994c40a
+langcode: es
+status: true
+dependencies:
+  config:
+    - domain.record.atos_portal
+  module:
+    - domain_access
+id: domain_access_remove_action.atos_portal
+label: 'Remove selected content from the ATOs Portal domain'
+type: node
+plugin: domain_access_remove_action
+configuration:
+  domain_id: atos_portal

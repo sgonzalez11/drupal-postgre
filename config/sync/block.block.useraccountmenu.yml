@@ -1,0 +1,24 @@
+uuid: 0764a339-cb8f-42be-a29f-7243b9d2bfcc
+langcode: es
+status: false
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - druadmin_lte_theme
+id: useraccountmenu
+theme: druadmin_lte_theme
+region: sidebar
+weight: -2
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'Sesión de Usuario'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

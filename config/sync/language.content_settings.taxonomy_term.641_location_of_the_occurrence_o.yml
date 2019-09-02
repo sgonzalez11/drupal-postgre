@@ -1,0 +1,11 @@
+uuid: 5fad4a9d-5cec-4730-be8b-7345ffa44c15
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.641_location_of_the_occurrence_o
+id: taxonomy_term.641_location_of_the_occurrence_o
+target_entity_type_id: taxonomy_term
+target_bundle: 641_location_of_the_occurrence_o
+default_langcode: site_default
+language_alterable: false

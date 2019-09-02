@@ -1,0 +1,32 @@
+uuid: e5b3ec4c-35d8-400a-9bb5-cf69682eee10
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.8_helicopter_landing_area_surfac.field_taxonomy_number
+    - taxonomy.vocabulary.8_helicopter_landing_area_surfac
+  module:
+    - text
+id: taxonomy_term.8_helicopter_landing_area_surfac.default
+targetEntityType: taxonomy_term
+bundle: 8_helicopter_landing_area_surfac
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_taxonomy_number:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,24 @@
+uuid: 08fee437-913f-4282-bb5a-db2a6dd690d4
+langcode: es
+status: false
+dependencies:
+  config:
+    - system.menu.eauthority
+  module:
+    - system
+  theme:
+    - druadmin_lte_theme
+id: eauthority
+theme: druadmin_lte_theme
+region: sidebar
+weight: -5
+provider: null
+plugin: 'system_menu_block:eauthority'
+settings:
+  id: 'system_menu_block:eauthority'
+  label: 'Menú Principal'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

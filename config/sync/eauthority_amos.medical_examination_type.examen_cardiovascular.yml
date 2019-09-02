@@ -1,0 +1,6 @@
+uuid: 8bef8591-e244-4402-89e1-e5b720d671f4
+langcode: en
+status: true
+dependencies: {  }
+id: examen_cardiovascular
+label: 'Examen cardiovascular'

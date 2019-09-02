@@ -1,0 +1,20 @@
+uuid: eddb2d7a-157c-4e29-8bc9-62af26e6a544
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.nd_team
+id: node.nd_team.uid
+field_name: uid
+entity_type: node
+bundle: nd_team
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,9 @@
+uuid: 94e2a0d5-2d9c-49dd-8890-6fe6a2460359
+langcode: en
+status: true
+dependencies: {  }
+id: customers_portal_base_zltgefy_bf4vp4joan5wy_us_2_platformsh_site
+domain_id: customers_portal
+pattern: customers-portal.base-zltgefy-bf4vp4joan5wy.us-2.platformsh.site
+redirect: 0
+environment: default

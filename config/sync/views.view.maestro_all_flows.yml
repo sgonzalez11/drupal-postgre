@@ -1,11 +1,10 @@
-uuid: db5fa233-9c31-49dd-b126-3f2ebd346da7
+uuid: 745a20ff-852d-4f62-bb09-137bef3cbc26
 langcode: es
 status: true
 dependencies:
   module:
     - maestro
     - user
-    - views_autocomplete_filters
 _core:
   default_config_hash: 3lAa1xRCDIyDiYVJLbRmz-OgZh4xZGMwMFbMGhdE-kY
 id: maestro_all_flows

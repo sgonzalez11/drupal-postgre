@@ -1,0 +1,11 @@
+uuid: 8305b95f-3e72-473e-88e2-80cb559a28aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.428_atm_contribution
+id: taxonomy_term.428_atm_contribution
+target_entity_type_id: taxonomy_term
+target_bundle: 428_atm_contribution
+default_langcode: site_default
+language_alterable: false

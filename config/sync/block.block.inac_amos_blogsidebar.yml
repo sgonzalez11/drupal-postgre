@@ -1,0 +1,31 @@
+uuid: 0d2181bc-80ea-472e-a9b6-17201136b806
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:52d90283-f1fd-4a98-a079-5ee890d19b8f'
+  module:
+    - block_content
+    - system
+  theme:
+    - inac_amos
+id: inac_amos_blogsidebar
+theme: inac_amos
+region: sidebar
+weight: -5
+provider: null
+plugin: 'block_content:52d90283-f1fd-4a98-a079-5ee890d19b8f'
+settings:
+  id: 'block_content:52d90283-f1fd-4a98-a079-5ee890d19b8f'
+  label: 'News Sidebar'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /contenido/noticias
+    negate: false
+    context_mapping: {  }

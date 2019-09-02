@@ -15,7 +15,7 @@ settings:
   default_form_novalidate: false
   default_form_disable_inline_errors: false
   default_form_required: false
-  default_form_required_label: 'Indicates required field'
+  default_form_required_label: 'Indica campo requerido'
   default_form_details_toggle: true
   default_form_file_limit: ''
   form_classes: "container-inline clearfix\nform--inline clearfix\nmessages messages--error\nmessages messages--warning\nmessages messages--status\n"
@@ -185,4 +185,4 @@ third_party_settings:
   captcha:
     replace_administration_mode: true
 _core:
-  default_config_hash: zGi6Kl2hhwJ2BVvbvVGykC2-NPShwQolX--wfmRTOfA
+  default_config_hash: LfS9F5pMOujrNNKzmWTQNsr6msfNn99m26vszAjDUOo

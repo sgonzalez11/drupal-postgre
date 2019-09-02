@@ -1,0 +1,19 @@
+uuid: f6d6ce4c-c0b1-473e-b5e5-1b0b29dd3bbc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_prefix
+    - node.type.document_parameter
+id: node.document_parameter.field_prefix
+field_name: field_prefix
+entity_type: node
+bundle: document_parameter
+label: Prefix
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

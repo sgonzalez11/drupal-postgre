@@ -1,0 +1,9 @@
+uuid: 3c785dd7-401f-4d48-8cdc-2795a2ed7d2e
+langcode: en
+status: true
+dependencies: {  }
+name: '9 - helicopter_landing_area_type'
+vid: 9_helicopter_landing_area_type
+description: ''
+hierarchy: 0
+weight: 0

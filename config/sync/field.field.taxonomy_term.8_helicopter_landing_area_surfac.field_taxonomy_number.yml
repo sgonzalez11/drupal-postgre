@@ -1,0 +1,23 @@
+uuid: fa526397-03df-4cf8-adc0-5c8ee666ef76
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_taxonomy_number
+    - taxonomy.vocabulary.8_helicopter_landing_area_surfac
+id: taxonomy_term.8_helicopter_landing_area_surfac.field_taxonomy_number
+field_name: field_taxonomy_number
+entity_type: taxonomy_term
+bundle: 8_helicopter_landing_area_surfac
+label: 'taxonomy number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

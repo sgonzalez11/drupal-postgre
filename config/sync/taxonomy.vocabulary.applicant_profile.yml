@@ -1,0 +1,9 @@
+uuid: 161a94b8-d851-4f71-b97b-a8bddaf32b98
+langcode: es
+status: true
+dependencies: {  }
+name: 'Perfiles de Solicitantes'
+vid: applicant_profile
+description: 'Perfiles de Solicitantes'
+hierarchy: 1
+weight: 0

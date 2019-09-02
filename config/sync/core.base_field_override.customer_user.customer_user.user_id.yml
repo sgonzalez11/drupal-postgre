@@ -1,0 +1,20 @@
+uuid: 04a30169-5882-4349-95dc-efd7da33d752
+langcode: en
+status: true
+dependencies:
+  module:
+    - eauthority
+id: customer_user.customer_user.user_id
+field_name: user_id
+entity_type: customer_user
+bundle: customer_user
+label: 'Authored by'
+description: 'The user ID of author of the Customer User entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

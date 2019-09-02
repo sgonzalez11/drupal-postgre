@@ -1,0 +1,32 @@
+uuid: 2c31cf0f-2ba2-4056-8de0-b96e3d2cf9a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.570_information_on_the_relative.field_taxonomy_number
+    - taxonomy.vocabulary.570_information_on_the_relative
+  module:
+    - text
+id: taxonomy_term.570_information_on_the_relative.default
+targetEntityType: taxonomy_term
+bundle: 570_information_on_the_relative
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_taxonomy_number:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,11 @@
+uuid: 71bd6407-db0b-42e7-8762-afcb2d71e991
+langcode: en
+status: true
+dependencies: {  }
+id: client
+label: Cliente
+weight: -8
+is_admin: null
+permissions:
+  - 'view maestro task console'
+  - 'view portal dashboard'

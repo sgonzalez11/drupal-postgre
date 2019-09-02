@@ -1,0 +1,22 @@
+uuid: b7d4ec31-3f22-4fdb-af01-0a0441803008
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_oftalmologico
+  module:
+    - options
+id: medical_examination.examen_oftalmologico.assessment_result
+field_name: assessment_result
+entity_type: medical_examination
+bundle: examen_oftalmologico
+label: 'Assessment Result'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: list_string

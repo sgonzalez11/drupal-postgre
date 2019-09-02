@@ -1,0 +1,190 @@
+uuid: 1fc0f6f1-2a0e-4721-a56b-d22121772d9f
+langcode: es
+status: open
+dependencies:
+  module:
+    - eauthority_transactions
+    - maestro_webform
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: _webform_settings_template_
+title: '[Webform Settings Template]'
+description: ''
+category: General
+elements: "container:\n  '#type': container\n  flexbox_datos:\n    '#type': webform_flexbox\n    apellidos:\n      '#type': textfield\n      '#title': Apellidos\n      '#title_display': inline\n      '#description_display': after\n      '#disabled': true\n      '#readonly': true\n      '#required': true\n      '#flex': '6'\n      '#default_value': '[current-user:field_last_name:value]'\n    pasaporte_no:\n      '#type': textfield\n      '#title': 'Pasaporte Nº'\n      '#title_display': inline\n      '#description_display': after\n      '#disabled': true\n      '#readonly': true\n      '#flex': '6'\n  nombres_:\n    '#type': textfield\n    '#title': 'Nombres:'\n    '#disabled': true\n    '#readonly': true\n    '#default_value': '[current-user:field_first_name]'\n    '#required': true\n  lugar_y_fecha_de_nacimiento_:\n    '#type': textfield\n    '#title': 'Lugar y Fecha de Nacimiento:'\n  flexbox_01:\n    '#type': webform_flexbox\n    sexo:\n      '#type': checkboxes\n      '#title': 'Sexo:'\n      '#title_display': inline\n      '#options':\n        1: F\n        2: M\n      '#options_display': side_by_side\n    ocupacion_:\n      '#type': textfield\n      '#title': 'Ocupación:'\n  telefono:\n    '#type': textfield\n    '#title': Telefono\n    '#title_display': inline\n  direccion_:\n    '#type': textfield\n    '#title': 'Direccíon:'\n    '#title_display': inline\n    '#description_display': after\ncontainer_02:\n  '#type': container\n  flexbox_prueba:\n    '#type': webform_flexbox\n    flexbox_01_parte:\n      '#type': webform_flexbox\n      '#flex': '2'\n      clase_1_:\n        '#type': checkbox\n        '#title': 'Clase 1'\n        '#title_display': inline\n        '#description_display': after\n        '#attributes':\n          class:\n            - clearfix\n      clase_2_:\n        '#type': checkbox\n        '#title': 'Clase 2'\n        '#title_display': inline\n        '#description_display': after\n        '#attributes':\n          class:\n            - clearfix\n      clase_3_:\n        '#type': checkbox\n        '#title': 'Clase 3'\n        '#title_display': inline\n        '#description_display': after\n        '#attributes':\n          class:\n            - clearfix\n      clase_4_:\n        '#type': checkbox\n        '#title': 'Clase 4'\n        '#title_display': inline\n        '#description_display': after\n        '#attributes':\n          class:\n            - clearfix\n      certificado_medico:\n        '#type': fieldset\n        '#title': 'Certificado medico'\n        '#flex': '4'\n    flexbox_02_parte:\n      '#type': webform_flexbox\n      '#flex': '2'\n      processed_text_03:\n        '#type': processed_text\n        '#text': \"<p>En relación a licencia para:</p>\\r\\n\"\n        '#format': basic_html\n      en_relacion_a_licencia_para_:\n        '#type': webform_checkboxes_other\n        '#title': 'En Relacion a licencia para:'\n        '#options':\n          'Piloto TLA:': 'Piloto TLA:'\n          'Piloto comercial': 'Piloto comercial'\n          TDC: TDC\n          CTA/OEA: CTA/OEA\n          'Mecánico de abordo': 'Mecánico de abordo'\n          'Alumno CTA / OEA': 'Alumno CTA / OEA'\n          'Piloto Privado': 'Piloto Privado'\n          'Piloto RPA': 'Piloto RPA'\n          'Alumno Piloto': 'Alumno Piloto'\n        '#options_display': two_columns\n        '#other__option_label': 'Otro:'\n        '#other__placeholder': ''\n3er_content:\n  '#type': webform_section\n  '#title': '3er content'\n  '#title_display': invisible\n  flexbox_02_estado_certificado:\n    '#type': webform_flexbox\n    text_pregunta:\n      '#type': processed_text\n      '#flex': '3'\n      '#text': '<h2>¿Le ha sido alguna vez limitado, restringido, negado, suspendido o revocado un Certificado Médico?</h2>'\n      '#format': restricted_html\n    estado_certificado:\n      '#type': checkboxes\n      '#title': estado_certificado\n      '#options':\n        SI: SI\n        'NO': 'NO'\n  _por_que_:\n    '#type': textfield\n    '#title': '¿por qué?'\n    '#states':\n      visible-slide:\n        ':input[name=\"estado_certificado[SI]\"]':\n          checked: true\nfour_content:\n  '#type': webform_section\n  '#title': four_content\n  '#title_display': invisible\n  processed_text:\n    '#type': processed_text\n    '#text': \"<h2>Tipo de Aeronave que actualmente vuela:</h2>\\r\\n\"\n    '#format': basic_html\n  tipo_aeronave:\n    '#type': webform_checkboxes_other\n    '#title': tipo_aeronave\n    '#title_display': invisible\n    '#options':\n      Reactor: Reactor\n      Hélice: Hélice\n      Helicóptero: Helicóptero\n    '#other__option_label': Otro\n    '#other__placeholder': ''\n  flexbox_02_tipo:\n    '#type': webform_flexbox\n    total_de_horas_voladas_:\n      '#type': textfield\n      '#title': 'Total de horas voladas:'\n      '#flex': '3'\n    ult_6_meses:\n      '#type': textfield\n      '#title': 'Ult. 6 meses'\nflexbox_03_tipo2:\n  '#type': webform_flexbox\n  processed_text_01:\n    '#type': processed_text\n    '#flex': '3'\n    '#text': \"<h3>¿Ha tenido usted algún accidente aéreo? (Ultimos 5 años)</h3>\\r\\n\"\n    '#format': basic_html\n  _ha_tenido_usted_algun_accidente_aereo_ultimos_5_anos_:\n    '#type': checkboxes\n    '#title': accidente\n    '#options':\n      SI: SI\n      'NO': 'NO'\nlugar_y_fecha:\n  '#type': textfield\n  '#title': 'Lugar y Fecha'\n  '#states':\n    visible-slide:\n      ':input[name=\"_ha_tenido_usted_algun_accidente_aereo_ultimos_5_anos_[SI]\"]':\n        checked: true\nflexbox_03_tipo3:\n  '#type': webform_flexbox\n  processed_text_02:\n    '#type': processed_text\n    '#flex': '3'\n    '#text': \"<h3>¿Hubo lesiones?</h3>\\r\\n\"\n    '#format': basic_html\n  hubo_lesiones:\n    '#type': checkboxes\n    '#title': hubo_lesiones\n    '#options':\n      SI: SI\n      'NO': 'NO'\n_cuales_:\n  '#type': textfield\n  '#title': '¿Cuales?'\n  '#states':\n    visible-slide:\n      ':input[name=\"hubo_lesiones[SI]\"]':\n        checked: true\nhistoria_medical_seccion:\n  '#type': processed_text\n  '#text': \"<h2><strong>HISTORIA MEDICA</strong>: ¿Ha experimentado usted alguna vez alguna de las condiciones siguientes? (en caso afirmativo cite y explique en&nbsp;la sección comentarios):</h2>\\r\\n\"\n  '#format': restricted_html\nflexbox_question:\n  '#type': webform_flexbox\n  question2:\n    '#type': webform_likert\n    '#title': question\n    '#title_display': invisible\n    '#questions':\n      '1) Dolores de cabeza fuerte o frecuentes': '1) DOLORES DE CABEZA FUERTES O FRECUENTES'\n      '2) TRAUMATISMOS CRANEANOS': '2) TRAUMATISMOS CRANEANOS'\n      '3) MENINGITIS O ENCEFALITIS': '3) MENINGITIS O ENCEFALITIS'\n      '4) EPILEPSIA O CO': '4) EPILEPSIA O CO'\n      '5) Perdida de conocimiento (cualquier cosa)': '5) Perdida de conocimiento (cualquier cosa)'\n      '6) Vértigo o desvanecimientos': '6) Vértigo o desvanecimientos'\n      '7) MAREO POR MOVIMIENTO': '7) MAREO POR MOVIMIENTO'\n      '8) DESEQUILIBRIO AL CAMINAR': '8) DESEQUILIBRIO AL CAMINAR'\n      '9) DIFICULTAD EN EL HABLA O LA AUDICIÓN': '9) DIFICULTAD EN EL HABLA O LA AUDICIÓN'\n      '10) OBSTRUCCIÓN NASAL FRECUENTE': '10) OBSTRUCCIÓN NASAL FRECUENTE'\n      '11) SECRECIÓN O SANGRAMIENTO DE OÍDOS': '11) SECRECIÓN O SANGRAMIENTO DE OÍDOS'\n      '12) TRASTORNOS OCULARES (EXCLUIR USO DE LENTES)': '12) TRASTORNOS OCULARES (EXCLUIR USO DE LENTES)'\n      '13) USO DE LENTES CORRECTORES': '13) USO DE LENTES CORRECTORES'\n      '14) VISIÓN DE HALOS LUMINOSOS': '14) VISIÓN DE HALOS LUMINOSOS'\n      '15) DIABETES': '15) DIABETES'\n      '16) ASMA': '16) ASMA'\n      '17) PROBLEMAS OSTEO-ARTICULARES O MUSCULARES ': '17) PROBLEMAS OSTEO-ARTICULARES O MUSCULARES '\n      '18) TRANSTORNOS CARDIOVASCULARES ': '18) TRANSTORNOS CARDIOVASCULARES '\n      '19) PRESIÓN ARTERIAL ALTA O BAJA': '19) PRESIÓN ARTERIAL ALTA O BAJA'\n      '20) TRASTORNOS GASTROINTESTINALES ': '20) TRASTORNOS GASTROINTESTINALES '\n    '#answers':\n      SI: SI\n      'NO': 'NO'\n  question3:\n    '#type': webform_likert\n    '#title': question3\n    '#title_display': invisible\n    '#questions':\n      '21) CÁLCULOS URINARIOS': '21) CÁLCULO URINARIOS'\n      '22) SANGRE, ALBÚMINA O AZÚCAR EN LA ORINA': '22) SANGRE, ALBÚMINA O AZÚCAR EN LA ORINA'\n      '23) AFECCIONES RENALES': '23) AFECCIONES RENALES'\n      '24) AFECCIONES GINECOOBTETRICAS': '24) AFECCIONES GINECOOBTETRICAS'\n      '25) INTERVENCIONES QUIRÚRGICAS': '25) INTERVENCIONES QUIRÚRGICAS'\n      '26) CUADROS NERVIOSOS O MENTALES': '26) CUADROS NERVIOSOS O MENTALES'\n      '27) HABITUACIÓN A MEDICAMENTOS O DROGAS': '27) HABITUACIÓN A MEDICAMENTOS O DROGAS'\n      '28) CONSUMO FRECUENTE DE BEBIDAS ALCOHÓLICAS': '28) CONSUMO FRECUENTE DE BEBIDAS ALCOHÓLICAS'\n      '29) ACCIDENTES AUTOMOVILÍSTICO CON LESIONES': '29) ACCIDENTES AUTOMOVILÍSTICO CON LESIONES'\n      '30) INTENTO DE SUICIDO': '30) INTENTO DE SUICIDO'\n      '31) CONDENA JUDICIAL': '31) CONDENA JUDICIAL'\n      '32) RECHAZO MÉDICO PARA SEGURO DE VIDA': '32) RECHAZO MÉDICO PARA SEGURO DE VIDA'\n      '33) HOSPITALIZACIÓN (ÚLTIMO 5 AÑOS)': '33) HOSPITALIZACIÓN (ÚLTIMO 5 AÑOS)'\n      '34) TRATAMIENTO MÉDICO (ÚLTIMOS 5 AÑOS)': '34) TRATAMIENTO MÉDICO (ÚLTIMOS 5 AÑOS)'\n      '35) USO FRECUENTE DE ALGÚN TIPO DE MEDICACIÓN ': '35) USO FRECUENTE DE ALGÚN TIPO DE MEDICACIÓN  -- (incluya Gotas Nasales u Oftálmicas, Antigripales, Sedantes, Analgésicos)'\n      '36) ¿SE CONSIDERA UD. SANO FÍSICA Y MENTALMENTE?': '36) ¿SE CONSIDERA UD. SANO FÍSICA Y MENTALMENTE?'\n    '#answers':\n      SI: SI\n      'NO': 'NO'\nnotas_validacion:\n  '#type': textarea\n  '#title': 'Notas Validación'\n  '#access_create_roles':\n    - agent\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#preview_prev__label': Regresar\n  '#preview_next__label': Continuar"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_title: source_entity_webform
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_remote_addr: true
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: true
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: login
+  form_access_denied_title: ''
+  form_access_denied_message: 'Es necesario <a href="[site:login-url]/login?destination=[current-page:url:relative]">iniciar sesi&oacute;n de usuario</a> para proceder con el llenado del formulario.'
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  preview: 2
+  preview_label: ''
+  preview_title: ''
+  preview_message: 'Por favor revise la informaci&oacute;n y luego presione el comando &quot;Enviar&quot;.'
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: "<h2>Su solicitud ha sido recibida correctamente.</h2>\r\n<br />\r\nA continuaci&oacute;n recibir&aacute; un correo electr&oacute;nico...."
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: false
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  generate_new_transaction:
+    id: generate_new_transaction
+    label: 'Generate New Transaction'
+    handler_id: generate_new_transaction
+    status: true
+    conditions: {  }
+    weight: 0
+    settings: {  }
+  spawn_maestro_workflow:
+    id: maestro
+    label: 'Spawn Maestro Workflow'
+    handler_id: spawn_maestro_workflow
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      maestro_template: gestion_de_certificados_medicos
+      maestro_message_success: ''
+      maestro_message_failure: ''

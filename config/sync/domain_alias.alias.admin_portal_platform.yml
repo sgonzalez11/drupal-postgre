@@ -1,0 +1,9 @@
+uuid: caaa208e-f3eb-465e-a888-21e29a665c9b
+langcode: es
+status: true
+dependencies: {  }
+id: admin_portal_platform
+domain_id: admin_portal
+pattern: admin-portal.initializing-fk5ohoq-bf4vp4joan5wy.us-2.platformsh.site
+redirect: 0
+environment: default

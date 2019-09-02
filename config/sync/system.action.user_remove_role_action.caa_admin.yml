@@ -1,0 +1,14 @@
+uuid: ad9a2ada-c149-4b12-a113-8f4368042997
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.caa_admin
+  module:
+    - user
+id: user_remove_role_action.caa_admin
+label: 'Remove the CAA Admin role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: caa_admin

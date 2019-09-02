@@ -1,4 +1,4 @@
-uuid: f2892568-db2f-424c-b5cc-367b359c662f
+uuid: 77e87baa-ed5c-4217-a43a-be57467b54d6
 langcode: es
 status: true
 dependencies:
@@ -13,7 +13,7 @@ bundle: nd_team
 label: 'Promoted to front page'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     value: 0

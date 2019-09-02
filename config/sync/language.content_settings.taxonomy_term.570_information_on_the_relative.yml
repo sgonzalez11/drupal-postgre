@@ -1,0 +1,11 @@
+uuid: 3b57a278-0f6a-4b7e-b47c-5b31d07e9750
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.570_information_on_the_relative
+id: taxonomy_term.570_information_on_the_relative
+target_entity_type_id: taxonomy_term
+target_bundle: 570_information_on_the_relative
+default_langcode: site_default
+language_alterable: false

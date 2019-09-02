@@ -1,0 +1,16 @@
+login_redirection:
+  anonymous: null
+  authenticated: /
+  client: /
+  ato_administrative: /
+  ato_admin: /
+  caa_admin: /admin/my-dashboard
+  administrator: /admin
+  amo_administrative: /
+  medical_examiner: /
+  head_medical_examiner: /
+  amo_admin: /
+  caa_medical_administrative: /
+  caa_medical_assessor: /
+  caa_head_medical_assessor: /
+exclude_urls: ''

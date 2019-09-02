@@ -1,0 +1,23 @@
+uuid: c6b0b3ce-879a-4093-b167-1e4a23d423f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_taxonomy_number
+    - taxonomy.vocabulary.641_location_of_the_occurrence_o
+id: taxonomy_term.641_location_of_the_occurrence_o.field_taxonomy_number
+field_name: field_taxonomy_number
+entity_type: taxonomy_term
+bundle: 641_location_of_the_occurrence_o
+label: 'taxonomy number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

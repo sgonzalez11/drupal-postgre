@@ -1,0 +1,11 @@
+uuid: 4d13dcdc-4628-44bd-9311-c094f3285b0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.800_report_status
+id: taxonomy_term.800_report_status
+target_entity_type_id: taxonomy_term
+target_bundle: 800_report_status
+default_langcode: site_default
+language_alterable: false

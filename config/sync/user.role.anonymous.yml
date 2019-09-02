@@ -1,12 +1,12 @@
-uuid: 8016a4f9-ebe0-4309-95c9-1cfa7c4c3a6c
+uuid: b6214dfe-e46d-4f50-b84d-d2d078d66b7d
 langcode: es
 status: true
 dependencies: {  }
 _core:
   default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
 id: anonymous
-label: 'Anonymous user'
-weight: 0
+label: 'Usuario anónimo'
+weight: -10
 is_admin: false
 permissions:
   - 'access comments'
@@ -14,3 +14,5 @@ permissions:
   - 'access site-wide contact form'
   - 'search content'
   - 'use text format restricted_html'
+  - 'view files'
+  - 'view media'

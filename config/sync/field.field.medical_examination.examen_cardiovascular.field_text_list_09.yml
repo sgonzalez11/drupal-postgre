@@ -1,0 +1,21 @@
+uuid: 59ce2243-1f1e-4a4b-8df5-4e3175bee5d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_cardiovascular
+    - field.storage.medical_examination.field_text_list_09
+  module:
+    - options
+id: medical_examination.examen_cardiovascular.field_text_list_09
+field_name: field_text_list_09
+entity_type: medical_examination
+bundle: examen_cardiovascular
+label: 'Auscultación pulmonar'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

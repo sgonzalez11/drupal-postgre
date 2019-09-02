@@ -1,0 +1,20 @@
+uuid: af4cad18-ffb6-4feb-bd74-5e2774c013bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_neurologico
+id: medical_examination.examen_neurologico.user_id
+field_name: user_id
+entity_type: medical_examination
+bundle: examen_neurologico
+label: 'Authored by'
+description: 'The user ID of author of the Medical Examination entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,23 @@
+uuid: 6a16dbd0-cc32-4252-90eb-a4f6bc33786d
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_cardiovascular
+    - field.storage.medical_examination.field_number_float_02
+id: medical_examination.examen_cardiovascular.field_number_float_02
+field_name: field_number_float_02
+entity_type: medical_examination
+bundle: examen_cardiovascular
+label: 'PA (Brazo)'
+description: mm
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

@@ -1,0 +1,10 @@
+uuid: b6a760fc-3690-497a-a386-1564605ed463
+langcode: es
+status: true
+dependencies:
+  module:
+    - eauthority
+id: document_parameter.ief_table
+label: 'Inline Entity Form Table'
+targetEntityType: document_parameter
+cache: true

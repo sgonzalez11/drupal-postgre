@@ -1,0 +1,23 @@
+uuid: 54c30d4f-0ca5-4762-810e-6458b678ad81
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_taxonomy_number
+    - taxonomy.vocabulary.166_landing_gear_type
+id: taxonomy_term.166_landing_gear_type.field_taxonomy_number
+field_name: field_taxonomy_number
+entity_type: taxonomy_term
+bundle: 166_landing_gear_type
+label: 'taxonomy number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

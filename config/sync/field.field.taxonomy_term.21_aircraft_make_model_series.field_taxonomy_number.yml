@@ -1,0 +1,23 @@
+uuid: 1825d64c-da46-4b27-8185-7d66adaa6bfd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_taxonomy_number
+    - taxonomy.vocabulary.21_aircraft_make_model_series
+id: taxonomy_term.21_aircraft_make_model_series.field_taxonomy_number
+field_name: field_taxonomy_number
+entity_type: taxonomy_term
+bundle: 21_aircraft_make_model_series
+label: 'taxonomy number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

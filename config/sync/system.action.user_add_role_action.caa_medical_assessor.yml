@@ -1,0 +1,14 @@
+uuid: 006a75e5-d1dd-4275-b54f-898172f05349
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.caa_medical_assessor
+  module:
+    - user
+id: user_add_role_action.caa_medical_assessor
+label: 'Add the CAA Medical Assessor role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: caa_medical_assessor

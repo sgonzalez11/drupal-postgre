@@ -1,4 +1,4 @@
-uuid: d826f821-9e6b-4f87-9607-bdccf154eac1
+uuid: a396f106-e4f3-4933-baf8-19573aef020f
 langcode: es
 status: true
 dependencies:
@@ -13,7 +13,7 @@ bundle: webform
 label: 'Promoted to front page'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     value: 0

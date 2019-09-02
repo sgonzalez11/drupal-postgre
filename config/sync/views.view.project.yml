@@ -1,4 +1,4 @@
-uuid: e028ee35-97ec-4a45-b36a-277e3f3bdab8
+uuid: 52ec47f6-7d8b-4355-baec-dcdaedbbabcb
 langcode: es
 status: true
 dependencies:
@@ -16,18 +16,16 @@ dependencies:
     - image.style.project__80x80_
     - image.style.project__900x900_
     - node.type.nd_project
-    - system.menu.main
   module:
     - image
     - jango_cms
     - node
     - text
     - user
-    - views_autocomplete_filters
 _core:
   default_config_hash: mbFqlApPJNpApCwuKDLEBSERR4VOAQSorEv1_0-Lf8c
 id: project
-label: Project
+label: Projecto
 module: views
 description: ''
 tag: ''
@@ -1106,11 +1104,11 @@ display:
           plugin_id: jango_cms_entity_path
       path: page-4col-portfolio
       menu:
-        type: normal
+        type: none
         title: '4 Columns Portfolio'
         description: ''
         expanded: false
-        parent: 'menu_link_content:5b11b361-4ed0-4d31-8927-bd7603233d0f'
+        parent: ''
         weight: 15
         context: '0'
         menu_name: main
@@ -1600,11 +1598,11 @@ display:
       path: page-fullwidth-gallery
       display_description: Masonry
       menu:
-        type: normal
+        type: none
         title: 'Full width gallery'
         description: ''
         expanded: false
-        parent: 'menu_link_content:5b11b361-4ed0-4d31-8927-bd7603233d0f'
+        parent: ''
         weight: 12
         context: '0'
         menu_name: main
@@ -4216,11 +4214,11 @@ display:
           plugin_id: jango_cms_entity_path
       path: page-masonry-gallery
       menu:
-        type: normal
+        type: none
         title: 'Masonry Gallery'
         description: ''
         expanded: false
-        parent: 'menu_link_content:5b11b361-4ed0-4d31-8927-bd7603233d0f'
+        parent: ''
         weight: 13
         context: '0'
         menu_name: main
@@ -5561,11 +5559,11 @@ display:
           plugin_id: field
       path: page-2col-portfolio
       menu:
-        type: normal
+        type: none
         title: '2 Columns Portfolio'
         description: ''
         expanded: false
-        parent: 'menu_link_content:5b11b361-4ed0-4d31-8927-bd7603233d0f'
+        parent: ''
         weight: 16
         context: '0'
         menu_name: main
@@ -6929,11 +6927,11 @@ display:
         fields: false
       path: page-index-gallery
       menu:
-        type: normal
+        type: none
         title: 'Gallery Index'
         description: ''
         expanded: false
-        parent: 'menu_link_content:5b11b361-4ed0-4d31-8927-bd7603233d0f'
+        parent: ''
         weight: 14
         context: '0'
         menu_name: main
@@ -7795,11 +7793,11 @@ display:
           plugin_id: field
       path: page-lightbox-gallery
       menu:
-        type: normal
+        type: none
         title: 'Lightbox Gallery'
         description: ''
         expanded: false
-        parent: 'menu_link_content:5b11b361-4ed0-4d31-8927-bd7603233d0f'
+        parent: ''
         weight: 11
         context: '0'
         menu_name: main
@@ -7835,11 +7833,11 @@ display:
         fields: false
       path: page-masonry-portfolio
       menu:
-        type: normal
+        type: none
         title: 'Masonry Portfolio'
         description: ''
         expanded: false
-        parent: 'menu_link_content:5b11b361-4ed0-4d31-8927-bd7603233d0f'
+        parent: ''
         weight: 17
         context: '0'
         menu_name: main

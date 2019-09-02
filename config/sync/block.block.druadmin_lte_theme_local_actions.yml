@@ -1,4 +1,4 @@
-uuid: dac4b575-f4f1-47ae-9859-2cc196c65483
+uuid: 8dde90ff-3fbc-4c4a-945f-3c1e4b58dc6c
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: druadmin_lte_theme_local_actions
 theme: druadmin_lte_theme
 region: content
-weight: -20
+weight: -1
 provider: null
 plugin: local_actions_block
 settings:

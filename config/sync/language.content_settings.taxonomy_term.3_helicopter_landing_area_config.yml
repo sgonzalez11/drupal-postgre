@@ -1,0 +1,11 @@
+uuid: 503bafa7-5e5e-438f-bfb6-a85ed099bd80
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.3_helicopter_landing_area_config
+id: taxonomy_term.3_helicopter_landing_area_config
+target_entity_type_id: taxonomy_term
+target_bundle: 3_helicopter_landing_area_config
+default_langcode: site_default
+language_alterable: false

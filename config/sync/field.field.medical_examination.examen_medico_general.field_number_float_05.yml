@@ -1,0 +1,23 @@
+uuid: d079991d-595b-4af9-bcb5-84958432af1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_medico_general
+    - field.storage.medical_examination.field_number_float_05
+id: medical_examination.examen_medico_general.field_number_float_05
+field_name: field_number_float_05
+entity_type: medical_examination
+bundle: examen_medico_general
+label: 'PA Brazo(2)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

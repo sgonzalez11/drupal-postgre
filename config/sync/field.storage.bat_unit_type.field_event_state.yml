@@ -1,0 +1,20 @@
+uuid: 985c52ce-0261-4840-8c1b-7790cba84b8e
+langcode: es
+status: true
+dependencies:
+  module:
+    - bat_event
+    - bat_unit
+id: bat_unit_type.field_event_state
+field_name: field_event_state
+entity_type: bat_unit_type
+type: entity_reference
+settings:
+  target_type: state
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,9 @@
+uuid: 4c17b68c-f2c3-40f3-8e31-deacf463e6f2
+langcode: en
+status: true
+dependencies: {  }
+name: '276 - type of airspeed'
+vid: 276_type_of_airspeed
+description: ''
+hierarchy: 0
+weight: 0

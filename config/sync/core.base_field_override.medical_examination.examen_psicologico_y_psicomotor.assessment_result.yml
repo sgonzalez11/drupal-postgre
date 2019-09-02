@@ -1,0 +1,22 @@
+uuid: 66e3dc7b-6220-40e4-bebb-f35460a99300
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_psicologico_y_psicomotor
+  module:
+    - options
+id: medical_examination.examen_psicologico_y_psicomotor.assessment_result
+field_name: assessment_result
+entity_type: medical_examination
+bundle: examen_psicologico_y_psicomotor
+label: 'Assessment Result'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: list_string

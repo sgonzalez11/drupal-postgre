@@ -1,0 +1,11 @@
+uuid: 7e7d33c6-61cf-44d7-843f-313da12e0ee7
+langcode: en
+status: true
+dependencies:
+  module:
+    - eauthority_transactions
+id: transaction_status.transaction_status
+target_entity_type_id: transaction_status
+target_bundle: transaction_status
+default_langcode: site_default
+language_alterable: false

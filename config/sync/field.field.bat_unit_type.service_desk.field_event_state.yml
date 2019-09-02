@@ -1,0 +1,29 @@
+uuid: 02c3e1c8-012c-4fd0-9f96-93b87530a852
+langcode: es
+status: true
+dependencies:
+  config:
+    - bat_unit.type_bundle.service_desk
+    - field.storage.bat_unit_type.field_event_state
+  content:
+    - 'state:state:55c62540-05cb-4797-a8bc-e75d11a08e09'
+id: bat_unit_type.service_desk.field_event_state
+field_name: field_event_state
+entity_type: bat_unit_type
+bundle: service_desk
+label: 'Event State'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: 55c62540-05cb-4797-a8bc-e75d11a08e09
+default_value_callback: ''
+settings:
+  handler: 'default:state'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: cd0d4665-1a77-42e1-a3a2-cb063e6f575e
+langcode: en
+status: true
+dependencies:
+  module:
+    - eauthority_amos
+    - options
+id: medical_assessment.medical_assessment.entity_status
+field_name: entity_status
+entity_type: medical_assessment
+bundle: medical_assessment
+label: Status
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: OPN
+default_value_callback: ''
+settings: {  }
+field_type: list_string

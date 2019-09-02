@@ -1,0 +1,60 @@
+uuid: bc2577c5-c59a-4800-a55e-65f3d4e2a59d
+langcode: en
+status: true
+dependencies:
+  config:
+    - bat_event.event_type.appointment
+    - field.field.bat_event.appointment.event_bat_unit_reference
+    - field.field.bat_event.appointment.event_dates
+    - field.field.bat_event.appointment.event_state_reference
+    - field.field.bat_event.appointment.field_transaction
+  module:
+    - datetime_range
+id: bat_event.appointment.default
+targetEntityType: bat_event
+bundle: appointment
+mode: default
+content:
+  event_bat_unit_reference:
+    type: entity_reference_autocomplete
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  event_dates:
+    type: daterange_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  event_state_reference:
+    type: entity_reference_autocomplete
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_transaction:
+    weight: 6
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

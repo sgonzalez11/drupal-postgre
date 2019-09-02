@@ -1,0 +1,11 @@
+uuid: a0a5c462-b8b6-4e95-a519-caabf74b169a
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.party_profiles
+id: taxonomy_term.party_profiles
+target_entity_type_id: taxonomy_term
+target_bundle: party_profiles
+default_langcode: site_default
+language_alterable: false

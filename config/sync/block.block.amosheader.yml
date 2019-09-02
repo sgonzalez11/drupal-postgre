@@ -1,0 +1,30 @@
+uuid: 3ff568fa-1e29-4708-8b51-272a96079ed4
+langcode: en
+status: true
+dependencies:
+  config:
+    - fixed_block_content.fixed_block_content.amos_header
+  module:
+    - domain
+    - fixed_block_content
+  theme:
+    - eauth_amos
+id: amosheader
+theme: eauth_amos
+region: header
+weight: -5
+provider: null
+plugin: 'fixed_block_content:amos_header'
+settings:
+  id: 'fixed_block_content:amos_header'
+  label: 'AMOs Header'
+  provider: fixed_block_content
+  label_display: '0'
+  view_mode: ''
+visibility:
+  domain:
+    id: domain
+    domains:
+      amos_portal: amos_portal
+    negate: false
+    context_mapping: {  }

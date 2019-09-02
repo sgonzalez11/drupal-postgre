@@ -1,0 +1,6 @@
+uuid: 17837570-5726-4940-8697-c6bbc93fc2e9
+langcode: en
+status: true
+dependencies: {  }
+id: examen_oftalmologico
+label: 'Examen oftalmológico'

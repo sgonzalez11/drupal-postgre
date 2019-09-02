@@ -1,17 +1,93 @@
-uuid: 17a5a386-dc4d-4193-80c9-ca4a136fbee7
+uuid: 97c66e8e-f1a6-4751-9f1b-f80512f8f95c
 langcode: es
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_access_level
+    - field.field.user.user.field_address
+    - field.field.user.user.field_birth_date
+    - field.field.user.user.field_city
+    - field.field.user.user.field_customer
     - field.field.user.user.field_domain_access
     - field.field.user.user.field_domain_admin
     - field.field.user.user.field_domain_all_affiliates
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_identifer_number
+    - field.field.user.user.field_identifier_code
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_level
+    - field.field.user.user.field_postal_code
+    - field.field.user.user.field_state
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
+    - field_group
     - image
     - path
     - user
+third_party_settings:
+  field_group:
+    group_user_account:
+      children:
+        - account
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        label: 'Cuenta de Usuario'
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Cuenta de Usuario'
+      region: content
+    group_personal_information:
+      children:
+        - field_last_name
+        - field_first_name
+        - user_picture
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        label: 'Información Personal'
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Información Personal'
+      region: content
+    group_user_preferences:
+      children:
+        - timezone
+        - language
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        label: Preferencias
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: Preferencias
+      region: content
+    group_domicilio:
+      children:
+        - field_address
+        - field_postal_code
+        - field_city
+        - field_state
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Domicilio
+      region: hidden
 _core:
   default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
 id: user.user.default
@@ -20,20 +96,27 @@ bundle: user
 mode: default
 content:
   account:
-    weight: -10
+    weight: 3
     region: content
-  contact:
-    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+  field_access_level:
+    weight: 13
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_domain_access:
     type: options_buttons
-    weight: 40
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     region: content
   field_domain_admin:
     type: options_buttons
-    weight: 50
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -41,28 +124,58 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 41
+    weight: 6
     third_party_settings: {  }
     region: content
-  language:
-    weight: 0
+  field_first_name:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
+  field_last_name:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  language:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   timezone:
-    weight: 6
+    weight: 3
     region: content
+    settings: {  }
+    third_party_settings: {  }
   user_picture:
     type: image_image
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    weight: -1
+    weight: 9
     region: content
 hidden:
+  contact: true
+  field_address: true
+  field_birth_date: true
+  field_city: true
+  field_customer: true
+  field_identifer_number: true
+  field_identifier_code: true
+  field_level: true
+  field_postal_code: true
+  field_state: true
   langcode: true

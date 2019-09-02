@@ -1,0 +1,17 @@
+uuid: 7f91fdea-cf0c-4034-b9d5-f441019d409f
+langcode: es
+status: true
+dependencies:
+  module:
+    - content_translation
+    - eauthority
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: customer_user.customer_user
+target_entity_type_id: customer_user
+target_bundle: customer_user
+default_langcode: site_default
+language_alterable: false

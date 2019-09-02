@@ -1,0 +1,18 @@
+uuid: 22812c7c-bb2d-4747-9ef0-ac8fe81e0a8b
+langcode: es
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_neurologico
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: medical_examination.examen_neurologico
+target_entity_type_id: medical_examination
+target_bundle: examen_neurologico
+default_langcode: site_default
+language_alterable: false

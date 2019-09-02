@@ -1,0 +1,23 @@
+uuid: 9e95ad65-3572-419f-b53e-79b6d620e022
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_taxonomy_number
+    - taxonomy.vocabulary.313_wake_turb_category
+id: taxonomy_term.313_wake_turb_category.field_taxonomy_number
+field_name: field_taxonomy_number
+entity_type: taxonomy_term
+bundle: 313_wake_turb_category
+label: 'taxonomy number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

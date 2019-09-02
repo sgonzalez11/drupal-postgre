@@ -1,0 +1,19 @@
+uuid: 95fe9273-9c99-4f7e-89e7-0b56a4715dff
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_psicologico_y_psicomotor
+    - field.storage.medical_examination.field_text_plain_06
+id: medical_examination.examen_psicologico_y_psicomotor.field_text_plain_06
+field_name: field_text_plain_06
+entity_type: medical_examination
+bundle: examen_psicologico_y_psicomotor
+label: Imagen
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

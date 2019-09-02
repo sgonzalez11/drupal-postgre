@@ -1,7 +1,8 @@
 autostart: 1
 formats:
-  shortcodes: shortcode_dynamic
+  shortcode_dynamic: shortcode_dynamic
   ckeditor: 0
+  html: 0
   basic_html: 0
   restricted_html: 0
   full_html: 0

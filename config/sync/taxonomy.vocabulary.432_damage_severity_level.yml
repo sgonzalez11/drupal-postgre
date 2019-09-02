@@ -1,0 +1,9 @@
+uuid: 2fdc643b-ef71-4a59-9f69-03ca2c52958a
+langcode: en
+status: true
+dependencies: {  }
+name: '432 - Damage severity level'
+vid: 432_damage_severity_level
+description: ''
+hierarchy: 0
+weight: 0

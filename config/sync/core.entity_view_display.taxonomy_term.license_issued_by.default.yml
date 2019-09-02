@@ -1,0 +1,32 @@
+uuid: 6210c607-59e3-4460-8927-ba5e797718b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.license_issued_by.field_taxonomy_number
+    - taxonomy.vocabulary.license_issued_by
+  module:
+    - text
+id: taxonomy_term.license_issued_by.default
+targetEntityType: taxonomy_term
+bundle: license_issued_by
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_taxonomy_number:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  langcode: true

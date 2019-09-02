@@ -1,0 +1,29 @@
+uuid: 7fba4ebe-8b57-4bb9-a95e-56577b984849
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.procedure_type
+  module:
+    - system
+    - views
+  theme:
+    - inac_customers
+id: inac_customers_exposedformprocedure_typeservices
+theme: inac_customers
+region: sidebar
+weight: -4
+provider: null
+plugin: 'views_exposed_filter_block:procedure_type-services'
+settings:
+  id: 'views_exposed_filter_block:procedure_type-services'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /services-guidance
+    negate: false
+    context_mapping: {  }

@@ -1,4 +1,4 @@
-uuid: 7dc95a62-9f98-4c31-9ccb-1b2371d0115f
+uuid: ebe36cbd-e465-47b0-a85a-8833a0dd5b69
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: eauth_customers_local_actions
 theme: eauth_customers
 region: content
-weight: -20
+weight: -6
 provider: null
 plugin: local_actions_block
 settings:

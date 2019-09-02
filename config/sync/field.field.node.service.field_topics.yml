@@ -1,0 +1,29 @@
+uuid: a8d0ac02-2936-4d48-845e-a6f7c1deb1b3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_topics
+    - node.type.service
+    - taxonomy.vocabulary.procedure_type_topics
+id: node.service.field_topics
+field_name: field_topics
+entity_type: node
+bundle: service
+label: Topics
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      procedure_type_topics: procedure_type_topics
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

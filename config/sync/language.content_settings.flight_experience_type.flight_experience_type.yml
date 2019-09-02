@@ -1,0 +1,17 @@
+uuid: dbad8872-60ce-4ee6-8184-c5daf77b2dfc
+langcode: es
+status: true
+dependencies:
+  module:
+    - content_translation
+    - eauthority_atos
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: flight_experience_type.flight_experience_type
+target_entity_type_id: flight_experience_type
+target_bundle: flight_experience_type
+default_langcode: site_default
+language_alterable: true

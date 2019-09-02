@@ -1,0 +1,11 @@
+uuid: 6f05c7b7-9a73-47d6-938a-54eec46a8cf4
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.applicant_profile
+id: taxonomy_term.applicant_profile
+target_entity_type_id: taxonomy_term
+target_bundle: applicant_profile
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,14 @@
+uuid: 14091d83-1967-4f8d-a37d-8da46a078fe1
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.amo_admin
+  module:
+    - user
+id: user_remove_role_action.amo_admin
+label: 'Remove the AMO Admin role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: amo_admin

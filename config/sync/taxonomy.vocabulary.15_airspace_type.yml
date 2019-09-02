@@ -1,0 +1,9 @@
+uuid: 15d01f8b-7b9b-4a3d-8cf0-3c34d007a510
+langcode: en
+status: true
+dependencies: {  }
+name: '15 - airspace_type'
+vid: 15_airspace_type
+description: ''
+hierarchy: 0
+weight: 0

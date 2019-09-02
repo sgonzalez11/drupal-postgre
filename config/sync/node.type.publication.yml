@@ -1,0 +1,17 @@
+uuid: c8cd3c2b-643b-429d-af51-28080f2d804b
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Publicación
+type: publication
+description: 'Use Publications for the regulations, normative documents or any kind of external document'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

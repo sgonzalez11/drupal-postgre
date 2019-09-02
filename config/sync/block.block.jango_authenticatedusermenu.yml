@@ -1,0 +1,32 @@
+uuid: bcce47cf-9495-454e-8859-af8fcbffdcd5
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.authenticated-user-menu
+  module:
+    - system
+    - user
+  theme:
+    - jango
+id: jango_authenticatedusermenu
+theme: jango
+region: header
+weight: -7
+provider: null
+plugin: 'system_menu_block:authenticated-user-menu'
+settings:
+  id: 'system_menu_block:authenticated-user-menu'
+  label: 'Authenticated User Menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

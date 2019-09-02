@@ -1,0 +1,29 @@
+uuid: 6fe7e5b5-7a24-440c-a6d7-5e48f77670fb
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_browser_entity_form
+name: customer_users
+label: 'Customer Users'
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select Customer Users'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  46c5f48d-de4f-4070-a00e-052e96efe2f0:
+    settings:
+      entity_type: customer_user
+      bundle: customer_user
+      form_mode: default
+      submit_text: Save
+    uuid: 46c5f48d-de4f-4070-a00e-052e96efe2f0
+    weight: 1
+    label: entity_form
+    id: entity_form

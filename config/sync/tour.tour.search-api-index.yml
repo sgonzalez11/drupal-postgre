@@ -1,11 +1,11 @@
-uuid: 9c2fc99a-8860-4cfb-8777-03d0143b38d8
+uuid: 6201ada6-e9b2-4b14-9c9d-69ce226b0db0
 langcode: es
 status: true
 dependencies:
   module:
     - search_api
 _core:
-  default_config_hash: vrJLX_BEpVcWa6OU7FvRAUfErBOxQBhPtzuKeNo4M2M
+  default_config_hash: q-BlDKHfpkMa8n0wdVGgqU2xNk4DFVdbqP0-VrWYcOo
 id: search-api-index
 label: 'Information about an index'
 module: search_api
@@ -30,7 +30,7 @@ tips:
   search-api-index-status:
     id: search-api-index-status
     plugin: text
-    label: Status
+    label: Estado
     body: 'Shows whether the index is currently enabled or disabled.'
     weight: 3
     attributes:
@@ -63,7 +63,7 @@ tips:
     id: search-api-index-server-index-status
     plugin: text
     label: 'Server index status'
-    body: 'For enabled indexes, the number of items that can actually be retrieved from the server is listed here. For reasons why this number might differ from the number under "Index status", <a href="https://www.drupal.org/docs/8/modules/search-api/getting-started/frequently-asked-questions#server-index-status">see the module''s documentation</a>.'
+    body: 'For enabled indexes, the number of items that can actually be retrieved from the server is listed here. For reasons why this number might differ from the number under "Index status", <a href="https://www.drupal.org/node/2009804#server-index-status">see the module''s documentation</a>.'
     weight: 7
     attributes:
       data-class: search-api-index-summary--server-index-status

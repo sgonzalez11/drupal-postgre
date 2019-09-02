@@ -1,0 +1,37 @@
+uuid: fd2c4383-2666-420c-842b-e957f030176d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.ng_blog_list
+  module:
+    - domain
+    - system
+    - views
+  theme:
+    - inac_customers
+id: inac_customers_views_block__ng_blog_list_recent_posts_slider
+theme: inac_customers
+region: content
+weight: -3
+provider: null
+plugin: 'views_block:ng_blog_list-recent_posts_slider'
+settings:
+  id: 'views_block:ng_blog_list-recent_posts_slider'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  domain:
+    id: domain
+    domains:
+      customers_portal: customers_portal
+    negate: false
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

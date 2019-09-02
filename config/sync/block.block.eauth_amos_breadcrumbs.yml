@@ -1,22 +1,39 @@
-uuid: e3b8cec7-0b9f-4231-b42f-c64ed000840b
+uuid: b1c03995-e48e-459c-869d-9f49d4f3cd74
 langcode: en
 status: true
 dependencies:
+  content:
+    - 'block_content:basic:38b34b73-dfc9-415a-8438-5e6bdbd0e6e4'
   module:
+    - block_content
     - system
+    - user
   theme:
     - eauth_amos
-_core:
-  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
 id: eauth_amos_breadcrumbs
 theme: eauth_amos
 region: header
-weight: 0
+weight: -3
 provider: null
-plugin: system_breadcrumb_block
+plugin: 'block_content:38b34b73-dfc9-415a-8438-5e6bdbd0e6e4'
 settings:
-  id: system_breadcrumb_block
+  id: 'block_content:38b34b73-dfc9-415a-8438-5e6bdbd0e6e4'
   label: Breadcrumbs
-  provider: system
+  provider: block_content
   label_display: '0'
-visibility: {  }
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

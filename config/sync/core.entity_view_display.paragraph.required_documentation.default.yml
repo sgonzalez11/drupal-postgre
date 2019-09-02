@@ -1,0 +1,49 @@
+uuid: 74ca55bf-e572-42c1-81e9-e994f851dd3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.required_documentation.field_copy
+    - field.field.paragraph.required_documentation.field_documentation
+    - field.field.paragraph.required_documentation.field_original
+    - field.field.paragraph.required_documentation.field_quantity
+    - paragraphs.paragraphs_type.required_documentation
+  module:
+    - options
+id: paragraph.required_documentation.default
+targetEntityType: paragraph
+bundle: required_documentation
+mode: default
+content:
+  field_copy:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_documentation:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_original:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_quantity:
+    weight: 3
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden: {  }

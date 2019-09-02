@@ -1,0 +1,11 @@
+uuid: c3a620f6-c57d-4d83-990d-1765ab4663c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.232_aircraft_propulsion_type
+id: taxonomy_term.232_aircraft_propulsion_type
+target_entity_type_id: taxonomy_term
+target_bundle: 232_aircraft_propulsion_type
+default_langcode: site_default
+language_alterable: false

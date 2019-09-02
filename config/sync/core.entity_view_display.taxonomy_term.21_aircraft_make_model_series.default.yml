@@ -1,0 +1,32 @@
+uuid: d4b6bb69-2fef-40f5-b560-2ce923c1cd29
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.21_aircraft_make_model_series.field_taxonomy_number
+    - taxonomy.vocabulary.21_aircraft_make_model_series
+  module:
+    - text
+id: taxonomy_term.21_aircraft_make_model_series.default
+targetEntityType: taxonomy_term
+bundle: 21_aircraft_make_model_series
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_taxonomy_number:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,46 @@
+uuid: 451483ab-0093-4c1a-9e80-9fdfd18dd02b
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_parties.party_type.person
+    - field.field.party.person.field_p_party_profiles
+id: party.person.default
+targetEntityType: party
+bundle: person
+mode: default
+content:
+  field_p_party_profiles:
+    weight: 6
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

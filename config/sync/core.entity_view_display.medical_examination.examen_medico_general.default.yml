@@ -1,0 +1,615 @@
+uuid: d0a7f9a2-cce4-4d74-9a05-5939f627b5a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_medico_general
+    - field.field.medical_examination.examen_medico_general.field_number_float_00
+    - field.field.medical_examination.examen_medico_general.field_number_float_01
+    - field.field.medical_examination.examen_medico_general.field_number_float_02
+    - field.field.medical_examination.examen_medico_general.field_number_float_03
+    - field.field.medical_examination.examen_medico_general.field_number_float_04
+    - field.field.medical_examination.examen_medico_general.field_number_float_05
+    - field.field.medical_examination.examen_medico_general.field_number_float_06
+    - field.field.medical_examination.examen_medico_general.field_number_float_07
+    - field.field.medical_examination.examen_medico_general.field_number_float_08
+    - field.field.medical_examination.examen_medico_general.field_text_list_00
+    - field.field.medical_examination.examen_medico_general.field_text_list_01
+    - field.field.medical_examination.examen_medico_general.field_text_list_02
+    - field.field.medical_examination.examen_medico_general.field_text_list_03
+    - field.field.medical_examination.examen_medico_general.field_text_list_04
+    - field.field.medical_examination.examen_medico_general.field_text_list_05
+    - field.field.medical_examination.examen_medico_general.field_text_list_06
+    - field.field.medical_examination.examen_medico_general.field_text_list_07
+    - field.field.medical_examination.examen_medico_general.field_text_list_08
+    - field.field.medical_examination.examen_medico_general.field_text_list_09
+    - field.field.medical_examination.examen_medico_general.field_text_list_10
+    - field.field.medical_examination.examen_medico_general.field_text_list_11
+    - field.field.medical_examination.examen_medico_general.field_text_list_12
+    - field.field.medical_examination.examen_medico_general.field_text_list_13
+    - field.field.medical_examination.examen_medico_general.field_text_plain_00
+    - field.field.medical_examination.examen_medico_general.field_text_plain_01
+    - field.field.medical_examination.examen_medico_general.field_text_plain_02
+    - field.field.medical_examination.examen_medico_general.field_text_plain_03
+    - field.field.medical_examination.examen_medico_general.field_text_plain_04
+    - field.field.medical_examination.examen_medico_general.field_text_plain_05
+    - field.field.medical_examination.examen_medico_general.field_text_plain_06
+    - field.field.medical_examination.examen_medico_general.field_text_plain_07
+    - field.field.medical_examination.examen_medico_general.field_text_plain_08
+    - field.field.medical_examination.examen_medico_general.field_text_plain_09
+    - field.field.medical_examination.examen_medico_general.field_text_plain_10
+    - field.field.medical_examination.examen_medico_general.field_text_plain_11
+    - field.field.medical_examination.examen_medico_general.field_text_plain_12
+    - field.field.medical_examination.examen_medico_general.field_text_plain_13
+    - field.field.medical_examination.examen_medico_general.field_text_plain_long_00
+    - field.field.medical_examination.examen_medico_general.field_text_plain_long_01
+    - field.field.medical_examination.examen_medico_general.field_text_plain_long_02
+    - field.field.medical_examination.examen_medico_general.field_text_plain_long_03
+    - field.field.medical_examination.examen_medico_general.field_text_plain_long_04
+    - field.field.medical_examination.examen_medico_general.field_text_plain_long_05
+    - field.field.medical_examination.examen_medico_general.field_text_plain_long_06
+    - field.field.medical_examination.examen_medico_general.field_text_plain_long_07
+    - field.field.medical_examination.examen_medico_general.field_text_plain_long_08
+    - field.field.medical_examination.examen_medico_general.field_text_plain_long_09
+    - field.field.medical_examination.examen_medico_general.field_text_plain_long_10
+    - field.field.medical_examination.examen_medico_general.field_text_plain_long_11
+    - field.field.medical_examination.examen_medico_general.field_text_plain_long_12
+    - field.field.medical_examination.examen_medico_general.field_text_plain_long_13
+  module:
+    - datetime
+    - file
+    - options
+id: medical_examination.examen_medico_general.default
+targetEntityType: medical_examination
+bundle: examen_medico_general
+mode: default
+content:
+  assessment_date:
+    label: inline
+    type: datetime_default
+    settings:
+      format_type: medium
+      timezone_override: ''
+    weight: 4
+    region: content
+    third_party_settings: {  }
+  assessment_notes:
+    label: inline
+    type: basic_string
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  assessment_reassessment_required:
+    label: inline
+    type: boolean
+    weight: 8
+    region: content
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+  assessment_result:
+    label: inline
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  cancellation_date:
+    label: inline
+    type: datetime_default
+    settings:
+      format_type: medium
+      timezone_override: ''
+    weight: -1
+    region: content
+    third_party_settings: {  }
+  cancellation_reason:
+    label: inline
+    type: basic_string
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  cancellation_user:
+    label: inline
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  documents:
+    label: inline
+    weight: 0
+    region: content
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+  entity_status:
+    label: inline
+    weight: -4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  examination_date:
+    label: inline
+    type: datetime_default
+    settings:
+      format_type: medium
+      timezone_override: ''
+    weight: -10
+    region: content
+    third_party_settings: {  }
+  examination_notes:
+    label: inline
+    type: basic_string
+    weight: -6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  examination_place:
+    label: above
+    type: string
+    weight: -8
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_number_float_00:
+    weight: 11
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_number_float_01:
+    weight: 12
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_number_float_02:
+    weight: 13
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_number_float_03:
+    weight: 14
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_number_float_04:
+    weight: 15
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_number_float_05:
+    weight: 16
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_number_float_06:
+    weight: 17
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_number_float_07:
+    weight: 18
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_number_float_08:
+    weight: 19
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_text_list_00:
+    weight: 22
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_text_list_01:
+    weight: 21
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_text_list_02:
+    weight: 23
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_text_list_03:
+    weight: 24
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_text_list_04:
+    weight: 25
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_text_list_05:
+    weight: 26
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_text_list_06:
+    weight: 27
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_text_list_07:
+    weight: 28
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_text_list_08:
+    weight: 29
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_text_list_09:
+    weight: 30
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_text_list_10:
+    weight: 31
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_text_list_11:
+    weight: 32
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_text_list_12:
+    weight: 33
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_text_list_13:
+    weight: 34
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_text_plain_00:
+    weight: 35
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_text_plain_01:
+    weight: 36
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_text_plain_02:
+    weight: 37
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_text_plain_03:
+    weight: 38
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_text_plain_04:
+    weight: 39
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_text_plain_05:
+    weight: 40
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_text_plain_06:
+    weight: 41
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_text_plain_07:
+    weight: 42
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_text_plain_08:
+    weight: 43
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_text_plain_09:
+    weight: 44
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_text_plain_10:
+    weight: 48
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_text_plain_11:
+    weight: 45
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_text_plain_12:
+    weight: 46
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_text_plain_13:
+    weight: 47
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_text_plain_long_00:
+    weight: 49
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_text_plain_long_01:
+    weight: 50
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_text_plain_long_02:
+    weight: 51
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_text_plain_long_03:
+    weight: 52
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_text_plain_long_04:
+    weight: 53
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_text_plain_long_05:
+    weight: 54
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_text_plain_long_06:
+    weight: 63
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_text_plain_long_07:
+    weight: 56
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_text_plain_long_08:
+    weight: 57
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_text_plain_long_09:
+    weight: 64
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_text_plain_long_10:
+    weight: 59
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_text_plain_long_11:
+    weight: 60
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_text_plain_long_12:
+    weight: 61
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_text_plain_long_13:
+    weight: 62
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  medical_assessor:
+    label: inline
+    weight: 2
+    region: content
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  medical_examination_type:
+    label: inline
+    weight: -4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  medical_examiner:
+    label: inline
+    weight: -12
+    region: content
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  name:
+    label: inline
+    type: string
+    weight: -20
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  scheduled_appointment_date:
+    label: inline
+    type: datetime_default
+    settings:
+      format_type: medium
+      timezone_override: ''
+    weight: -14
+    region: content
+    third_party_settings: {  }
+hidden:
+  creation_date: true
+  langcode: true
+  medical_assessment: true
+  number: true
+  prefix: true

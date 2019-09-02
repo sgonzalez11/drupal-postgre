@@ -1,4 +1,4 @@
-uuid: b5177dd2-d4c1-4145-93d7-a5499c8a6da3
+uuid: b0145a97-863d-408a-b3a0-32e105616d35
 langcode: es
 status: true
 dependencies: {  }
@@ -6,5 +6,5 @@ _core:
   default_config_hash: Q2Ra3jfoIVk0f3SjxJX61byRQFVBAbpzYDQOiY-kno8
 id: main
 label: 'Main navigation'
-description: 'Site section links'
+description: 'Enlaces de secciones del sitio'
 locked: true

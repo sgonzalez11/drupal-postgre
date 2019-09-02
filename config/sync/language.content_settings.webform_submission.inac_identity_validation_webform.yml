@@ -1,0 +1,11 @@
+uuid: 0fd73382-a877-4992-810f-218ecb9f2fc1
+langcode: es
+status: true
+dependencies:
+  config:
+    - webform.webform.inac_identity_validation_webform
+id: webform_submission.inac_identity_validation_webform
+target_entity_type_id: webform_submission
+target_bundle: inac_identity_validation_webform
+default_langcode: site_default
+language_alterable: false

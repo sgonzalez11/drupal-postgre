@@ -1,4 +1,4 @@
-uuid: 8ed91cab-f3b9-4879-9a30-77fc2b335099
+uuid: 21036539-cda8-4a09-82ec-c524cb5c9ce7
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: eauth_customers_local_tasks
 theme: eauth_customers
 region: content
-weight: -40
+weight: -5
 provider: null
 plugin: local_tasks_block
 settings:

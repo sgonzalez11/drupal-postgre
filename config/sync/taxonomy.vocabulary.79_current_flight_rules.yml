@@ -1,0 +1,9 @@
+uuid: 106352ae-ddb1-4349-a37c-4f4fac159aa1
+langcode: en
+status: true
+dependencies: {  }
+name: '79 - Current flight rules'
+vid: 79_current_flight_rules
+description: ''
+hierarchy: 0
+weight: 0

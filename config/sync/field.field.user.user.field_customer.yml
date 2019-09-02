@@ -1,0 +1,26 @@
+uuid: 35a0f842-cc2d-46a6-9f15-f56b853cfbb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_customer
+  module:
+    - user
+id: user.user.field_customer
+field_name: field_customer
+entity_type: user
+bundle: user
+label: Customer
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:customer'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

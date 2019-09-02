@@ -1,0 +1,18 @@
+uuid: 1c733c8b-d934-4079-8bf0-cb165d4ab282
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.nd_team
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.nd_team
+target_entity_type_id: node
+target_bundle: nd_team
+default_langcode: site_default
+language_alterable: false

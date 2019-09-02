@@ -1,0 +1,20 @@
+uuid: cb33a1f6-b718-4eda-9ad0-55fc97d54803
+langcode: en
+status: true
+dependencies:
+  module:
+    - eauthority
+id: document_parameter.document_parameter.user_id
+field_name: user_id
+entity_type: document_parameter
+bundle: document_parameter
+label: 'Authored by'
+description: 'The user ID of author of the Document Parameter entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,9 @@
+uuid: 9ee2aacd-1dcb-466c-a290-cd0bbfbde392
+langcode: en
+status: true
+dependencies: {  }
+name: '215 - the name of the operator'
+vid: 215_the_name_of_the_operator
+description: ''
+hierarchy: 0
+weight: 0

@@ -1,4 +1,4 @@
-uuid: d10785c0-39ee-4f0e-912c-6f7bca64a221
+uuid: 63559e24-04c3-47a0-a207-1f875e3ca91a
 langcode: es
 status: true
 dependencies:
@@ -16,7 +16,7 @@ bundle: nd_blog
 label: Body
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

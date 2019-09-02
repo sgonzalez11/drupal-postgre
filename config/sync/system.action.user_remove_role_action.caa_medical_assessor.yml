@@ -1,0 +1,14 @@
+uuid: df84352c-4ba6-49b2-88db-c89736254f85
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.caa_medical_assessor
+  module:
+    - user
+id: user_remove_role_action.caa_medical_assessor
+label: 'Remove the CAA Medical Assessor role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: caa_medical_assessor

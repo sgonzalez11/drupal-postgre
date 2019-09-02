@@ -1,0 +1,11 @@
+uuid: 88dcbf85-cd08-4e6a-9b08-beeb244a47f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.649_pilot_advised_of_birds
+id: taxonomy_term.649_pilot_advised_of_birds
+target_entity_type_id: taxonomy_term
+target_bundle: 649_pilot_advised_of_birds
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,90 @@
+description: 'Encontrar y administrar archivos.'
+display:
+  default:
+    display_title: Máster
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtro
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          tags:
+            previous: '‹ anterior'
+            next: 'siguiente ›'
+          expose:
+            items_per_page_label: 'Elementos por página'
+            items_per_page_options_all_label: '- Todo -'
+            offset_label: Desplazamiento
+      fields:
+        fid:
+          label: Fid
+        filename:
+          label: Nombre
+        type:
+          label: Tipo
+        filesize:
+          label: Tamaño
+        status:
+          label: Estado
+        changed:
+          label: Modificado
+          separator: ', '
+        created:
+          label: Creado
+          separator: ', '
+        count:
+          label: 'Usado en'
+        operations:
+          label: Operaciones
+      filters:
+        filename:
+          expose:
+            label: 'Nombre de archivo'
+        status:
+          expose:
+            label: Estado
+        type:
+          expose:
+            label: Tipo
+      title: Archivos
+      empty:
+        area_text_custom:
+          content: 'No hay archivos disponibles.'
+  overview:
+    display_title: 'Vista general de archivos'
+    display_options:
+      menu:
+        title: Archivos
+  usage:
+    display_title: 'Usos del archivo'
+    display_options:
+      pager:
+        options:
+          tags:
+            previous: '‹ anterior'
+            next: 'siguiente ›'
+          expose:
+            items_per_page_label: 'Elementos por página'
+            items_per_page_options_all_label: '- Todo -'
+            offset_label: Desplazamiento
+      fields:
+        entity_label:
+          label: Entidad
+        type:
+          label: 'Tipo de entidad'
+        module:
+          label: 'Registrando módulo'
+        count:
+          label: 'Conteo de usos'
+      title: 'Usos del archivo'
+      arguments:
+        fid:
+          exception:
+            title: Todo(s)
+          title: 'Información de uso del fichero para {{ arguments.fid }}'
+      menu:
+        title: Uso

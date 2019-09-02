@@ -1,0 +1,18 @@
+uuid: 333919c5-c5e8-4402-a8e9-46bd3e15428b
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_neurologico
+id: medical_examination.examen_neurologico.examination_notes
+field_name: examination_notes
+entity_type: medical_examination
+bundle: examen_neurologico
+label: 'Examination Notes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

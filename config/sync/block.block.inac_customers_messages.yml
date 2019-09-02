@@ -1,4 +1,4 @@
-uuid: ee350766-3302-42a4-a017-063d4052b3da
+uuid: 77f35f9d-0e99-47e9-bde9-0b29ac0386aa
 langcode: en
 status: true
 dependencies:
@@ -10,8 +10,8 @@ _core:
   default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
 id: inac_customers_messages
 theme: inac_customers
-region: highlighted
-weight: 0
+region: content
+weight: -7
 provider: null
 plugin: system_messages_block
 settings:

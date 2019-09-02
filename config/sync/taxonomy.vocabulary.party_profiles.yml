@@ -1,0 +1,9 @@
+uuid: 5e295e19-e7aa-4115-ae2a-4aa8cdd2beea
+langcode: es
+status: true
+dependencies: {  }
+name: 'Perfiles de Partes'
+vid: party_profiles
+description: 'Perfiles de Partes'
+hierarchy: 0
+weight: 0

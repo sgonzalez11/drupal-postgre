@@ -1,9 +1,12 @@
-uuid: 31de9b9a-84a7-49fb-bab7-7b36c338357b
+uuid: c131e1f0-925a-48b4-8eb7-0cfbad24bdd2
 langcode: es
 status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
+    - field.field.user.user.field_birth_date
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_last_name
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -26,5 +29,8 @@ content:
     third_party_settings: {  }
     label: hidden
 hidden:
+  field_birth_date: true
+  field_first_name: true
+  field_last_name: true
   langcode: true
   member_for: true

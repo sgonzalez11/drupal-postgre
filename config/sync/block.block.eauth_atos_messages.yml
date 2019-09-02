@@ -1,4 +1,4 @@
-uuid: 1854ec43-66e6-43b0-b786-c11b362bc8db
+uuid: 10434e5b-8733-47d5-becd-cb688edb2246
 langcode: en
 status: true
 dependencies:
@@ -10,8 +10,8 @@ _core:
   default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
 id: eauth_atos_messages
 theme: eauth_atos
-region: highlighted
-weight: 0
+region: content
+weight: -3
 provider: null
 plugin: system_messages_block
 settings:

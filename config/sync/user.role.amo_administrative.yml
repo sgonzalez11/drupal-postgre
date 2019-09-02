@@ -1,0 +1,33 @@
+uuid: 871dc6c3-c146-4ecb-8026-1799bc80429d
+langcode: en
+status: true
+dependencies: {  }
+id: amo_administrative
+label: 'AMO Administrative'
+weight: -3
+is_admin: null
+permissions:
+  - 'allows users to assign aviation medical examination'
+  - 'allows users to cancel medical assessment entities'
+  - 'allows users to cancel medical examination entities'
+  - 'view any webform submission'
+  - 'view applicant information section of the medical assessment form'
+  - 'view applicant information section of the medical examination form'
+  - 'view cancelation section of the medical assessment form'
+  - 'view cancelation section of the medical examination form'
+  - 'view canceled medical assessment'
+  - 'view canceled medical examination'
+  - 'view general section of the medical assessment form'
+  - 'view general section of the medical examination form'
+  - 'view in progress medical assessment'
+  - 'view maestro task console'
+  - 'view medical examinations section of the medical assessment form'
+  - 'view medical examiner''s declaration section of the medical examination form'
+  - 'view open medical assessment'
+  - 'view open medical examination'
+  - 'view private files'
+  - 'view published customers entities'
+  - 'view responsible medical examiner''s declaration section of the medical assessment form'
+  - 'view scheduled medical assessment'
+  - 'view scheduled medical examination'
+  - 'view webform submissions any node'

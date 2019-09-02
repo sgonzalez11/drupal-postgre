@@ -1,0 +1,8 @@
+uuid: 08531c57-402c-4647-aa83-6c17d49e7e5d
+langcode: und
+status: true
+dependencies: {  }
+id: amos-organization
+label: 'AMOs Organization'
+description: ''
+locked: false

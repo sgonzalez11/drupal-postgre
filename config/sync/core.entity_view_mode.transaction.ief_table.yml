@@ -1,0 +1,10 @@
+uuid: ce1912ec-bb82-4de0-8bcc-4bff2438469e
+langcode: es
+status: true
+dependencies:
+  module:
+    - eauthority_transactions
+id: transaction.ief_table
+label: 'Inline Entity Form Table'
+targetEntityType: transaction
+cache: true

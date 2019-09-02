@@ -1,0 +1,9 @@
+uuid: 6cc02bca-4466-4718-89ab-476a56373eb0
+langcode: en
+status: true
+dependencies: {  }
+id: required_documentation
+label: 'Documentación Requerida'
+icon_uuid: null
+description: 'Required Documentation for Procedure Types'
+behavior_plugins: {  }

@@ -1,4 +1,4 @@
-uuid: 6e415101-ecd3-47fb-9535-e1ac31be255f
+uuid: e31530e4-7634-402c-80c8-4e5c132deded
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: inac_customers_help
 theme: inac_customers
 region: content
-weight: -30
+weight: -1
 provider: null
 plugin: help_block
 settings:

@@ -1,0 +1,9 @@
+uuid: dd956210-c638-48a9-b422-088e1516ffd9
+langcode: en
+status: true
+dependencies: {  }
+id: atos_portal_lndo_site
+domain_id: atos_portal
+pattern: atos-portal.lndo.site
+redirect: 0
+environment: default

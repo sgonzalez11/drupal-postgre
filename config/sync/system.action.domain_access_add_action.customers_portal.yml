@@ -1,0 +1,14 @@
+uuid: 1587ee1c-b534-44a3-8b9c-d18af35627cd
+langcode: es
+status: true
+dependencies:
+  config:
+    - domain.record.customers_portal
+  module:
+    - domain_access
+id: domain_access_add_action.customers_portal
+label: 'Add selected content to the Customers Portal domain'
+type: node
+plugin: domain_access_add_action
+configuration:
+  domain_id: customers_portal

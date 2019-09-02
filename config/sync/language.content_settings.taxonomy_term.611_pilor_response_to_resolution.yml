@@ -1,0 +1,11 @@
+uuid: 2a4037ae-e23b-4e1e-b5fa-f30e43396447
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.611_pilor_response_to_resolution
+id: taxonomy_term.611_pilor_response_to_resolution
+target_entity_type_id: taxonomy_term
+target_bundle: 611_pilor_response_to_resolution
+default_langcode: site_default
+language_alterable: false

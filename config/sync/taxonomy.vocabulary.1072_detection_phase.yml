@@ -1,0 +1,9 @@
+uuid: 51ee842d-5e52-4ae9-ae08-47f4ce993c8d
+langcode: en
+status: true
+dependencies: {  }
+name: '1072 - detection phase'
+vid: 1072_detection_phase
+description: ''
+hierarchy: 0
+weight: 0

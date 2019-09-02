@@ -1,0 +1,19 @@
+uuid: f4105075-8cb1-488f-b482-6b29eb925af5
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_otorrinolaringologico
+    - field.storage.medical_examination.field_text_plain_long_12
+id: medical_examination.examen_otorrinolaringologico.field_text_plain_long_12
+field_name: field_text_plain_long_12
+entity_type: medical_examination
+bundle: examen_otorrinolaringologico
+label: 'Exploración vestibular a 30° (E. N. G.) '
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

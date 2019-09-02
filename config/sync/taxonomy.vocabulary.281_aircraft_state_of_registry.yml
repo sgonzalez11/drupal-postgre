@@ -1,0 +1,9 @@
+uuid: 77df2f91-6716-4934-8f7e-08e8fbc7fd3e
+langcode: en
+status: true
+dependencies: {  }
+name: '281 - Aircraft State of registry'
+vid: 281_aircraft_state_of_registry
+description: ''
+hierarchy: 0
+weight: 0

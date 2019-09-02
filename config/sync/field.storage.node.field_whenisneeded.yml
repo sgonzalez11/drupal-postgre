@@ -1,0 +1,19 @@
+uuid: 18317f23-ad34-42d2-ba49-619c378646b1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_whenisneeded
+field_name: field_whenisneeded
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

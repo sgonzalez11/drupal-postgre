@@ -1,0 +1,11 @@
+uuid: 9df7a6ee-8284-4ac6-ac0f-8bdd304bafa8
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.8_helicopter_landing_area_surfac
+id: taxonomy_term.8_helicopter_landing_area_surfac
+target_entity_type_id: taxonomy_term
+target_bundle: 8_helicopter_landing_area_surfac
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,8 @@
+uuid: 9259bd3c-ab3e-4ec3-9a2d-dbd9254df7c6
+langcode: en
+status: true
+dependencies: {  }
+id: main-menu-eauthority
+label: 'Main Menu eAuthority'
+description: 'This Menu will be the main menu of the entire site. Located at the header on the center of itself'
+locked: false

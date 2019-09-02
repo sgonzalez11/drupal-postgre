@@ -1,0 +1,14 @@
+uuid: beb2e7d1-cec2-4a85-978e-6d850350d0a0
+langcode: es
+status: true
+dependencies:
+  config:
+    - domain.record.amos_portal
+  module:
+    - domain_access
+id: domain_access_add_action.amos_portal
+label: 'Add selected content to the AMOs Portal domain'
+type: node
+plugin: domain_access_add_action
+configuration:
+  domain_id: amos_portal

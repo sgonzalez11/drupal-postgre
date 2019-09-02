@@ -1,0 +1,33 @@
+uuid: ccc53d16-873c-4dfc-b20b-f3b1238e806e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:03936b14-3410-48a5-9e57-31f7f96a9fbb'
+  module:
+    - block_content
+    - user
+  theme:
+    - eauth_atos
+id: eauth_atos_userselfservice_2
+theme: eauth_atos
+region: header
+weight: -4
+provider: null
+plugin: 'block_content:03936b14-3410-48a5-9e57-31f7f96a9fbb'
+settings:
+  id: 'block_content:03936b14-3410-48a5-9e57-31f7f96a9fbb'
+  label: 'Client Self-Service'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      client: client
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

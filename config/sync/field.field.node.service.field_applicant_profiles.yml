@@ -1,0 +1,29 @@
+uuid: 4da79ae0-5213-4c42-bdee-4c20e56c9f27
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_applicant_profiles
+    - node.type.service
+    - taxonomy.vocabulary.applicant_profile
+id: node.service.field_applicant_profiles
+field_name: field_applicant_profiles
+entity_type: node
+bundle: service
+label: 'Applicant Profiles'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      applicant_profile: applicant_profile
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,54 @@
+uuid: 967f3eb6-1d46-4fb9-a340-8b678c65a379
+langcode: en
+status: true
+dependencies:
+  config:
+    - bat_unit.type_bundle.service_desk
+    - field.field.bat_unit_type.service_desk.field_address
+    - field.field.bat_unit_type.service_desk.field_event_state
+id: bat_unit_type.service_desk.default
+targetEntityType: bat_unit_type
+bundle: service_desk
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_address:
+    weight: 12
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_event_state:
+    weight: 13
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  name:
+    type: string_textfield
+    weight: -4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

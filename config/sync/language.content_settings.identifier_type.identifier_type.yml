@@ -1,0 +1,17 @@
+uuid: 77e555fc-9224-40c6-9815-c49761cf9751
+langcode: es
+status: true
+dependencies:
+  module:
+    - content_translation
+    - eauthority
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: identifier_type.identifier_type
+target_entity_type_id: identifier_type
+target_bundle: identifier_type
+default_langcode: site_default
+language_alterable: false

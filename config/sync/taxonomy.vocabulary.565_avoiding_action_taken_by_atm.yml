@@ -1,0 +1,9 @@
+uuid: 52585ce8-e9a5-4da2-bd26-65d60eaf7c9d
+langcode: en
+status: true
+dependencies: {  }
+name: '565 - avoiding action taken by atm'
+vid: 565_avoiding_action_taken_by_atm
+description: ''
+hierarchy: 0
+weight: 0

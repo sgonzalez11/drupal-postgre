@@ -1,0 +1,11 @@
+uuid: 44e0ffb4-004e-40f1-b2b9-f7b4e850bc53
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.check_yes_flight_options
+id: taxonomy_term.check_yes_flight_options
+target_entity_type_id: taxonomy_term
+target_bundle: check_yes_flight_options
+default_langcode: site_default
+language_alterable: false

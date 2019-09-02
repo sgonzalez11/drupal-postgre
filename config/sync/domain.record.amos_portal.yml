@@ -1,0 +1,11 @@
+uuid: 23c6b3db-5e2b-451f-837e-631b64e64ac3
+langcode: es
+status: true
+dependencies: {  }
+id: amos_portal
+domain_id: 13897640
+hostname: 'amos-portal.lndo.site:8000'
+name: 'AMOs Portal'
+scheme: variable
+weight: 3
+is_default: false

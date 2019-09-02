@@ -1,0 +1,9 @@
+uuid: 97a45510-6fb5-4ef9-927b-2839eba036cf
+langcode: en
+status: true
+dependencies: {  }
+name: '228 - Planned destination'
+vid: 228_planned_destination
+description: ''
+hierarchy: 0
+weight: 0

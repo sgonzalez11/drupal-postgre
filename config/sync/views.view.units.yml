@@ -1,4 +1,4 @@
-uuid: c3e60e1a-6b2a-4154-9d65-611a8588e59d
+uuid: c8d103ae-54d2-4ca0-90ba-1befeb239636
 langcode: es
 status: true
 dependencies:
@@ -313,7 +313,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Status
+          label: Estado
           exclude: false
           alter:
             alter_text: false

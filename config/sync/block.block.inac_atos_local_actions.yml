@@ -1,4 +1,4 @@
-uuid: d489fe5c-ab96-4493-8ede-047882cd29a2
+uuid: b6832ed5-2ba0-4b93-ab14-18dc0041d19f
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: inac_atos_local_actions
 theme: inac_atos
 region: content
-weight: -20
+weight: -6
 provider: null
 plugin: local_actions_block
 settings:

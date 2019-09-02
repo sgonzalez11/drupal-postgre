@@ -1,0 +1,32 @@
+uuid: dc7eafe4-611a-4c5a-86a0-1cb30557c2d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.431_occurrence_class.field_taxonomy_number
+    - taxonomy.vocabulary.431_occurrence_class
+  module:
+    - text
+id: taxonomy_term.431_occurrence_class.default
+targetEntityType: taxonomy_term
+bundle: 431_occurrence_class
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_taxonomy_number:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,18 @@
+uuid: 9289dc5a-9e2c-41e5-8139-5174621303a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_otorrinolaringologico
+id: medical_examination.examen_otorrinolaringologico.examination_notes
+field_name: examination_notes
+entity_type: medical_examination
+bundle: examen_otorrinolaringologico
+label: 'Examination Notes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,4 +1,4 @@
-uuid: cd99d6d1-188c-4e4d-97ff-276dfac1d77d
+uuid: a571ac30-995f-4a6f-9d44-6faa192b6129
 langcode: es
 status: true
 dependencies:
@@ -243,7 +243,7 @@ display:
   block:
     display_plugin: block
     id: block
-    display_title: Tags
+    display_title: Etiquetas
     position: 1
     display_options:
       display_extenders: {  }

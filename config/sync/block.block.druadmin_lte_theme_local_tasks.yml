@@ -1,4 +1,4 @@
-uuid: 772e17cc-bc2a-4110-b3e2-4aab588035e0
+uuid: 4d8a4900-2ad9-47f1-a8b1-361e4a7d215e
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: druadmin_lte_theme_local_tasks
 theme: druadmin_lte_theme
 region: content
-weight: -40
+weight: 0
 provider: null
 plugin: local_tasks_block
 settings:

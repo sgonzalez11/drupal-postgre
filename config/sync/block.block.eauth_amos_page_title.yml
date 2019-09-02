@@ -1,7 +1,9 @@
-uuid: fc0cf53f-b952-4b72-a18f-9bbcc6f24b60
+uuid: 4973885f-c05e-40e1-ac5c-ed7d0be30647
 langcode: en
-status: true
+status: false
 dependencies:
+  module:
+    - system
   theme:
     - eauth_amos
 _core:
@@ -9,7 +11,7 @@ _core:
 id: eauth_amos_page_title
 theme: eauth_amos
 region: content
-weight: -50
+weight: 2
 provider: null
 plugin: page_title_block
 settings:
@@ -17,4 +19,9 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

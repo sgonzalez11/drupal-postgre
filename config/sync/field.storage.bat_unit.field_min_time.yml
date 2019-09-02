@@ -1,0 +1,21 @@
+uuid: ebc2f5f7-1073-40d7-bfab-fe55e5a5a712
+langcode: es
+status: true
+dependencies:
+  module:
+    - bat_unit
+id: bat_unit.field_min_time
+field_name: field_min_time
+entity_type: bat_unit
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

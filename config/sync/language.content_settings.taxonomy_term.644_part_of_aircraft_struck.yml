@@ -1,0 +1,11 @@
+uuid: 67d23646-c994-4bbc-8d60-623d00057a87
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.644_part_of_aircraft_struck
+id: taxonomy_term.644_part_of_aircraft_struck
+target_entity_type_id: taxonomy_term
+target_bundle: 644_part_of_aircraft_struck
+default_langcode: site_default
+language_alterable: false

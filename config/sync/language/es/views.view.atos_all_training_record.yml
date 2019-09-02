@@ -1,0 +1,14 @@
+display:
+  default:
+    display_options:
+      fields:
+        name:
+          label: Identificador
+        entity_status:
+          label: Estado
+        operations:
+          label: Acciones
+        estimated_start_date:
+          label: 'Fecha de inicio'
+        estimated_finish_date:
+          label: 'Fecha de finalización'

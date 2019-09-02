@@ -1,0 +1,23 @@
+uuid: 620c7f3b-cabb-429f-8d63-9fcdf92213b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_taxonomy_number
+    - taxonomy.vocabulary.649_pilot_advised_of_birds
+id: taxonomy_term.649_pilot_advised_of_birds.field_taxonomy_number
+field_name: field_taxonomy_number
+entity_type: taxonomy_term
+bundle: 649_pilot_advised_of_birds
+label: 'taxonomy number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

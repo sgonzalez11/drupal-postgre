@@ -1,0 +1,30 @@
+uuid: c45c8190-9132-44dd-b499-a65033c8d327
+langcode: es
+status: true
+dependencies:
+  config:
+    - fixed_block_content.fixed_block_content.amos_header
+  module:
+    - domain
+    - fixed_block_content
+  theme:
+    - inac_amos
+id: amosheader_2
+theme: inac_amos
+region: header
+weight: -8
+provider: null
+plugin: 'fixed_block_content:amos_header'
+settings:
+  id: 'fixed_block_content:amos_header'
+  label: 'AMOs Header'
+  provider: fixed_block_content
+  label_display: '0'
+  view_mode: ''
+visibility:
+  domain:
+    id: domain
+    domains:
+      amos_portal: amos_portal
+    negate: false
+    context_mapping: {  }

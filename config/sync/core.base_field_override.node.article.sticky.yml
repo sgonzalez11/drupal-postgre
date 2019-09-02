@@ -1,4 +1,4 @@
-uuid: 02663e09-06bd-4f81-9fac-e9909b41bfab
+uuid: ad8dcd5a-07ee-499e-a219-63d39a8c80bc
 langcode: es
 status: true
 dependencies:
@@ -13,7 +13,7 @@ bundle: article
 label: 'Sticky at top of lists'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     value: 1

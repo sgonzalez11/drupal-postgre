@@ -1,0 +1,8 @@
+uuid: 52348744-3de4-4387-8d86-093d1c8f9a7f
+langcode: und
+status: true
+dependencies: {  }
+id: authenticated-user-menu
+label: 'Customer Self-Service '
+description: 'Provides access to functionalities related with the logged user'
+locked: false

@@ -4,10 +4,13 @@ features:
   favicon: 1
 logo:
   use_default: 0
+  path: 'public://app-logo-on-light_0.png'
 favicon:
   use_default: 0
-menu_icons: "Administration|fa-gears\r\nHome|fa-home\r\nMy account|fa-user\r\nLog out|fa-sign-out\r\nAdd content|fa-plus"
-skin: blue
+  path: 'public://favicon.ico'
+  mimetype: image/vnd.microsoft.icon
+menu_icons: "Administration|fa-gears\r\nHome|fa-home\r\nInicio|fa-home\r\nMy account|fa-user\r\nMi cuenta|fa-user\r\nLog out|fa-sign-out\r\nCerrar sesión|fa-sign-out\r\nAdd content|fa-plus"
+skin: black
 _core:
   default_config_hash: mdCoJ3Ix8047Dsw8vGpqcrGZtmBom6gYAuNl6e7-rHY
 langcode: es

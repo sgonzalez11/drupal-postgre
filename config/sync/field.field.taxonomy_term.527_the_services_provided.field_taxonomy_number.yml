@@ -1,0 +1,23 @@
+uuid: 53bc7d29-d6f4-49cc-ac9b-e6f9cbafd744
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_taxonomy_number
+    - taxonomy.vocabulary.527_the_services_provided
+id: taxonomy_term.527_the_services_provided.field_taxonomy_number
+field_name: field_taxonomy_number
+entity_type: taxonomy_term
+bundle: 527_the_services_provided
+label: 'taxonomy number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

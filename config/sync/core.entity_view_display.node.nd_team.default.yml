@@ -1,11 +1,9 @@
-uuid: 607e39ce-ff21-4370-9580-9494c7a06540
+uuid: 0f795b43-751e-4be2-a788-a35eeae7a7a3
 langcode: es
 status: true
 dependencies:
   config:
     - field.field.node.nd_team.body
-    - field.field.node.nd_team.field_domain_access
-    - field.field.node.nd_team.field_domain_all_affiliates
     - field.field.node.nd_team.field_image
     - field.field.node.nd_team.field_position
     - field.field.node.nd_team.field_social_links
@@ -64,6 +62,4 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_domain_access: true
-  field_domain_all_affiliates: true
   langcode: true

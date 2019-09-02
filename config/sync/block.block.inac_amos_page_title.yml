@@ -1,7 +1,9 @@
-uuid: 80503355-5654-43bb-bf80-af6c60e586ba
+uuid: 9d1e5f3c-7288-4dab-a620-c5d668db2068
 langcode: en
-status: true
+status: false
 dependencies:
+  module:
+    - system
   theme:
     - inac_amos
 _core:
@@ -9,7 +11,7 @@ _core:
 id: inac_amos_page_title
 theme: inac_amos
 region: content
-weight: -50
+weight: 0
 provider: null
 plugin: page_title_block
 settings:
@@ -17,4 +19,9 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

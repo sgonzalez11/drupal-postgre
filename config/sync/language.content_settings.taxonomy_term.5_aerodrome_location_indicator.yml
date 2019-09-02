@@ -1,0 +1,11 @@
+uuid: 6afb1cfa-5cdf-4a43-ae84-f10eb5abd383
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.5_aerodrome_location_indicator
+id: taxonomy_term.5_aerodrome_location_indicator
+target_entity_type_id: taxonomy_term
+target_bundle: 5_aerodrome_location_indicator
+default_langcode: site_default
+language_alterable: false

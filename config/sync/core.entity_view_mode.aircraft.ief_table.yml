@@ -1,0 +1,10 @@
+uuid: cfff2eb3-5c8f-41a3-a843-7ed79c3552a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - eauthority
+id: aircraft.ief_table
+label: 'Inline Entity Form Table'
+targetEntityType: aircraft
+cache: true

@@ -1,0 +1,17 @@
+uuid: 8e095d58-3420-41c4-91d6-2ea3ada72a23
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - eauthority
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: aircraft.aircraft
+target_entity_type_id: aircraft
+target_bundle: aircraft
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,23 @@
+uuid: 60eb5b9d-e4a0-4ab5-bc45-dc0e7ae2138f
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_medico_general
+    - field.storage.medical_examination.field_number_float_00
+id: medical_examination.examen_medico_general.field_number_float_00
+field_name: field_number_float_00
+entity_type: medical_examination
+bundle: examen_medico_general
+label: Peso
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

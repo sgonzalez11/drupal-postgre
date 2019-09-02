@@ -1,0 +1,19 @@
+uuid: bbc6068c-3504-47c6-b501-21d1524eae9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_oftalmologico
+    - field.storage.medical_examination.field_text_plain_04
+id: medical_examination.examen_oftalmologico.field_text_plain_04
+field_name: field_text_plain_04
+entity_type: medical_examination
+bundle: examen_oftalmologico
+label: 'Inspección general OD (N)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

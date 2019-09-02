@@ -1,0 +1,9 @@
+uuid: 231b5cf5-2737-458a-8885-1cb27b6e8378
+langcode: en
+status: true
+dependencies: {  }
+name: '436 - effect on atm service'
+vid: 436_effect_on_atm_service
+description: ''
+hierarchy: 0
+weight: 0

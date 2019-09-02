@@ -1,0 +1,11 @@
+uuid: 1c731b2e-7aa9-4eb1-a71d-9c1982fc6058
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.647_number_of_birds_wildlife_str
+id: taxonomy_term.647_number_of_birds_wildlife_str
+target_entity_type_id: taxonomy_term
+target_bundle: 647_number_of_birds_wildlife_str
+default_langcode: site_default
+language_alterable: false

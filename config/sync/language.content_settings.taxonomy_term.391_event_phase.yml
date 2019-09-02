@@ -1,0 +1,11 @@
+uuid: 665b998f-e0c5-473d-9fc2-408cb2faab4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.391_event_phase
+id: taxonomy_term.391_event_phase
+target_entity_type_id: taxonomy_term
+target_bundle: 391_event_phase
+default_langcode: site_default
+language_alterable: false

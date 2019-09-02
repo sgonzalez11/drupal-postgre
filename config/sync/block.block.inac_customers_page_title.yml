@@ -1,7 +1,9 @@
-uuid: c27acba9-845a-42a0-a5cb-264cc3da627a
+uuid: 2d6b6d4f-8809-45ea-b203-0dd7cc6fbc60
 langcode: en
-status: true
+status: false
 dependencies:
+  module:
+    - system
   theme:
     - inac_customers
 _core:
@@ -9,7 +11,7 @@ _core:
 id: inac_customers_page_title
 theme: inac_customers
 region: content
-weight: -50
+weight: 0
 provider: null
 plugin: page_title_block
 settings:
@@ -17,4 +19,9 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

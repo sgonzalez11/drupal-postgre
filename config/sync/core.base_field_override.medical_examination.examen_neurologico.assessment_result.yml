@@ -1,0 +1,22 @@
+uuid: 3c3176d7-c66d-4fa9-92ec-2e6597b2ab9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_neurologico
+  module:
+    - options
+id: medical_examination.examen_neurologico.assessment_result
+field_name: assessment_result
+entity_type: medical_examination
+bundle: examen_neurologico
+label: 'Assessment Result'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: list_string

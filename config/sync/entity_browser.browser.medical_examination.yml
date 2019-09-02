@@ -1,0 +1,29 @@
+uuid: 851e4216-9072-477b-bc7a-716872ef9e18
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_browser_entity_form
+name: medical_examination
+label: 'Medical Examination'
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select Medical Examination'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  fe5918c5-1358-4be2-8ce5-c85d0bc5ecd7:
+    settings:
+      entity_type: medical_examination_type
+      bundle: medical_examination_type
+      form_mode: default
+      submit_text: Save
+    uuid: fe5918c5-1358-4be2-8ce5-c85d0bc5ecd7
+    weight: 1
+    label: entity_form
+    id: entity_form

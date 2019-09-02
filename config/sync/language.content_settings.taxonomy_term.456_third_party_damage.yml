@@ -1,0 +1,11 @@
+uuid: 5eb01f66-da6c-4f48-b0a9-f734fbaa4521
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.456_third_party_damage
+id: taxonomy_term.456_third_party_damage
+target_entity_type_id: taxonomy_term
+target_bundle: 456_third_party_damage
+default_langcode: site_default
+language_alterable: false

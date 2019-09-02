@@ -1,0 +1,182 @@
+uuid: c40ec2e4-da8d-4ebd-bdab-314b9fac5d08
+langcode: en
+status: open
+dependencies:
+  module:
+    - maestro_webform
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: inac_identity_validation_webform
+title: 'INAC - Validacion de Identidad'
+description: ''
+category: ''
+elements: "informacion_personal:\n  '#type': webform_wizard_page\n  '#title': 'INFORMACIÓN PERSONAL'\n  '#prev_button_label': Regresar\n  '#next_button_label': Continuar\n  user:\n    '#type': hidden\n    '#title': username\n    '#default_value': '[current-user:account-name]'\n    '#prepopulate': true\n  datos:\n    '#type': fieldset\n    '#title': Datos\n    '#title_display': invisible\n    flexbox_01:\n      '#type': webform_flexbox\n      nombre:\n        '#type': textfield\n        '#title': Nombre/s\n        '#readonly': true\n        '#required': true\n        '#default_value': '[current-user:field_first_name]'\n      apellido_s:\n        '#type': textfield\n        '#title': Apellido/s\n        '#readonly': true\n        '#required': true\n        '#default_value': '[current-user:field_last_name]'\n      genero:\n        '#type': radios\n        '#title': Género\n        '#options':\n          1: Femenino\n          2: Masculino\n        '#options_display': two_columns\n        '#required': true\n    processed_text:\n      '#type': processed_text\n      '#text': \"<center><p style=\\\"text-align:center\\\"><em><strong>NOTA</strong></em>:<strong><em>&nbsp;</em></strong>Si consideras que los datos precargados son incorrectos, por favor ingresa a <a href=\\\"#\\\">tu panel</a> para modificarlos.</p></center>\\r\\n\"\n      '#format': full_html\n    flexbox_02:\n      '#type': webform_flexbox\n      fecha_de_nacimiento:\n        '#type': date\n        '#title': 'Fecha de nacimiento'\n        '#required': true\n      pais_de_nacimiento:\n        '#type': select\n        '#title': 'País de nacimiento'\n        '#options': country_names\n        '#select2': true\n        '#required': true\n  documento_de_identidad:\n    '#type': fieldset\n    '#title': 'Documento de identidad'\n    flexbox_03:\n      '#type': webform_flexbox\n      tipo:\n        '#type': webform_entity_select\n        '#title': Tipo\n        '#required': true\n        '#format': label\n        '#target_type': identifier_type\n        '#selection_handler': 'default:identifier_type'\n      numero:\n        '#type': textfield\n        '#title': Número\n        '#required': true\n      pais_emisor:\n        '#type': select\n        '#title': 'País emisor'\n        '#options': country_names\n        '#states':\n          invisible:\n            ':input[name=\"tipo\"]':\n              '!value': PASAPORTE\n      rif:\n        '#type': textfield\n        '#title': RIF\n        '#states':\n          visible-slide:\n            ':input[name=\"tipo\"]':\n              '!value': PASAPORTE\n  domicilio_legal:\n    '#type': fieldset\n    '#title': 'Domicilio legal'\n    flexbox_04:\n      '#type': webform_flexbox\n      pais_de_residencia:\n        '#type': select\n        '#title': 'País de residencia'\n        '#options': country_names\n        '#required': true\n      estado_provincia:\n        '#type': select\n        '#title': Estado/Provincia\n        '#options': state_province_names\n        '#required': true\n      ciudad:\n        '#type': textfield\n        '#title': Ciudad\n        '#required': true\n    flexbox_05:\n      '#type': webform_flexbox\n      direccion:\n        '#type': textfield\n        '#title': Dirección\n        '#required': true\n        '#flex': '3'\n      numero_cod:\n        '#type': number\n        '#title': Número\n        '#required': true\n      dpto:\n        '#type': number\n        '#title': Dpto\n      piso:\n        '#type': number\n        '#title': Piso\n      codigo_postal:\n        '#type': number\n        '#title': 'Código postal'\n        '#required': true\n  domicilio_postal:\n    '#type': fieldset\n    '#title': 'Domicilio postal'\n    '#help': 'Este domicilio es optativo y solo debe ser completado en caso de requerir recibir correspondencia postal en otra direcci&oacute;n que no sea la anteriormente declarada como legal.'\n    '#description_display': invisible\n    deseo_recibir_cualquier_tipo_de_correspondencia_en_otro_domicili:\n      '#type': checkbox\n      '#title': 'Deseo recibir cualquier tipo de correspondencia en otro domicilio que no sea mi domicilio antes declarado como legal'\n    flexbox_04_01:\n      '#type': webform_flexbox\n      '#states':\n        visible-slide:\n          ':input[name=\"deseo_recibir_cualquier_tipo_de_correspondencia_en_otro_domicili\"]':\n            checked: true\n      pais:\n        '#type': select\n        '#title': 'País de residencia'\n        '#options': country_names\n        '#required': true\n      estado_provincia_2:\n        '#type': select\n        '#title': Estado/Provincia\n        '#options': state_province_names\n        '#required': true\n      ciudad_2:\n        '#type': textfield\n        '#title': Ciudad\n        '#required': true\n    flexbox_05_01:\n      '#type': webform_flexbox\n      '#states':\n        visible-slide:\n          ':input[name=\"deseo_recibir_cualquier_tipo_de_correspondencia_en_otro_domicili\"]':\n            checked: true\n      direccion_2:\n        '#type': textfield\n        '#title': Dirección\n        '#flex': '3'\n        '#required': true\n      numero_cod_2:\n        '#type': number\n        '#title': Número\n        '#required': true\n      dpto_2:\n        '#type': number\n        '#title': Dpto\n      piso_2:\n        '#type': number\n        '#title': Piso\n      codigo_postal_2:\n        '#type': number\n        '#title': 'Código postal'\n        '#required': true\n  datos_de_contacto:\n    '#type': fieldset\n    '#title': 'Datos de contacto'\n    flexbox_06:\n      '#type': webform_flexbox\n      telefono_celular:\n        '#type': textfield\n        '#title': 'Teléfono celular'\n        '#required': true\n      telefono_local:\n        '#type': textfield\n        '#title': 'Teléfono local'\n      email:\n        '#type': email\n        '#title': Email\n        '#readonly': true\n        '#default_value': '[current-user:mail]'\n        '#format': value\nadjuntos:\n  '#type': webform_wizard_page\n  '#title': ADJUNTOS\n  '#prev_button_label': Regresar\n  '#next_button_label': Continuar\n  container_adj_civ:\n    '#type': container\n    foto_de_civ_cedula_de_identidad_venezolana_:\n      '#type': fieldset\n      '#title': 'Foto de documentación'\n      processed_text_01:\n        '#type': processed_text\n        '#text': \"<center>\\r\\n<p>Por favor, sube una foto del frente y dorso de cédula.</p>\\r\\n</center>\\r\\n\\r\\n<center>\\r\\n<p style=\\\"text-align:center\\\">Te solicitamos una imagen nítida donde se puedan ver claramente los datos.</p>\\r\\n</center>\\r\\n\"\n        '#format': full_html\n      foto_documentacion:\n        '#type': webform_image_file\n        '#title': 'Foto documentación'\n        '#required': true\n    foto_civ:\n      '#type': fieldset\n      '#title': Foto\n      processed_text_06_foto_civ:\n        '#type': processed_text\n        '#text': \"<center>\\r\\n<p>Por favor, te solicitamos subas tu fotografía. Se debe poder identificar tu rostro.</p>\\r\\n</center>\\r\\n\"\n        '#format': full_html\n      foto_personal:\n        '#type': webform_image_file\n        '#title': 'Foto personal'\n        '#required': true\n  container_adj_cie:\n    '#type': container\n    '#states':\n      visible:\n        ':input[name=\"tipo\"]':\n          value: CIE\n    foto_de_cie_cedula_de_identidad_extranjera_:\n      '#type': fieldset\n      '#title': 'Foto de CIE (Cédula de Identidad Extranjera)'\n      processed_text_02:\n        '#type': processed_text\n        '#text': \"<center>\\r\\n<p>Por favor, sube una foto del frente y dorso de cédula.</p>\\r\\n</center>\\r\\n\\r\\n<center>\\r\\n<p style=\\\"text-align:center\\\">Te solicitamos una imagen nítida donde se puedan ver claramente los datos.</p>\\r\\n</center>\\r\\n\"\n        '#format': full_html\n    foto_cie:\n      '#type': fieldset\n      '#title': Foto\n      processed_text_06_cie:\n        '#type': processed_text\n        '#text': \"<center>\\r\\n<p>Por favor, te solicitamos subas tu fotografía. Se debe poder identificar tu rostro.</p>\\r\\n</center>\\r\\n\"\n        '#format': full_html\n  container_adj_pasaporte:\n    '#type': container\n    '#states':\n      visible:\n        ':input[name=\"tipo\"]':\n          value: PASAPORTE\n    foto_del_pasaporte:\n      '#type': fieldset\n      '#title': 'Foto del pasaporte'\n      '#states_clear': false\n      processed_text_04:\n        '#type': processed_text\n        '#text': \"<center>\\r\\n<p>Por favor, sube una foto del frente y dorso de cédula.</p>\\r\\n</center>\\r\\n\\r\\n<center>\\r\\n<p style=\\\"text-align:center\\\">Te solicitamos una imagen nítida donde se puedan ver claramente los datos.</p>\\r\\n</center>\\r\\n\"\n        '#format': full_html\n    foto:\n      '#type': fieldset\n      '#title': Foto\n      processed_text_05:\n        '#type': processed_text\n        '#text': \"<center>\\r\\n<p>Por favor, te solicitamos subas tu fotografia. Se debe poder identificar tu rostro.</p>\\r\\n</center>\\r\\n\"\n        '#format': full_html\nprocessed_text_03:\n  '#type': processed_text\n  '#display_on': view\n  '#text': \"<p style=\\\"text-align:center\\\"><strong>DECLARACIÓN JURADA</strong></p>\\r\\n\\r\\n<p><input id=\\\"certify_checkbox\\\" type=\\\"checkbox\\\" />DECLARO BAJO FE DE JURAMENTO QUE LA INFORMACIÓN SUMINISTRADA ES CIERTA Y SE ASUME LA RESPONSABILIDAD QUE SU VALIDACIÓN CONFIERE.</p>\\r\\n\"\n  '#format': full_html\nresolutions_history:\n  '#type': webform_custom_composite\n  '#title': 'Historial de Resoluciones'\n  '#multiple__header': false\n  '#access_create_roles':\n    - caa_admin\n    - administrator\n  '#access_update_roles':\n    - caa_admin\n    - administrator\n  '#access_view_roles':\n    - caa_admin\n    - administrator\n  '#element':\n    validation_result:\n      '#type': textarea\n      '#title': 'Validation Result'\n    validation_note:\n      '#type': textarea\n      '#title': 'Validation Note'\n    require_attachments:\n      '#type': radios\n      '#options':\n        - 'no'\n        - 'yes'\n        - multiple\n      '#title': 'Require Attachments'\n    response_text:\n      '#type': textarea\n      '#title': 'Response Text'\n    response_files:\n      '#type': managed_file\n      '#title': 'Response Files'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'"
+css: ".webform-submission-form #edit-actions div {\r\n\tdisplay: inline-block;\r\n\tfloat: left;\r\n\tmargin-right: 10px;\r\n}\r\n\r\n.webform-confirmation__back a {\r\n\tdisplay: none;\r\n}"
+javascript: "(function ($) {\r\n    $(document).ready(function () {\r\n      console.log(window.location.href);\r\n      $('#edit-actions-submit').attr('disabled', 'disabled');\r\n      $('#certify_checkbox').change(function () {\r\n      if (this.checked) {\r\n         $('#edit-actions-submit').removeAttr('disabled');\r\n         } else {\r\n         $('#edit-actions-submit').attr('disabled', 'disabled');\r\n        }\r\n      });\r\n    });\r\n}(jQuery));"
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_title: source_entity_webform
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_remote_addr: true
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: CONFIRMACIÓN
+  wizard_track: ''
+  preview: 2
+  preview_label: RESUMEN
+  preview_title: RESUMEN
+  preview_message: 'Por favor, revise atentamente todos los datos ingresados. Su solicitud ser&aacute; enviada cuando presione el bot&oacute;n Enviar.'
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: "<p style=\"text-align:center\">Los datos fueron recibidos con &eacute;xito&nbsp;y su tr&aacute;mite fue iniciado.</p>\r\n\r\n<p style=\"text-align:center\">El n&uacute;mero de tr&aacute;mite es #TRA-1205.</p>\r\n\r\n<p style=\"text-align:center\">Puedes ver tu tr&aacute;mite en&nbsp;<a href=\"/user/my-tasks\">tu panel</a></p>\r\n\r\n<p style=\"text-align:center\"><strong>Por favor, aguarda nuevas indicaciones del personal de la autoridad para proseguir.</strong></p>"
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: INICIO
+  confirmation_back_attributes:
+    style: 'text-align:center; border: none;     padding: 1rem 2rem;     .p color:white;     text-decoration: none;   '
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  spawn_maestro_workflow:
+    id: maestro
+    label: 'Spawn Maestro Workflow'
+    handler_id: spawn_maestro_workflow
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      maestro_template: inac_identity_validation
+      maestro_message_success: 'Start Maestro process'
+      maestro_message_failure: 'Failed to try start process'

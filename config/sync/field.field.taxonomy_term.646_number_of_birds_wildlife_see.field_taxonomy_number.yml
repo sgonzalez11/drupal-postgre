@@ -1,0 +1,23 @@
+uuid: 8e814938-541e-44fa-8438-1b4656c1a4eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_taxonomy_number
+    - taxonomy.vocabulary.646_number_of_birds_wildlife_see
+id: taxonomy_term.646_number_of_birds_wildlife_see.field_taxonomy_number
+field_name: field_taxonomy_number
+entity_type: taxonomy_term
+bundle: 646_number_of_birds_wildlife_see
+label: 'taxonomy number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

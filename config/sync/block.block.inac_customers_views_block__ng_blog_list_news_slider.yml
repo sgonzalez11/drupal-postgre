@@ -1,0 +1,37 @@
+uuid: adb64941-09f0-41c8-9714-5a8b3a8641af
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.ng_blog_list
+  module:
+    - domain
+    - system
+    - views
+  theme:
+    - inac_customers
+id: inac_customers_views_block__ng_blog_list_news_slider
+theme: inac_customers
+region: content
+weight: -4
+provider: null
+plugin: 'views_block:ng_blog_list-news_slider'
+settings:
+  id: 'views_block:ng_blog_list-news_slider'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  domain:
+    id: domain
+    domains:
+      customers_portal: customers_portal
+    negate: false
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

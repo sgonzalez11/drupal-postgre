@@ -1,0 +1,10 @@
+uuid: 2d5a1bf0-a766-4a37-8d75-0112e695e7ae
+langcode: es
+status: true
+dependencies:
+  module:
+    - eauthority_amos
+id: medical_examination.ief_table
+label: 'Inline Entity Form Table'
+targetEntityType: medical_examination
+cache: true

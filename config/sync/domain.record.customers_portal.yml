@@ -1,0 +1,11 @@
+uuid: 5d501d4d-ffe7-4bc6-aec4-fbf666446a9e
+langcode: es
+status: true
+dependencies: {  }
+id: customers_portal
+domain_id: 9271109
+hostname: 'customers-portal.lndo.site:8000'
+name: 'Customers Portal'
+scheme: variable
+weight: 1
+is_default: true

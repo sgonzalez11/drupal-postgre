@@ -1,0 +1,19 @@
+uuid: 00a5c1f9-82ad-404d-a810-baaa2599ea98
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_oftalmologico
+    - field.storage.medical_examination.field_text_plain_02
+id: medical_examination.examen_oftalmologico.field_text_plain_02
+field_name: field_text_plain_02
+entity_type: medical_examination
+bundle: examen_oftalmologico
+label: 'Historia oftalmológica OI (N)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

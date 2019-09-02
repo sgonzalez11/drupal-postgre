@@ -1,0 +1,23 @@
+uuid: 31f0f0be-8795-4507-867d-573c90c8693e
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_cardiovascular
+    - field.storage.medical_examination.field_number_float_00
+id: medical_examination.examen_cardiovascular.field_number_float_00
+field_name: field_number_float_00
+entity_type: medical_examination
+bundle: examen_cardiovascular
+label: 'FC (Reposo)'
+description: Ipm
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

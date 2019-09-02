@@ -1,0 +1,28 @@
+uuid: 53ec600a-97cb-4430-8e01-85c47f166bb8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_publications
+    - node.type.publication
+    - node.type.service
+id: node.service.field_related_publications
+field_name: field_related_publications
+entity_type: node
+bundle: service
+label: 'Related Publications'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      publication: publication
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

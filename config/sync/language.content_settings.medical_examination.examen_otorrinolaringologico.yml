@@ -1,0 +1,18 @@
+uuid: e4a56fb0-e434-4c1b-87d6-f844ded06a1f
+langcode: es
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_otorrinolaringologico
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: medical_examination.examen_otorrinolaringologico
+target_entity_type_id: medical_examination
+target_bundle: examen_otorrinolaringologico
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,19 @@
+uuid: d54141fb-a683-454a-859a-48457d0f6315
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_cardiovascular
+    - field.storage.medical_examination.field_text_plain_long_00
+id: medical_examination.examen_cardiovascular.field_text_plain_long_00
+field_name: field_text_plain_long_00
+entity_type: medical_examination
+bundle: examen_cardiovascular
+label: 'Historia cardiológica'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

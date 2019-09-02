@@ -1,4 +1,4 @@
-uuid: cedc2140-db02-40c1-981a-f7cae3fdca66
+uuid: ba43c636-10a9-43f8-9279-5929a582e9d6
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: jango_branding
 theme: jango
 region: header
-weight: 0
+weight: -7
 provider: null
 plugin: system_branding_block
 settings:

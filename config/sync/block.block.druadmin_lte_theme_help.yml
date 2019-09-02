@@ -1,4 +1,4 @@
-uuid: 1ae2a0f1-3bbf-4089-a392-2fbba9fce08c
+uuid: e95049fe-4ae0-4a03-94d6-f2dbdaceef3e
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: druadmin_lte_theme_help
 theme: druadmin_lte_theme
 region: content
-weight: -30
+weight: 2
 provider: null
 plugin: help_block
 settings:

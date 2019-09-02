@@ -1,0 +1,22 @@
+uuid: c7749892-9f18-4ad9-8c2d-8049b05fd6d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_medico_general
+  module:
+    - options
+id: medical_examination.examen_medico_general.entity_status
+field_name: entity_status
+entity_type: medical_examination
+bundle: examen_medico_general
+label: Status
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: OPN
+default_value_callback: ''
+settings: {  }
+field_type: list_string

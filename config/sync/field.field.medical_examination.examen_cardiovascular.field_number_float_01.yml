@@ -1,0 +1,23 @@
+uuid: 71da50d2-c766-41a1-9f81-de1e2928f7cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_cardiovascular
+    - field.storage.medical_examination.field_number_float_01
+id: medical_examination.examen_cardiovascular.field_number_float_01
+field_name: field_number_float_01
+entity_type: medical_examination
+bundle: examen_cardiovascular
+label: FR
+description: rpm
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

@@ -1,0 +1,14 @@
+uuid: 14a9dd6f-aae8-4c85-bc89-01bd70c342aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.head_medical_examiner
+  module:
+    - user
+id: user_remove_role_action.head_medical_examiner
+label: 'Remove the Head Medical Examiner role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: head_medical_examiner

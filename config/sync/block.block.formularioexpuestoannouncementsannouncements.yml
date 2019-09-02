@@ -1,0 +1,29 @@
+uuid: e842f1a2-8d10-4baf-bf86-e8a261468bac
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.announcements
+  module:
+    - system
+    - views
+  theme:
+    - eauth_customers
+id: formularioexpuestoannouncementsannouncements
+theme: eauth_customers
+region: sidebar
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:announcements-announcements'
+settings:
+  id: 'views_exposed_filter_block:announcements-announcements'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /announcements
+    negate: false
+    context_mapping: {  }

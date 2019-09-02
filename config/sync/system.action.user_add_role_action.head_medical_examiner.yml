@@ -1,0 +1,14 @@
+uuid: 8efb3a9f-0b16-4856-8fbf-61437aee5c00
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.head_medical_examiner
+  module:
+    - user
+id: user_add_role_action.head_medical_examiner
+label: 'Add the Head Medical Examiner role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: head_medical_examiner

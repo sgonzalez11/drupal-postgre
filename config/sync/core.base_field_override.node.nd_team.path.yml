@@ -1,0 +1,20 @@
+uuid: ca4e2acd-dd4e-4928-adab-236079e6bc79
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.nd_team
+  module:
+    - path
+id: node.nd_team.path
+field_name: path
+entity_type: node
+bundle: nd_team
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

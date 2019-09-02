@@ -1,0 +1,32 @@
+uuid: 21993145-e56c-4a5d-8554-affbe10c268d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.424_narrative_language.field_taxonomy_number
+    - taxonomy.vocabulary.424_narrative_language
+  module:
+    - text
+id: taxonomy_term.424_narrative_language.default
+targetEntityType: taxonomy_term
+bundle: 424_narrative_language
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_taxonomy_number:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  langcode: true

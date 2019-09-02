@@ -1,0 +1,11 @@
+uuid: ccc45917-0ada-4fea-8913-964d310d6b6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.current_traffic_type
+id: taxonomy_term.current_traffic_type
+target_entity_type_id: taxonomy_term
+target_bundle: current_traffic_type
+default_langcode: site_default
+language_alterable: false

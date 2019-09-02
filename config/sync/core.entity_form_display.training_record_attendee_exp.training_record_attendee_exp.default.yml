@@ -1,0 +1,39 @@
+uuid: f5da6a55-b911-4e11-a93d-908369e8d10a
+langcode: en
+status: true
+dependencies:
+  module:
+    - eauthority_atos
+id: training_record_attendee_exp.training_record_attendee_exp.default
+targetEntityType: training_record_attendee_exp
+bundle: training_record_attendee_exp
+mode: default
+content:
+  aircraft:
+    type: options_select
+    weight: 0
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  flight_experience_types:
+    type: options_buttons
+    weight: 1
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  flight_hours:
+    type: number
+    settings:
+      placeholder: ''
+    region: content
+    weight: 3
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden:
+  name: true

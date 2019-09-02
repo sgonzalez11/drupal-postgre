@@ -1,0 +1,17 @@
+uuid: 693db82b-10e5-444a-8f8d-8c8080715ddf
+langcode: es
+status: true
+dependencies:
+  module:
+    - content_translation
+    - eauthority_atos
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: training_record_attendee_exp.training_record_attendee_exp
+target_entity_type_id: training_record_attendee_exp
+target_bundle: training_record_attendee_exp
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,9 @@
+uuid: 0d1f2756-83a8-4038-a10d-bdac53e040a8
+langcode: en
+status: true
+dependencies: {  }
+name: '431 - occurrence class'
+vid: 431_occurrence_class
+description: ''
+hierarchy: 0
+weight: 0

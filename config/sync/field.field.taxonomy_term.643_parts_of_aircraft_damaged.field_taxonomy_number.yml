@@ -1,0 +1,23 @@
+uuid: a6f0e30a-3bdb-4be6-a169-54fb7661ef13
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_taxonomy_number
+    - taxonomy.vocabulary.643_parts_of_aircraft_damaged
+id: taxonomy_term.643_parts_of_aircraft_damaged.field_taxonomy_number
+field_name: field_taxonomy_number
+entity_type: taxonomy_term
+bundle: 643_parts_of_aircraft_damaged
+label: 'taxonomy number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

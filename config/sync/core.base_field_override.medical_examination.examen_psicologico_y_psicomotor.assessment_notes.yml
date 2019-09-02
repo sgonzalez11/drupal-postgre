@@ -1,0 +1,18 @@
+uuid: c770016e-51d7-4ed8-b85a-71ba4acaae1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_psicologico_y_psicomotor
+id: medical_examination.examen_psicologico_y_psicomotor.assessment_notes
+field_name: assessment_notes
+entity_type: medical_examination
+bundle: examen_psicologico_y_psicomotor
+label: 'Assessment Notes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

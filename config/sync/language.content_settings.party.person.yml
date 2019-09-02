@@ -1,0 +1,11 @@
+uuid: 236d3d35-a08f-451c-8265-00b8e518bdd9
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_parties.party_type.person
+id: party.person
+target_entity_type_id: party
+target_bundle: person
+default_langcode: site_default
+language_alterable: false

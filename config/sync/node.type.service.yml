@@ -1,0 +1,17 @@
+uuid: 0ea771e6-bd30-4d26-92f8-80bf8c4161cd
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Service
+type: service
+description: 'Content Type "Service" from node Entity'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

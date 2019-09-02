@@ -1,4 +1,4 @@
-uuid: 310de718-c144-4f4b-84d3-b674bdcc67d0
+uuid: 652d198e-db4f-464c-b80d-a9c8b15cc6e2
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: eauth_atos_help
 theme: eauth_atos
 region: content
-weight: -30
+weight: 1
 provider: null
 plugin: help_block
 settings:

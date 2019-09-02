@@ -1,0 +1,9 @@
+uuid: 7f795f9c-c4a1-44fa-8ed4-56bcde8fdac6
+langcode: en
+status: true
+dependencies: {  }
+name: '13 - Airspace class'
+vid: 13_airspace_class
+description: ''
+hierarchy: 0
+weight: 0

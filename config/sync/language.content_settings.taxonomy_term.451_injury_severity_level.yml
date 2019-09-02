@@ -1,0 +1,11 @@
+uuid: 37eaad37-7ac0-40a4-9a7f-b8d5902958ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.451_injury_severity_level
+id: taxonomy_term.451_injury_severity_level
+target_entity_type_id: taxonomy_term
+target_bundle: 451_injury_severity_level
+default_langcode: site_default
+language_alterable: false

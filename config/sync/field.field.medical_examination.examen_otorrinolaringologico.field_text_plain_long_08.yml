@@ -1,0 +1,19 @@
+uuid: 9d0fb8c4-8eca-495d-877d-7b607da0c89f
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_otorrinolaringologico
+    - field.storage.medical_examination.field_text_plain_long_08
+id: medical_examination.examen_otorrinolaringologico.field_text_plain_long_08
+field_name: field_text_plain_long_08
+entity_type: medical_examination
+bundle: examen_otorrinolaringologico
+label: Faringe
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,22 @@
+uuid: 6a0a2a0d-6217-4b9a-b4ef-9b9e785eebc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_otorrinolaringologico
+  module:
+    - options
+id: medical_examination.examen_otorrinolaringologico.assessment_result
+field_name: assessment_result
+entity_type: medical_examination
+bundle: examen_otorrinolaringologico
+label: 'Assessment Result'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: list_string

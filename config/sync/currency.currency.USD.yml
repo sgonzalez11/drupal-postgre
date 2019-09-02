@@ -1,0 +1,10 @@
+alternativeSigns: {  }
+currencyCode: USD
+currencyNumber: '840'
+label: 'US Dollar'
+roundingStep: !!float 1
+sign: ¤
+subunits: 0
+status: true
+usages: {  }
+uuid: 06597eae-5254-49fd-bda0-249ee5cf72a8

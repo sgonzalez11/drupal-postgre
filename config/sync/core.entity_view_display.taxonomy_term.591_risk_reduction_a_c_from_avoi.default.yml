@@ -1,0 +1,32 @@
+uuid: 7b32454c-0f20-4327-8b5a-2bb680556dfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.591_risk_reduction_a_c_from_avoi.field_taxonomy_number
+    - taxonomy.vocabulary.591_risk_reduction_a_c_from_avoi
+  module:
+    - text
+id: taxonomy_term.591_risk_reduction_a_c_from_avoi.default
+targetEntityType: taxonomy_term
+bundle: 591_risk_reduction_a_c_from_avoi
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_taxonomy_number:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  langcode: true

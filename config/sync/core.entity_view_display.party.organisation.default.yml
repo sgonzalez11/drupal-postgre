@@ -1,0 +1,39 @@
+uuid: 0ecb0afd-67fd-4c02-a98f-b020dda8fb75
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_parties.party_type.organisation
+    - field.field.party.organisation.field_o_party_profiles
+  module:
+    - user
+id: party.organisation.default
+targetEntityType: party
+bundle: organisation
+mode: default
+content:
+  field_o_party_profiles:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

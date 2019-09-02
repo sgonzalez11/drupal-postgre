@@ -1,4 +1,4 @@
-uuid: 427860e5-dd8a-445f-966a-b47479505c17
+uuid: a84d490b-76ff-4d0a-9829-c152c08f5f19
 langcode: es
 status: true
 dependencies:
@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 _core:
   default_config_hash: DmxlVGfOdRqchhzvdWgCQZ3mA-yHrcf_VSYAGhy3WBo
-name: Team
+name: Equipo
 type: nd_team
 description: ''
 help: ''

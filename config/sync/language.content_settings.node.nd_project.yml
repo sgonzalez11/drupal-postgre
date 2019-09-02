@@ -1,0 +1,18 @@
+uuid: c994ad48-a3c1-4437-89da-b714629f3d15
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.nd_project
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.nd_project
+target_entity_type_id: node
+target_bundle: nd_project
+default_langcode: site_default
+language_alterable: false

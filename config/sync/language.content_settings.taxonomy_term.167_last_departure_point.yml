@@ -1,0 +1,11 @@
+uuid: c2f0b5de-7dec-46fe-96af-9484d0ba23d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.167_last_departure_point
+id: taxonomy_term.167_last_departure_point
+target_entity_type_id: taxonomy_term
+target_bundle: 167_last_departure_point
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,21 @@
+uuid: 996607e3-275d-437f-ac0f-ab389bae2be5
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_cardiovascular
+    - field.storage.medical_examination.field_text_list_01
+  module:
+    - options
+id: medical_examination.examen_cardiovascular.field_text_list_01
+field_name: field_text_list_01
+entity_type: medical_examination
+bundle: examen_cardiovascular
+label: 'Historia vascular'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

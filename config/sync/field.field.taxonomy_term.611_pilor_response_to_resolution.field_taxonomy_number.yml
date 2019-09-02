@@ -1,0 +1,23 @@
+uuid: 7a5be429-83b7-4913-9181-01a3a981f7f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_taxonomy_number
+    - taxonomy.vocabulary.611_pilor_response_to_resolution
+id: taxonomy_term.611_pilor_response_to_resolution.field_taxonomy_number
+field_name: field_taxonomy_number
+entity_type: taxonomy_term
+bundle: 611_pilor_response_to_resolution
+label: 'taxonomy number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,14 @@
+uuid: 5d57ba0c-e057-4a8f-a7d7-828b88a6c100
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.medical_examiner
+  module:
+    - user
+id: user_add_role_action.medical_examiner
+label: 'Add the Medical Examiner role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: medical_examiner

@@ -1,0 +1,22 @@
+uuid: fa758027-2228-4f34-aeed-0321cf51c689
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_level
+  module:
+    - user
+id: user.user.field_level
+field_name: field_level
+entity_type: user
+bundle: user
+label: Level
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: string

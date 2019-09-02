@@ -1,0 +1,11 @@
+uuid: c2aa87fd-7fa1-4f7d-a3a6-592a760e9ee6
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.10_aerodrome_type
+id: taxonomy_term.10_aerodrome_type
+target_entity_type_id: taxonomy_term
+target_bundle: 10_aerodrome_type
+default_langcode: site_default
+language_alterable: false

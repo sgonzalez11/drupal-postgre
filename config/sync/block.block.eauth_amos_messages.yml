@@ -1,4 +1,4 @@
-uuid: b823bc84-4b98-4811-8b60-439bfabe286b
+uuid: 1bde41bb-5425-4647-a743-8c3679456feb
 langcode: en
 status: true
 dependencies:
@@ -10,8 +10,8 @@ _core:
   default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
 id: eauth_amos_messages
 theme: eauth_amos
-region: highlighted
-weight: 0
+region: content
+weight: -3
 provider: null
 plugin: system_messages_block
 settings:

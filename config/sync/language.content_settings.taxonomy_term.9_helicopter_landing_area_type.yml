@@ -1,0 +1,11 @@
+uuid: 91edea94-106f-4a13-a4e3-62a602699544
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.9_helicopter_landing_area_type
+id: taxonomy_term.9_helicopter_landing_area_type
+target_entity_type_id: taxonomy_term
+target_bundle: 9_helicopter_landing_area_type
+default_langcode: site_default
+language_alterable: false

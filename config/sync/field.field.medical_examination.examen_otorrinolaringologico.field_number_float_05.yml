@@ -1,0 +1,23 @@
+uuid: cafd8abf-8893-4a3f-b812-91ec59010ba0
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_otorrinolaringologico
+    - field.storage.medical_examination.field_number_float_05
+id: medical_examination.examen_otorrinolaringologico.field_number_float_05
+field_name: field_number_float_05
+entity_type: medical_examination
+bundle: examen_otorrinolaringologico
+label: 'OD-via aerea-0.5K'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

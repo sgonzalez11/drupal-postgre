@@ -1,0 +1,11 @@
+uuid: 36872e00-a8c3-4093-b6f4-8ea4d9725e3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.estados
+id: taxonomy_term.estados
+target_entity_type_id: taxonomy_term
+target_bundle: estados
+default_langcode: site_default
+language_alterable: false

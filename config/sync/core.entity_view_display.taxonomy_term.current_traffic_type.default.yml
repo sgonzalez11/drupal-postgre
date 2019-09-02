@@ -1,0 +1,32 @@
+uuid: 2101ba05-b95c-43b1-948a-b8dff93c237d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.current_traffic_type.field_taxonomy_number
+    - taxonomy.vocabulary.current_traffic_type
+  module:
+    - text
+id: taxonomy_term.current_traffic_type.default
+targetEntityType: taxonomy_term
+bundle: current_traffic_type
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_taxonomy_number:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  langcode: true

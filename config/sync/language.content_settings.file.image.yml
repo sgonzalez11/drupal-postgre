@@ -1,0 +1,11 @@
+uuid: cdad4e8c-b98d-40de-bf91-884f8764bd71
+langcode: es
+status: true
+dependencies:
+  config:
+    - file_entity.type.image
+id: file.image
+target_entity_type_id: file
+target_bundle: image
+default_langcode: site_default
+language_alterable: false

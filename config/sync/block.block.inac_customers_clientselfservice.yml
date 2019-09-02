@@ -1,0 +1,25 @@
+uuid: b327cd02-3da1-459e-8306-37811640a2d4
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:03936b14-3410-48a5-9e57-31f7f96a9fbb'
+  module:
+    - block_content
+  theme:
+    - inac_customers
+id: inac_customers_clientselfservice
+theme: inac_customers
+region: header
+weight: -7
+provider: null
+plugin: 'block_content:03936b14-3410-48a5-9e57-31f7f96a9fbb'
+settings:
+  id: 'block_content:03936b14-3410-48a5-9e57-31f7f96a9fbb'
+  label: 'Client Self-Service'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

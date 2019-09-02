@@ -1,0 +1,23 @@
+uuid: 70df33ef-d824-4236-9fe4-74e04c9995ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_cardiovascular
+    - field.storage.medical_examination.field_number_float_05
+id: medical_examination.examen_cardiovascular.field_number_float_05
+field_name: field_number_float_05
+entity_type: medical_examination
+bundle: examen_cardiovascular
+label: 'PA Acostado (2)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

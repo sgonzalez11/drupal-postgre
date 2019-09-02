@@ -1,0 +1,11 @@
+uuid: 49db41c9-55c4-421b-80ad-b5d3844b1573
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.notificacion_evento_seguridad
+id: webform_submission.notificacion_evento_seguridad
+target_entity_type_id: webform_submission
+target_bundle: notificacion_evento_seguridad
+default_langcode: site_default
+language_alterable: false

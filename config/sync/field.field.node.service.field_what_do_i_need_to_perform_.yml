@@ -1,0 +1,21 @@
+uuid: 1a160518-5129-4584-a39f-1943688fe3e3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_what_do_i_need_to_perform_
+    - node.type.service
+  module:
+    - text
+id: node.service.field_what_do_i_need_to_perform_
+field_name: field_what_do_i_need_to_perform_
+entity_type: node
+bundle: service
+label: 'What Do I Need To Perform It?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

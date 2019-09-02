@@ -1,0 +1,9 @@
+uuid: e1a911ee-0e2c-4e0c-bb41-f8fef6c8b824
+langcode: es
+status: true
+dependencies: {  }
+id: atos_portal_platform
+domain_id: atos_portal
+pattern: atos-portal.initializing-fk5ohoq-bf4vp4joan5wy.us-2.platformsh.site
+redirect: 0
+environment: default

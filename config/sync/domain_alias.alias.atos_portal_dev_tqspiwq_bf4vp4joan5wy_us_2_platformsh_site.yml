@@ -1,0 +1,9 @@
+uuid: 3b5ea024-d135-4531-8afd-826bc1c99a99
+langcode: en
+status: true
+dependencies: {  }
+id: atos_portal_dev_tqspiwq_bf4vp4joan5wy_us_2_platformsh_site
+domain_id: atos_portal
+pattern: atos-portal.dev-tqspiwq-bf4vp4joan5wy.us-2.platformsh.site
+redirect: 0
+environment: default

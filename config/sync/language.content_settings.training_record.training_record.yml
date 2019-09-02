@@ -1,0 +1,11 @@
+uuid: 093d38d9-8953-4045-b0e7-8f0ea29a5b26
+langcode: en
+status: true
+dependencies:
+  module:
+    - eauthority_atos
+id: training_record.training_record
+target_entity_type_id: training_record
+target_bundle: training_record
+default_langcode: site_default
+language_alterable: false

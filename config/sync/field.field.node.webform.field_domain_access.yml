@@ -1,5 +1,5 @@
-uuid: f9545561-1005-4345-a985-45b1c24c8afc
-langcode: en
+uuid: 05e1d489-cd70-4dfe-9b8f-96637b0cb35f
+langcode: es
 status: true
 dependencies:
   config:
@@ -12,7 +12,7 @@ bundle: webform
 label: 'Domain Access'
 description: 'Select the affiliate domain(s) for this content'
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: 'Drupal\domain_access\DomainAccessManager::getDefaultValue'
 settings:

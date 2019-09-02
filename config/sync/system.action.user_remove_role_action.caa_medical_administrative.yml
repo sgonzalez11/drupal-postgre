@@ -1,0 +1,14 @@
+uuid: 2d5b8d06-5d3d-486b-9679-efc75edd62ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.caa_medical_administrative
+  module:
+    - user
+id: user_remove_role_action.caa_medical_administrative
+label: 'Remove the CAA Medical Administrative role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: caa_medical_administrative

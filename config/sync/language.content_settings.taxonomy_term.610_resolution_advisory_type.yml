@@ -1,0 +1,11 @@
+uuid: 2381061f-c389-4251-b78a-191502a1bf2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.610_resolution_advisory_type
+id: taxonomy_term.610_resolution_advisory_type
+target_entity_type_id: taxonomy_term
+target_bundle: 610_resolution_advisory_type
+default_langcode: site_default
+language_alterable: false

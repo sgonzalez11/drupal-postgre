@@ -1,0 +1,9 @@
+uuid: fb149266-f28e-4b2a-99e0-caec27e5c14b
+langcode: en
+status: true
+dependencies: {  }
+name: 'current traffic type'
+vid: current_traffic_type
+description: ''
+hierarchy: 0
+weight: 0

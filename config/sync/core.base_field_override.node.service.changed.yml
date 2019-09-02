@@ -1,0 +1,18 @@
+uuid: 0029497b-07ba-4617-9649-897d5770d468
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.service
+id: node.service.changed
+field_name: changed
+entity_type: node
+bundle: service
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,4 +1,4 @@
-uuid: b1ffafd9-8c25-49c3-aa14-841288d60970
+uuid: 720bdb09-512c-4a40-b44c-dec82e48c822
 langcode: en
 status: true
 dependencies:
@@ -10,8 +10,8 @@ _core:
   default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
 id: inac_amos_messages
 theme: inac_amos
-region: highlighted
-weight: 0
+region: content
+weight: -7
 provider: null
 plugin: system_messages_block
 settings:

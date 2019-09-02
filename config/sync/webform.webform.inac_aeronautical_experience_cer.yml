@@ -1,0 +1,168 @@
+uuid: 01547867-ab35-425a-a771-15801e98f9e3
+langcode: es
+status: open
+dependencies: {  }
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: inac_aeronautical_experience_cer
+title: 'INAC - Certificación de Experiencia Aeronáutica'
+description: ''
+category: ''
+elements: "1:\n  '#type': webform_wizard_page\n  '#title': 'Carga de experiencia'\n  informacion_del_solicitante:\n    '#type': webform_section\n    '#title': 'Información del solicitante'\n    apellidos:\n      '#type': textfield\n      '#title': Apellidos\n      '#readonly': true\n      '#default_value': '[current-user:field_last_name:value]'\n    nombres:\n      '#type': textfield\n      '#title': Nombres\n      '#readonly': true\n      '#default_value': '[current-user:field_first_name]'\n  experiencia_aeronautica:\n    '#type': webform_section\n    '#title': 'Experiencia Aeronáutica'\n    container:\n      '#type': container\n      flexbox:\n        '#type': webform_flexbox\n        flight_exp_type_pic:\n          '#type': number\n          '#title': 'Horas como Piloto al mando (PIC) '\n          '#title_display': invisible\n        markup:\n          '#type': webform_markup\n          '#markup': 'Horas como Piloto al mando (PIC)'\n      flexbox_01:\n        '#type': webform_flexbox\n        flight_exp_type_picus:\n          '#type': number\n          '#title': 'hs. como Piloto al mando bajo supervisión'\n          '#title_display': invisible\n        markup_01:\n          '#type': webform_markup\n          '#markup': 'Horas como Piloto al mando bajo supervisión'\n      flexbox_02:\n        '#type': webform_flexbox\n        flight_exp_type_cpil:\n          '#type': number\n          '#title': 'hs. como Copiloto'\n          '#title_display': invisible\n        markup_02:\n          '#type': webform_markup\n          '#markup': 'Horas como Copiloto'\n      flexbox_03:\n        '#type': webform_flexbox\n        flight_exp_type_ccof:\n          '#type': number\n          '#title': 'hs. Experiencia total de vuelo a campo traviesa y en el extranjero'\n          '#title_display': invisible\n        markup_03:\n          '#type': webform_markup\n          '#markup': 'Horas Experiencia total de vuelo a campo traviesa y en el extranjero'\n      flexbox_04:\n        '#type': webform_flexbox\n        flight_exp_type_nfly:\n          '#type': number\n          '#title': 'hs. Experiencia total de vuelo nocturno'\n          '#title_display': invisible\n        markup_04:\n          '#type': webform_markup\n          '#markup': 'Horas Experiencia total de vuelo nocturno'\n      flexbox_05:\n        '#type': webform_flexbox\n        flight_exp_type_ifly:\n          '#type': number\n          '#title': 'hs. Experiencia total en vuelo de instrumentos'\n          '#title_display': invisible\n        markup_05:\n          '#type': webform_markup\n          '#markup': 'Horas Experiencia total en vuelo de instrumentos'\n      flexbox_06:\n        '#type': webform_flexbox\n        flight_exp_type_mpsa:\n          '#type': number\n          '#title': 'hs. Total de horas multipiloto realizadas en una aeronave de un solo piloto'\n          '#title_display': invisible\n        markup_06:\n          '#type': webform_markup\n          '#markup': 'Total de horas multipiloto realizadas en una aeronave de un solo piloto'\n      flexbox_07:\n        '#type': webform_flexbox\n        flight_exp_type_mpa:\n          '#type': number\n          '#title': 'hs. Total de horas realizadas en una aeronave multipiloto'\n          '#title_display': invisible\n        markup_07:\n          '#type': webform_markup\n          '#markup': 'Total de horas realizadas en una aeronave multipiloto'\n      flexbox_09:\n        '#type': webform_flexbox\n        flight_exp_type_simulator:\n          '#type': number\n          '#title': 'Horas en simulador'\n          '#title_display': invisible\n        markup_08:\n          '#type': webform_markup\n          '#markup': 'Horas Experiencia en el simulador'\n      flexbox_10:\n        '#type': webform_flexbox\n        '#states':\n          visible-slide:\n            ':input[name=\"flight_exp_type_simulator\"]':\n              filled: true\n        markup_10:\n          '#type': webform_markup\n          '#markup': 'De los cuales:'\n        flexbox_11:\n          '#type': webform_flexbox\n          en_el_simulador_de_vuelo_completo:\n            '#type': number\n            '#title': 'en el simulador de vuelo completo'\n            '#title_display': invisible\n          markup_09:\n            '#type': webform_markup\n            '#markup': 'Horas en el simulador de vuelo completo'\n        flexbox_12:\n          '#type': webform_flexbox\n          en_el_entrenador_de_procedimientos_y_navegacion_de_vuelo_i:\n            '#type': number\n            '#title': 'en el entrenador de procedimientos y navegación de vuelo I'\n            '#title_display': invisible\n          markup_11:\n            '#type': webform_markup\n            '#markup': 'Horas en el entrenador de procedimientos y navegaci&oacute;n de vuelo I'\n      flexbox_16:\n        '#type': webform_flexbox\n        '#states':\n          visible-slide:\n            ':input[name=\"flight_exp_type_simulator\"]':\n              filled: true\n        flexbox_13:\n          '#type': webform_flexbox\n          en_el_entrenador_de_procedimientos_y_navegacion_de_vuelo_ii_iii_:\n            '#type': number\n            '#title': 'en el entrenador de procedimientos y navegación de vuelo II / III '\n            '#title_display': invisible\n          markup_12:\n            '#type': webform_markup\n            '#markup': 'Horas&nbsp;en el entrenador de procedimientos y navegaci&oacute;n de vuelo II / III&nbsp;'\n        flexbox_14:\n          '#type': webform_flexbox\n          en_dispositivos_de_entrenamiento_de_vuelo_2_3:\n            '#type': number\n            '#title': 'en dispositivos de entrenamiento de vuelo 2/3'\n            '#title_display': invisible\n          markup_13:\n            '#type': webform_markup\n            '#markup': 'Horas&nbsp;en dispositivos de entrenamiento de vuelo 2/3'\n        flexbox_15:\n          '#type': webform_flexbox\n          en_dispositivo_de_entrenamiento_de_simulacion_de_vuelo:\n            '#type': number\n            '#title': 'en dispositivo de entrenamiento de simulación de vuelo'\n            '#title_display': invisible\n          markup_14:\n            '#type': webform_markup\n            '#markup': 'Horas&nbsp;en dispositivo de entrenamiento de simulaci&oacute;n de vuelo'\n2:\n  '#type': webform_wizard_page\n  '#title': 'Archivos Adjuntos'\n  adjuntar_libro_de_vuelo:\n    '#type': webform_section\n    '#title': 'Adjuntar Libro de vuelo'\n    adjuntar_imagenes_de_su_libro_de_vuelo:\n      '#type': webform_image_file\n      '#title': 'Adjuntar imágenes de su Libro de vuelo'\n      '#multiple': true\n      '#title_display': invisible\n      '#required': true\n  declaracion:\n    '#type': webform_section\n    '#title': Declaración\n    processed_text:\n      '#type': processed_text\n      '#text': \"<div class=\\\"row\\\">\\r\\n<div class=\\\"col-sm-12\\\"><input class=\\\"form-checkbox\\\" id=\\\"certify_checkbox\\\" type=\\\"checkbox\\\" value=\\\"0\\\" /> <label for=\\\"certify_checkbox\\\"> </label>Certifico que la cantidad de horas indicadas son verdaderas y son un registro fiel a lo indicado en mi Libro de Vuelo.<label for=\\\"certify_checkbox\\\"> </label></div>\\r\\n</div>\\r\\n\"\n      '#format': full_html\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'"
+css: ".webform-submission-form #edit-actions div {\r\n\tdisplay: inline-block;\r\n\tfloat: left;\r\n\tmargin-right: 10px;\r\n}\r\n\r\n.webform-confirmation__back a {\r\n\tdisplay: none;\r\n}"
+javascript: "(function ($) {\r\n    $(document).ready(function () {\r\n      console.log(window.location.href);\r\n      $('#edit-actions-submit').attr('disabled', 'disabled');\r\n      $('#certify_checkbox').change(function () {\r\n      if (this.checked) {\r\n         $('#edit-actions-submit').removeAttr('disabled');\r\n         } else {\r\n         $('#edit-actions-submit').attr('disabled', 'disabled');\r\n        }\r\n      });\r\n    });\r\n}(jQuery));"
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_title: both
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_remote_addr: true
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: "<h2>Su solicitud ha sido recibida correctamente.</h2>\r\n<br />\r\n&nbsp;"
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }

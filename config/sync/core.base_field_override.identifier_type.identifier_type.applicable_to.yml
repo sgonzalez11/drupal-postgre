@@ -1,0 +1,19 @@
+uuid: f77e7233-36d2-4746-b545-07542055caad
+langcode: en
+status: true
+dependencies:
+  module:
+    - eauthority
+    - options
+id: identifier_type.identifier_type.applicable_to
+field_name: applicable_to
+entity_type: identifier_type
+bundle: identifier_type
+label: 'Applicable To'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

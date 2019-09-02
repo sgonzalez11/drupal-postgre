@@ -1,0 +1,85 @@
+uuid: fad7911e-db43-4955-82a4-6b8d8fbe74ed
+langcode: en
+status: true
+dependencies: {  }
+id: simple
+label: simple
+app_group: 0
+canvas_height: 900
+canvas_width: 800
+default_workflow_timeline_stage_count: 0
+show_details: false
+validated: true
+views_attached:
+  maestro_completed_tasks:
+    view_machine_name: maestro_completed_tasks
+    view_weight: -9
+    view_display: default;Master
+  maestro_entity_identifiers:
+    view_machine_name: maestro_entity_identifiers
+    view_weight: -10
+    view_display: 'taskconsole_display;Task Console Display'
+variables:
+  initiator:
+    variable_id: initiator
+    variable_value: '0'
+  workflow_timeline_stage_count:
+    variable_id: workflow_timeline_stage_count
+    variable_value: ''
+  workflow_current_stage:
+    variable_id: workflow_current_stage
+    variable_value: ''
+  workflow_current_stage_message:
+    variable_id: workflow_current_stage_message
+    variable_value: ''
+tasks:
+  start:
+    id: start
+    tasktype: MaestroStart
+    label: Start
+    nextstep: payment
+    nextfalsestep: ''
+    top: '40'
+    left: '40'
+    assignby: fixed
+    assignto: engine
+  end:
+    id: end
+    tasktype: MaestroEnd
+    label: End
+    nextstep: ''
+    nextfalsestep: ''
+    top: '330'
+    left: '370'
+    assignby: fixed
+    assignto: engine
+  payment:
+    id: payment
+    label: 'Schedule an Appointment for the Medical Certificate Application'
+    tasktype: MaestroManualWeb
+    nextstep: end
+    nextfalsestep: ''
+    top: '125'
+    left: '285'
+    assignby: fixed
+    assignto: ''
+    raphael: ''
+    to: ''
+    pointedfrom: ''
+    falsebranch: ''
+    lines: {  }
+    handler: /turnero
+    data:
+      modal: notmodal
+    assigned: 'user:fixed:pepe'
+    runonce: false
+    showindetail: true
+    participate_in_workflow_status_stage: false
+    workflow_status_stage_number: 0
+    workflow_status_stage_message: ''
+    notifications:
+      notification_assignment: ''
+      notification_reminder: ''
+      notification_escalation: ''
+      reminder_after: 0
+      escalation_after: 0

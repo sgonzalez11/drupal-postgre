@@ -1,0 +1,18 @@
+uuid: 4ded848f-a000-465b-a6f3-dcf801fe4233
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_medico_general
+id: medical_examination.examen_medico_general.assessment_notes
+field_name: assessment_notes
+entity_type: medical_examination
+bundle: examen_medico_general
+label: 'Assessment Notes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

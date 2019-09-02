@@ -1,0 +1,21 @@
+uuid: 0561a7b4-9cab-4d2e-8e68-695053703cbe
+langcode: en
+status: true
+dependencies:
+  module:
+    - eauthority_amos
+    - options
+id: medical_assessment.medical_assessment.assessment_type
+field_name: assessment_type
+entity_type: medical_assessment
+bundle: medical_assessment
+label: 'Submition Type'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: list_string

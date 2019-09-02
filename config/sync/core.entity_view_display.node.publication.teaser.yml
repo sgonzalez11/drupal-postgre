@@ -1,0 +1,33 @@
+uuid: 49825553-0141-470b-bae2-e13f4970b40c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.publication.field_file
+    - field.field.node.publication.field_media
+    - field.field.node.publication.field_notes
+    - field.field.node.publication.field_published_date
+    - field.field.node.publication.field_reference
+    - field.field.node.publication.field_status
+    - node.type.publication
+  module:
+    - user
+id: node.publication.teaser
+targetEntityType: node
+bundle: publication
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_file: true
+  field_media: true
+  field_notes: true
+  field_published_date: true
+  field_reference: true
+  field_status: true
+  langcode: true

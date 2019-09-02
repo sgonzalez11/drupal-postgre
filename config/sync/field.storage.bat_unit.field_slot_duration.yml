@@ -1,0 +1,20 @@
+uuid: 200d7497-a1fb-4128-b53e-83cbacec84ba
+langcode: es
+status: true
+dependencies:
+  module:
+    - bat_unit
+id: bat_unit.field_slot_duration
+field_name: field_slot_duration
+entity_type: bat_unit
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

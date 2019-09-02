@@ -1,0 +1,21 @@
+uuid: 748d67d6-b3d4-4862-85ae-77f6a81c2ab2
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_oftalmologico
+    - field.storage.medical_examination.field_text_list_oft_01
+  module:
+    - options
+id: medical_examination.examen_oftalmologico.field_text_list_oft_01
+field_name: field_text_list_oft_01
+entity_type: medical_examination
+bundle: examen_oftalmologico
+label: 'Reflejo fotomotor'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

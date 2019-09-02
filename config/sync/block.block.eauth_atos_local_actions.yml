@@ -1,4 +1,4 @@
-uuid: 29a79994-780f-4413-93fd-026e993c554a
+uuid: 8b5d36c9-cd4e-468d-8d1a-8949f896cfeb
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: eauth_atos_local_actions
 theme: eauth_atos
 region: content
-weight: -20
+weight: -2
 provider: null
 plugin: local_actions_block
 settings:

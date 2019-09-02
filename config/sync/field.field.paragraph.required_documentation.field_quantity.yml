@@ -1,0 +1,25 @@
+uuid: 3a7a9b5e-0ff7-49c0-8cc7-fc128729b8e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_quantity
+    - paragraphs.paragraphs_type.required_documentation
+id: paragraph.required_documentation.field_quantity
+field_name: field_quantity
+entity_type: paragraph
+bundle: required_documentation
+label: Quantity
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

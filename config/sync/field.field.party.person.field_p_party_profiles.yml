@@ -1,0 +1,29 @@
+uuid: 05dc80d9-e34e-4528-a126-97ff58c74e24
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_parties.party_type.person
+    - field.storage.party.field_p_party_profiles
+    - taxonomy.vocabulary.party_profiles
+id: party.person.field_p_party_profiles
+field_name: field_p_party_profiles
+entity_type: party
+bundle: person
+label: 'Party Profiles'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      party_profiles: party_profiles
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

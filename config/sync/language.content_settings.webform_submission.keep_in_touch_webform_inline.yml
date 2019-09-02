@@ -1,0 +1,11 @@
+uuid: e11dac07-cc70-44c4-8b98-335d8c974305
+langcode: es
+status: true
+dependencies:
+  config:
+    - webform.webform.keep_in_touch_webform_inline
+id: webform_submission.keep_in_touch_webform_inline
+target_entity_type_id: webform_submission
+target_bundle: keep_in_touch_webform_inline
+default_langcode: site_default
+language_alterable: false

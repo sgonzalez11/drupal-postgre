@@ -1,0 +1,20 @@
+uuid: be7507db-ba5f-44d5-8a0d-151bbbbfd27f
+langcode: en
+status: true
+dependencies:
+  module:
+    - eauthority
+id: aircraft.aircraft.user_id
+field_name: user_id
+entity_type: aircraft
+bundle: aircraft
+label: 'Authored by'
+description: 'The user ID of author of the Aircraft entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,4 +1,4 @@
-eauthority: null
-_core:
-  default_config_hash: OKdVd2iEvT8lQSbwwmpLLmRc9IRoUKZPl0jd59ZlfUA
+api_url: 'http://www.google.com'
+user: usercore
+password: admin123
 langcode: es

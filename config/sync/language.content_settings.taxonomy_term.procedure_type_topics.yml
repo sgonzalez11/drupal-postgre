@@ -1,0 +1,11 @@
+uuid: 6656c2a6-a98b-4619-b7db-045f9ed4ae34
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.procedure_type_topics
+id: taxonomy_term.procedure_type_topics
+target_entity_type_id: taxonomy_term
+target_bundle: procedure_type_topics
+default_langcode: site_default
+language_alterable: false

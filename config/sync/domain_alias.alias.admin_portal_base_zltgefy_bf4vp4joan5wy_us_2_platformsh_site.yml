@@ -1,0 +1,9 @@
+uuid: d74e95f0-a690-4ac4-b326-027cdab2ae03
+langcode: en
+status: true
+dependencies: {  }
+id: admin_portal_base_zltgefy_bf4vp4joan5wy_us_2_platformsh_site
+domain_id: admin_portal
+pattern: admin-portal.base-zltgefy-bf4vp4joan5wy.us-2.platformsh.site
+redirect: 0
+environment: default

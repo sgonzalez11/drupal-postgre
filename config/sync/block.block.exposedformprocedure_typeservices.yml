@@ -1,0 +1,29 @@
+uuid: 2962afbc-220c-44ed-8044-c6e9b4462db3
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.procedure_type
+  module:
+    - system
+    - views
+  theme:
+    - eauth_customers
+id: exposedformprocedure_typeservices
+theme: eauth_customers
+region: sidebar
+weight: -4
+provider: null
+plugin: 'views_exposed_filter_block:procedure_type-services'
+settings:
+  id: 'views_exposed_filter_block:procedure_type-services'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /services-guidance
+    negate: false
+    context_mapping: {  }

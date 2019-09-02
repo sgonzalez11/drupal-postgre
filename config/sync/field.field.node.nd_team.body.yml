@@ -1,4 +1,4 @@
-uuid: 3ff72b82-f842-41c0-b890-3fdfd301cf9b
+uuid: 1c524b44-55ab-4fa1-b443-55f50751eac4
 langcode: es
 status: true
 dependencies:
@@ -16,7 +16,7 @@ bundle: nd_team
 label: Body
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

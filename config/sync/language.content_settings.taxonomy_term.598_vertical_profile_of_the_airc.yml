@@ -1,0 +1,11 @@
+uuid: e9d0e3b9-cb2e-4105-8eb7-317bef7e51fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.598_vertical_profile_of_the_airc
+id: taxonomy_term.598_vertical_profile_of_the_airc
+target_entity_type_id: taxonomy_term
+target_bundle: 598_vertical_profile_of_the_airc
+default_langcode: site_default
+language_alterable: false

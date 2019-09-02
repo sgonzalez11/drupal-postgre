@@ -1,0 +1,29 @@
+uuid: 60b74f9f-40f0-4691-a332-608bdff22806
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.announcements
+  module:
+    - system
+    - views
+  theme:
+    - inac_customers
+id: inac_customers_formularioexpuestoannouncementsannouncements
+theme: inac_customers
+region: sidebar
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:announcements-announcements'
+settings:
+  id: 'views_exposed_filter_block:announcements-announcements'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /announcements
+    negate: false
+    context_mapping: {  }

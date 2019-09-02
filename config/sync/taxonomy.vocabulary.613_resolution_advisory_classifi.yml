@@ -1,0 +1,9 @@
+uuid: fe4d62b1-38d9-48b7-a4fb-d152fe2e926b
+langcode: en
+status: true
+dependencies: {  }
+name: '613 - resolution advisory classification'
+vid: 613_resolution_advisory_classifi
+description: ''
+hierarchy: 0
+weight: 0

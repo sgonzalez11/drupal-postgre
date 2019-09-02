@@ -1,0 +1,12 @@
+uuid: 9d5ace3b-a5d4-432e-99e4-450cfdd23f51
+langcode: en
+status: true
+dependencies: {  }
+id: ato_administrative
+label: 'ATO Administrative'
+weight: -7
+is_admin: null
+permissions:
+  - 'report start date training record entities'
+  - 'view maestro task console'
+  - 'view published training record entities'

@@ -1,0 +1,30 @@
+uuid: e97211c4-0257-4603-9be2-7b675e436b55
+langcode: en
+status: true
+dependencies:
+  config:
+    - fixed_block_content.fixed_block_content.customers_header
+  module:
+    - domain
+    - fixed_block_content
+  theme:
+    - inac_customers
+id: inac_customers_customersheader
+theme: inac_customers
+region: header
+weight: -8
+provider: null
+plugin: 'fixed_block_content:customers_header'
+settings:
+  id: 'fixed_block_content:customers_header'
+  label: 'Customers Header'
+  provider: fixed_block_content
+  label_display: '0'
+  view_mode: ''
+visibility:
+  domain:
+    id: domain
+    domains:
+      customers_portal: customers_portal
+    negate: false
+    context_mapping: {  }

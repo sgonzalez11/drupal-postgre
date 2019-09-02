@@ -1,0 +1,170 @@
+uuid: 8248b9d2-8d49-4036-aa68-67fc7e827b06
+langcode: es
+status: open
+dependencies: {  }
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: inac_licence_application
+title: 'INAC - Solicitud de Licencia'
+description: ''
+category: ''
+elements: "uno:\n  '#type': webform_wizard_page\n  '#title': 'Validación de datos'\n  flexbox:\n    '#type': webform_flexbox\n    apellidos:\n      '#type': textfield\n      '#title': Apellidos\n      '#readonly': true\n      '#default_value': '[current-user:field_last_name:value]'\n    nombres:\n      '#type': textfield\n      '#title': Nombres\n      '#readonly': true\n      '#default_value': '[current-user:field_first_name]'\n  flexbox_01:\n    '#type': webform_flexbox\n    tipo_de_identificador:\n      '#type': textfield\n      '#title': 'Tipo de identificador'\n      '#readonly': true\n      '#default_value': '[current-user:field_identifier_code]'\n    numero_de_identificador:\n      '#type': textfield\n      '#title': 'Número de identificador'\n      '#readonly': true\n      '#default_value': '[current-user:field_identifer_number]'\n  flexbox_02:\n    '#type': webform_flexbox\n    tipo_de_licencia_solicitada:\n      '#type': textfield\n      '#title': 'Tipo de licencia solicitada'\n      '#readonly': true\ndos:\n  '#type': webform_wizard_page\n  '#title': 'Carga de documentación'\n  container:\n    '#type': container\n    processed_text:\n      '#type': processed_text\n      '#text': \"<center>\\r\\n<p>Por favor, sube una foto de la documentación requerida.</p>\\r\\n</center>\\r\\n\\r\\n<center>\\r\\n<p style=\\\"text-align:center\\\">Te solicitamos una imagen nítida donde se puedan ver claramente los datos.</p>\\r\\n</center>\\r\\n\"\n      '#format': full_html\n    foto_de_documentacion:\n      '#type': webform_image_file\n      '#title': 'Foto de documentación requerida'\n      '#multiple': true\ntres:\n  '#type': webform_wizard_page\n  '#title': 'Verificación del pago'\n  payment_reference:\n    '#type': textfield\n    '#title': 'Referencia de pago'\n  validar_pago:\n    '#type': webform_buttons\n    '#title': 'Validar pago'\n    '#title_display': invisible\n    '#options':\n      'Validar Pago': 'Validar Pago'\n    '#states':\n      disabled:\n        ':input[name=\"payment_reference\"]':\n          empty: true\n  service_code:\n    '#type': value\n    '#title': 'Service Code'\n  confirmacion_pago:\n    '#type': webform_message\n    '#states':\n      visible:\n        ':input[name=\"validar_pago\"]':\n          checked: true\n    '#message_message': 'Pago validado'"
+css: ".webform-submission-form #edit-actions div {\r\n\tdisplay: inline-block;\r\n\tfloat: left;\r\n\tmargin-right: 10px;\r\n}\r\n\r\n.webform-confirmation__back a {\r\n\tdisplay: none;\r\n}"
+javascript: "(function ($) {\r\n    $(document).ready(function () {\r\n\tconst Url='3';\r\n      $('.ui-button').onclick(function()){\r\n\t\tconsole.log('al menos aca entra');\r\n\t\t$.ajax({\r\n\t\t\turl:url,\r\n\t\t\ttype:\"GET\",\r\n\t\t\tsuccess: function(result){\r\n\t\t\tconsole.log(result);\r\n\t\t\t},\r\n\t\t\terror:function(error){\r\n\t\t\tconsole.log('error ${error}')\r\n\t\t\t}\t\r\n\t\t})  \r\n\t  }\r\n    });\r\n}(jQuery));"
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_title: source_entity_webform
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_remote_addr: true
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: login
+  form_access_denied_title: ''
+  form_access_denied_message: 'Es necesario <a href="[site:login-url]/login?destination=[current-page:url:relative]">iniciar sesi&oacute;n de usuario</a> para proceder con el llenado del formulario.'
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  preview: 2
+  preview_label: Resumen
+  preview_title: Resumen
+  preview_message: 'Por favor, revise atentamente todos los datos ingresados. Su solicitud ser&aacute; enviada cuando presione el bot&oacute;n Enviar.'
+  preview_attributes: {  }
+  preview_excluded_elements:
+    validar_pago: validar_pago
+    service_code: service_code
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: 'Su solicitud ha sido enviada exitosamente. El n&uacute;mero de tramite es TALL-32'
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }

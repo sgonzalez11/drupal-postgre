@@ -1,0 +1,11 @@
+uuid: fad47614-13a4-4b58-a13e-21921b59b59a
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.587_other_aircraft_sighted_in_lo
+id: taxonomy_term.587_other_aircraft_sighted_in_lo
+target_entity_type_id: taxonomy_term
+target_bundle: 587_other_aircraft_sighted_in_lo
+default_langcode: site_default
+language_alterable: false

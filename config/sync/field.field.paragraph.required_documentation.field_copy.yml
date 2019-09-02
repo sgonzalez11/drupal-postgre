@@ -1,0 +1,21 @@
+uuid: c043d074-3ba7-4737-9a7d-045b4169dd5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_copy
+    - paragraphs.paragraphs_type.required_documentation
+  module:
+    - options
+id: paragraph.required_documentation.field_copy
+field_name: field_copy
+entity_type: paragraph
+bundle: required_documentation
+label: Copy
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

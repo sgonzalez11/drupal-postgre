@@ -1,0 +1,11 @@
+uuid: 911f90f1-59ec-47ab-a24d-eba088636ca5
+langcode: es
+status: true
+dependencies:
+  config:
+    - webform.webform.flight_operations
+id: webform_submission.flight_operations
+target_entity_type_id: webform_submission
+target_bundle: flight_operations
+default_langcode: site_default
+language_alterable: false

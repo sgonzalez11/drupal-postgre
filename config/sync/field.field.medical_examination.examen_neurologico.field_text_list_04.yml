@@ -1,0 +1,21 @@
+uuid: 27e7703f-7ee4-4fae-8049-8b2e3453d087
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_neurologico
+    - field.storage.medical_examination.field_text_list_04
+  module:
+    - options
+id: medical_examination.examen_neurologico.field_text_list_04
+field_name: field_text_list_04
+entity_type: medical_examination
+bundle: examen_neurologico
+label: 'Reflejos cutáneo-plantares'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

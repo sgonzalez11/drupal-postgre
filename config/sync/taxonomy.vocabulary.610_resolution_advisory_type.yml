@@ -1,0 +1,9 @@
+uuid: a1737787-59fd-4d6b-aa95-77b0fad539b7
+langcode: en
+status: true
+dependencies: {  }
+name: '610 - resolution advisory type'
+vid: 610_resolution_advisory_type
+description: ''
+hierarchy: 0
+weight: 0

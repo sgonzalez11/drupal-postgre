@@ -1,0 +1,20 @@
+uuid: b4b4631f-03f3-419a-a1cb-7c82926bbc91
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_oftalmologico
+  module:
+    - options
+id: medical_examination.examen_oftalmologico.medical_examination_type
+field_name: medical_examination_type
+entity_type: medical_examination
+bundle: examen_oftalmologico
+label: 'Examiation Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

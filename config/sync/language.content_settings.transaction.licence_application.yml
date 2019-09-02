@@ -1,0 +1,11 @@
+uuid: a7e24b14-0379-43e4-9af2-6d972891cf58
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_transactions.transaction_type.licence_application
+id: transaction.licence_application
+target_entity_type_id: transaction
+target_bundle: licence_application
+default_langcode: site_default
+language_alterable: false

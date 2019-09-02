@@ -1,0 +1,9 @@
+uuid: 6aee07fd-e9b7-4149-98ba-1acfd4d86a24
+langcode: en
+status: true
+dependencies: {  }
+name: '214 - Operation type'
+vid: 214_operation_type
+description: ''
+hierarchy: 0
+weight: 0

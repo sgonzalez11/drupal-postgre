@@ -1,6 +1,6 @@
-uuid: d4b7ca9e-e448-4223-bb93-59de8065e0b0
+uuid: 4d0c3227-1313-4bc8-914a-9fd4e3b988d8
 langcode: es
-status: true
+status: false
 dependencies:
   config:
     - filter.format.ckeditor

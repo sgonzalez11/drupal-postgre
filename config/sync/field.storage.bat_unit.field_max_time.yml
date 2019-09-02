@@ -1,0 +1,21 @@
+uuid: c21cb356-9588-449e-aeff-0d56c293f45f
+langcode: en
+status: true
+dependencies:
+  module:
+    - bat_unit
+id: bat_unit.field_max_time
+field_name: field_max_time
+entity_type: bat_unit
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

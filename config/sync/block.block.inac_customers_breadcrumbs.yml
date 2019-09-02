@@ -1,22 +1,25 @@
-uuid: d70b4531-919a-408f-9b53-4c62de5f76df
+uuid: 91d45c8a-83d4-4648-aec0-43fdd55d96e7
 langcode: en
 status: true
 dependencies:
+  content:
+    - 'block_content:basic:38b34b73-dfc9-415a-8438-5e6bdbd0e6e4'
   module:
-    - system
+    - block_content
   theme:
     - inac_customers
-_core:
-  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
 id: inac_customers_breadcrumbs
 theme: inac_customers
 region: header
-weight: 0
+weight: -6
 provider: null
-plugin: system_breadcrumb_block
+plugin: 'block_content:38b34b73-dfc9-415a-8438-5e6bdbd0e6e4'
 settings:
-  id: system_breadcrumb_block
+  id: 'block_content:38b34b73-dfc9-415a-8438-5e6bdbd0e6e4'
   label: Breadcrumbs
-  provider: system
+  provider: block_content
   label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
 visibility: {  }

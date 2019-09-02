@@ -1,0 +1,11 @@
+uuid: 83457025-5b57-4a0b-a2ad-f2b75128bf3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.215_the_name_of_the_operator
+id: taxonomy_term.215_the_name_of_the_operator
+target_entity_type_id: taxonomy_term
+target_bundle: 215_the_name_of_the_operator
+default_langcode: site_default
+language_alterable: false

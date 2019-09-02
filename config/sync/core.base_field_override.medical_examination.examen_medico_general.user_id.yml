@@ -1,0 +1,20 @@
+uuid: 41e52d8c-1d8f-4ab6-8286-b531fd60134b
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_medico_general
+id: medical_examination.examen_medico_general.user_id
+field_name: user_id
+entity_type: medical_examination
+bundle: examen_medico_general
+label: 'Authored by'
+description: 'The user ID of author of the Medical Examination entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,78 @@
+uuid: d82963aa-9291-4fc9-bec1-f38ec6e6e79a
+langcode: es
+status: true
+dependencies:
+  config:
+    - bat_unit.unit_bundle.service_line
+    - field.field.bat_unit.service_line.field_max_time
+    - field.field.bat_unit.service_line.field_min_time
+    - field.field.bat_unit.service_line.field_slot_duration
+    - field.field.bat_unit.service_line.field_weekends
+id: bat_unit.service_line.default
+targetEntityType: bat_unit
+bundle: service_line
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_max_time:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_min_time:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_slot_duration:
+    weight: 14
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_weekends:
+    weight: 13
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  name:
+    type: string_textfield
+    weight: -4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  unit_type_id:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

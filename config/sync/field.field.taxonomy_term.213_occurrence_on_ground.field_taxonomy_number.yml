@@ -1,0 +1,23 @@
+uuid: 8583c4e9-7e4a-4542-80f3-94189dd13ac9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_taxonomy_number
+    - taxonomy.vocabulary.213_occurrence_on_ground
+id: taxonomy_term.213_occurrence_on_ground.field_taxonomy_number
+field_name: field_taxonomy_number
+entity_type: taxonomy_term
+bundle: 213_occurrence_on_ground
+label: 'taxonomy number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

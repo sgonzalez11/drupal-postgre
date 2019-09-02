@@ -1,0 +1,11 @@
+uuid: ab7b6bba-2570-4008-b35a-8762b654cba2
+langcode: es
+status: true
+dependencies: {  }
+id: atos_portal
+domain_id: 10432955
+hostname: 'atos-portal.lndo.site:8000'
+name: 'ATOs Portal'
+scheme: variable
+weight: 2
+is_default: false

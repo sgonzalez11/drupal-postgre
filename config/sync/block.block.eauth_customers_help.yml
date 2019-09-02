@@ -1,4 +1,4 @@
-uuid: 1ca79e9e-10e6-4fc8-ba6d-5ae2dc580bf6
+uuid: 601459df-19f3-442f-829e-71fc49700234
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: eauth_customers_help
 theme: eauth_customers
 region: content
-weight: -30
+weight: -1
 provider: null
 plugin: help_block
 settings:

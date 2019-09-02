@@ -1,0 +1,11 @@
+uuid: 6331315d-f54c-4523-8b7e-5977a87edd8c
+langcode: es
+status: true
+dependencies:
+  config:
+    - webform.webform.inac_medical_certificate_webform
+id: webform_submission.inac_medical_certificate_webform
+target_entity_type_id: webform_submission
+target_bundle: inac_medical_certificate_webform
+default_langcode: site_default
+language_alterable: false

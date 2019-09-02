@@ -1,0 +1,11 @@
+uuid: 5392cc6a-e535-428b-9f13-1f3e433f5760
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.400_flight_crew_license_license
+id: taxonomy_term.400_flight_crew_license_license
+target_entity_type_id: taxonomy_term
+target_bundle: 400_flight_crew_license_license
+default_langcode: site_default
+language_alterable: false

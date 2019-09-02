@@ -1,0 +1,20 @@
+uuid: 2232f71c-0640-4a24-b29c-21378f0c14f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.nd_project
+  module:
+    - path
+id: node.nd_project.path
+field_name: path
+entity_type: node
+bundle: nd_project
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

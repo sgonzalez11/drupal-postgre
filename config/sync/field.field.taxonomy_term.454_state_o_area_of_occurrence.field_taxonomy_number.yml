@@ -1,0 +1,23 @@
+uuid: 75e5744b-0b03-4c42-b0c8-cf0767cebe7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_taxonomy_number
+    - taxonomy.vocabulary.454_state_o_area_of_occurrence
+id: taxonomy_term.454_state_o_area_of_occurrence.field_taxonomy_number
+field_name: field_taxonomy_number
+entity_type: taxonomy_term
+bundle: 454_state_o_area_of_occurrence
+label: 'taxonomy number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

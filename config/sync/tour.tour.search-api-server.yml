@@ -1,4 +1,4 @@
-uuid: 76685218-ade8-423c-8d85-861d7a684fc1
+uuid: e5bf3a66-f27c-4d25-92ab-9efb2e4ec149
 langcode: es
 status: true
 dependencies:
@@ -22,7 +22,7 @@ tips:
   search-api-server-status:
     id: search-api-server-status
     plugin: text
-    label: Status
+    label: Estado
     body: 'Shows whether the server is currently enabled or disabled.'
     weight: 2
     attributes:

@@ -1,0 +1,46 @@
+uuid: 25f7237f-ff03-4153-8abb-9dfb46494931
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c247d8e2-0dfa-4c58-9949-b8346dbde77e'
+  module:
+    - block_content
+    - domain
+    - system
+    - user
+  theme:
+    - eauth_customers
+id: userlogin
+theme: eauth_customers
+region: sidebar
+weight: -7
+provider: null
+plugin: 'block_content:c247d8e2-0dfa-4c58-9949-b8346dbde77e'
+settings:
+  id: 'block_content:c247d8e2-0dfa-4c58-9949-b8346dbde77e'
+  label: 'User Login'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  domain:
+    id: domain
+    domains:
+      customers_portal: customers_portal
+    negate: false
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      anonymous: anonymous
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

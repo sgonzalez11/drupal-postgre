@@ -1,0 +1,9 @@
+uuid: 08604bd7-ecab-4549-aa8f-4d2e6f0a8628
+langcode: en
+status: true
+dependencies: {  }
+id: customers_portal_dev_tqspiwq_bf4vp4joan5wy_us_2_platformsh_site
+domain_id: customers_portal
+pattern: customers-portal.dev-tqspiwq-bf4vp4joan5wy.us-2.platformsh.site
+redirect: 0
+environment: default

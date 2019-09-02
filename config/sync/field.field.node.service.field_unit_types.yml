@@ -1,0 +1,28 @@
+uuid: 63b8ac43-d382-4817-9245-0c442747b251
+langcode: en
+status: true
+dependencies:
+  config:
+    - bat_unit.type_bundle.service_desk
+    - field.storage.node.field_unit_types
+    - node.type.service
+id: node.service.field_unit_types
+field_name: field_unit_types
+entity_type: node
+bundle: service
+label: 'Service Centers'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:bat_unit_type'
+  handler_settings:
+    target_bundles:
+      service_desk: service_desk
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

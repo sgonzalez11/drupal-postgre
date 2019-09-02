@@ -1,0 +1,20 @@
+uuid: 7e378a1f-cba7-48b0-b6e8-2f0f2ec7dbf9
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_neurologico
+  module:
+    - options
+id: medical_examination.examen_neurologico.medical_examination_type
+field_name: medical_examination_type
+entity_type: medical_examination
+bundle: examen_neurologico
+label: 'Examiation Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

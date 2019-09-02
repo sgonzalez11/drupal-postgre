@@ -1,0 +1,18 @@
+uuid: 81b1facd-4695-4c1c-9e64-59de1a36f987
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.nd_team
+id: node.nd_team.created
+field_name: created
+entity_type: node
+bundle: nd_team
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

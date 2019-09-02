@@ -1,4 +1,4 @@
-uuid: f81fa327-1a8c-4eb8-b2d8-f782864b6bb7
+uuid: 9e164a8e-97f9-4a06-96d0-4347c2cafbf5
 langcode: es
 status: true
 dependencies:
@@ -8,7 +8,7 @@ dependencies:
 _core:
   default_config_hash: mII4acOv33s-j8PINywrCag4OITbeJGxdPO373dnHHw
 id: education
-label: Education
+label: Educación
 category: Demographic
 likert: false
 options: "High School: High School\nAssociate Degree: Associate Degree\nGraduate or Professional Degree: Graduate or Professional Degree\nSome College: Some College\n"

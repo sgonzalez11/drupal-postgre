@@ -1,4 +1,4 @@
-uuid: aa777ac4-170e-4cf0-be1e-717e14adbfc1
+uuid: 6294bd38-91dc-49a0-b13e-4a1e63bb879b
 langcode: es
 status: true
 dependencies:
@@ -7,11 +7,12 @@ dependencies:
 third_party_settings:
   menu_ui:
     available_menus:
+      - authenticated-user-menu
       - main
     parent: 'main:'
 _core:
   default_config_hash: owO46fmh5Tcr3l5zEPKgbuRUZjY1JPREbRNEkZ0GyCE
-name: Blog
+name: Noticia
 type: nd_blog
 description: ''
 help: ''

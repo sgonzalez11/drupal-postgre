@@ -1,0 +1,11 @@
+uuid: ae0a3653-5a1f-4352-9dbc-9d7b9c5e8d9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.license_issued_by
+id: taxonomy_term.license_issued_by
+target_entity_type_id: taxonomy_term
+target_bundle: license_issued_by
+default_langcode: site_default
+language_alterable: false

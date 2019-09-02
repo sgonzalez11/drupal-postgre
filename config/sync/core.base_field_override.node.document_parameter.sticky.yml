@@ -1,0 +1,22 @@
+uuid: b1501b41-db85-4468-8ab9-5050d409862c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.document_parameter
+id: node.document_parameter.sticky
+field_name: sticky
+entity_type: node
+bundle: document_parameter
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

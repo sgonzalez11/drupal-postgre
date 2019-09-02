@@ -1,0 +1,21 @@
+uuid: 8f988227-6ba8-4636-a3e2-44feef511569
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_cardiovascular
+    - field.storage.medical_examination.field_text_list_07
+  module:
+    - options
+id: medical_examination.examen_cardiovascular.field_text_list_07
+field_name: field_text_list_07
+entity_type: medical_examination
+bundle: examen_cardiovascular
+label: 'Ápex (explore otros latidos)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

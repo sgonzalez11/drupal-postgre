@@ -1,4 +1,4 @@
-uuid: 64a980ac-da17-4c1b-9abb-877609bb2018
+uuid: 0f0653fe-683e-40fa-a2a1-d440382a5935
 langcode: es
 status: true
 dependencies:
@@ -12,7 +12,7 @@ id: node.nd_blog.field_blog_category
 field_name: field_blog_category
 entity_type: node
 bundle: nd_blog
-label: 'Blog Category'
+label: Categorías
 description: ''
 required: false
 translatable: false

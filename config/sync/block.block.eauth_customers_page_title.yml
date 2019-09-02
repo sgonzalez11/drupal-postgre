@@ -1,7 +1,9 @@
-uuid: ec0e818b-c65b-4e3f-b20a-2f2058f89e74
+uuid: 3f541bae-2e3f-44bb-926a-82ec04aa90bc
 langcode: en
-status: true
+status: false
 dependencies:
+  module:
+    - system
   theme:
     - eauth_customers
 _core:
@@ -9,7 +11,7 @@ _core:
 id: eauth_customers_page_title
 theme: eauth_customers
 region: content
-weight: -50
+weight: 0
 provider: null
 plugin: page_title_block
 settings:
@@ -17,4 +19,9 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

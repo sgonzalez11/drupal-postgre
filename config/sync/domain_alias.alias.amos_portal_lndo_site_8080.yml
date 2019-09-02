@@ -1,0 +1,9 @@
+uuid: 09a2c651-ecb6-4d6f-8a25-7a24581aebee
+langcode: en
+status: true
+dependencies: {  }
+id: amos_portal_lndo_site_8080
+domain_id: amos_portal
+pattern: 'amos-portal.lndo.site:8080'
+redirect: 0
+environment: default

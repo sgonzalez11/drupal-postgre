@@ -1,0 +1,6 @@
+uuid: 0a5b1853-12d5-41af-b308-634cd1007bbd
+langcode: en
+status: true
+dependencies: {  }
+id: examen_medico_general
+label: 'Examen médico general'

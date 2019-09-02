@@ -1,0 +1,23 @@
+uuid: 4bcfb152-d694-4cd5-aa57-13da6f3d4888
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_taxonomy_number
+    - taxonomy.vocabulary.613_resolution_advisory_classifi
+id: taxonomy_term.613_resolution_advisory_classifi.field_taxonomy_number
+field_name: field_taxonomy_number
+entity_type: taxonomy_term
+bundle: 613_resolution_advisory_classifi
+label: 'taxonomy number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,11 @@
+uuid: 0a09e161-6dc4-4404-a7b6-3feb1921f747
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.15_airspace_type
+id: taxonomy_term.15_airspace_type
+target_entity_type_id: taxonomy_term
+target_bundle: 15_airspace_type
+default_langcode: site_default
+language_alterable: false

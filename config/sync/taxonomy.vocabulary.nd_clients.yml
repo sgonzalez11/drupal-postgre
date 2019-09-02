@@ -1,11 +1,11 @@
-uuid: d6ca017e-57d6-4f62-b60b-628ce1e79ad4
+uuid: 01452960-ef37-4350-b317-aa9505a41b72
 langcode: es
 status: true
 dependencies: {  }
 _core:
   default_config_hash: zGp-joJ_YpwkH2XRnHiI9-ilugRHHqTaE0vDVMmZdpI
-name: Clients
+name: Clientes
 vid: nd_clients
-description: ''
+description: Clientes
 hierarchy: 0
 weight: 0

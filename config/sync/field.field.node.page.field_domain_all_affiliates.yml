@@ -1,5 +1,5 @@
-uuid: 52686afc-6485-4a6e-a9bb-ea6b839b8cac
-langcode: en
+uuid: e343bdda-25bd-4aff-bd68-a9c085883d38
+langcode: es
 status: true
 dependencies:
   config:
@@ -12,7 +12,7 @@ bundle: page
 label: 'Send to all affiliates'
 description: 'Make this content available on all domains.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

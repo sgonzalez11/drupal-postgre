@@ -1,0 +1,26 @@
+uuid: b60d0ec7-095f-4157-a3ba-df892831b666
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: pathauto_content_default
+label: 'Pathauto content default'
+type: 'canonical_entities:node'
+pattern: 'contenido/[node:content-type]/[node:title]'
+selection_criteria:
+  fcab5414-732c-404b-bc0d-59e2a9fe297f:
+    id: node_type
+    bundles:
+      nd_blog: nd_blog
+      article: article
+      nd_project: nd_project
+      nd_service: nd_service
+      nd_team: nd_team
+    negate: false
+    context_mapping:
+      node: node
+    uuid: fcab5414-732c-404b-bc0d-59e2a9fe297f
+selection_logic: and
+weight: -5
+relationships: {  }

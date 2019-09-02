@@ -1,5 +1,5 @@
-uuid: 6c1aabfb-d219-48b1-9015-deef58705421
-langcode: en
+uuid: 16462b4c-65da-4b38-b399-fe48ab7cdd78
+langcode: es
 status: true
 dependencies:
   config:
@@ -9,7 +9,7 @@ id: bat_event.availability_example.event_bat_unit_reference
 field_name: event_bat_unit_reference
 entity_type: bat_event
 bundle: availability_example
-label: Unit
+label: Unidad
 description: ''
 required: true
 translatable: true

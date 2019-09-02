@@ -1,0 +1,23 @@
+uuid: f3f58787-e324-4ad1-a4ea-bb5910c5b741
+langcode: en
+status: true
+dependencies:
+  config:
+    - bat_unit.unit_bundle.service_line
+    - field.storage.bat_unit.field_weekends
+id: bat_unit.service_line.field_weekends
+field_name: field_weekends
+entity_type: bat_unit
+bundle: service_line
+label: Weekends
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'TRUE'
+  off_label: 'FALSE'
+field_type: boolean

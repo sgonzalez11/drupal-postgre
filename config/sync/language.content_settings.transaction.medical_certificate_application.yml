@@ -1,0 +1,11 @@
+uuid: 5b77194c-c837-4d56-8014-48e4172c45e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_transactions.transaction_type.medical_certificate_application
+id: transaction.medical_certificate_application
+target_entity_type_id: transaction
+target_bundle: medical_certificate_application
+default_langcode: site_default
+language_alterable: false

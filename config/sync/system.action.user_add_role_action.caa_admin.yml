@@ -1,0 +1,14 @@
+uuid: c7c9fc49-e105-4887-9586-3369841ec1b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.caa_admin
+  module:
+    - user
+id: user_add_role_action.caa_admin
+label: 'Add the CAA Admin role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: caa_admin

@@ -1,4 +1,4 @@
-uuid: a96c5eba-4704-48d8-b092-ea0906d53463
+uuid: 23ac8009-2f67-42a9-ba25-466fbb2fb7ad
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: inac_amos_content
 theme: inac_amos
 region: content
-weight: 0
+weight: -2
 provider: null
 plugin: system_main_block
 settings:

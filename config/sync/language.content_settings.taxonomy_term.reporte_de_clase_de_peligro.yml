@@ -1,0 +1,11 @@
+uuid: ae4685a8-679d-4fff-a336-60aa3fc4f506
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.reporte_de_clase_de_peligro
+id: taxonomy_term.reporte_de_clase_de_peligro
+target_entity_type_id: taxonomy_term
+target_bundle: reporte_de_clase_de_peligro
+default_langcode: site_default
+language_alterable: false

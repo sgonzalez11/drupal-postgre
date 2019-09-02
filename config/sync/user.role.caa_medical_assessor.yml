@@ -1,0 +1,40 @@
+uuid: 122396e3-213b-42cd-99ce-dcc10b86ba1b
+langcode: en
+status: true
+dependencies: {  }
+id: caa_medical_assessor
+label: 'CAA Medical Assessor'
+weight: 2
+is_admin: null
+permissions:
+  - 'allow users to view examen_cardiovascular examination'
+  - 'allow users to view examen_medico_general examination'
+  - 'allow users to view examen_neurologico examination'
+  - 'allow users to view examen_oftalmologico examination'
+  - 'allow users to view examen_otorrinolaringologico examination'
+  - 'allow users to view examen_psicologico_y_psicomotor examination'
+  - 'allows users to close a medical examination'
+  - 'edit medical assessor''s declaration page of the medical examination form'
+  - 'edit medical assessor''s declaration section of the medical examination form'
+  - 'view any webform submission'
+  - 'view applicant information section of the medical assessment form'
+  - 'view applicant information section of the medical examination form'
+  - 'view assessment in progress medical assessment'
+  - 'view assessment scheduled medical assessment'
+  - 'view assessment scheduled medical examination'
+  - 'view cancelation section of the medical assessment form'
+  - 'view cancelation section of the medical examination form'
+  - 'view canceled medical assessment'
+  - 'view canceled medical examination'
+  - 'view examination type section of the medical examination form'
+  - 'view general section of the medical assessment form'
+  - 'view general section of the medical examination form'
+  - 'view maestro task console'
+  - 'view medical assessor''s declaration section of the medical examination form'
+  - 'view medical examinations section of the medical assessment form'
+  - 'view medical examiner''s declaration section of the medical examination form'
+  - 'view pending recommendation medical assessment'
+  - 'view published customers entities'
+  - 'view responsible medical assessor''s declaration section of the medical assessment form'
+  - 'view responsible medical examiner''s declaration section of the medical assessment form'
+  - 'view webform submissions any node'

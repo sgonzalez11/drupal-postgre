@@ -1,0 +1,9 @@
+uuid: 83524c29-5eca-41aa-9c51-45725f13036c
+langcode: en
+status: true
+dependencies: {  }
+name: '606 - Weather relevance'
+vid: 606_weather_relevance
+description: ''
+hierarchy: 0
+weight: 0

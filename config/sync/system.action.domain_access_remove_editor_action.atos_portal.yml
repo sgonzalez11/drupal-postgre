@@ -1,0 +1,14 @@
+uuid: 5e4f3def-b2c1-4685-8f17-b6ca5cf67363
+langcode: es
+status: true
+dependencies:
+  config:
+    - domain.record.atos_portal
+  module:
+    - domain_access
+id: domain_access_remove_editor_action.atos_portal
+label: 'Remove editors from the ATOs Portal domain'
+type: user
+plugin: domain_access_remove_editor_action
+configuration:
+  domain_id: atos_portal

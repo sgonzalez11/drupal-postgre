@@ -1,0 +1,11 @@
+uuid: e8cec911-bb74-45ae-bddc-8ef1a15eead6
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.228_planned_destination
+id: taxonomy_term.228_planned_destination
+target_entity_type_id: taxonomy_term
+target_bundle: 228_planned_destination
+default_langcode: site_default
+language_alterable: false

@@ -1,4 +1,4 @@
-uuid: af1a5e43-8dd6-43d7-9ac7-52dd1071471e
+uuid: 64a436d4-6adc-4896-a9a6-3bbb3f5f7176
 langcode: es
 status: true
 dependencies:
@@ -7,8 +7,6 @@ dependencies:
     - field.field.node.nd_project.body
     - field.field.node.nd_project.field_categories
     - field.field.node.nd_project.field_client
-    - field.field.node.nd_project.field_domain_access
-    - field.field.node.nd_project.field_domain_all_affiliates
     - field.field.node.nd_project.field_images
     - field.field.node.nd_project.field_small_description
     - field.field.node.nd_project.field_url_the_site
@@ -27,8 +25,6 @@ hidden:
   body: true
   field_categories: true
   field_client: true
-  field_domain_access: true
-  field_domain_all_affiliates: true
   field_images: true
   field_small_description: true
   field_url_the_site: true

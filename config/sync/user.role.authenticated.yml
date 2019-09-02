@@ -1,12 +1,12 @@
-uuid: e74854ac-f629-4f36-b5b9-5924a73b0d6b
+uuid: afcf99c4-40be-4442-a47e-268c9c6f7512
 langcode: es
 status: true
 dependencies: {  }
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
 id: authenticated
-label: 'Authenticated user'
-weight: 1
+label: 'Usuario autenticado'
+weight: -9
 is_admin: false
 permissions:
   - 'access comments'
@@ -17,3 +17,6 @@ permissions:
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
+  - 'view files'
+  - 'view media'
+  - 'view portal task console'

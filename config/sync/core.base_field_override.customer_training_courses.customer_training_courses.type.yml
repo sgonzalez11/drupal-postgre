@@ -1,0 +1,21 @@
+uuid: 70807c7d-afca-45ea-88d5-676c2a47d929
+langcode: en
+status: true
+dependencies:
+  module:
+    - eauthority_atos
+    - options
+id: customer_training_courses.customer_training_courses.type
+field_name: type
+entity_type: customer_training_courses
+bundle: customer_training_courses
+label: Type
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: list_string

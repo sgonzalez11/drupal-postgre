@@ -1,0 +1,11 @@
+uuid: 27f7d73d-39ad-40b8-b60e-faeb45d39b78
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.509_runway_surface_type
+id: taxonomy_term.509_runway_surface_type
+target_entity_type_id: taxonomy_term
+target_bundle: 509_runway_surface_type
+default_langcode: site_default
+language_alterable: false

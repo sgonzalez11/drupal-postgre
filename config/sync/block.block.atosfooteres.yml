@@ -1,0 +1,39 @@
+uuid: 9e15e56e-cfac-473a-bef3-d82e3b052f21
+langcode: en
+status: true
+dependencies:
+  config:
+    - fixed_block_content.fixed_block_content.atos_footer_es
+  module:
+    - domain
+    - fixed_block_content
+    - language
+  theme:
+    - eauth_atos
+id: atosfooteres
+theme: eauth_atos
+region: footer
+weight: 0
+provider: null
+plugin: 'fixed_block_content:atos_footer_es'
+settings:
+  id: 'fixed_block_content:atos_footer_es'
+  label: 'ATOs Footer ES'
+  provider: fixed_block_content
+  label_display: '0'
+  view_mode: ''
+visibility:
+  domain:
+    id: domain
+    domains:
+      atos_portal: atos_portal
+    negate: false
+    context_mapping: {  }
+  language:
+    id: language
+    langcodes:
+      en: en
+      es: es
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'

@@ -1,0 +1,9 @@
+uuid: 1aea8810-5fc4-4164-8f73-0b959139160d
+langcode: en
+status: true
+dependencies: {  }
+name: '1064 - parties informed'
+vid: 1064_parties_informed
+description: ''
+hierarchy: 0
+weight: 0

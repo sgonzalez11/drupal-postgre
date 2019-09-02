@@ -1,0 +1,32 @@
+uuid: 60f090fb-3148-4c0f-942f-9cd0cd91012e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.4_aircraft.field_taxonomy_number
+    - taxonomy.vocabulary.4_aircraft
+  module:
+    - text
+id: taxonomy_term.4_aircraft.default
+targetEntityType: taxonomy_term
+bundle: 4_aircraft
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_taxonomy_number:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  langcode: true

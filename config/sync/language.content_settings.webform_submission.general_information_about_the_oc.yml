@@ -1,0 +1,11 @@
+uuid: 2f4348c8-a1e0-4bc5-afe3-79dcca4c6432
+langcode: es
+status: true
+dependencies:
+  config:
+    - webform.webform.general_information_about_the_oc
+id: webform_submission.general_information_about_the_oc
+target_entity_type_id: webform_submission
+target_bundle: general_information_about_the_oc
+default_langcode: site_default
+language_alterable: false

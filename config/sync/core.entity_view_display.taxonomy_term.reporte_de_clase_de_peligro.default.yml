@@ -1,0 +1,22 @@
+uuid: c9beee6e-7e80-47ed-91ee-9e03aefad1e6
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.reporte_de_clase_de_peligro
+  module:
+    - text
+id: taxonomy_term.reporte_de_clase_de_peligro.default
+targetEntityType: taxonomy_term
+bundle: reporte_de_clase_de_peligro
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

@@ -1,0 +1,9 @@
+uuid: 4518c175-d4b2-4436-b0a7-6088f83bae4b
+langcode: en
+status: true
+dependencies: {  }
+name: '32 - Aircraft category'
+vid: 32_aircraft_category
+description: ''
+hierarchy: 0
+weight: 0

@@ -1,0 +1,11 @@
+uuid: bd27d261-64b6-4cc1-ac0d-6d8fbf375792
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.121_the_flight_phase_in_which_th
+id: taxonomy_term.121_the_flight_phase_in_which_th
+target_entity_type_id: taxonomy_term
+target_bundle: 121_the_flight_phase_in_which_th
+default_langcode: site_default
+language_alterable: false

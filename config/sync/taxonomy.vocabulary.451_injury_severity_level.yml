@@ -1,0 +1,9 @@
+uuid: f682e310-a7e6-4d6a-8ed2-970b36fb3897
+langcode: en
+status: true
+dependencies: {  }
+name: '451 - Injury severity level'
+vid: 451_injury_severity_level
+description: ''
+hierarchy: 0
+weight: 0

@@ -1,0 +1,9 @@
+uuid: 3a5d6203-55f4-4a23-a79c-fa7350d55e6b
+langcode: en
+status: true
+dependencies: {  }
+name: '509 - runway surface type'
+vid: 509_runway_surface_type
+description: ''
+hierarchy: 0
+weight: 0

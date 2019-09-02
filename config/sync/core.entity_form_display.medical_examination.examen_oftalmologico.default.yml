@@ -1,0 +1,678 @@
+uuid: 79a7177d-b934-4cfc-a07d-bb80ed78f3ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_oftalmologico
+    - field.field.medical_examination.examen_oftalmologico.field_text_list_oft_00
+    - field.field.medical_examination.examen_oftalmologico.field_text_list_oft_01
+    - field.field.medical_examination.examen_oftalmologico.field_text_list_oft_02
+    - field.field.medical_examination.examen_oftalmologico.field_text_list_oft_03
+    - field.field.medical_examination.examen_oftalmologico.field_text_list_oft_04
+    - field.field.medical_examination.examen_oftalmologico.field_text_list_t_correccion
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_00
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_01
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_02
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_03
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_04
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_05
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_06
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_07
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_08
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_09
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_10
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_11
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_12
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_13
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_14
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_15
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_16
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_17
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_18
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_19
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_20
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_21
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_22
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_23
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_24
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_25
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_26
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_27
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_28
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_29
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_30
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_31
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_32
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_33
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_34
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_35
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_36
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_37
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_long_00
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_long_01
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_long_02
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_long_03
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_long_04
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_long_05
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_long_06
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_long_07
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_long_08
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_long_09
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_long_10
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_long_11
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_long_12
+    - field.field.medical_examination.examen_oftalmologico.field_text_plain_long_13
+  module:
+    - datetime
+    - file
+id: medical_examination.examen_oftalmologico.default
+targetEntityType: medical_examination
+bundle: examen_oftalmologico
+mode: default
+content:
+  assessment_date:
+    type: datetime_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  assessment_notes:
+    type: string_textarea
+    weight: 6
+    rows: 6
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  assessment_reassessment_required:
+    type: boolean_checkbox
+    weight: 8
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  assessment_result:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  cancellation_date:
+    type: datetime_default
+    weight: -1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  cancellation_reason:
+    type: string_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  cancellation_user:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  creation_date:
+    type: datetime_default
+    weight: -2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  documents:
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+  entity_status:
+    type: options_select
+    weight: -4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  examination_date:
+    type: datetime_default
+    weight: -10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  examination_notes:
+    type: string_textarea
+    weight: -6
+    rows: 6
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_text_list_oft_00:
+    weight: 62
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_text_list_oft_01:
+    weight: 64
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_text_list_oft_02:
+    weight: 65
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_text_list_oft_03:
+    weight: 67
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_text_list_oft_04:
+    weight: 68
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_text_list_t_correccion:
+    weight: 48
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_text_plain_00:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_01:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_02:
+    weight: 13
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_03:
+    weight: 14
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_04:
+    weight: 16
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_05:
+    weight: 17
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_06:
+    weight: 18
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_07:
+    weight: 19
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_08:
+    weight: 21
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_09:
+    weight: 22
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_10:
+    weight: 23
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_11:
+    weight: 24
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_12:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_13:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_14:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_15:
+    weight: 29
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_16:
+    weight: 30
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_17:
+    weight: 31
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_18:
+    weight: 33
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_19:
+    weight: 34
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_20:
+    weight: 35
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_21:
+    weight: 36
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_22:
+    weight: 37
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_23:
+    weight: 38
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_24:
+    weight: 40
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_25:
+    weight: 41
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_26:
+    weight: 42
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_27:
+    weight: 43
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_28:
+    weight: 44
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_29:
+    weight: 45
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_30:
+    weight: 49
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_31:
+    weight: 51
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_32:
+    weight: 52
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_33:
+    weight: 54
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_34:
+    weight: 56
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_35:
+    weight: 57
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_36:
+    weight: 59
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_37:
+    weight: 60
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_plain_long_00:
+    weight: 15
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_text_plain_long_01:
+    weight: 20
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_text_plain_long_02:
+    weight: 25
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_text_plain_long_03:
+    weight: 32
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_text_plain_long_04:
+    weight: 39
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_text_plain_long_05:
+    weight: 46
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_text_plain_long_06:
+    weight: 50
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_text_plain_long_07:
+    weight: 53
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_text_plain_long_08:
+    weight: 55
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_text_plain_long_09:
+    weight: 58
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_text_plain_long_10:
+    weight: 61
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_text_plain_long_11:
+    weight: 63
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_text_plain_long_12:
+    weight: 66
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_text_plain_long_13:
+    weight: 69
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  medical_assessment:
+    weight: -12
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+  medical_assessor:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+  medical_examination_type:
+    type: options_select
+    weight: -4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  medical_examiner:
+    weight: -12
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+  name:
+    type: string_textfield
+    weight: -20
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  number:
+    type: number
+    weight: -16
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  prefix:
+    type: string_textfield
+    weight: -18
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  scheduled_appointment_date:
+    type: datetime_default
+    weight: -14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

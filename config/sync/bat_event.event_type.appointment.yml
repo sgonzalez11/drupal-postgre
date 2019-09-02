@@ -1,0 +1,11 @@
+uuid: 9ffd18ef-d20a-4621-a0ad-b03d501a6af5
+langcode: en
+status: true
+dependencies: {  }
+name: Appointment
+type: appointment
+event_granularity: bat_hourly
+fixed_event_states: 1
+default_event_value_field_ids: null
+default_event_label_field_name: event_state_reference
+target_entity_type: bat_unit

@@ -1,0 +1,9 @@
+uuid: f37ca677-8548-4ead-ad20-6d15b60840ba
+langcode: en
+status: true
+dependencies: {  }
+name: '166- landing gear type'
+vid: 166_landing_gear_type
+description: ''
+hierarchy: 0
+weight: 0

@@ -1,0 +1,14 @@
+uuid: 89e0f0b7-6be7-41ec-aa34-4beef920bbb9
+langcode: es
+status: true
+dependencies:
+  config:
+    - domain.record.customers_portal
+  module:
+    - domain_access
+id: domain_access_remove_editor_action.customers_portal
+label: 'Remove editors from the Customers Portal domain'
+type: user
+plugin: domain_access_remove_editor_action
+configuration:
+  domain_id: customers_portal

@@ -1,0 +1,11 @@
+uuid: d9133f7b-f3aa-4d2f-97bc-5ba440e6ba03
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.595_the_quality_of_the_traffic_i
+id: taxonomy_term.595_the_quality_of_the_traffic_i
+target_entity_type_id: taxonomy_term
+target_bundle: 595_the_quality_of_the_traffic_i
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,32 @@
+uuid: 1311561d-f843-47f3-a919-730ebd51a24f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.319_aircraft_mass_group.field_taxonomy_number
+    - taxonomy.vocabulary.319_aircraft_mass_group
+  module:
+    - text
+id: taxonomy_term.319_aircraft_mass_group.default
+targetEntityType: taxonomy_term
+bundle: 319_aircraft_mass_group
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_taxonomy_number:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  langcode: true

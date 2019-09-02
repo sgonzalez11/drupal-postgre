@@ -1,0 +1,18 @@
+uuid: fcc4e1e0-644c-4599-a777-cd635ee20082
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.document_parameter
+id: node.document_parameter.created
+field_name: created
+entity_type: node
+bundle: document_parameter
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

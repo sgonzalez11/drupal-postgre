@@ -1,0 +1,20 @@
+display:
+  customer_aircraft:
+    display_options:
+      title: Aeronaves
+      fields:
+        registration:
+          label: Matrícula
+        manufacturer:
+          label: Fabricante
+        model:
+          label: Modelo
+        type:
+          label: Tipo
+  customer_instructors:
+    display_options:
+      fields:
+        name:
+          label: Instructor
+        id_number:
+          label: 'Número de cédula'

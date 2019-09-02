@@ -1,0 +1,46 @@
+uuid: 8e4806ba-b2ed-4b58-920a-5e9fffe227e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.required_documentation.field_copy
+    - field.field.paragraph.required_documentation.field_documentation
+    - field.field.paragraph.required_documentation.field_original
+    - field.field.paragraph.required_documentation.field_quantity
+    - paragraphs.paragraphs_type.required_documentation
+id: paragraph.required_documentation.default
+targetEntityType: paragraph
+bundle: required_documentation
+mode: default
+content:
+  field_copy:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_documentation:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_original:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_quantity:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

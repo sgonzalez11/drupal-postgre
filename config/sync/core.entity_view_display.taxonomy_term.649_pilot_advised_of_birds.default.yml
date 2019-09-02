@@ -1,0 +1,32 @@
+uuid: 2e4de91a-cb13-4e0d-ab22-e8532cee7fd8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.649_pilot_advised_of_birds.field_taxonomy_number
+    - taxonomy.vocabulary.649_pilot_advised_of_birds
+  module:
+    - text
+id: taxonomy_term.649_pilot_advised_of_birds.default
+targetEntityType: taxonomy_term
+bundle: 649_pilot_advised_of_birds
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_taxonomy_number:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  langcode: true

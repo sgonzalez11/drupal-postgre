@@ -1,0 +1,23 @@
+uuid: 3a0ea78b-a9d1-4fba-8e6b-3760bd93ce0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_taxonomy_number
+    - taxonomy.vocabulary.400_flight_crew_license_license
+id: taxonomy_term.400_flight_crew_license_license.field_taxonomy_number
+field_name: field_taxonomy_number
+entity_type: taxonomy_term
+bundle: 400_flight_crew_license_license
+label: 'taxonomy number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

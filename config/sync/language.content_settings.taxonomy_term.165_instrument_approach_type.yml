@@ -1,0 +1,11 @@
+uuid: a2928265-ffc8-481f-9f2a-afab8dce6515
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.165_instrument_approach_type
+id: taxonomy_term.165_instrument_approach_type
+target_entity_type_id: taxonomy_term
+target_bundle: 165_instrument_approach_type
+default_langcode: site_default
+language_alterable: false

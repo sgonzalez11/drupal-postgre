@@ -1,22 +1,38 @@
-uuid: c1195f09-31b5-42fb-b442-b4a01c89168a
+uuid: 9ce99e89-a079-43eb-bea5-f4e9e0712e27
 langcode: en
 status: true
 dependencies:
+  content:
+    - 'block_content:basic:38b34b73-dfc9-415a-8438-5e6bdbd0e6e4'
   module:
+    - block_content
+    - domain
     - system
   theme:
     - inac_atos
-_core:
-  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
 id: inac_atos_breadcrumbs
 theme: inac_atos
 region: header
-weight: 0
+weight: -6
 provider: null
-plugin: system_breadcrumb_block
+plugin: 'block_content:38b34b73-dfc9-415a-8438-5e6bdbd0e6e4'
 settings:
-  id: system_breadcrumb_block
+  id: 'block_content:38b34b73-dfc9-415a-8438-5e6bdbd0e6e4'
   label: Breadcrumbs
-  provider: system
+  provider: block_content
   label_display: '0'
-visibility: {  }
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /user/login
+    negate: true
+    context_mapping: {  }
+  domain:
+    id: domain
+    domains:
+      atos_portal: atos_portal
+    negate: false
+    context_mapping: {  }

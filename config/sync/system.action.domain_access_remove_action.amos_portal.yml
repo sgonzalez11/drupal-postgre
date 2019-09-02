@@ -1,0 +1,14 @@
+uuid: 50288666-ae0e-42e9-b148-e1808d738fc9
+langcode: es
+status: true
+dependencies:
+  config:
+    - domain.record.amos_portal
+  module:
+    - domain_access
+id: domain_access_remove_action.amos_portal
+label: 'Remove selected content from the AMOs Portal domain'
+type: node
+plugin: domain_access_remove_action
+configuration:
+  domain_id: amos_portal

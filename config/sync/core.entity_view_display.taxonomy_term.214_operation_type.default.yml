@@ -1,0 +1,32 @@
+uuid: 611d6072-54d5-4164-83b4-a11b1a5f7ade
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.214_operation_type.field_taxonomy_number
+    - taxonomy.vocabulary.214_operation_type
+  module:
+    - text
+id: taxonomy_term.214_operation_type.default
+targetEntityType: taxonomy_term
+bundle: 214_operation_type
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_taxonomy_number:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  langcode: true

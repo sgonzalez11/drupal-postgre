@@ -29,7 +29,7 @@ nikadevs_cms_layout:
           tag: div
           full_width: '1'
           bg_image_type: '0'
-          padding_bottom: '140'
+          padding_bottom: '50'
       id-2:
         name: Content
         attributes:
@@ -39,6 +39,7 @@ nikadevs_cms_layout:
         settings:
           tag: div
           bg_image_type: '0'
+          padding_bottom: '50'
       id-3:
         name: 'Content Full Width'
         attributes:
@@ -49,6 +50,7 @@ nikadevs_cms_layout:
           tag: div
           full_width: '1'
           bg_image_type: '0'
+          padding_bottom: '50'
       id-4:
         name: Footer
         attributes:
@@ -118,7 +120,7 @@ nikadevs_cms_layout:
             - col-md-12
   layout-right-sidebar:
     name: 'Right Sidebar'
-    pages: blog-2-columns
+    pages: "/node/9\n/services-guidance\n/announcements"
     rows:
       id-1:
         name: Header
@@ -130,6 +132,7 @@ nikadevs_cms_layout:
           tag: div
           full_width: '1'
           bg_image_type: '0'
+          padding_bottom: '50'
       id-2:
         name: Content
         attributes:
@@ -139,6 +142,7 @@ nikadevs_cms_layout:
         settings:
           tag: div
           bg_image_type: '0'
+          padding_bottom: '50'
       id-3:
         name: 'Content Full Width'
         attributes:
@@ -187,15 +191,14 @@ nikadevs_cms_layout:
         attributes:
           id: content
           class:
-            2: col-md-8
+            - col-md-8
       sidebar:
         row_id: id-2
         name: Sidebar
         attributes:
           id: sidebar
           class:
-            2: col-md-3
-            3: col-md-offset-1
+            - col-md-4
       page_bottom:
         row_id: id-2
         name: 'Page Bottom'
@@ -231,6 +234,7 @@ nikadevs_cms_layout:
           tag: div
           full_width: '1'
           bg_image_type: '0'
+          padding_bottom: '50'
       id-2:
         name: Content
         attributes:
@@ -240,6 +244,7 @@ nikadevs_cms_layout:
         settings:
           tag: div
           bg_image_type: '0'
+          padding_bottom: '50'
       id-3:
         name: 'Content Full Width'
         attributes:
@@ -288,8 +293,8 @@ nikadevs_cms_layout:
         attributes:
           id: content
           class:
-            2: col-md-8
-            3: col-md-offset-2
+            - col-md-8
+            - col-md-offset-2
       sidebar:
         row_id: id-2
         name: Sidebar
@@ -332,6 +337,7 @@ nikadevs_cms_layout:
           tag: div
           full_width: '1'
           bg_image_type: '0'
+          padding_bottom: '50'
       id-2:
         name: Content
         attributes:
@@ -341,6 +347,7 @@ nikadevs_cms_layout:
         settings:
           tag: div
           bg_image_type: '0'
+          padding_bottom: '50'
       id-3:
         name: 'Content Full Width'
         attributes:
@@ -389,8 +396,8 @@ nikadevs_cms_layout:
         attributes:
           id: content
           class:
-            2: col-md-10
-            3: col-md-offset-1
+            - col-md-10
+            - col-md-offset-1
       sidebar:
         row_id: id-2
         name: Sidebar
@@ -433,7 +440,7 @@ nikadevs_cms_layout:
           tag: div
           full_width: '1'
           bg_image_type: '0'
-          padding_bottom: '140'
+          padding_bottom: '50'
       id-2:
         name: Content
         attributes:
@@ -444,6 +451,7 @@ nikadevs_cms_layout:
           tag: div
           bg_image_type: '0'
           full_width: '1'
+          padding_bottom: '50'
       id-3:
         name: 'Content Full Width'
         attributes:
@@ -535,6 +543,7 @@ nikadevs_cms_layout:
           tag: div
           full_width: '1'
           bg_image_type: '0'
+          padding_bottom: '50'
       id-2:
         name: Content
         attributes:
@@ -545,6 +554,7 @@ nikadevs_cms_layout:
           tag: div
           bg_image_type: '0'
           full_width: '1'
+          padding_bottom: '50'
       id-3:
         name: 'Content Full Width'
         attributes:

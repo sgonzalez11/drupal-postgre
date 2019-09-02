@@ -1,0 +1,21 @@
+uuid: 1e4f0abc-0efe-4707-ba29-df0211863cb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_identifier_code
+  module:
+    - options
+    - user
+id: user.user.field_identifier_code
+field_name: field_identifier_code
+entity_type: user
+bundle: user
+label: 'Tipo de Documento'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

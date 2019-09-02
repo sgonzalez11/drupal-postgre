@@ -1,0 +1,9 @@
+uuid: b21618b8-af7f-47b3-8229-cc3c97218284
+langcode: en
+status: true
+dependencies: {  }
+name: '10 - aerodrome_type'
+vid: 10_aerodrome_type
+description: ''
+hierarchy: 0
+weight: 0

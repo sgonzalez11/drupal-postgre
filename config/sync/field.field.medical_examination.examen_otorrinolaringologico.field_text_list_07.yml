@@ -1,0 +1,21 @@
+uuid: f9596439-8a96-4fe7-a88d-edd285d8610d
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_otorrinolaringologico
+    - field.storage.medical_examination.field_text_list_07
+  module:
+    - options
+id: medical_examination.examen_otorrinolaringologico.field_text_list_07
+field_name: field_text_list_07
+entity_type: medical_examination
+bundle: examen_otorrinolaringologico
+label: Dientes
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

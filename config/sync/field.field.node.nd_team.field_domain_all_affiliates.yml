@@ -1,5 +1,5 @@
-uuid: 01e5da01-f6bd-47bd-adc6-7bcfb1b1197c
-langcode: en
+uuid: 2b2d9416-68b9-457c-92ec-947ae73300f9
+langcode: es
 status: true
 dependencies:
   config:
@@ -12,7 +12,7 @@ bundle: nd_team
 label: 'Send to all affiliates'
 description: 'Make this content available on all domains.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

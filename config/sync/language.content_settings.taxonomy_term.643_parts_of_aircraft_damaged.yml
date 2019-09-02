@@ -1,0 +1,11 @@
+uuid: cbb82d6d-7bc1-47ed-ac0a-d50422f459a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.643_parts_of_aircraft_damaged
+id: taxonomy_term.643_parts_of_aircraft_damaged
+target_entity_type_id: taxonomy_term
+target_bundle: 643_parts_of_aircraft_damaged
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,14 @@
+uuid: ae1763d5-d968-4fc6-a4c4-eff237347a12
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.amo_admin
+  module:
+    - user
+id: user_add_role_action.amo_admin
+label: 'Add the AMO Admin role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: amo_admin

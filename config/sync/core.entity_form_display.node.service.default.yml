@@ -1,0 +1,265 @@
+uuid: 8ef57b7c-3ef9-4837-a023-90de16b2eb9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.service.body
+    - field.field.node.service.field_additional_information
+    - field.field.node.service.field_aimedto
+    - field.field.node.service.field_applicant_profiles
+    - field.field.node.service.field_appointment_length
+    - field.field.node.service.field_cost_information
+    - field.field.node.service.field_description
+    - field.field.node.service.field_document_parameter
+    - field.field.node.service.field_documentation
+    - field.field.node.service.field_domain_access
+    - field.field.node.service.field_domain_all_affiliates
+    - field.field.node.service.field_isappointmentneeded
+    - field.field.node.service.field_online_procedure
+    - field.field.node.service.field_online_procedure_url
+    - field.field.node.service.field_previous_needed_services
+    - field.field.node.service.field_related_publications
+    - field.field.node.service.field_related_services
+    - field.field.node.service.field_required_access_level
+    - field.field.node.service.field_service_code
+    - field.field.node.service.field_topics
+    - field.field.node.service.field_unit_types
+    - field.field.node.service.field_what_do_i_need_to_perform_
+    - field.field.node.service.field_whenisneeded
+    - field.field.node.service.field_whocanperformit
+    - node.type.service
+  module:
+    - field_group
+    - link
+    - paragraphs
+    - text
+third_party_settings:
+  field_group:
+    group_appointment_info:
+      children:
+        - field_appointment_length
+        - field_isappointmentneeded
+      parent_name: ''
+      weight: 18
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: true
+        required_fields: true
+      label: 'Appointment Info'
+      region: content
+id: node.service.default
+targetEntityType: node
+bundle: service
+mode: default
+content:
+  field_additional_information:
+    weight: 13
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_aimedto:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_applicant_profiles:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_appointment_length:
+    weight: 2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_cost_information:
+    weight: 12
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_description:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_document_parameter:
+    weight: 22
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_documentation:
+    type: entity_reference_paragraphs
+    weight: 19
+    settings:
+      title: 'Required Documentation'
+      title_plural: 'Required Documentations'
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: required_documentation
+    third_party_settings: {  }
+    region: content
+  field_domain_access:
+    type: options_buttons
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_domain_all_affiliates:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 21
+    third_party_settings: {  }
+    region: content
+  field_isappointmentneeded:
+    weight: 42
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_online_procedure:
+    weight: 16
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_online_procedure_url:
+    weight: 17
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_previous_needed_services:
+    weight: 8
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_related_publications:
+    weight: 15
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_related_services:
+    weight: 14
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_required_access_level:
+    weight: 43
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_service_code:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_topics:
+    weight: 10
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_unit_types:
+    weight: 9
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_what_do_i_need_to_perform_:
+    weight: 11
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_whenisneeded:
+    weight: 6
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_whocanperformit:
+    weight: 7
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  body: true
+  created: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

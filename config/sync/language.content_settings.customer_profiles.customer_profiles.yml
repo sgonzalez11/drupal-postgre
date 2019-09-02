@@ -1,0 +1,17 @@
+uuid: c37c93a9-4d01-4543-abd4-7a2f1cba6958
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - eauthority
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: customer_profiles.customer_profiles
+target_entity_type_id: customer_profiles
+target_bundle: customer_profiles
+default_langcode: site_default
+language_alterable: false

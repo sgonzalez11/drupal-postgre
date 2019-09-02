@@ -1,0 +1,9 @@
+uuid: 0dc9bed2-6e01-4059-8cd3-f0b49ec3d863
+langcode: en
+status: true
+dependencies: {  }
+id: customers_portal_lndo_site
+domain_id: customers_portal
+pattern: customers-portal.lndo.site
+redirect: 0
+environment: default

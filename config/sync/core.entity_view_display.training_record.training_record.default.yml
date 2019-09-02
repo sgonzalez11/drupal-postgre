@@ -1,0 +1,147 @@
+uuid: 9e2c16e2-aae9-47da-ba71-500dd146241d
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - eauthority_atos
+    - options
+id: training_record.training_record.default
+targetEntityType: training_record
+bundle: training_record
+mode: default
+content:
+  aircraft:
+    label: above
+    type: entity_reference_label
+    weight: -4
+    region: content
+    settings:
+      link: false
+    third_party_settings: {  }
+  cancellation_date:
+    label: above
+    type: datetime_default
+    settings:
+      format_type: medium
+      timezone_override: ''
+    weight: -2
+    region: content
+    third_party_settings: {  }
+  cancellation_reason:
+    label: above
+    type: basic_string
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  cancellation_user:
+    label: above
+    type: string
+    weight: -1
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  entity_status:
+    label: above
+    type: list_default
+    weight: -15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  estimated_finish_date:
+    label: above
+    type: datetime_default
+    settings:
+      format_type: medium
+      timezone_override: ''
+    weight: -9
+    region: content
+    third_party_settings: {  }
+  estimated_start_date:
+    label: above
+    type: datetime_default
+    settings:
+      format_type: medium
+      timezone_override: ''
+    weight: -10
+    region: content
+    third_party_settings: {  }
+  finish_date:
+    label: above
+    type: datetime_default
+    settings:
+      format_type: medium
+      timezone_override: ''
+    weight: -7
+    region: content
+    third_party_settings: {  }
+  location:
+    label: above
+    type: string
+    weight: -6
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  name:
+    label: above
+    type: string
+    weight: -14
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  number:
+    label: above
+    weight: -12
+    region: content
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+  prefix:
+    label: above
+    type: string
+    weight: -13
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  remarks:
+    label: above
+    type: basic_string
+    weight: -3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  start_date:
+    label: above
+    type: datetime_default
+    settings:
+      format_type: medium
+      timezone_override: ''
+    weight: -8
+    region: content
+    third_party_settings: {  }
+  training_course:
+    label: above
+    type: entity_reference_label
+    weight: -11
+    region: content
+    settings:
+      link: true
+    third_party_settings: {  }
+  training_record_attendee:
+    label: above
+    type: entity_reference_entity_view
+    weight: -5
+    region: content
+    settings:
+      view_mode: ief_table
+      link: false
+    third_party_settings: {  }
+hidden:
+  langcode: true

@@ -1,0 +1,22 @@
+uuid: a80dc0b3-e83c-4569-99fb-4da363942589
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_cardiovascular
+  module:
+    - options
+id: medical_examination.examen_cardiovascular.assessment_result
+field_name: assessment_result
+entity_type: medical_examination
+bundle: examen_cardiovascular
+label: 'Assessment Result'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: list_string

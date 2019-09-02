@@ -1,0 +1,18 @@
+uuid: d43eb134-37b1-4c2f-bdd5-542429d6f79b
+langcode: en
+status: true
+dependencies:
+  module:
+    - eauthority_amos
+id: medical_examination.field_number_float_02
+field_name: field_number_float_02
+entity_type: medical_examination
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: 78d054df-edf7-43a6-a297-4cd819ef0d43
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_psicologico_y_psicomotor
+    - field.storage.medical_examination.field_text_plain_03
+id: medical_examination.examen_psicologico_y_psicomotor.field_text_plain_03
+field_name: field_text_plain_03
+entity_type: medical_examination
+bundle: examen_psicologico_y_psicomotor
+label: Entrevista
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

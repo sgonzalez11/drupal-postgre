@@ -1,4 +1,4 @@
-uuid: 787b7ddb-64a8-4a1d-9b24-43c223b11533
+uuid: 940a7c08-6d00-4dfe-b766-3e1aeafc5773
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: eauth_amos_local_actions
 theme: eauth_amos
 region: content
-weight: -20
+weight: -2
 provider: null
 plugin: local_actions_block
 settings:

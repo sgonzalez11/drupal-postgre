@@ -1,0 +1,20 @@
+uuid: 17515c38-d38a-4a52-b7fe-eab94d2db90a
+langcode: en
+status: true
+dependencies:
+  module:
+    - eauthority_parties
+    - taxonomy
+id: party.field_p_party_profiles
+field_name: field_p_party_profiles
+entity_type: party
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

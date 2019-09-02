@@ -1,0 +1,18 @@
+uuid: a798edcb-0897-40e4-aa3e-24871d1ab230
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_cardiovascular
+id: medical_examination.examen_cardiovascular.assessment_notes
+field_name: assessment_notes
+entity_type: medical_examination
+bundle: examen_cardiovascular
+label: 'Assessment Notes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

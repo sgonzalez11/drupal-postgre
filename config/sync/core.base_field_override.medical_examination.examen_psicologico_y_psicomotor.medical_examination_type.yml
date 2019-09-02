@@ -1,0 +1,20 @@
+uuid: 4b54b505-3afe-4ed6-9786-139ab05ede68
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_psicologico_y_psicomotor
+  module:
+    - options
+id: medical_examination.examen_psicologico_y_psicomotor.medical_examination_type
+field_name: medical_examination_type
+entity_type: medical_examination
+bundle: examen_psicologico_y_psicomotor
+label: 'Examiation Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

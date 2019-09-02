@@ -1,0 +1,32 @@
+uuid: 452771c4-67ee-485a-8fde-a84c29aef1b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.3_helicopter_landing_area_config.field_taxonomy_number
+    - taxonomy.vocabulary.3_helicopter_landing_area_config
+  module:
+    - text
+id: taxonomy_term.3_helicopter_landing_area_config.default
+targetEntityType: taxonomy_term
+bundle: 3_helicopter_landing_area_config
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_taxonomy_number:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  langcode: true

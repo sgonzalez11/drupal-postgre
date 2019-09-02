@@ -1,0 +1,30 @@
+uuid: 817f848e-f269-44c6-a50e-d0f15f8f2e2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - fixed_block_content.fixed_block_content.customers_header
+  module:
+    - domain
+    - fixed_block_content
+  theme:
+    - eauth_customers
+id: customersheader
+theme: eauth_customers
+region: header
+weight: -8
+provider: null
+plugin: 'fixed_block_content:customers_header'
+settings:
+  id: 'fixed_block_content:customers_header'
+  label: 'Customers Header'
+  provider: fixed_block_content
+  label_display: '0'
+  view_mode: ''
+visibility:
+  domain:
+    id: domain
+    domains:
+      customers_portal: customers_portal
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,23 @@
+uuid: 0b9caa57-ad9a-46f0-ab61-b3d34ffa7f83
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_taxonomy_number
+    - taxonomy.vocabulary.645_bird_wildlife_species_descri
+id: taxonomy_term.645_bird_wildlife_species_descri.field_taxonomy_number
+field_name: field_taxonomy_number
+entity_type: taxonomy_term
+bundle: 645_bird_wildlife_species_descri
+label: 'taxonomy number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

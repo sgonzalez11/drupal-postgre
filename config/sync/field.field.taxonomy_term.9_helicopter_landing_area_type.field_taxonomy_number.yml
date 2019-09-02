@@ -1,0 +1,23 @@
+uuid: d9553904-97ba-4513-8fe0-7146629f8eff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_taxonomy_number
+    - taxonomy.vocabulary.9_helicopter_landing_area_type
+id: taxonomy_term.9_helicopter_landing_area_type.field_taxonomy_number
+field_name: field_taxonomy_number
+entity_type: taxonomy_term
+bundle: 9_helicopter_landing_area_type
+label: 'taxonomy number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

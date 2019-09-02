@@ -1,0 +1,47 @@
+uuid: 92d6a62f-33db-4413-8765-9172eae25420
+langcode: en
+status: true
+dependencies: {  }
+id: caa_head_medical_assessor
+label: 'CAA Head Medical Assessor'
+weight: 3
+is_admin: null
+permissions:
+  - 'allow user to view medical assessment''s inform'
+  - 'allow users to view examen_cardiovascular examination'
+  - 'allow users to view examen_medico_general examination'
+  - 'allow users to view examen_neurologico examination'
+  - 'allow users to view examen_oftalmologico examination'
+  - 'allow users to view examen_otorrinolaringologico examination'
+  - 'allow users to view examen_psicologico_y_psicomotor examination'
+  - 'allows users to assign a medical assessor'
+  - 'allows users to undo closed examination'
+  - 'allows users to undo examination assessment'
+  - 'edit responsible medical assessor''s Declaration section of the medical assessment form'
+  - 'edit responsible medical assessor''s declaration page of the medical assessment form'
+  - 'view any webform submission'
+  - 'view applicant information section of the medical assessment form'
+  - 'view applicant information section of the medical examination form'
+  - 'view assessment in progress medical assessment'
+  - 'view assessment scheduled medical assessment'
+  - 'view assessment scheduled medical examination'
+  - 'view cancelation section of the medical assessment form'
+  - 'view cancelation section of the medical examination form'
+  - 'view canceled medical assessment'
+  - 'view canceled medical examination'
+  - 'view closed medical assessment'
+  - 'view closed medical examination'
+  - 'view examination type section of the medical examination form'
+  - 'view general section of the medical assessment form'
+  - 'view general section of the medical examination form'
+  - 'view maestro task console'
+  - 'view medical assessor''s declaration section of the medical examination form'
+  - 'view medical examinations section of the medical assessment form'
+  - 'view medical examiner''s declaration section of the medical examination form'
+  - 'view pending assessment medical assessment'
+  - 'view pending assessment medical examination'
+  - 'view pending recommendation medical assessment'
+  - 'view published customers entities'
+  - 'view responsible medical assessor''s declaration section of the medical assessment form'
+  - 'view responsible medical examiner''s declaration section of the medical assessment form'
+  - 'view webform submissions any node'

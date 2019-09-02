@@ -1,0 +1,21 @@
+uuid: 76c48957-d5e6-43ce-b723-b6132b671a6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - bat_event.event_type.appointment
+    - field.storage.bat_event.event_state_reference
+id: bat_event.appointment.event_state_reference
+field_name: event_state_reference
+entity_type: bat_event
+bundle: appointment
+label: State
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:state'
+  handler_settings: {  }
+field_type: entity_reference

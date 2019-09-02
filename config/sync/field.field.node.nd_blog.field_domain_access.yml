@@ -1,5 +1,5 @@
-uuid: cfe001d1-e751-4601-aa29-fd2bb2441f9a
-langcode: en
+uuid: c9334fb5-6fa7-43ed-b14c-f71ff8ded1ad
+langcode: es
 status: true
 dependencies:
   config:
@@ -12,7 +12,7 @@ bundle: nd_blog
 label: 'Domain Access'
 description: 'Select the affiliate domain(s) for this content'
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: 'Drupal\domain_access\DomainAccessManager::getDefaultValue'
 settings:

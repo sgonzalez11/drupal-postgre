@@ -1,0 +1,31 @@
+uuid: 508292ba-6f76-4504-b1b6-b67a12b6491b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_documentation
+    - node.type.service
+    - paragraphs.paragraphs_type.required_documentation
+  module:
+    - entity_reference_revisions
+id: node.service.field_documentation
+field_name: field_documentation
+entity_type: node
+bundle: service
+label: Documentation
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      required_documentation: required_documentation
+    target_bundles_drag_drop:
+      required_documentation:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

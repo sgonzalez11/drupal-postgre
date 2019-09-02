@@ -1,0 +1,11 @@
+uuid: 234fe8dd-4490-4992-8c13-f8ce0de1ceb8
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.319_aircraft_mass_group
+id: taxonomy_term.319_aircraft_mass_group
+target_entity_type_id: taxonomy_term
+target_bundle: 319_aircraft_mass_group
+default_langcode: site_default
+language_alterable: false

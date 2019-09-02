@@ -1,0 +1,18 @@
+uuid: 731360f6-4e8d-4819-b29f-0354032738dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - eauthority_amos
+id: medical_assessment.medical_assessment.assessment_notes
+field_name: assessment_notes
+entity_type: medical_assessment
+bundle: medical_assessment
+label: 'Assessment Notes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

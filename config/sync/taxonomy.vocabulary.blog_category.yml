@@ -1,11 +1,11 @@
-uuid: baddaa7c-f6e5-420e-aeae-27b0b4af51c2
+uuid: cf9c4ef0-f86a-4996-b936-6dc7a09dffa2
 langcode: es
 status: true
 dependencies: {  }
 _core:
   default_config_hash: w4IFH-wjG-yQHr8W8X9VvJe2W82-itRuhcX5Bxm8VTQ
-name: 'Blog Category'
+name: Categorías
 vid: blog_category
-description: ''
+description: 'Categorías de Noticias'
 hierarchy: 0
 weight: 0

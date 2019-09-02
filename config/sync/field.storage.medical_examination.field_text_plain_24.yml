@@ -1,0 +1,21 @@
+uuid: ad8b1f92-452b-4d03-b739-1c1c4cfb8abc
+langcode: en
+status: true
+dependencies:
+  module:
+    - eauthority_amos
+id: medical_examination.field_text_plain_24
+field_name: field_text_plain_24
+entity_type: medical_examination
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

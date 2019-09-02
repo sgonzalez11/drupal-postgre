@@ -1,0 +1,21 @@
+uuid: 985269dd-a7b7-4aa6-8e94-b56f105dcc35
+langcode: en
+status: true
+dependencies:
+  module:
+    - eauthority_amos
+    - options
+id: med_assessmt_recommendation.med_assessmt_recommendation.behaviour_as
+field_name: behaviour_as
+entity_type: med_assessmt_recommendation
+bundle: med_assessmt_recommendation
+label: 'Behaviour As'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: list_string

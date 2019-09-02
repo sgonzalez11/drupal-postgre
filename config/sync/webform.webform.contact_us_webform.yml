@@ -1,4 +1,4 @@
-uuid: 9bb17b45-da79-4a73-9c77-60d3e03f72c7
+uuid: d7802b36-95a4-4889-b745-ad8f8090ffd6
 langcode: es
 status: open
 dependencies: {  }
@@ -14,7 +14,7 @@ id: contact_us_webform
 title: 'Contact Us WebForm'
 description: ''
 category: ''
-elements: "name:\n  '#type': textfield\n  '#title': Name\n  '#title_display': invisible\n  '#placeholder': 'Your Name'\nemail:\n  '#type': email\n  '#title': Email\n  '#title_display': invisible\n  '#placeholder': 'Your Email'\ncomment:\n  '#type': textarea\n  '#title': Comment\n  '#title_display': invisible\n  '#placeholder': 'Write comment here...'\nsubmit:\n  '#type': processed_text\n  '#text': '<button class=\"btn c-btn-white c-btn-border-2x c-btn-uppercase btn-lg c-btn-bold c-btn-square\" type=\"submit\">Send</button>'\n  '#format': full_html\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit_hide': true\n"
+elements: "name:\n  '#type': textfield\n  '#title': 'Nombre y Apellido'\n  '#title_display': invisible\n  '#placeholder': 'Nombre y Apellido'\nemail:\n  '#type': email\n  '#title': Email\n  '#title_display': invisible\n  '#placeholder': Email\nasunto:\n  '#type': textfield\n  '#title': Asunto\n  '#title_display': invisible\n  '#placeholder': Asunto\ncomment:\n  '#type': textarea\n  '#title': 'En qué podemos ayudarte'\n  '#title_display': invisible\n  '#placeholder': '¿En qué podemos ayudarte?'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'"
 css: ''
 javascript: ''
 settings:

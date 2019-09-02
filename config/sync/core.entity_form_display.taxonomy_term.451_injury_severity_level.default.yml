@@ -1,0 +1,52 @@
+uuid: 1dc77879-6d81-42d5-aa4b-010ca4873640
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.451_injury_severity_level.field_taxonomy_number
+    - taxonomy.vocabulary.451_injury_severity_level
+  module:
+    - path
+    - text
+id: taxonomy_term.451_injury_severity_level.default
+targetEntityType: taxonomy_term
+bundle: 451_injury_severity_level
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_taxonomy_number:
+    weight: 31
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,4 +1,4 @@
-uuid: f5b62630-65ae-424a-ae1e-d7cb912664c7
+uuid: aa26fc82-0ae2-4e2f-9cdd-11b911205096
 langcode: es
 status: true
 dependencies:
@@ -251,7 +251,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Status
+          label: Estado
           exclude: false
           alter:
             alter_text: false
@@ -358,7 +358,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Member for'
+          label: 'Miembro por'
           exclude: false
           alter:
             alter_text: false
@@ -647,7 +647,7 @@ display:
               administrator: '0'
           is_grouped: true
           group_info:
-            label: Status
+            label: Estado
             description: ''
             identifier: status
             optional: true

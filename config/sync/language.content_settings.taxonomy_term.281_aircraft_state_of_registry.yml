@@ -1,0 +1,11 @@
+uuid: 1214631b-5a1b-4ce5-9bab-0df26aa4ebdd
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.281_aircraft_state_of_registry
+id: taxonomy_term.281_aircraft_state_of_registry
+target_entity_type_id: taxonomy_term
+target_bundle: 281_aircraft_state_of_registry
+default_langcode: site_default
+language_alterable: false

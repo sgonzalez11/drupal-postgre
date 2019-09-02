@@ -1,0 +1,11 @@
+uuid: b0260445-f299-4d79-af95-39ed88025497
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.happy_customers
+id: taxonomy_term.happy_customers
+target_entity_type_id: taxonomy_term
+target_bundle: happy_customers
+default_langcode: site_default
+language_alterable: false

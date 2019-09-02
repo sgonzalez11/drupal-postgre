@@ -1,4 +1,4 @@
-uuid: cfe52a55-6416-4216-8b8b-cd6e0553d4ec
+uuid: 816a6c2d-3b94-4578-bb78-9e051a6ea3d3
 langcode: es
 status: true
 dependencies:
@@ -14,7 +14,7 @@ bundle: nd_project
 label: Video
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

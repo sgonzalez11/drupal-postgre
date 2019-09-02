@@ -1,0 +1,33 @@
+uuid: 4a5e4b00-4ed7-4483-bbb7-764ba229f1bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.training_record_attendee.ief_table
+  module:
+    - eauthority_atos
+    - options
+id: training_record_attendee.training_record_attendee.ief_table
+targetEntityType: training_record_attendee
+bundle: training_record_attendee
+mode: ief_table
+content:
+  customer:
+    label: hidden
+    type: entity_reference_label
+    weight: 0
+    region: content
+    settings:
+      link: true
+    third_party_settings: {  }
+  result_set_value:
+    label: hidden
+    type: list_default
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  label: true
+  langcode: true
+  name: true

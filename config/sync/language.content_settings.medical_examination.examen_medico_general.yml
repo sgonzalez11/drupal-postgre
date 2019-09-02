@@ -1,0 +1,18 @@
+uuid: d768524a-8ca1-485c-bff2-d9a6e2c3be71
+langcode: es
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_medico_general
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: medical_examination.examen_medico_general
+target_entity_type_id: medical_examination
+target_bundle: examen_medico_general
+default_langcode: site_default
+language_alterable: false

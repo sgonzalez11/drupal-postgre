@@ -1,0 +1,23 @@
+uuid: 22b29707-1193-41c1-b238-da83349c7652
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_medico_general
+    - field.storage.medical_examination.field_number_float_03
+id: medical_examination.examen_medico_general.field_number_float_03
+field_name: field_number_float_03
+entity_type: medical_examination
+bundle: examen_medico_general
+label: FC
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

@@ -1,0 +1,20 @@
+uuid: aab9c85b-b5f3-440f-af7e-029cb579b509
+langcode: en
+status: true
+dependencies:
+  module:
+    - eauthority
+    - user
+id: user.field_customer
+field_name: field_customer
+entity_type: user
+type: entity_reference
+settings:
+  target_type: customer
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

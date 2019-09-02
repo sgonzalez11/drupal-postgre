@@ -1,0 +1,32 @@
+uuid: 30435b38-e90d-4eb1-8337-7299c464e0ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.29_current_traffic_type.field_taxonomy_number
+    - taxonomy.vocabulary.29_current_traffic_type
+  module:
+    - text
+id: taxonomy_term.29_current_traffic_type.default
+targetEntityType: taxonomy_term
+bundle: 29_current_traffic_type
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_taxonomy_number:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  langcode: true

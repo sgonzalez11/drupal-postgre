@@ -1,0 +1,9 @@
+uuid: 0ee3c126-1b40-436c-bc31-eff01ddb749b
+langcode: en
+status: true
+dependencies: {  }
+id: amos_portal_dev_tqspiwq_bf4vp4joan5wy_us_2_platformsh_site
+domain_id: amos_portal
+pattern: amos-portal.dev-tqspiwq-bf4vp4joan5wy.us-2.platformsh.site
+redirect: 0
+environment: default

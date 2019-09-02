@@ -1,0 +1,11 @@
+uuid: c3eea12a-aa9a-4119-9ac5-2ff2915300d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.214_operation_type
+id: taxonomy_term.214_operation_type
+target_entity_type_id: taxonomy_term
+target_bundle: 214_operation_type
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,19 @@
+uuid: b42cc8e9-68ca-4558-bca4-211295b4135b
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_otorrinolaringologico
+    - field.storage.medical_examination.field_text_plain_long_05
+id: medical_examination.examen_otorrinolaringologico.field_text_plain_long_05
+field_name: field_text_plain_long_05
+entity_type: medical_examination
+bundle: examen_otorrinolaringologico
+label: 'Oído medio y mastoides'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

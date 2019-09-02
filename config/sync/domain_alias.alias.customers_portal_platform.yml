@@ -1,0 +1,9 @@
+uuid: 5fcdef21-3012-48e2-9716-3a40468f8722
+langcode: es
+status: true
+dependencies: {  }
+id: customers_portal_platform
+domain_id: customers_portal
+pattern: customers-portal.initializing-fk5ohoq-bf4vp4joan5wy.us-2.platformsh.site
+redirect: 0
+environment: default

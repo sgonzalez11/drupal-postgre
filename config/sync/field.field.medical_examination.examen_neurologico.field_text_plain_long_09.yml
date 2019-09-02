@@ -1,0 +1,19 @@
+uuid: cd4dc93a-e9d6-434d-bc59-82d7a2e7d9d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_neurologico
+    - field.storage.medical_examination.field_text_plain_long_09
+id: medical_examination.examen_neurologico.field_text_plain_long_09
+field_name: field_text_plain_long_09
+entity_type: medical_examination
+bundle: examen_neurologico
+label: Coordinación
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

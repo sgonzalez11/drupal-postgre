@@ -1,0 +1,25 @@
+uuid: bc9bb89c-0376-438c-9c05-d888bb1ccae5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document_parameter
+    - node.type.service
+id: node.service.field_document_parameter
+field_name: field_document_parameter
+entity_type: node
+bundle: service
+label: 'Document Parameter'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:document_parameter'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

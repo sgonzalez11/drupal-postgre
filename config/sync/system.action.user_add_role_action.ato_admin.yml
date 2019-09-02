@@ -1,0 +1,14 @@
+uuid: ad0d9dd1-9090-4aaa-9c08-8e3c8a05ef00
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.ato_admin
+  module:
+    - user
+id: user_add_role_action.ato_admin
+label: 'Add the ATO Admin role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: ato_admin

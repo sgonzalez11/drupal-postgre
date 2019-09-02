@@ -1,4 +1,4 @@
-uuid: 94646a2d-a2d5-465b-819c-d55347afe4fb
+uuid: d9f7fd74-5530-43d4-873e-4c51e40e9a4a
 langcode: es
 status: true
 dependencies:
@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 _core:
   default_config_hash: IxL4QQFyxlku5NICcctvQ0hhOEp5I-rNHQArTyZSdjU
-name: Project
+name: Projecto
 type: nd_project
 description: ''
 help: ''

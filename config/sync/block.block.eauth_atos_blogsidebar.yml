@@ -1,0 +1,31 @@
+uuid: b960dd8d-f68a-4bc3-9057-b3612c271b4d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:52d90283-f1fd-4a98-a079-5ee890d19b8f'
+  module:
+    - block_content
+    - system
+  theme:
+    - eauth_atos
+id: eauth_atos_blogsidebar
+theme: eauth_atos
+region: sidebar
+weight: 0
+provider: null
+plugin: 'block_content:52d90283-f1fd-4a98-a079-5ee890d19b8f'
+settings:
+  id: 'block_content:52d90283-f1fd-4a98-a079-5ee890d19b8f'
+  label: 'News Sidebar'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /contenido/noticias
+    negate: false
+    context_mapping: {  }

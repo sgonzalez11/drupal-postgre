@@ -1,0 +1,171 @@
+uuid: 8020a356-1a4b-407a-bc29-d5e544ae5cd4
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: general_information_about_the_oc
+title: 'General Aviation Personal'
+description: ''
+category: ''
+elements: "general_information_occurrence:\n  '#type': webform_wizard_page\n  '#title': 'General information about the occurrence'\n  '#next_button_label': Next\n  datos:\n    '#type': fieldset\n    '#title': Datos\n    '#title_display': invisible\n    when_where:\n      '#type': processed_text\n      '#text': \"<left>\\r\\n<h1 style=\\\"text-align: left;\\\">When/Where</h1>\\r\\n</left>\"\n      '#format': full_html\n    when_where_fieldset:\n      '#type': fieldset\n      '#title': When/Where\n      '#title_display': invisible\n      info__date:\n        '#type': webform_flexbox\n        utc_date:\n          '#type': date\n          '#title': 'UTC date'\n          '#help_title': '477 - UTC date of the occurrence'\n          '#help': \"UTC: Time scale based on the second (SI), as defined and recommended by the CCIR, and maintained by the Bureau International des Poids et Mesures (BIPM). For most practical purposes associated with the Radio Regulations, UTC is equivalent to mean solar time at the prime meridian (0&deg; longitude), formerly expressed in GMT.&nbsp;<br />\\r\\nThe UTC date entered in the format which depends on the local installation. Use yyyy-mm-dd otherwise.\"\n          '#default_value': '[current-user:created:custom:?]'\n        local_date:\n          '#type': date\n          '#title': 'Local date'\n          '#help_title': '433 - Local date'\n          '#help': 'The local date of the occurrence. This date is formatted according to the system short date format.'\n          '#default_value': '[current-user:created:custom:?]'\n      info_time:\n        '#type': webform_flexbox\n        utc_time_1:\n          '#type': textfield\n          '#title': 'UTC time'\n          '#help_title': '478 - UTC time'\n          '#help': 'The UTC time of the occurrence entered using the 24 hour clock e.g. 23:59. UTC: Time scale based on the second (SI), as defined and recommended by the CCIR, and maintained by the Bureau International des Poids et Mesures (BIPM). For most practical purposes associated with the Radio Regulations, UTC is equivalent to mean solar time at the prime meridian (0&deg; longitude), formerly expressed in GMT.'\n        local_time:\n          '#type': textfield\n          '#title': 'Local time'\n          '#help_title': '457 - Local time'\n          '#help': 'The local time of the occurrence time entered using the 24 hour clock e.g. 23:59.'\n      state_area_flex:\n        '#type': webform_flexbox\n        state_area_of_occ:\n          '#type': webform_shs_term_select\n          '#title': 'State/area of occ'\n          '#help_title': '454 - State or area of occurrence'\n          '#help': 'The identification of the State or geographical area where the occurrence occurred. N.B. the designation employed for States and geographical areas do not imply the expression of any opinion whatsoever on the part of ICAO concerning the legal status of any country, territory, city, area or of its authorities, or concerning the delineation of its frontiers and boundaries.'\n          '#vocabulary': 454_state_o_area_of_occurrence\n          '#breadcrumb_delimiter': ''\n      location_flex:\n        '#type': webform_flexbox\n        location_name:\n          '#type': textfield\n          '#title': 'Location name'\n          '#help_title': '440 - Location of occurrence'\n          '#help': 'Location of occurrence should be the name of the closest settled area or geographical feature.'\n    what:\n      '#type': processed_text\n      '#text': \"<left>\\r\\n<h1 style=\\\"text-align: left;\\\">What</h1>\\r\\n</left>\"\n      '#format': full_html\n    what_fieldset:\n      '#type': fieldset\n      '#title': What\n      '#title_display': invisible\n      headline_flex:\n        '#type': webform_flexbox\n        headline:\n          '#type': textfield\n          '#title': Headline\n          '#help_title': '601 - Headline'\n          '#help': 'A short message identifying the accident to the human reader.'\n      language_flex:\n        '#type': webform_flexbox\n        '#flex': '6'\n        narrative_languages:\n          '#type': webform_term_select\n          '#title': 'Narrative language'\n          '#help': 'Language of the reporter&rsquo;s description of the event.'\n          '#flex': '6'\n          '#vocabulary': 1091_language_of_the_reporter_s_\n          '#breadcrumb_delimiter': ''\n      narrative:\n        '#type': textarea\n        '#title': Narrative\n        '#help': 'Reporter&rsquo;s description of the event.'\n        '#required': true\n    severity:\n      '#type': processed_text\n      '#text': \"<left>\\r\\n<h1 style=\\\"text-align: left;\\\">Severity</h1>\\r\\n</left>\"\n      '#format': full_html\n    severity_fieldset:\n      '#type': fieldset\n      '#title': Severity\n      '#title_display': invisible\n      severity_flex:\n        '#type': webform_flexbox\n        injury_severity_level:\n          '#type': webform_term_select\n          '#title': 'Injury level'\n          '#help_title': '451 - Injury severity level'\n          '#help': 'The highest level of injury sustained by any person in the occurrence.'\n          '#vocabulary': 451_injury_severity_level\n          '#breadcrumb_delimiter': ''\n        highest_damage:\n          '#type': webform_term_select\n          '#title': 'Highest damage'\n          '#help_title': '432 - Damage severity level'\n          '#help': 'The highest level of damage sustained by any aircraft involved in the occurrence.'\n          '#vocabulary': 432_damage_severity_level\n          '#breadcrumb_delimiter': ''\naircraft_information_attachments:\n  '#type': webform_wizard_page\n  '#title': 'Aircraft information and attachments'\n  '#prev_button_label': Previous\n  '#next_button_label': Next\n  aircraft_identification_label:\n    '#type': processed_text\n    '#text': \"<left>\\r\\n<h1 style=\\\"text-align: left;\\\">Aircraft identification</h1>\\r\\n</left>\"\n    '#format': full_html\n  aircraft_identification:\n    '#type': fieldset\n    '#title': 'Aircraft identification'\n    '#title_display': invisible\n    state_registry_flexbox:\n      '#type': webform_flexbox\n      state_of_registry:\n        '#type': webform_term_select\n        '#title': 'State of registry'\n        '#help_title': '281 - Aircraft State of registry'\n        '#help': 'State of Registry. The State on whose register the aircraft is entered.'\n        '#vocabulary': 281_aircraft_state_of_registry\n        '#breadcrumb_delimiter': ''\n      aircraft_registration:\n        '#type': textfield\n        '#title': 'Aircraft registration'\n        '#help_title': '244 - Aircraft registration'\n        '#help': 'The mark used to identify an aircraft. The mark consists of a common mark or nationality mark followed by a registration mark. The nationality mark shall be selected from the series of nationality symbols included in the radio call signs allocated to the State of Registry by the International Telecommunication Union. The nationality mark shall be notified to the International Civil Aviation Organization. The registration mark shall be letters, numbers, or a combination of letters and numbers, and shall be that assigned by the State of Registry or common mark registering authority. When letters are used for the registration mark, combinations shall not be used which might be confused with the five-letter combinations used in the International Code of Signals, Part II, the three-letter combinations beginning with Q used in the Q Code, and with the distress signal SOS, or other similar urgent signals, for example XXX, PAN and TTT. Rules regarding registration marks do not apply to meteorological pilot balloons used exclusively for meteorological purposes or to unmanned free balloons without a payload. ICAO Annex 7'\n        '#default_value': '[current-user:account-name]'\n    aircraft_category_flexbox:\n      '#type': webform_flexbox\n      aircraft_category:\n        '#type': webform_shs_term_select\n        '#title': 'Aircraft category'\n        '#help_title': '32 - Aircraft category'\n        '#help': \"Aircraft category. Classification of aircraft according to specified basic characteristics, e.g. aeroplane, helicopter, glider, free balloon. ICAO Annex 1.<br />\\r\\nAircraft. Any machine that can derive support in the atmosphere from the reactions of the air other than the reactions of the air against the earth&acute;s surface. (Annex 8)\"\n        '#vocabulary': 32_aircraft_category\n        '#depth_labels': {  }\n    manufacturer_model_flexbox:\n      '#type': webform_flexbox\n      manufacturer_model:\n        '#type': webform_shs_term_select\n        '#title': Manufacturer/model\n        '#help_title': '21 - Aircraft make/model/series'\n        '#help': \"The name of the aircraft manufacturer and model (international standard for aircraft make, model, and series groupings - CICTT).<br />\\r\\nThe ICAO aircraft type designator - four character code assigned to the aircraft - is defined as an alias.&nbsp;\"\n        '#vocabulary': 21_aircraft_make_model_series\n        '#breadcrumb_delimiter': ''\n    serial_number_year_built_flexbox:\n      '#type': webform_flexbox\n      serial_number:\n        '#type': textfield\n        '#title': 'Serial number'\n        '#help_title': '254 - Aircraft serial number '\n        '#help': \"The serial number of the aircraft (free text field).<br />\\r\\n&nbsp;\"\n      year_built:\n        '#type': textfield\n        '#title': 'Year built'\n        '#help_title': '327 - Year of aircraft manufacture '\n        '#help': 'The year the aircraft was built.'\n  flight_details_label:\n    '#type': processed_text\n    '#text': \"<left>\\r\\n<h1 style=\\\"text-align: left;\\\">Flight details</h1>\\r\\n</left>\"\n    '#format': full_html\n  flight_details_fieldset:\n    '#type': fieldset\n    '#title': 'Flight details'\n    '#title_display': invisible\n    last_departure_point_flexbox:\n      '#type': webform_flexbox\n      last_departure_point:\n        '#type': webform_shs_term_select\n        '#title': 'Last departure point'\n        '#help_title': '167 - Last departure point '\n        '#help': 'The aerodrome or place from which the flight originated.'\n        '#vocabulary': 167_last_departure_point\n        '#breadcrumb_delimiter': ''\n    planned_destination_flexbox:\n      '#type': webform_flexbox\n      planned_destination:\n        '#type': webform_shs_term_select\n        '#title': 'Planned destination'\n        '#help_title': '228 - Planned destination '\n        '#help': 'The place of intended landing.'\n        '#vocabulary': 228_planned_destination\n        '#breadcrumb_delimiter': ''\n    operation_type_flexbox:\n      '#type': webform_flexbox\n      operation_type:\n        '#type': webform_shs_term_select\n        '#title': 'Operation type'\n        '#help_title': ' 214 - Operation type '\n        '#help': 'The type of operation indicates whether this was a public transport operation (airline operation) or a general aviation flight.'\n        '#vocabulary': 214_operation_type\n        '#breadcrumb_delimiter': ''\n    flight_phase_flexbox:\n      '#type': webform_flexbox\n      flight_phase:\n        '#type': webform_term_select\n        '#title': 'Flight phase'\n        '#help_title': '121 - The flight phase in which the occurrence took place'\n        '#help': 'Enter the most significant phase of flight related to the occurrence. This is the phase of flight in which the event occurred which defined the accident/incident. Usually, this is the phase of flight in which the first event of the occurrence took place.'\n        '#vocabulary': 121_the_flight_phase_in_which_th\n        '#breadcrumb_delimiter': ''\n      occ_on_ground:\n        '#type': webform_term_select\n        '#title': 'Occ on ground'\n        '#help_title': '213 - Occurrence on ground'\n        '#help': 'An indication of whether the aircraft was airborne or not at the time of the occurrence.'\n        '#vocabulary': 213_occurrence_on_ground\n        '#breadcrumb_delimiter': ''\n  operational_information_label:\n    '#type': processed_text\n    '#text': \"<left>\\r\\n<h1 style=\\\"text-align: left;\\\">Operational information</h1>\\r\\n</left>\"\n    '#format': full_html\n  operational_information_fieldset:\n    '#type': fieldset\n    '#title': 'Operational information'\n    '#title_display': invisible\n    weather_relevant_flexbox:\n      '#type': webform_flexbox\n      weather_relevan:\n        '#type': webform_entity_radios\n        '#title': 'Weather relevant'\n        '#help_title': '606 - Weather relevance'\n        '#help': 'An indication whether, in the view of the investigation, the weather was relevant to the occurrence.'\n        '#target_type': taxonomy_term\n        '#selection_handler': 'default:taxonomy_term'\n        '#selection_settings':\n          target_bundles:\n            606_weather_relevance: 606_weather_relevance\n          sort:\n            field: name\n            direction: ASC\n      weather_conditions:\n        '#type': webform_entity_radios\n        '#title': 'Weather conditions'\n        '#help_title': '127 - Weather conditions'\n        '#help': 'The general weather conditions in the area of the occurrence e.g. VMC, IMC or unknown.'\n        '#target_type': taxonomy_term\n        '#selection_handler': 'default:taxonomy_term'\n        '#selection_settings':\n          target_bundles:\n            127_weather_conditions: 127_weather_conditions\n          sort:\n            field: name\n            direction: ASC\n    current_flight_rules_airspace_class_flexbox:\n      '#type': webform_flexbox\n      current_flight_rules:\n        '#type': webform_term_select\n        '#title': 'Current flight rules'\n        '#help_title': '79 - Current flight rules'\n        '#help': 'The flight rules under which the aircraft was operating: e.g. IFR, VFR or Special VFR.'\n        '#vocabulary': 79_current_flight_rules\n        '#breadcrumb_delimiter': ''\n      airspace_class:\n        '#type': webform_term_select\n        '#title': 'Airspace class'\n        '#help_title': '13 - Airspace class'\n        '#help': 'Air traffic services airspaces. Airspaces of defined dimensions, alphabetically designated, within which specific types of flights may operate and for which air traffic services and rules of operation are specified. ICAO Annex 11.'\n        '#vocabulary': 13_airspace_class\n        '#breadcrumb_delimiter': ''\n  attachments_label:\n    '#type': processed_text\n    '#text': \"<left>\\r\\n<h1 style=\\\"text-align: left;\\\">Attachments (optional)</h1>\\r\\n</left>\"\n    '#format': full_html\n  attachments_optional_fieldset:\n    '#type': fieldset\n    '#title': 'Attachments (optional)'\n    '#title_display': invisible\n    files:\n      '#type': managed_file\n      '#title': Files\n      '#description_display': invisible\n      '#max_filesize': '2'\nthank_you_for_preparing_this_occurrence_report_:\n  '#type': webform_wizard_page\n  '#title': 'Contact details'\n  '#prev_button_label': Previous\n  '#next_button_label': Submit\n  processed_text:\n    '#type': processed_text\n    '#text': \"<p>Thank you for preparing this occurrence report.&nbsp;<br />\\r\\n<br />\\r\\nProviding your contact details allows contacting you if deemed necessary. Specify a valid e-mail address for obtaining a PDF copy of the submitted report. Leave credentials or e-mail empty if you do not want to be contacted or receive the PDF copy.&nbsp;<br />\\r\\n<br />\\r\\n<strong>If you are aware that the occurrence you are reporting could be a&nbsp;serious incident&nbsp;or&nbsp;accident&nbsp;then,&nbsp;in addition to reporting via this site, you are also legally obliged to notify the&nbsp;<em>Safety Investigation Authority</em>&nbsp;in the&nbsp;<em>State of Occurrence</em>. Regulation (EU)996/2010 refers</strong>.<br />\\r\\n<br />\\r\\nMore information and lists of Authorities are available on&nbsp;<strong>ENCASIA website</strong>&nbsp;(<a href=\\\"https://ec.europa.eu/transport/modes/air/encasia_en\\\">link</a>) for EU Member States and on&nbsp;<strong>ICAO website</strong>&nbsp;(<a href=\\\"https://www.icao.int/safety/AIA/Pages/default.aspx\\\">link</a>) for Third Countries.&nbsp;<br />\\r\\n<br />\\r\\nPress 'Preview' and then 'Submit' to complete this session and send the report.</p>\\r\\n\"\n    '#format': basic_html\n  contact_details_flexbox:\n    '#type': webform_flexbox\n    '#align_items': center\n    name_contact_details:\n      '#type': textfield\n      '#title': Name\n      '#flex': '7'\n  contact_details_email_tele_flexbox:\n    '#type': webform_flexbox\n    '#align_items': center\n    email_contact_detail:\n      '#type': email\n      '#title': Email\n    telephone_contact_details:\n      '#type': textfield\n      '#title': Telephone\nflexbox:\n  '#type': webform_flexbox\nflexbox_01:\n  '#type': webform_flexbox\nflexbox_02:\n  '#type': webform_flexbox"
+css: '.webform-confirmation__message, .webform-confirmation__back { margin: 0 0 1em 0; text-align: center;'
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_title: source_entity_webform
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_remote_addr: true
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: false
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: true
+  wizard_start_label: ''
+  wizard_preview_link: true
+  wizard_confirmation: true
+  wizard_confirmation_label: Confirmation
+  wizard_track: ''
+  preview: 2
+  preview_label: Preview
+  preview_title: Preview
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: "<p style=\"text-align:center\"><br />\n<br />\n<br />\nYour occurrence report has been submitted to the selected authority.&nbsp;<br />\n<br />\nThank you for your contribution to improving aviation safety!<br />\n<br />\nIf you provided an email address you will receive a PDF version of the report in due time. If deemed necessary your authority might contact you regarding this report via Email and / or telephone number (if provided).<br />\n<br />\n<br />\n&nbsp;</p>\n"
+  confirmation_url: ''
+  confirmation_attributes:
+    style: '.webform-confirmation__message, .webform-confirmation__back { margin: 0 0 1em 0; text-align: center;}'
+  confirmation_back: true
+  confirmation_back_label: INICIO
+  confirmation_back_attributes:
+    style: 'text-align: center; border: 1em; padding: 1rem 2rem; p color:white; text-decoration: none; background: #C9EAF3;'
+  confirmation_exclude_query: false
+  confirmation_exclude_token: true
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }

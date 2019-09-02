@@ -1,0 +1,11 @@
+uuid: 79648b0a-d442-4eb9-a103-80a35b8d99bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.inac_aeronautical_experience_cer
+id: webform_submission.inac_aeronautical_experience_cer
+target_entity_type_id: webform_submission
+target_bundle: inac_aeronautical_experience_cer
+default_langcode: site_default
+language_alterable: false

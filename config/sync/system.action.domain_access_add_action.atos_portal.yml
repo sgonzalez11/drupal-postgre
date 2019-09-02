@@ -1,0 +1,14 @@
+uuid: c03f607f-00b3-4f86-9d1b-fb4fc88a6df4
+langcode: es
+status: true
+dependencies:
+  config:
+    - domain.record.atos_portal
+  module:
+    - domain_access
+id: domain_access_add_action.atos_portal
+label: 'Add selected content to the ATOs Portal domain'
+type: node
+plugin: domain_access_add_action
+configuration:
+  domain_id: atos_portal

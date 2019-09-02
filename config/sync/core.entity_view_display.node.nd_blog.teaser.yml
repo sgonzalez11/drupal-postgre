@@ -1,22 +1,17 @@
-uuid: bd6c3a1d-9b04-4c5f-a534-58706ed93dd9
+uuid: cad8b868-f338-4081-9427-5c6c844fed72
 langcode: es
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment.default
     - core.entity_view_mode.node.teaser
     - field.field.node.nd_blog.body
     - field.field.node.nd_blog.field_blog_category
-    - field.field.node.nd_blog.field_comments
-    - field.field.node.nd_blog.field_domain_access
-    - field.field.node.nd_blog.field_domain_all_affiliates
     - field.field.node.nd_blog.field_images
     - field.field.node.nd_blog.field_tags
     - field.field.node.nd_blog.field_video
     - image.style.product_700x900
     - node.type.nd_blog
   module:
-    - comment
     - jango_cms
     - text
     - user
@@ -35,15 +30,6 @@ content:
       trim_length: 600
     third_party_settings: {  }
     region: content
-  field_comments:
-    type: comment_default
-    weight: 4
-    region: content
-    label: hidden
-    settings:
-      view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
   field_images:
     type: jango_cms_images_slider
     weight: 1
@@ -75,6 +61,4 @@ content:
     third_party_settings: {  }
 hidden:
   field_blog_category: true
-  field_domain_access: true
-  field_domain_all_affiliates: true
   langcode: true

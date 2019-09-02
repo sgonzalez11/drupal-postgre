@@ -1,0 +1,14 @@
+uuid: 5df69991-59b5-40c2-9f2d-ea88c9125ced
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: pathauto_users
+label: 'Pathauto Users'
+type: 'canonical_entities:user'
+pattern: 'usuarios/[user:name]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

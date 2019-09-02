@@ -1,0 +1,19 @@
+uuid: d5dfe3d5-473f-4a4c-b6b3-679e8b03e59b
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_oftalmologico
+    - field.storage.medical_examination.field_text_plain_15
+id: medical_examination.examen_oftalmologico.field_text_plain_15
+field_name: field_text_plain_15
+entity_type: medical_examination
+bundle: examen_oftalmologico
+label: 'Campo visual por confrontación O.D (A)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

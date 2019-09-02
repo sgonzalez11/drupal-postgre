@@ -1,0 +1,11 @@
+uuid: cf645af1-9aa3-44f0-8983-3935a2ce0d04
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.436_effect_on_atm_service
+id: taxonomy_term.436_effect_on_atm_service
+target_entity_type_id: taxonomy_term
+target_bundle: 436_effect_on_atm_service
+default_langcode: site_default
+language_alterable: false

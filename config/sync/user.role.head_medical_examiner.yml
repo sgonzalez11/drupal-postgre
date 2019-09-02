@@ -1,0 +1,47 @@
+uuid: a6c2a330-93dd-4b30-a10e-88616579ef69
+langcode: en
+status: true
+dependencies: {  }
+id: head_medical_examiner
+label: 'Head Medical Examiner'
+weight: -1
+is_admin: null
+permissions:
+  - 'allow user to view medical assessment''s inform'
+  - 'allow users to view examen_cardiovascular examination'
+  - 'allow users to view examen_medico_general examination'
+  - 'allow users to view examen_neurologico examination'
+  - 'allow users to view examen_oftalmologico examination'
+  - 'allow users to view examen_otorrinolaringologico examination'
+  - 'allow users to view examen_psicologico_y_psicomotor examination'
+  - 'allows users to assign aviation medical examination'
+  - 'allows users to cancel medical assessment entities'
+  - 'allows users to cancel medical examination entities'
+  - 'allows users to undo completed examination'
+  - 'allows users to undo examination'
+  - 'edit responsible medical examiner''s declaration page'
+  - 'edit responsible medical examiner''s declaration page of the medical assessment form'
+  - 'view any webform submission'
+  - 'view applicant information section of the medical assessment form'
+  - 'view applicant information section of the medical examination form'
+  - 'view cancelation section of the medical assessment form'
+  - 'view cancelation section of the medical examination form'
+  - 'view canceled medical assessment'
+  - 'view canceled medical examination'
+  - 'view completed medical examination'
+  - 'view examination type section of the medical examination form'
+  - 'view general section of the medical assessment form'
+  - 'view general section of the medical examination form'
+  - 'view in progress medical assessment'
+  - 'view maestro task console'
+  - 'view medical examinations section of the medical assessment form'
+  - 'view medical examiner''s declaration section of the medical examination form'
+  - 'view open medical assessment'
+  - 'view open medical examination'
+  - 'view pending validation medical assessment'
+  - 'view private files'
+  - 'view published customers entities'
+  - 'view responsible medical examiner''s declaration section of the medical assessment form'
+  - 'view scheduled medical assessment'
+  - 'view scheduled medical examination'
+  - 'view webform submissions any node'

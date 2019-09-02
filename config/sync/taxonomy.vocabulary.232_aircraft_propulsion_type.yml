@@ -1,0 +1,9 @@
+uuid: 96450874-caf6-4656-8991-e3219421e712
+langcode: en
+status: true
+dependencies: {  }
+name: '232 aircraft propulsion type'
+vid: 232_aircraft_propulsion_type
+description: ''
+hierarchy: 0
+weight: 0

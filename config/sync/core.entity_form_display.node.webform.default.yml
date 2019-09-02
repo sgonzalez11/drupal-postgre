@@ -1,4 +1,4 @@
-uuid: 7f68e63d-309e-44e5-b7b8-3cd865aa57ba
+uuid: 33334587-6954-44b9-84ab-d67cf6e6ec7b
 langcode: es
 status: true
 dependencies:
@@ -21,7 +21,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 0
+    weight: 1
     settings:
       rows: 9
       summary_rows: 3
@@ -30,13 +30,13 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     region: content
   field_domain_access:
     type: options_buttons
-    weight: 40
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -44,19 +44,19 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 41
+    weight: 11
     third_party_settings: {  }
     region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 5
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -64,26 +64,26 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 7
     third_party_settings: {  }
     region: content
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
+    weight: 12
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 8
     third_party_settings: {  }
     region: content
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     settings:
       size: 60
       placeholder: ''
@@ -91,7 +91,7 @@ content:
     region: content
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 3
     settings:
       match_operator: CONTAINS
       size: 60
@@ -99,8 +99,9 @@ content:
     third_party_settings: {  }
     region: content
   webform:
-    weight: 0
-    settings: {  }
+    weight: 4
+    settings:
+      default_data: true
     third_party_settings: {  }
     type: webform_entity_reference_select
     region: content

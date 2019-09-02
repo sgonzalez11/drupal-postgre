@@ -1,0 +1,11 @@
+uuid: 60a3dac7-e72c-4fd9-bf58-15c4a339e180
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.648_bird_size
+id: taxonomy_term.648_bird_size
+target_entity_type_id: taxonomy_term
+target_bundle: 648_bird_size
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,25 @@
+uuid: 889c1ff6-0c9e-473f-9c50-3c8ff3dfcfdb
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:03936b14-3410-48a5-9e57-31f7f96a9fbb'
+  module:
+    - block_content
+  theme:
+    - eauth_customers
+id: clientselfservice
+theme: eauth_customers
+region: header
+weight: -7
+provider: null
+plugin: 'block_content:03936b14-3410-48a5-9e57-31f7f96a9fbb'
+settings:
+  id: 'block_content:03936b14-3410-48a5-9e57-31f7f96a9fbb'
+  label: 'Client Self-Service'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

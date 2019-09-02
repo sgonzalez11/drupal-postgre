@@ -1,0 +1,23 @@
+uuid: d676957a-9944-42f7-9252-d6a9452561b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_cardiovascular
+    - field.storage.medical_examination.field_number_float_04
+id: medical_examination.examen_cardiovascular.field_number_float_04
+field_name: field_number_float_04
+entity_type: medical_examination
+bundle: examen_cardiovascular
+label: 'PA (Acostado)'
+description: 'mm / Hg'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

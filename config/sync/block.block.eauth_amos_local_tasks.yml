@@ -1,4 +1,4 @@
-uuid: 4bf56ee9-23a2-43d7-a076-4e2594755b31
+uuid: 84b9d46a-e31b-44f2-877a-3309344bfd7a
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: eauth_amos_local_tasks
 theme: eauth_amos
 region: content
-weight: -40
+weight: -1
 provider: null
 plugin: local_tasks_block
 settings:

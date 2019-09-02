@@ -1,0 +1,18 @@
+uuid: 0ce0da1a-d361-4dce-814e-c99c758b8d10
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.nd_team
+id: node.nd_team.title
+field_name: title
+entity_type: node
+bundle: nd_team
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

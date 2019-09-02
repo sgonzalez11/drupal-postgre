@@ -1,4 +1,4 @@
-uuid: b83c504b-d22f-4e17-8d7f-b3201142900d
+uuid: fc2a6817-8ad6-4f02-8be5-3ff6ec103698
 langcode: es
 status: true
 dependencies:
@@ -16,7 +16,7 @@ bundle: nd_project
 label: Body
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

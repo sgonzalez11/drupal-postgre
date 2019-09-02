@@ -1,0 +1,9 @@
+uuid: 8d61a8ca-f702-482a-b15a-b3c25dbc2c71
+langcode: en
+status: true
+dependencies: {  }
+name: '3 - Helicopter landing area configuration'
+vid: 3_helicopter_landing_area_config
+description: ''
+hierarchy: 0
+weight: 0

@@ -1,0 +1,8 @@
+uuid: 3c6814ad-681c-4fc5-9978-f00ea97e6570
+langcode: und
+status: true
+dependencies: {  }
+id: amos-main-menu
+label: 'AMOs Main Menu'
+description: ''
+locked: false

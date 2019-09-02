@@ -1,0 +1,21 @@
+uuid: b5984abd-ba48-4724-b56e-2e18b1b44a3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_original
+    - paragraphs.paragraphs_type.required_documentation
+  module:
+    - options
+id: paragraph.required_documentation.field_original
+field_name: field_original
+entity_type: paragraph
+bundle: required_documentation
+label: Original
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

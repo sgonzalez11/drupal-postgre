@@ -1,4 +1,4 @@
-uuid: 7953d80c-d057-49a3-8368-db4eb27ceb0b
+uuid: 867ccab7-f567-45f2-adb8-9a940330b4f7
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: inac_customers_local_actions
 theme: inac_customers
 region: content
-weight: -20
+weight: -6
 provider: null
 plugin: local_actions_block
 settings:

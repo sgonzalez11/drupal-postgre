@@ -1,0 +1,11 @@
+uuid: f8ccc81b-e575-40c9-ad47-fb01f26aa54d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.424_narrative_language
+id: taxonomy_term.424_narrative_language
+target_entity_type_id: taxonomy_term
+target_bundle: 424_narrative_language
+default_langcode: site_default
+language_alterable: false

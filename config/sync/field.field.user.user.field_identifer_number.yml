@@ -1,0 +1,24 @@
+uuid: d0a0d7e8-aad7-4979-a79f-1af9e460922a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_identifer_number
+  module:
+    - user
+id: user.user.field_identifer_number
+field_name: field_identifer_number
+entity_type: user
+bundle: user
+label: 'Número de Documento'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

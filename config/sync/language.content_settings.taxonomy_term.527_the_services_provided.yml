@@ -1,0 +1,11 @@
+uuid: 4ff8a533-3c95-4259-ab6b-43dc7164c974
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.527_the_services_provided
+id: taxonomy_term.527_the_services_provided
+target_entity_type_id: taxonomy_term
+target_bundle: 527_the_services_provided
+default_langcode: site_default
+language_alterable: false

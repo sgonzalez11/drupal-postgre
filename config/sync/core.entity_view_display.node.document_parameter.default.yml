@@ -1,0 +1,48 @@
+uuid: a65ad106-72f8-4560-9b5e-0dec85a9c374
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.document_parameter.field_code
+    - field.field.node.document_parameter.field_number
+    - field.field.node.document_parameter.field_prefix
+    - node.type.document_parameter
+  module:
+    - user
+id: node.document_parameter.default
+targetEntityType: node
+bundle: document_parameter
+mode: default
+content:
+  field_code:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_number:
+    weight: 3
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_prefix:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

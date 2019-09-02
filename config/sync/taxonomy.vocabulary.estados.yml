@@ -1,0 +1,9 @@
+uuid: fe998792-0e64-424f-a5eb-076fc6f5b0d6
+langcode: es
+status: true
+dependencies: {  }
+name: Estados
+vid: estados
+description: ''
+hierarchy: 0
+weight: 0

@@ -1,7 +1,9 @@
-uuid: 916c1a45-a7f7-4ca5-8d04-fe2070cf2c9f
+uuid: 098dea56-43a3-4643-bd5e-b8203b72e736
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - druadmin_lte_theme
 _core:
@@ -9,7 +11,7 @@ _core:
 id: druadmin_lte_theme_page_title
 theme: druadmin_lte_theme
 region: content
-weight: -50
+weight: -2
 provider: null
 plugin: page_title_block
 settings:
@@ -17,4 +19,9 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

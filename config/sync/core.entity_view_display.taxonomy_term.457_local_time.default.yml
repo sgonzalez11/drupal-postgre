@@ -1,0 +1,32 @@
+uuid: 5a566927-1164-4890-a512-b7442ca2334d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.457_local_time.field_taxonomy_number
+    - taxonomy.vocabulary.457_local_time
+  module:
+    - text
+id: taxonomy_term.457_local_time.default
+targetEntityType: taxonomy_term
+bundle: 457_local_time
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_taxonomy_number:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  langcode: true

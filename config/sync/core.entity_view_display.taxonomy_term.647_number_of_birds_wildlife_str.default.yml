@@ -1,0 +1,32 @@
+uuid: a416c207-8268-4f2c-bd56-2151fc1c08f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.647_number_of_birds_wildlife_str.field_taxonomy_number
+    - taxonomy.vocabulary.647_number_of_birds_wildlife_str
+  module:
+    - text
+id: taxonomy_term.647_number_of_birds_wildlife_str.default
+targetEntityType: taxonomy_term
+bundle: 647_number_of_birds_wildlife_str
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_taxonomy_number:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  langcode: true

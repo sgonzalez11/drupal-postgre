@@ -1,0 +1,11 @@
+uuid: 90336be8-11a3-41ed-9438-3256d8b5d14e
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.430_occurrence_categories
+id: taxonomy_term.430_occurrence_categories
+target_entity_type_id: taxonomy_term
+target_bundle: 430_occurrence_categories
+default_langcode: site_default
+language_alterable: false

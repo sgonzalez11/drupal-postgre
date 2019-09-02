@@ -1,0 +1,21 @@
+uuid: 4bc85a7e-f0e2-42d0-8b03-6f0e1a9c841a
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_medico_general
+    - field.storage.medical_examination.field_text_list_06
+  module:
+    - options
+id: medical_examination.examen_medico_general.field_text_list_06
+field_name: field_text_list_06
+entity_type: medical_examination
+bundle: examen_medico_general
+label: Génito-Urinario
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

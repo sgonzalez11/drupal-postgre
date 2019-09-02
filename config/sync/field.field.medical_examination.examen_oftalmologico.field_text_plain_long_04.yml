@@ -1,0 +1,19 @@
+uuid: c7cb9af9-1cbd-4c6a-9ad6-47d604047e69
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_oftalmologico
+    - field.storage.medical_examination.field_text_plain_long_04
+id: medical_examination.examen_oftalmologico.field_text_plain_long_04
+field_name: field_text_plain_long_04
+entity_type: medical_examination
+bundle: examen_oftalmologico
+label: 'Visión lejana corregida'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

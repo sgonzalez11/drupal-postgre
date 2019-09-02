@@ -1,0 +1,19 @@
+uuid: e6f4ae5c-f56a-4ffa-b726-e9dddbbae053
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_neurologico
+    - field.storage.medical_examination.field_text_plain_long_08
+id: medical_examination.examen_neurologico.field_text_plain_long_08
+field_name: field_text_plain_long_08
+entity_type: medical_examination
+bundle: examen_neurologico
+label: Trofismo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

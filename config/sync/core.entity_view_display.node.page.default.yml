@@ -1,4 +1,4 @@
-uuid: 67816010-8f4d-4179-953e-1c3c1db83548
+uuid: d8c4b647-3d3f-4dc3-a75c-e57b6872fcb0
 langcode: es
 status: true
 dependencies:
@@ -18,12 +18,14 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 100
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
   links:
-    weight: 101
+    weight: 2
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   langcode: true

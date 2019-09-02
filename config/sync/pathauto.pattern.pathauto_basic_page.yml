@@ -1,0 +1,22 @@
+uuid: 8fab3816-6e14-4a13-bdce-19362c4d6d0a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: pathauto_basic_page
+label: 'Pathauto Basic Page'
+type: 'canonical_entities:node'
+pattern: 'contenido/[node:title]'
+selection_criteria:
+  3d8fd500-d985-4d1d-aca9-3952dad59e4b:
+    id: node_type
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 3d8fd500-d985-4d1d-aca9-3952dad59e4b
+selection_logic: and
+weight: -5
+relationships: {  }

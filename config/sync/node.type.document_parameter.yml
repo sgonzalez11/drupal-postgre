@@ -1,0 +1,17 @@
+uuid: 59376107-3b82-4150-b8f6-4cbe122049f4
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Parámetro de Documento'
+type: document_parameter
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

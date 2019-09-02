@@ -1,0 +1,19 @@
+uuid: e9d68cfa-2dda-430d-a746-0116604e2209
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_medico_general
+    - field.storage.medical_examination.field_text_plain_07
+id: medical_examination.examen_medico_general.field_text_plain_07
+field_name: field_text_plain_07
+entity_type: medical_examination
+bundle: examen_medico_general
+label: Recto
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

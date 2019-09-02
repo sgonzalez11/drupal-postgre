@@ -1,0 +1,21 @@
+uuid: 1a4cbba7-36cb-43a7-8c90-56d63bc3a45f
+langcode: es
+status: true
+dependencies:
+  config:
+    - bat_unit.unit_bundle.service_line
+    - field.storage.bat_unit.field_min_time
+id: bat_unit.service_line.field_min_time
+field_name: field_min_time
+entity_type: bat_unit
+bundle: service_line
+label: 'Opening Time'
+description: 'Example time 10:00:00'
+required: true
+translatable: false
+default_value:
+  -
+    value: '10:00:00'
+default_value_callback: ''
+settings: {  }
+field_type: string

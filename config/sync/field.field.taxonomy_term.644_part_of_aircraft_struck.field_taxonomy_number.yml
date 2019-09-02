@@ -1,0 +1,23 @@
+uuid: 39982338-fcca-448d-99ea-db59f2d9a886
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_taxonomy_number
+    - taxonomy.vocabulary.644_part_of_aircraft_struck
+id: taxonomy_term.644_part_of_aircraft_struck.field_taxonomy_number
+field_name: field_taxonomy_number
+entity_type: taxonomy_term
+bundle: 644_part_of_aircraft_struck
+label: 'taxonomy number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,19 @@
+uuid: d6e51636-b7c4-4739-bdad-441c0f52650c
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_otorrinolaringologico
+    - field.storage.medical_examination.field_text_plain_long_06
+id: medical_examination.examen_otorrinolaringologico.field_text_plain_long_06
+field_name: field_text_plain_long_06
+entity_type: medical_examination
+bundle: examen_otorrinolaringologico
+label: Boca
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,11 +1,11 @@
-uuid: d1257580-5838-4468-8955-6fab9acea260
-langcode: en
+uuid: e9c84a32-84b2-4ce0-a3c7-5f57cbb94a30
+langcode: es
 status: true
 dependencies: {  }
-name: 'Availability Example'
+name: Availability
 type: availability_example
-event_granularity: bat_daily
+event_granularity: bat_hourly
 fixed_event_states: 1
 default_event_value_field_ids: null
-default_event_label_field_name: null
+default_event_label_field_name: event_state_reference
 target_entity_type: bat_unit

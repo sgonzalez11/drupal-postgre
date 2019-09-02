@@ -1,0 +1,11 @@
+uuid: 0e917092-a7f7-4fa9-a147-9559d26df4b2
+langcode: es
+status: true
+dependencies:
+  config:
+    - webform.webform.ask_a_question_webform_inline
+id: webform_submission.ask_a_question_webform_inline
+target_entity_type_id: webform_submission
+target_bundle: ask_a_question_webform_inline
+default_langcode: site_default
+language_alterable: false

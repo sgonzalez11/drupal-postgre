@@ -1,0 +1,11 @@
+uuid: 5caecf62-c1de-471d-8c0c-260e16e0577d
+langcode: es
+status: true
+dependencies:
+  config:
+    - webform.webform.webform_contacto
+id: webform_submission.webform_contacto
+target_entity_type_id: webform_submission
+target_bundle: webform_contacto
+default_langcode: site_default
+language_alterable: false

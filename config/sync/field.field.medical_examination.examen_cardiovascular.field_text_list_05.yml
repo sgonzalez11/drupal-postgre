@@ -1,0 +1,21 @@
+uuid: 7b9b41a4-5d53-4150-b98a-05619fad6634
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_cardiovascular
+    - field.storage.medical_examination.field_text_list_05
+  module:
+    - options
+id: medical_examination.examen_cardiovascular.field_text_list_05
+field_name: field_text_list_05
+entity_type: medical_examination
+bundle: examen_cardiovascular
+label: 'Sistema venoso'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,11 @@
+uuid: 3af6bcf4-e0d8-4db5-9f78-452f602bc64c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.432_damage_severity_level
+id: taxonomy_term.432_damage_severity_level
+target_entity_type_id: taxonomy_term
+target_bundle: 432_damage_severity_level
+default_langcode: site_default
+language_alterable: false

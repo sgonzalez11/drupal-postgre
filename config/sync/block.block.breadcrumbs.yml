@@ -1,0 +1,25 @@
+uuid: 72184946-75cd-4571-a188-20e33b177780
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:38b34b73-dfc9-415a-8438-5e6bdbd0e6e4'
+  module:
+    - block_content
+  theme:
+    - eauth_customers
+id: breadcrumbs
+theme: eauth_customers
+region: header
+weight: -6
+provider: null
+plugin: 'block_content:38b34b73-dfc9-415a-8438-5e6bdbd0e6e4'
+settings:
+  id: 'block_content:38b34b73-dfc9-415a-8438-5e6bdbd0e6e4'
+  label: Breadcrumbs
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

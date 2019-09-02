@@ -1,0 +1,11 @@
+uuid: 5425d359-d424-4fc6-967f-aeb2dfa3c916
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.1072_detection_phase
+id: taxonomy_term.1072_detection_phase
+target_entity_type_id: taxonomy_term
+target_bundle: 1072_detection_phase
+default_langcode: site_default
+language_alterable: false

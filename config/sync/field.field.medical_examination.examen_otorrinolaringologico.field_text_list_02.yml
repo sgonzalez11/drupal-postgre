@@ -1,0 +1,21 @@
+uuid: f6f96917-d31f-4032-be41-1fde88a60bf1
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_otorrinolaringologico
+    - field.storage.medical_examination.field_text_list_02
+  module:
+    - options
+id: medical_examination.examen_otorrinolaringologico.field_text_list_02
+field_name: field_text_list_02
+entity_type: medical_examination
+bundle: examen_otorrinolaringologico
+label: 'Senos paranasales'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

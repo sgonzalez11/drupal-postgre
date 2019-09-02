@@ -1,4 +1,4 @@
-uuid: c487c328-a387-4817-86a2-ae7aad7e6e7e
+uuid: 301d2fd9-de8d-4f3d-880f-585d15461976
 langcode: es
 status: true
 dependencies:
@@ -265,7 +265,7 @@ display:
           id: status
           table: node_field_data
           field: status
-          label: Status
+          label: Estado
           exclude: false
           alter:
             alter_text: false
@@ -450,7 +450,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: Status
+            label: Estado
             description: ''
             use_operator: false
             operator: status_op

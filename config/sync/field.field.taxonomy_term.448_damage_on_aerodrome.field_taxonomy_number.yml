@@ -1,0 +1,23 @@
+uuid: 1badb823-aa69-4814-9b84-6a0629a421be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_taxonomy_number
+    - taxonomy.vocabulary.448_damage_on_aerodrome
+id: taxonomy_term.448_damage_on_aerodrome.field_taxonomy_number
+field_name: field_taxonomy_number
+entity_type: taxonomy_term
+bundle: 448_damage_on_aerodrome
+label: 'taxonomy number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

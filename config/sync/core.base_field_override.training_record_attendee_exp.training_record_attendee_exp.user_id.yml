@@ -1,0 +1,20 @@
+uuid: bbc9b154-1e56-4b82-8bcf-f034f26ad25e
+langcode: en
+status: true
+dependencies:
+  module:
+    - eauthority_atos
+id: training_record_attendee_exp.training_record_attendee_exp.user_id
+field_name: user_id
+entity_type: training_record_attendee_exp
+bundle: training_record_attendee_exp
+label: 'Authored by'
+description: 'The user ID of author of the Attendee Experience entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,241 @@
+uuid: a7ce2fbc-82c7-4cfc-8d04-b1bdd8e29248
+langcode: en
+status: true
+dependencies: {  }
+id: inac_identity_validation
+label: 'Inac Identity Validation'
+app_group: 0
+canvas_height: 900
+canvas_width: 800
+default_workflow_timeline_stage_count: 0
+show_details: false
+validated: true
+views_attached:
+  maestro_entity_identifiers:
+    view_machine_name: maestro_entity_identifiers
+    view_weight: -10
+    view_display: 'taskconsole_display;Task Console Display'
+  maestro_completed_tasks:
+    view_machine_name: maestro_completed_tasks
+    view_weight: -9
+    view_display: default;Master
+variables:
+  validation_result:
+    variable_id: validation_result
+    variable_value: UNK
+  initiator:
+    variable_id: initiator
+    variable_value: '0'
+  workflow_timeline_stage_count:
+    variable_id: workflow_timeline_stage_count
+    variable_value: ''
+  workflow_current_stage:
+    variable_id: workflow_current_stage
+    variable_value: ''
+  workflow_current_stage_message:
+    variable_id: workflow_current_stage_message
+    variable_value: ''
+  username:
+    variable_id: username
+    variable_value: und
+tasks:
+  start:
+    id: start
+    tasktype: MaestroStart
+    label: Start
+    nextstep: set_username
+    nextfalsestep: ''
+    top: '40'
+    left: '50'
+    assignby: fixed
+    assignto: engine
+  end:
+    id: end
+    tasktype: MaestroEnd
+    label: End
+    nextstep: ''
+    nextfalsestep: ''
+    top: '560'
+    left: '570'
+    assignby: fixed
+    assignto: engine
+  set_username:
+    id: set_username
+    label: 'Set Username'
+    tasktype: MaestroSetProcessVariable
+    nextstep: submission_process
+    nextfalsestep: ''
+    top: '35'
+    left: '305'
+    assignby: fixed
+    assignto: ''
+    raphael: ''
+    to: ''
+    pointedfrom: ''
+    falsebranch: ''
+    lines: {  }
+    data:
+      spv:
+        variable: username
+        method: bycontentfunction
+        variable_value: 'maestro_webform_spv_fetch_submission_value:submission,user'
+    assigned: ''
+    runonce: false
+    handler: ''
+    showindetail: true
+    participate_in_workflow_status_stage: false
+    workflow_status_stage_number: 0
+    workflow_status_stage_message: ''
+    notifications:
+      notification_assignment_subject: null
+      notification_assignment: null
+      notification_reminder_subject: null
+      notification_reminder: null
+      notification_escalation_subject: null
+      notification_escalation: null
+      reminder_after: null
+      escalation_after: null
+  submission_process:
+    id: submission_process
+    label: 'Solicitud de Validación de Identidad'
+    tasktype: MaestroWebform
+    nextstep: decision_submission_process
+    nextfalsestep: ''
+    top: '35'
+    left: '565'
+    assignby: fixed
+    assignto: ''
+    raphael: ''
+    to: ''
+    pointedfrom: ''
+    falsebranch: ''
+    lines: {  }
+    data:
+      unique_id: submission
+      webform_machine_name: inac_identity_validation_webform
+      modal: notmodal
+      skip_webform_handlers: 0
+      webform_nodes_attached_to: none
+      use_nodes_attached: 0
+      webform_nodes_attached_variable: none
+      redirect_to: taskconsole
+      show_edit_form: 0
+    assigned: 'role:fixed:caa_admin'
+    runonce: false
+    handler: ''
+    showindetail: true
+    participate_in_workflow_status_stage: false
+    workflow_status_stage_number: 0
+    workflow_status_stage_message: 'Validation Pending'
+    notifications:
+      notification_assignment_subject: ''
+      notification_assignment: ''
+      notification_reminder_subject: ''
+      notification_reminder: ''
+      notification_escalation_subject: ''
+      notification_escalation: ''
+      reminder_after: 0
+      escalation_after: 0
+  reject_submission_form:
+    id: reject_submission_form
+    label: 'Requiere Clarificación'
+    tasktype: MaestroInteractive
+    nextstep: submission_process
+    nextfalsestep: ''
+    top: '215'
+    left: '305'
+    assignby: fixed
+    assignto: ''
+    raphael: ''
+    to: ''
+    pointedfrom: ''
+    falsebranch: ''
+    lines: {  }
+    handler: inac_interactive_inac_identity_clarification_form
+    data:
+      modal: modal
+      redirect_to: /taskconsole
+    assigned: 'user:variable:username'
+    runonce: false
+    showindetail: true
+    participate_in_workflow_status_stage: false
+    workflow_status_stage_number: 2
+    workflow_status_stage_message: 'Clarification Requested'
+    notifications:
+      notification_assignment_subject: ''
+      notification_assignment: ''
+      notification_reminder_subject: ''
+      notification_reminder: ''
+      notification_escalation_subject: ''
+      notification_escalation: ''
+      reminder_after: 0
+      escalation_after: 0
+  decision_submission_process:
+    id: decision_submission_process
+    label: 'Decision Submission Process'
+    tasktype: MaestroIf
+    nextstep: log_message
+    nextfalsestep: reject_submission_form
+    top: '212'
+    left: '562'
+    assignby: fixed
+    assignto: ''
+    raphael: ''
+    to: ''
+    pointedfrom: ''
+    falsebranch: ''
+    lines: {  }
+    data:
+      if:
+        method: byvariable
+        variable: validation_result
+        operator: '='
+        variable_value: APV
+        status: '1'
+    assigned: ''
+    runonce: false
+    handler: ''
+    showindetail: true
+    participate_in_workflow_status_stage: false
+    workflow_status_stage_number: 0
+    workflow_status_stage_message: ''
+    notifications:
+      notification_assignment_subject: null
+      notification_assignment: null
+      notification_reminder_subject: null
+      notification_reminder: null
+      notification_escalation_subject: null
+      notification_escalation: null
+      reminder_after: null
+      escalation_after: null
+  log_message:
+    id: log_message
+    label: 'Log message'
+    tasktype: MaestroBatchFunction
+    nextstep: end
+    nextfalsestep: ''
+    top: '370'
+    left: '570'
+    assignby: fixed
+    assignto: ''
+    raphael: ''
+    to: ''
+    pointedfrom: ''
+    falsebranch: ''
+    lines: {  }
+    handler: inac_batch_inac_identity_validation_medical_assessment
+    assigned: ''
+    runonce: false
+    showindetail: true
+    participate_in_workflow_status_stage: false
+    workflow_status_stage_number: 0
+    workflow_status_stage_message: ''
+    notifications:
+      notification_assignment_subject: null
+      notification_assignment: null
+      notification_reminder_subject: null
+      notification_reminder: null
+      notification_escalation_subject: null
+      notification_escalation: null
+      reminder_after: null
+      escalation_after: null

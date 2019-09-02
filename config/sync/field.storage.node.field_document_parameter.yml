@@ -1,0 +1,20 @@
+uuid: 2ef101f7-3c77-4e2a-a6bb-7e45934576d0
+langcode: es
+status: true
+dependencies:
+  module:
+    - eauthority
+    - node
+id: node.field_document_parameter
+field_name: field_document_parameter
+entity_type: node
+type: entity_reference
+settings:
+  target_type: document_parameter
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

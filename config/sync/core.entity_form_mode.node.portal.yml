@@ -1,0 +1,10 @@
+uuid: 87f5149e-a616-43f4-8901-a204e75e9fc6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.portal
+label: Portal
+targetEntityType: node
+cache: true

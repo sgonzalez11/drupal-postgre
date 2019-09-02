@@ -1,0 +1,23 @@
+uuid: b3d8c145-2f8e-4425-bbf5-724126233d3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_taxonomy_number
+    - taxonomy.vocabulary.215_the_name_of_the_operator
+id: taxonomy_term.215_the_name_of_the_operator.field_taxonomy_number
+field_name: field_taxonomy_number
+entity_type: taxonomy_term
+bundle: 215_the_name_of_the_operator
+label: 'taxonomy number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

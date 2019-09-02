@@ -7,6 +7,7 @@ tips:
     label: 'Añadiendo idiomas'
     body: '<p>Para añadir más idiomas a su sitio, haga clic en el botón "Añadir idioma".</p><p>Los idiomas añadidos se mostrarán en la lista de idiomas y pueden entonces ser editados o borrados.</p>'
   language-reorder:
+    label: 'Reordenando idiomas'
     body: '<p>Para cambiar el orden de los idiomas en su sitio, utilice los iconos de selección junto a cada idioma.</p><p>El orden que se muestra aquí es el orden de presentación de las listas de idiomas en el sitio como en los bloques selectores de idiomas proporcionados por los módulos Interface Translation  y Content Translation.</p><p>Cuando haya terminado con la reordenación de los idiomas, haga clic en el botón "Guardar configuración" para que los cambios surtan efecto.</p>'
   language-default:
     label: 'Establecer un idioma por defecto'

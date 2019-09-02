@@ -1,0 +1,9 @@
+uuid: 89c98506-0531-46aa-89ee-7a57b2fa4abe
+langcode: en
+status: true
+dependencies: {  }
+name: '167 - Last departure point'
+vid: 167_last_departure_point
+description: ''
+hierarchy: 0
+weight: 0

@@ -1,0 +1,14 @@
+uuid: 37acf09d-2c8d-420b-9cbc-f6949c7e4370
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.ato_admin
+  module:
+    - user
+id: user_remove_role_action.ato_admin
+label: 'Remove the ATO Admin role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: ato_admin

@@ -1,4 +1,4 @@
-uuid: 27718cc2-9350-4ae8-bf52-7f0f72fd9cf9
+uuid: d7b23f01-286c-4551-8c26-361404317f57
 langcode: en
 status: true
 dependencies:
@@ -13,7 +13,7 @@ _core:
 id: jango_main_menu
 theme: jango
 region: header
-weight: 0
+weight: -7
 provider: null
 plugin: 'system_menu_block:main'
 settings:

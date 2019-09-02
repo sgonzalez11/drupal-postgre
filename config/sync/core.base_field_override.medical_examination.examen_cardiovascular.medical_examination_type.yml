@@ -1,0 +1,20 @@
+uuid: 636ef047-28a3-4c37-ba61-7beb428108ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_cardiovascular
+  module:
+    - options
+id: medical_examination.examen_cardiovascular.medical_examination_type
+field_name: medical_examination_type
+entity_type: medical_examination
+bundle: examen_cardiovascular
+label: 'Examiation Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

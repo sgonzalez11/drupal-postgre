@@ -1,0 +1,17 @@
+uuid: a95043f1-ad5b-484d-8487-e3159976294a
+langcode: es
+status: true
+dependencies:
+  module:
+    - content_translation
+    - eauthority_amos
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: medical_assessment.medical_assessment
+target_entity_type_id: medical_assessment
+target_bundle: medical_assessment
+default_langcode: site_default
+language_alterable: false

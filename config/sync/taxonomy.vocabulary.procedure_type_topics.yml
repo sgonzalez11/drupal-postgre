@@ -1,0 +1,9 @@
+uuid: 0dd9cffa-febe-4055-b652-4222398a259f
+langcode: es
+status: true
+dependencies: {  }
+name: Temas
+vid: procedure_type_topics
+description: 'Temas de Trámites'
+hierarchy: 0
+weight: 0

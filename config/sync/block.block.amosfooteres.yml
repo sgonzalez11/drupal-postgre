@@ -1,0 +1,39 @@
+uuid: a3dfbb60-8a68-4be9-b0ef-404772865a0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - fixed_block_content.fixed_block_content.amos_footer_es
+  module:
+    - domain
+    - fixed_block_content
+    - language
+  theme:
+    - eauth_amos
+id: amosfooteres
+theme: eauth_amos
+region: footer
+weight: 0
+provider: null
+plugin: 'fixed_block_content:amos_footer_es'
+settings:
+  id: 'fixed_block_content:amos_footer_es'
+  label: 'AMOs Footer ES'
+  provider: fixed_block_content
+  label_display: '0'
+  view_mode: ''
+visibility:
+  domain:
+    id: domain
+    domains:
+      amos_portal: amos_portal
+    negate: false
+    context_mapping: {  }
+  language:
+    id: language
+    langcodes:
+      en: en
+      es: es
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'

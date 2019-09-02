@@ -1,0 +1,28 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          exposed_sorts_label: 'Ordenar por'
+          submit_button: Filtrar
+      fields:
+        name_1:
+          label: Identificador
+        customer_applicant:
+          label: Solicitante
+        assessment_type:
+          label: 'Tipo de trámite'
+        class:
+          label: 'Clase de certificado'
+        scheduled_appointment_date:
+          label: 'Turno programado'
+        entity_status:
+          label: Estado
+      title: 'Evaluaciones médicas'
+      filters:
+        entity_status_1:
+          expose:
+            label: Estado
+          group_info:
+            label: Estado
+label: 'Evaluaciones médicas'

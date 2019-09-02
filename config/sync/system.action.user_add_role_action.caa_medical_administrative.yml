@@ -1,0 +1,14 @@
+uuid: 6192dac2-4b1a-400d-a7df-d7b4fab0a7be
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.caa_medical_administrative
+  module:
+    - user
+id: user_add_role_action.caa_medical_administrative
+label: 'Add the CAA Medical Administrative role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: caa_medical_administrative

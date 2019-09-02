@@ -1,0 +1,23 @@
+uuid: 003867b4-61c1-4386-a216-4c3de16f298d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_taxonomy_number
+    - taxonomy.vocabulary.587_other_aircraft_sighted_in_lo
+id: taxonomy_term.587_other_aircraft_sighted_in_lo.field_taxonomy_number
+field_name: field_taxonomy_number
+entity_type: taxonomy_term
+bundle: 587_other_aircraft_sighted_in_lo
+label: 'taxonomy number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

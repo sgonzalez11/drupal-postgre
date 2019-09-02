@@ -1,4 +1,4 @@
-uuid: 55576bc9-7be2-481a-9b1f-05f828419a49
+uuid: ce8fda71-7f64-4342-9697-828ef3cbdeb1
 langcode: es
 status: true
 dependencies:
@@ -7,7 +7,6 @@ dependencies:
   module:
     - maestro
     - user
-    - views_autocomplete_filters
 _core:
   default_config_hash: viC4SS65u0gG4DwH30J09CYMoIH7_yLXjLW7smsMRwA
 id: maestro_outstanding_tasks

@@ -1,0 +1,29 @@
+uuid: cad513f7-a9ef-450f-a4fa-3dd1cf98503a
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_browser_entity_form
+name: training_record_attendee
+label: 'Training Record Attendee'
+display: modal
+display_configuration:
+  width: '1000'
+  height: '800'
+  link_text: 'New Attendee'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  53b2d906-af78-4a0c-a3c4-0dff60aa23b4:
+    settings:
+      entity_type: training_record_attendee
+      bundle: training_record_attendee
+      form_mode: default
+      submit_text: Guardar
+    uuid: 53b2d906-af78-4a0c-a3c4-0dff60aa23b4
+    weight: 1
+    label: entity_form
+    id: entity_form

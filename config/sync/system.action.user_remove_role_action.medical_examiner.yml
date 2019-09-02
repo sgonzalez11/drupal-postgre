@@ -1,0 +1,14 @@
+uuid: 6d6e5471-32b8-415f-a5c3-f5f62e8f58ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.medical_examiner
+  module:
+    - user
+id: user_remove_role_action.medical_examiner
+label: 'Remove the Medical Examiner role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: medical_examiner

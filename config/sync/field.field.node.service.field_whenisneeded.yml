@@ -1,0 +1,19 @@
+uuid: b4c6faab-5371-4a41-a6ca-5825247210ac
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_whenisneeded
+    - node.type.service
+id: node.service.field_whenisneeded
+field_name: field_whenisneeded
+entity_type: node
+bundle: service
+label: 'When has to be perfomed?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

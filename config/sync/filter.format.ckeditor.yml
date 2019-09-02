@@ -1,6 +1,6 @@
-uuid: 5f1ebc86-54b5-414d-a868-f854d3900ee6
+uuid: 088b4db2-2d48-4d68-949c-b3d2852d93d7
 langcode: es
-status: true
+status: false
 dependencies:
   module:
     - editor

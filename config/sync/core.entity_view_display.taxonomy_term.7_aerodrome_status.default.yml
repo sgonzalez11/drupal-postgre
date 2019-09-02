@@ -1,0 +1,32 @@
+uuid: 3181c787-8635-4180-9212-7f04ad49c75f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.7_aerodrome_status.field_taxonomy_number
+    - taxonomy.vocabulary.7_aerodrome_status
+  module:
+    - text
+id: taxonomy_term.7_aerodrome_status.default
+targetEntityType: taxonomy_term
+bundle: 7_aerodrome_status
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_taxonomy_number:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  langcode: true

@@ -1,4 +1,4 @@
-uuid: 7de6e17a-7b71-4d8c-b83e-6e7ee9917fce
+uuid: b9c95f98-a013-4647-b72e-7f284a1e4c86
 langcode: es
 status: true
 dependencies:
@@ -7,8 +7,6 @@ dependencies:
     - node.type.nd_blog
   module:
     - comment
-_core:
-  default_config_hash: RaFbCAho2OcnGJSN7-G9qoB00qQyzGn1RTteLf9Wrgw
 id: node.nd_blog.field_comments
 field_name: field_comments
 entity_type: node

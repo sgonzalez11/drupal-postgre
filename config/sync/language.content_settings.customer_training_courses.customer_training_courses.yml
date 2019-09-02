@@ -1,0 +1,17 @@
+uuid: 5f4d7ef9-1f39-4e22-a397-87ef11df9969
+langcode: es
+status: true
+dependencies:
+  module:
+    - content_translation
+    - eauthority_atos
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: customer_training_courses.customer_training_courses
+target_entity_type_id: customer_training_courses
+target_bundle: customer_training_courses
+default_langcode: site_default
+language_alterable: false

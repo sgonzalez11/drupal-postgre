@@ -26,12 +26,13 @@ module:
   contact: 0
   contextual: 0
   ctools: 0
-  ctools_entity_mask: 0
   currency: 0
   currency_intl: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
+  dbug: 0
+  devel: 0
   domain: 0
   domain_access: 0
   domain_alias: 0
@@ -61,6 +62,7 @@ module:
   field_group: 0
   field_ui: 0
   file: 0
+  file_browser: 0
   file_entity: 0
   filter: 0
   fixed_block_content: 0
@@ -77,6 +79,7 @@ module:
   jango_cms: 0
   jango_main_features: 0
   jango_shortcodes: 0
+  kint: 0
   language: 0
   layout_discovery: 0
   libraries: 0
@@ -88,6 +91,7 @@ module:
   maestro_utilities: 0
   maestro_webform: 0
   md_slider: 0
+  media: 0
   menu_ui: 0
   nd_visualshortcodes: 0
   nikadevs_cms: 0
@@ -150,14 +154,14 @@ module:
 theme:
   stable: 0
   classy: 0
-  druadmin_lte_theme: 0
   jango: 0
-  eauth_customers: 0
-  eauth_atos: 0
+  druadmin_lte_theme: 0
   eauth_amos: 0
+  eauth_atos: 0
+  eauth_customers: 0
+  inac_amos: 0
   inac_atos: 0
   inac_customers: 0
-  inac_amos: 0
 profile: standard
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

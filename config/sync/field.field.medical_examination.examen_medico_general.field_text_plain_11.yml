@@ -1,0 +1,19 @@
+uuid: b9c48fcc-052a-4177-89a8-98ac7493704c
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_medico_general
+    - field.storage.medical_examination.field_text_plain_11
+id: medical_examination.examen_medico_general.field_text_plain_11
+field_name: field_text_plain_11
+entity_type: medical_examination
+bundle: examen_medico_general
+label: 'Musculoesquelético (explore amplitud de movimientos)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

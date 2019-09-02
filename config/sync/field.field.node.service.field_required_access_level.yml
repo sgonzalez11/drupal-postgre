@@ -1,0 +1,19 @@
+uuid: 650f81ef-53ce-4957-bc93-90b691648f00
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_required_access_level
+    - node.type.service
+id: node.service.field_required_access_level
+field_name: field_required_access_level
+entity_type: node
+bundle: service
+label: 'Nivel de acceso requerido'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

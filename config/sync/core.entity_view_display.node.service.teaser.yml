@@ -1,0 +1,82 @@
+uuid: 63653f9a-48d2-489b-8402-52d01842f247
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.service.body
+    - field.field.node.service.field_additional_information
+    - field.field.node.service.field_aimedto
+    - field.field.node.service.field_applicant_profiles
+    - field.field.node.service.field_appointment_length
+    - field.field.node.service.field_cost_information
+    - field.field.node.service.field_description
+    - field.field.node.service.field_document_parameter
+    - field.field.node.service.field_documentation
+    - field.field.node.service.field_domain_access
+    - field.field.node.service.field_domain_all_affiliates
+    - field.field.node.service.field_isappointmentneeded
+    - field.field.node.service.field_online_procedure
+    - field.field.node.service.field_online_procedure_url
+    - field.field.node.service.field_previous_needed_services
+    - field.field.node.service.field_related_publications
+    - field.field.node.service.field_related_services
+    - field.field.node.service.field_topics
+    - field.field.node.service.field_unit_types
+    - field.field.node.service.field_what_do_i_need_to_perform_
+    - field.field.node.service.field_whenisneeded
+    - field.field.node.service.field_whocanperformit
+    - node.type.service
+  module:
+    - text
+    - user
+id: node.service.teaser
+targetEntityType: node
+bundle: service
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 0
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_description:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_additional_information: true
+  field_aimedto: true
+  field_applicant_profiles: true
+  field_appointment_length: true
+  field_cost_information: true
+  field_document_parameter: true
+  field_documentation: true
+  field_domain_access: true
+  field_domain_all_affiliates: true
+  field_isappointmentneeded: true
+  field_online_procedure: true
+  field_online_procedure_url: true
+  field_previous_needed_services: true
+  field_previousproceduretypes: true
+  field_related_procedure_types: true
+  field_related_publications: true
+  field_related_services: true
+  field_topics: true
+  field_unit_types: true
+  field_what_do_i_need_to_perform_: true
+  field_whenisneeded: true
+  field_whocanperformit: true
+  langcode: true

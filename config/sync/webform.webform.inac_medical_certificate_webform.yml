@@ -1,0 +1,195 @@
+uuid: 8cf500c3-39e1-442c-81b6-9ff12fb16af9
+langcode: es
+status: open
+dependencies:
+  module:
+    - eauthority
+    - maestro_webform
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: inac_medical_certificate_webform
+title: 'INAC - Emisión de Certificado Médico'
+description: ''
+category: 'Medicina Aeronáutica'
+elements: "container:\n  '#type': container\ntipo_de_tramite:\n  '#type': hidden\n  '#title': 'Tipo de Tramite'\nservice_code:\n  '#type': value\n  '#title': 'Service Code'\n  '#value': SC-0001\nuser:\n  '#type': hidden\n  '#title': username\n  '#default_value': '[current-user:account-name]'\n  '#prepopulate': true\nflexbox_datos:\n  '#type': webform_flexbox\napellidos:\n  '#type': textfield\n  '#title': 'Apellido:'\n  '#title_display': inline\n  '#description_display': after\n  '#disabled': true\n  '#readonly': true\n  '#required': true\n  '#flex': '6'\n  '#default_value': '[current-user:field_last_name:value]'\nnombres_:\n  '#type': textfield\n  '#title': 'Nombres:'\n  '#disabled': true\n  '#readonly': true\n  '#default_value': '[current-user:field_first_name]'\n  '#required': true\nlugar_y_fecha_de_nacimiento_:\n  '#type': textfield\n  '#title': 'Fecha de Nacimiento:'\n  '#readonly': true\n  '#required': true\n  '#default_value': '[current-user:field_birth_date:value]'\nflexbox_01:\n  '#type': webform_flexbox\ngenero:\n  '#type': radios\n  '#title': 'Género:'\n  '#options':\n    1: Femenino\n    2: Masculino\n  '#options_display': two_columns\nocupacion_:\n  '#type': textfield\n  '#title': 'Ocupación:'\ntelefono:\n  '#type': textfield\n  '#title': Teléfono\n  '#title_display': inline\ndireccion_:\n  '#type': textfield\n  '#title': 'Direccíon:'\n  '#title_display': inline\n  '#description_display': after\ncontainer_02:\n  '#type': container\nflexbox_prueba:\n  '#type': webform_flexbox\nflexbox_01_parte:\n  '#type': webform_flexbox\n  '#flex': '2'\n  centro_medico:\n    '#type': webform_entity_select\n    '#title': 'Centro de evaluación médica aeronáutica'\n    '#format': value\n    '#target_type': customer\n    '#selection_handler': views\n    '#selection_settings':\n      view:\n        view_name: entity_reference_filters_customers\n        display_name: customers_type_amo\n        arguments: {  }\ncertificado_medico:\n  '#type': radios\n  '#title': 'Certificado médico'\n  '#options':\n    1: 'Clase 1'\n    2: 'Clase 2'\n    3: 'Clase 3'\n    4: 'Clase 4'\nflexbox_02_parte:\n  '#type': webform_flexbox\n  '#flex': '2'\nen_relacion_a_licencia:\n  '#type': checkboxes\n  '#title': 'En Relación a licencia para'\n  '#options':\n    'Piloto TLA': 'Piloto TLA'\n    'Piloto comercial': 'Piloto comercial'\n    TDC: TDC\n    CTA/OEA: CTA/OEA\n    'Mecánico de abordo': 'Mecánico de abordo'\n    'Alumno CTA / OEA': 'Alumno CTA / OEA'\n    'Piloto Privado': 'Piloto Privado'\n    'Piloto RPA': 'Piloto RPA'\n    'Alumno Piloto': 'Alumno Piloto'\ncheckboxes_otro:\n  '#type': checkbox\n  '#title': Otro\ncheckboxes_otro_text:\n  '#type': textfield\n  '#title': 'Texto checkbox'\n  '#title_display': invisible\n  '#states':\n    visible-slide:\n      ':input[name=\"checkboxes_otro\"]':\n        checked: true\n3er_content:\n  '#type': webform_section\n  '#title': '3er content'\n  '#title_display': invisible\nflexbox_02_estado_certificado:\n  '#type': webform_flexbox\n  estado_certificado:\n    '#type': radios\n    '#title': '¿Le ha sido alguna vez limitado, restringido, negado, suspendido o revocado un Certificado Médico?'\n    '#options':\n      1: SI\n      2: 'NO'\n_por_que_:\n  '#type': textfield\n  '#title': '¿Por qué?'\n  '#states':\n    visible-slide:\n      ':input[name=\"estado_certificado\"]':\n        value: '1'\nfour_content:\n  '#type': webform_section\n  '#title': four_content\n  '#title_display': invisible\ntipo_de_aeronave:\n  '#type': checkboxes\n  '#title': 'Tipo de Aeronave que actualmente vuela:'\n  '#options':\n    Reactor: Reactor\n    Hélice: Hélice\n    Helicóptero: Helicóptero\ncheckboxes_otro_2:\n  '#type': checkbox\n  '#title': Otro\ncheckboxes_otro_text_2:\n  '#type': textfield\n  '#title': 'Texto checkbox'\n  '#title_display': invisible\n  '#states':\n    visible-slide:\n      ':input[name=\"checkboxes_otro_2\"]':\n        checked: true\nflexbox_02_tipo:\n  '#type': webform_flexbox\ntotal_de_horas_voladas_:\n  '#type': textfield\n  '#title': 'Total de horas voladas'\n  '#flex': '3'\nult_6_meses:\n  '#type': textfield\n  '#title': 'Últimos 6 meses'\nflexbox_03_tipo2:\n  '#type': webform_flexbox\n  accidente:\n    '#type': radios\n    '#title': '¿Ha tenido usted algún accidente aéreo? (últimos 5 años)'\n    '#options':\n      1: SI\n      2: 'NO'\n    '#options_display': two_columns\nlugar_y_fecha:\n  '#type': textfield\n  '#title': 'Lugar y Fecha'\n  '#states':\n    visible-slide:\n      ':input[name=\"accidente\"]':\n        value: '1'\nflexbox_03_tipo3:\n  '#type': webform_flexbox\n  _hubo_lesiones_:\n    '#type': radios\n    '#title': '¿Hubo lesiones?'\n    '#options':\n      1: SI\n      2: 'NO'\n_cuales_:\n  '#type': textfield\n  '#title': '¿Cuáles?'\n  '#states':\n    visible-slide:\n      ':input[name=\"_hubo_lesiones_\"]':\n        value: '1'\nhistoria_medical_seccion:\n  '#type': processed_text\n  '#text': \"<h2><strong>HISTORIA MÉDICA</strong></h2>\\r\\n<h3>¿Ha experimentado usted alguna vez alguna de las condiciones siguientes? (en caso afirmativo cite y explique en&nbsp;la sección comentarios)</h3>\\r\\n\"\n  '#format': restricted_html\nflexbox_question:\n  '#type': webform_flexbox\nquestion2:\n  '#type': webform_likert\n  '#title': question\n  '#title_display': invisible\n  '#questions':\n    '01) Dolores de cabeza fuerte o frecuentes': '01) Dolores de cabeza fuerte o frecuentes'\n    '02) Traumatismos craneanos': '02) Traumatismos craneanos'\n    '03) Meningitis o encefalitis': '03) Meningitis o encefalitis'\n    '04) Epilepsia o convulsiones': '04) Epilepsia o convulsiones'\n    '05) Pérdida de conocimiento (cualquier cosa)': '05) Pérdida de conocimiento (cualquier cosa)'\n    '06) Vértigo o desvanecimientos': '06) Vértigo o desvanecimientos'\n    '07) Mareo por movimiento': '07) Mareo por movimiento'\n    '08) Desequilibrio al caminar': '8) Desequilobrio al caminar'\n    '09) Dificultad en el habla o la audición': '09) Dificultad en el habla o la audición'\n    '10) Obstrucción nasal frecuente': '10) Obstrucción nasal frecuente'\n    '11) Secreción o sangramiento de oídos': '11) Secreción o sangramiento de oídos'\n    '12) Trastornos oculares (excluir uso de lentes)': '12) Trastornos oculares (excluir uso de lentes)'\n    '13) Uso de lentes correctores': '13) Uso de lentes correctores'\n    '14) Visión de halos luminosos': '14) Visión de halos luminosos'\n    '15) Diabetes': '15) Diabetes'\n    '16) Asma': '16) Asma'\n    '17) Problemas osteo-articulares o musculares': '17) Problemas osteo-articulares o musculares'\n    '18) Trastornos cardiovasculares': '18) Trastornos cardiovasculares'\n    '19) Presión arterial alta o baja': '19) Presión arterial alta o baja'\n    '20) Trastornos gastrointestinales': '20) Trastornos gastrointestinales'\n  '#answers':\n    SI: SI\n    'NO': 'NO'\nquestion3:\n  '#type': webform_likert\n  '#title': question3\n  '#title_display': invisible\n  '#questions':\n    '21) Cáculos urinarios': '21) Cáculos urinarios'\n    '22) Sangre, albúmina o azucar eb la orina': '22) Sangre, albúmina o azucar eb la orina'\n    '23) Afecciones renales': '23) Afecciones renales'\n    '24) Afecciones ginecoobstétricas': '24) Afecciones ginecoobstétricas'\n    '25) Intervenciones quirúrgicas': '25) Intervenciones quirúrgicas'\n    '26) Cuadros nerviosos o mentales': '26) Cuadros nerviosos o mentales'\n    '27) Habituación a medicamentos o drogas': '27) Habituación a medicamentos o drogas'\n    '28) Consumo frecuente de bebidas alcohólicas ': '28) Consumo frecuente de bebidas acloholicas '\n    '29) Accidentes automovilísticos con lesiones': '29) Accidentes automovilísticos con lesiones'\n    '30) Intento de suicidio': '30) Intento de suicidio'\n    '31) Condena judicial': '31) Condena judicial'\n    '32) Rechazo médico para seguro de vida': '32) Rechazo médico para seguro de vida'\n    '33) Hopitalización (últimos 5 años)': '33) Hopitalización (últimos 5 años)'\n    '34) Tratamiento médico (últimos 5 años)': '34) Tratamiento médico (últimos 5 años)'\n    '35) Uso frecuente de algún tipo de medicación': '35) Uso frecuente de algún tipo de medicación -- (incluya Gotas Nasales u Oftálmicas, Antigripales, Sedantes, Analgésicos)'\n    '36) ¿Se considera usted sano física y mentalmente?': '36) ¿Se considera usted sano física y mentalmente?'\n  '#answers':\n    SI: SI\n    'NO': 'NO'\ncomentarios:\n  '#type': textarea\n  '#title': Comentarios\nresolutions_history:\n  '#type': webform_custom_composite\n  '#title': 'Historial de Resoluciones'\n  '#access_create_roles':\n    - administrator\n    - amo_administrative\n    - head_medical_examiner\n    - amo_admin\n  '#access_update_roles':\n    - administrator\n    - amo_administrative\n    - medical_examiner\n    - amo_admin\n  '#access_view_roles':\n    - administrator\n    - amo_administrative\n    - head_medical_examiner\n    - amo_admin\n  '#element':\n    validation_result:\n      '#type': textarea\n      '#title': 'Resultado de la validación'\n    validation_note:\n      '#type': textarea\n      '#title': 'Notas de Validación'\n    require_attachments:\n      '#type': radios\n      '#options':\n        - 'no'\n        - 'yes'\n        - multiple\n      '#title': 'Archivos adjuntos requeridos'\n    response_text:\n      '#type': textarea\n      '#title': 'Respuesta de aplicante'\n    response_files:\n      '#type': managed_file\n      '#title': 'Archivos de la respuesta'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#preview_prev__label': Regresar\n  '#preview_next__label': Continuar\nprocessed_text:\n  '#type': processed_text\n  '#display_on': view\n  '#text': \"<div class=\\\"row\\\">\\r\\n<div class=\\\"col-sm-12\\\"><input class=\\\"form-checkbox\\\" id=\\\"certify_checkbox\\\" type=\\\"checkbox\\\" value=\\\"0\\\" /> <label for=\\\"certify_checkbox\\\"> </label>Declaro bajo juramento que los datos consignados en este formulario son correctos y completos sin omitir ni falsear dato alguno que deba contener, siendo fi­el expresión de la verdad.<label for=\\\"certify_checkbox\\\"> </label></div>\\r\\n</div>\\r\\n\"\n  '#format': full_html"
+css: ".webform-required .form-required {\r\n  display: inline-block;\r\n  width: 20px;\r\n}\r\n\r\n.c-checkbox,\r\n.form-group.js-form-type-checkbox,\r\n.checkboxes--wrapper {\r\n  margin: 0 !important; \r\n}\r\n\r\n.form-actions {\r\n   clear: both;\r\n}\r\n\r\n.webform-preview .webform-element-type-webform-likert {\r\n  width: 50%;\r\n  float: left;\r\n  border: 0 !important;\r\n}\r\n\r\n.webform-preview .webform-element-type-webform-likert > label {\r\n  display: none !important;\r\n}\r\n\r\n.webform-preview .form-item-notas-validacion {\r\n  clear: both;\r\n}\r\n\r\n.webform-submission-form #edit-actions div {\r\n\tdisplay: inline-block;\r\n\tfloat: left;\r\n\tmargin-right: 10px;\r\n}\r\n\r\n.webform-confirmation__back a {\r\n\tdisplay: none;\r\n}"
+javascript: "(function ($) {\r\n    $(document).ready(function () {\r\n      $('#edit-actions-submit').attr('disabled', 'disabled');\r\n      $('#certify_checkbox').change(function () {\r\n        if (this.checked) {\r\n          $('#edit-actions-submit').removeAttr('disabled');\r\n        } else {\r\n          $('#edit-actions-submit').attr('disabled', 'disabled');\r\n        }\r\n      });\r\n    });\r\n}(jQuery));"
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_title: source_entity_webform
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_remote_addr: true
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: true
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: login
+  form_access_denied_title: ''
+  form_access_denied_message: 'Es necesario <a href="[site:login-url]/login?destination=[current-page:url:relative]">iniciar sesi&oacute;n de usuario</a> para proceder con el llenado del formulario.'
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  preview: 2
+  preview_label: Resumen
+  preview_title: Resumen
+  preview_message: 'Por favor revise la informaci&oacute;n y luego presione el comando &quot;Enviar&quot;.'
+  preview_attributes: {  }
+  preview_excluded_elements:
+    tipo_de_tramite: tipo_de_tramite
+    service_code: service_code
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: "<p style=\"text-align:center\">Su solicitud ha sido recibida correctamente.</p>\r\n\r\n<p style=\"text-align:center\">A continuaci&oacute;n seleccione un&nbsp;<a href=\"/appointments/new\">turno</a></p>"
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: false
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  spawn_maestro_workflow:
+    id: maestro
+    label: 'Spawn Maestro Workflow'
+    handler_id: spawn_maestro_workflow
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      maestro_template: inac_medical_certificate
+      maestro_message_success: ''
+      maestro_message_failure: ''
+  generate_new_entity_transaction:
+    id: generate_transaction
+    label: 'Generate New Entity Transaction'
+    handler_id: generate_new_entity_transaction
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      service: '[webform_submission:values:service_code]'
+      transaction_type: medical_certificate_application
+      custom_options: "payment_reference: 'Just a Reference'\r\npayment_amount: 50\r\npayment_status: PEN"

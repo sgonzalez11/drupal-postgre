@@ -1,0 +1,8 @@
+uuid: 29ef4893-4aa4-44d0-98a6-f481e7252533
+langcode: und
+status: true
+dependencies: {  }
+id: customers-main-menu
+label: 'Customers Main Menu'
+description: ''
+locked: false

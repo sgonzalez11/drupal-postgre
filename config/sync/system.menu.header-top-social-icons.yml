@@ -1,0 +1,8 @@
+uuid: fd932f8b-6e7d-40d6-acff-abadecb09b72
+langcode: und
+status: true
+dependencies: {  }
+id: header-top-social-icons
+label: 'Header Top Social Icons'
+description: 'This Menu will be located at the header on the right corner. The menu will be included social icons related to the authority'
+locked: false

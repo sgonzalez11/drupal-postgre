@@ -1,0 +1,11 @@
+uuid: ca24964f-a066-4d40-9d26-74b2d9923ed9
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.166_landing_gear_type
+id: taxonomy_term.166_landing_gear_type
+target_entity_type_id: taxonomy_term
+target_bundle: 166_landing_gear_type
+default_langcode: site_default
+language_alterable: false

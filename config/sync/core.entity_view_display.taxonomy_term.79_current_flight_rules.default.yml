@@ -1,0 +1,32 @@
+uuid: 7b27fc99-5993-4373-bd80-ccf98e183d9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.79_current_flight_rules.field_taxonomy_number
+    - taxonomy.vocabulary.79_current_flight_rules
+  module:
+    - text
+id: taxonomy_term.79_current_flight_rules.default
+targetEntityType: taxonomy_term
+bundle: 79_current_flight_rules
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_taxonomy_number:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  langcode: true

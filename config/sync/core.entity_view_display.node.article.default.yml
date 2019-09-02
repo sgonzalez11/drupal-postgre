@@ -1,4 +1,4 @@
-uuid: b32b40fc-39c2-4819-ab05-22d3455bf82e
+uuid: 6380927c-ab35-4ced-95cc-313412787708
 langcode: es
 status: true
 dependencies:
@@ -6,6 +6,8 @@ dependencies:
     - core.entity_view_display.comment.comment.default
     - field.field.node.article.body
     - field.field.node.article.comment
+    - field.field.node.article.field_domain_access
+    - field.field.node.article.field_domain_all_affiliates
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
     - image.style.large
@@ -61,4 +63,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_domain_access: true
+  field_domain_all_affiliates: true
   langcode: true

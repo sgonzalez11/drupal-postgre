@@ -1,0 +1,52 @@
+uuid: b78155ae-c6b6-48b4-af87-e02ed4fc11a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.5_aerodrome_location_indicator.field_taxonomy_number
+    - taxonomy.vocabulary.5_aerodrome_location_indicator
+  module:
+    - path
+    - text
+id: taxonomy_term.5_aerodrome_location_indicator.default
+targetEntityType: taxonomy_term
+bundle: 5_aerodrome_location_indicator
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_taxonomy_number:
+    weight: 31
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

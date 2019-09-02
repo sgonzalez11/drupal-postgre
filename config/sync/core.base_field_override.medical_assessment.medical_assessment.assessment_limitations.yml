@@ -1,0 +1,18 @@
+uuid: cd0a84bc-aa59-472a-be3d-6adf372dd456
+langcode: en
+status: true
+dependencies:
+  module:
+    - eauthority_amos
+id: medical_assessment.medical_assessment.assessment_limitations
+field_name: assessment_limitations
+entity_type: medical_assessment
+bundle: medical_assessment
+label: 'Assessment Limitations'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,4 +1,4 @@
-uuid: 151c5aa1-c17e-4921-b2e4-98f68ea34990
+uuid: 1a09994c-ed56-4c5c-b632-3bacc24522f9
 langcode: es
 status: true
 dependencies:
@@ -16,7 +16,7 @@ bundle: webform
 label: Body
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

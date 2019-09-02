@@ -1,0 +1,9 @@
+uuid: 3eac94ae-ad9f-4a77-80c8-332595b0cc74
+langcode: en
+status: true
+dependencies: {  }
+name: '390 - event type'
+vid: 390_event_type
+description: ''
+hierarchy: 0
+weight: 0

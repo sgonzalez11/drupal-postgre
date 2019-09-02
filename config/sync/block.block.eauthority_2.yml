@@ -1,0 +1,20 @@
+uuid: 27dd5a42-e867-48c8-8646-2888a0065db8
+langcode: en
+status: true
+dependencies:
+  module:
+    - tb_megamenu
+  theme:
+    - druadmin_lte_theme
+id: eauthority_2
+theme: druadmin_lte_theme
+region: sidebar
+weight: 0
+provider: null
+plugin: 'tb_megamenu_menu_block:eauthority'
+settings:
+  id: 'tb_megamenu_menu_block:eauthority'
+  label: eAuthority
+  provider: tb_megamenu
+  label_display: visible
+visibility: {  }

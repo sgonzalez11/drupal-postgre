@@ -1,0 +1,17 @@
+uuid: 7dc5890e-baf5-47ab-9756-215b20e4d989
+langcode: es
+status: true
+dependencies:
+  module:
+    - content_translation
+    - eauthority_amos
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: med_assessmt_recommendation.med_assessmt_recommendation
+target_entity_type_id: med_assessmt_recommendation
+target_bundle: med_assessmt_recommendation
+default_langcode: site_default
+language_alterable: false

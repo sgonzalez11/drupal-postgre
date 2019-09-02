@@ -1,0 +1,32 @@
+uuid: 2fe4f68e-64d3-4cf7-8584-c8c885503760
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.648_bird_size.field_taxonomy_number
+    - taxonomy.vocabulary.648_bird_size
+  module:
+    - text
+id: taxonomy_term.648_bird_size.default
+targetEntityType: taxonomy_term
+bundle: 648_bird_size
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_taxonomy_number:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  langcode: true

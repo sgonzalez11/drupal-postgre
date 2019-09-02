@@ -1,0 +1,9 @@
+uuid: 601d3f9f-825d-414b-951f-1cc95c170c84
+langcode: en
+status: true
+dependencies: {  }
+name: 'latitude longuitude'
+vid: latitude_longuitude
+description: ''
+hierarchy: 0
+weight: 0

@@ -1,0 +1,6 @@
+uuid: c36d6bf2-7b89-4fb1-a490-424d8301b6b2
+langcode: en
+status: true
+dependencies: {  }
+id: examen_otorrinolaringologico
+label: 'Examen otorrinolaringológico'

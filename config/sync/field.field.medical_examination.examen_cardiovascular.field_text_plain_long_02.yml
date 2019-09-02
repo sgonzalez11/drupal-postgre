@@ -1,0 +1,19 @@
+uuid: 4675dfc7-d7b2-4279-b9f4-2670755b5783
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_cardiovascular
+    - field.storage.medical_examination.field_text_plain_long_02
+id: medical_examination.examen_cardiovascular.field_text_plain_long_02
+field_name: field_text_plain_long_02
+entity_type: medical_examination
+bundle: examen_cardiovascular
+label: 'Pulso venoso'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

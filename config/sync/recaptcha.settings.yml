@@ -1,5 +1,5 @@
-site_key: ''
-secret_key: ''
+site_key: 6LcYbasUAAAAAPV6IU54OSkM9wv51j9ajGPhnbcE
+secret_key: 6LcYbasUAAAAAN0eSYnYLcGhR01goxnVk68lzzkh
 verify_hostname: false
 use_globally: false
 widget:

@@ -1,0 +1,11 @@
+uuid: a1b6f72d-7335-40cc-baef-7e642a87cfe5
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.645_bird_wildlife_species_descri
+id: taxonomy_term.645_bird_wildlife_species_descri
+target_entity_type_id: taxonomy_term
+target_bundle: 645_bird_wildlife_species_descri
+default_langcode: site_default
+language_alterable: false

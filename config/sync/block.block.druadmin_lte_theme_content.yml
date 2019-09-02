@@ -1,4 +1,4 @@
-uuid: 736e4509-929c-4e7f-b473-ad2454938061
+uuid: f272e297-244c-49c4-b72f-c8224fbc859b
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: druadmin_lte_theme_content
 theme: druadmin_lte_theme
 region: content
-weight: 0
+weight: 1
 provider: null
 plugin: system_main_block
 settings:

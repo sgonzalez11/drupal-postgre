@@ -1,0 +1,11 @@
+uuid: 8f8803e4-a21d-4929-b195-b79989113d44
+langcode: en
+status: true
+dependencies:
+  module:
+    - eauthority_atos
+id: training_course.training_course
+target_entity_type_id: training_course
+target_bundle: training_course
+default_langcode: site_default
+language_alterable: false

@@ -1,4 +1,4 @@
-uuid: 8952c563-195a-486f-bcf7-8554edfed413
+uuid: 321096f7-b5e7-4261-8c78-6b06f80137b2
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: inac_atos_help
 theme: inac_atos
 region: content
-weight: -30
+weight: -1
 provider: null
 plugin: help_block
 settings:

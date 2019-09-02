@@ -1,0 +1,11 @@
+uuid: 5d0e1a9f-4afb-464f-8bcf-575247ad5c99
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.transaction_statuses
+id: taxonomy_term.transaction_statuses
+target_entity_type_id: taxonomy_term
+target_bundle: transaction_statuses
+default_langcode: site_default
+language_alterable: false

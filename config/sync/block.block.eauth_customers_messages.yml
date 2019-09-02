@@ -1,4 +1,4 @@
-uuid: dbad8ba6-29e6-48eb-b987-c507034ca707
+uuid: 37dae019-1fc5-41c1-b7f8-c4dbf5121c57
 langcode: en
 status: true
 dependencies:
@@ -10,8 +10,8 @@ _core:
   default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
 id: eauth_customers_messages
 theme: eauth_customers
-region: highlighted
-weight: 0
+region: content
+weight: -7
 provider: null
 plugin: system_messages_block
 settings:

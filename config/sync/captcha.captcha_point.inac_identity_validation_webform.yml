@@ -1,0 +1,7 @@
+uuid: dd2ec0e3-3219-42c4-a80d-46df68f61d31
+langcode: es
+status: true
+dependencies: {  }
+formId: inac_identity_validation_webform
+captchaType: recaptcha/reCAPTCHA
+label: inac_identity_validation_webform

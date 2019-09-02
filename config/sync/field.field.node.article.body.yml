@@ -1,4 +1,4 @@
-uuid: 7c35d3aa-339b-4725-8303-4e744719abb7
+uuid: fdbaf894-9bac-4af0-9336-6a1a509448c7
 langcode: es
 status: true
 dependencies:
@@ -16,7 +16,7 @@ bundle: article
 label: Body
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

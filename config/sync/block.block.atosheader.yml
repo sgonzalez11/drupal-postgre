@@ -1,0 +1,30 @@
+uuid: b6adf0b3-b100-4a28-a8d3-4c933c0bf1d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - fixed_block_content.fixed_block_content.atos_header
+  module:
+    - domain
+    - fixed_block_content
+  theme:
+    - eauth_atos
+id: atosheader
+theme: eauth_atos
+region: header
+weight: -5
+provider: null
+plugin: 'fixed_block_content:atos_header'
+settings:
+  id: 'fixed_block_content:atos_header'
+  label: 'ATOs Header'
+  provider: fixed_block_content
+  label_display: '0'
+  view_mode: ''
+visibility:
+  domain:
+    id: domain
+    domains:
+      atos_portal: atos_portal
+    negate: false
+    context_mapping: {  }

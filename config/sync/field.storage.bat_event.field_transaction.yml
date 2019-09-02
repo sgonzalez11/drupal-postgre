@@ -1,0 +1,20 @@
+uuid: 108d56e4-8b25-4335-a129-de3a5e10a031
+langcode: es
+status: true
+dependencies:
+  module:
+    - bat_event
+    - eauthority_transactions
+id: bat_event.field_transaction
+field_name: field_transaction
+entity_type: bat_event
+type: entity_reference
+settings:
+  target_type: transaction
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

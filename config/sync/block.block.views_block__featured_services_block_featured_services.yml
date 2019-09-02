@@ -1,0 +1,37 @@
+uuid: d5af4534-f91c-4151-a533-56c790e2cfaa
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.featured_services
+  module:
+    - domain
+    - system
+    - views
+  theme:
+    - eauth_customers
+id: views_block__featured_services_block_featured_services
+theme: eauth_customers
+region: sidebar
+weight: -6
+provider: null
+plugin: 'views_block:featured_services-block_featured_services'
+settings:
+  id: 'views_block:featured_services-block_featured_services'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  domain:
+    id: domain
+    domains:
+      customers_portal: customers_portal
+    negate: false
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

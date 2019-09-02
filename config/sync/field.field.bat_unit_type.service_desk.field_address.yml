@@ -1,0 +1,19 @@
+uuid: cc70ecb9-5eb4-4912-8efa-570444f5fb83
+langcode: en
+status: true
+dependencies:
+  config:
+    - bat_unit.type_bundle.service_desk
+    - field.storage.bat_unit_type.field_address
+id: bat_unit_type.service_desk.field_address
+field_name: field_address
+entity_type: bat_unit_type
+bundle: service_desk
+label: Address
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

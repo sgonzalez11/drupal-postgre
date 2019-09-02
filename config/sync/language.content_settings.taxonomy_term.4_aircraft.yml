@@ -1,0 +1,11 @@
+uuid: 03be096f-11cb-44f6-bff8-0e436e8d1171
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.4_aircraft
+id: taxonomy_term.4_aircraft
+target_entity_type_id: taxonomy_term
+target_bundle: 4_aircraft
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,20 @@
+uuid: a2b8bd74-06b9-4466-b85d-ac26e51ccd2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_medico_general
+  module:
+    - options
+id: medical_examination.examen_medico_general.medical_examination_type
+field_name: medical_examination_type
+entity_type: medical_examination
+bundle: examen_medico_general
+label: 'Examiation Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

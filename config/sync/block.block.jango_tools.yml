@@ -1,6 +1,6 @@
-uuid: 97127110-8e9c-4de0-be48-0e1c0a5baee8
+uuid: 9a7c09ef-5dc3-4e35-b353-abf160a42a07
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.tools
@@ -13,7 +13,7 @@ _core:
 id: jango_tools
 theme: jango
 region: header
-weight: 0
+weight: -7
 provider: null
 plugin: 'system_menu_block:tools'
 settings:

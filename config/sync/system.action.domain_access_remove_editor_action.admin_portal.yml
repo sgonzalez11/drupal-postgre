@@ -1,0 +1,14 @@
+uuid: b350bec0-7e98-4c22-8ce8-0b0aee9f3964
+langcode: es
+status: true
+dependencies:
+  config:
+    - domain.record.admin_portal
+  module:
+    - domain_access
+id: domain_access_remove_editor_action.admin_portal
+label: 'Remove editors from the eAuthority Admin Portal domain'
+type: user
+plugin: domain_access_remove_editor_action
+configuration:
+  domain_id: admin_portal

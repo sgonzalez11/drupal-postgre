@@ -1,0 +1,11 @@
+uuid: 4bf6e5e3-1df1-4280-9f29-1b8a1dd6a253
+langcode: es
+status: true
+dependencies:
+  module:
+    - eauthority_atos
+id: training_record_attendee_result.training_record_attendee_result
+target_entity_type_id: training_record_attendee_result
+target_bundle: training_record_attendee_result
+default_langcode: site_default
+language_alterable: false

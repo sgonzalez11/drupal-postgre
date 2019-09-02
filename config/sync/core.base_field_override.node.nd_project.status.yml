@@ -1,0 +1,22 @@
+uuid: 059f6f0e-3d66-4b57-a71a-10c0e7569a6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.nd_project
+id: node.nd_project.status
+field_name: status
+entity_type: node
+bundle: nd_project
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

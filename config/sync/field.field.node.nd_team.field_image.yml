@@ -1,4 +1,4 @@
-uuid: b312abba-6b24-49e8-8ff4-7709e737b7ef
+uuid: 9a190b09-6125-4915-b167-3a8f76f9343b
 langcode: es
 status: true
 dependencies:
@@ -16,7 +16,7 @@ bundle: nd_team
 label: Image
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

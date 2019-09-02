@@ -1,0 +1,9 @@
+uuid: c37ee830-03fc-427e-963b-d095a5409897
+langcode: en
+status: true
+dependencies: {  }
+name: Longitude_latitude
+vid: longitude_latitude
+description: ''
+hierarchy: 0
+weight: 0

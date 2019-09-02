@@ -1,0 +1,14 @@
+uuid: d70ca0a6-4105-433f-bdeb-08eb39a32235
+langcode: es
+status: true
+dependencies:
+  config:
+    - domain.record.amos_portal
+  module:
+    - domain_access
+id: domain_access_add_editor_action.amos_portal
+label: 'Add editors to the AMOs Portal domain'
+type: user
+plugin: domain_access_add_editor_action
+configuration:
+  domain_id: amos_portal

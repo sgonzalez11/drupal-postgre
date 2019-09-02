@@ -1,0 +1,32 @@
+uuid: 1ec9d0b3-d426-46cf-a70a-a07250d07d4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.167_last_departure_point.field_taxonomy_number
+    - taxonomy.vocabulary.167_last_departure_point
+  module:
+    - text
+id: taxonomy_term.167_last_departure_point.default
+targetEntityType: taxonomy_term
+bundle: 167_last_departure_point
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_taxonomy_number:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  langcode: true

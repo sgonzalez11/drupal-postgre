@@ -1,0 +1,19 @@
+uuid: 66c41317-6b85-417e-b4ca-08115b4ac463
+langcode: en
+status: true
+dependencies:
+  module:
+    - bat_unit
+id: bat_unit_type.field_address
+field_name: field_address
+entity_type: bat_unit_type
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

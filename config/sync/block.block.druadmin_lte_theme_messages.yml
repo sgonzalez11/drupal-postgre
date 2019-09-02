@@ -1,4 +1,4 @@
-uuid: 200824ce-b0b9-4ee4-9b6d-fb84d7bd4db2
+uuid: b12cf75f-c01e-4982-b383-a081038583f5
 langcode: en
 status: true
 dependencies:
@@ -10,8 +10,8 @@ _core:
   default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
 id: druadmin_lte_theme_messages
 theme: druadmin_lte_theme
-region: brand
-weight: 0
+region: content
+weight: -3
 provider: null
 plugin: system_messages_block
 settings:

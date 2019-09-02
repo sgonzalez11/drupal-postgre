@@ -1,4 +1,4 @@
-uuid: 90237bc5-3526-403e-bfcd-5c6dc4e7cc04
+uuid: dca2b753-1b7e-4510-bad6-afd8c0edaa97
 langcode: en
 status: true
 dependencies:
@@ -10,8 +10,8 @@ _core:
   default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
 id: inac_atos_messages
 theme: inac_atos
-region: highlighted
-weight: 0
+region: content
+weight: -7
 provider: null
 plugin: system_messages_block
 settings:

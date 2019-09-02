@@ -1,0 +1,21 @@
+uuid: cd0998d0-5aed-4eb1-b1cd-a5b2f3e19b69
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_oftalmologico
+    - field.storage.medical_examination.field_text_list_oft_02
+  module:
+    - options
+id: medical_examination.examen_oftalmologico.field_text_list_oft_02
+field_name: field_text_list_oft_02
+entity_type: medical_examination
+bundle: examen_oftalmologico
+label: 'Reflejo consensual'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

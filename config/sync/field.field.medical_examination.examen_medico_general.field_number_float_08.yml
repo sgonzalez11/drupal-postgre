@@ -1,0 +1,23 @@
+uuid: 37801547-caaf-46e9-8d96-d3e916d4304e
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_medico_general
+    - field.storage.medical_examination.field_number_float_08
+id: medical_examination.examen_medico_general.field_number_float_08
+field_name: field_number_float_08
+entity_type: medical_examination
+bundle: examen_medico_general
+label: 'PA Acostado (3)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

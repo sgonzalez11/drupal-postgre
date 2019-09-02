@@ -1,0 +1,6 @@
+uuid: 1afabd97-47a6-4846-8d8a-d7e67aff44cc
+langcode: en
+status: true
+dependencies: {  }
+id: examen_neurologico
+label: 'Examen neurológico'

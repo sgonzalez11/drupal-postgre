@@ -1,0 +1,14 @@
+uuid: 592e20b2-0f9c-4e7a-9278-3c0bcf44ea53
+langcode: es
+status: true
+dependencies:
+  config:
+    - domain.record.atos_portal
+  module:
+    - domain_access
+id: domain_access_add_editor_action.atos_portal
+label: 'Add editors to the ATOs Portal domain'
+type: user
+plugin: domain_access_add_editor_action
+configuration:
+  domain_id: atos_portal

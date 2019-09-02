@@ -1,0 +1,32 @@
+uuid: d5077f60-9243-4b1a-93cf-69ae38766fcb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.432_damage_severity_level.field_taxonomy_number
+    - taxonomy.vocabulary.432_damage_severity_level
+  module:
+    - text
+id: taxonomy_term.432_damage_severity_level.default
+targetEntityType: taxonomy_term
+bundle: 432_damage_severity_level
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_taxonomy_number:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  langcode: true

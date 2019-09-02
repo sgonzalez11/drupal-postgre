@@ -1,4 +1,4 @@
-uuid: 64aa7d8f-896c-4367-867e-7d6f4e121062
+uuid: 262ab22b-2428-4699-95d8-c49de31af056
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: inac_amos_local_actions
 theme: inac_amos
 region: content
-weight: -20
+weight: -6
 provider: null
 plugin: local_actions_block
 settings:

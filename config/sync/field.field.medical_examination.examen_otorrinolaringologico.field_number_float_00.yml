@@ -1,0 +1,23 @@
+uuid: f4d90c2c-66a9-4835-8f34-91dea24f4697
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_otorrinolaringologico
+    - field.storage.medical_examination.field_number_float_00
+id: medical_examination.examen_otorrinolaringologico.field_number_float_00
+field_name: field_number_float_00
+entity_type: medical_examination
+bundle: examen_otorrinolaringologico
+label: 'OD-via osea-0.5K'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

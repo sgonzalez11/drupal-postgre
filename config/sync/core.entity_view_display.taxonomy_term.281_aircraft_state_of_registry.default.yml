@@ -1,0 +1,32 @@
+uuid: 2a2ec87d-5452-4ab8-a497-79c7178efb7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.281_aircraft_state_of_registry.field_taxonomy_number
+    - taxonomy.vocabulary.281_aircraft_state_of_registry
+  module:
+    - text
+id: taxonomy_term.281_aircraft_state_of_registry.default
+targetEntityType: taxonomy_term
+bundle: 281_aircraft_state_of_registry
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_taxonomy_number:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,11 @@
+uuid: acb6f56a-93f3-4abc-82b5-af3a977b5b55
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.32_aircraft_category
+id: taxonomy_term.32_aircraft_category
+target_entity_type_id: taxonomy_term
+target_bundle: 32_aircraft_category
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,11 @@
+uuid: deee38f3-f9db-4b39-b307-9c2d14b767af
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.276_type_of_airspeed
+id: taxonomy_term.276_type_of_airspeed
+target_entity_type_id: taxonomy_term
+target_bundle: 276_type_of_airspeed
+default_langcode: site_default
+language_alterable: false

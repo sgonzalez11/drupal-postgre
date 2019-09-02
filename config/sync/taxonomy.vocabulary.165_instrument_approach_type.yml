@@ -1,0 +1,9 @@
+uuid: 1f67b7dd-d8d8-4e03-9099-e32df776922a
+langcode: en
+status: true
+dependencies: {  }
+name: '165 instrument approach type'
+vid: 165_instrument_approach_type
+description: ''
+hierarchy: 0
+weight: 0

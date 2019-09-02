@@ -1,0 +1,9 @@
+uuid: dbe6f6de-119e-4659-a736-1c4801c4895c
+langcode: es
+status: true
+dependencies: {  }
+name: 'Estados de Trámites'
+vid: transaction_statuses
+description: 'Estados de Trámites'
+hierarchy: 0
+weight: 0

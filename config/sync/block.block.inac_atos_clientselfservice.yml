@@ -1,0 +1,25 @@
+uuid: 52ed3a25-9f8b-4717-869e-95ad37046c6a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:03936b14-3410-48a5-9e57-31f7f96a9fbb'
+  module:
+    - block_content
+  theme:
+    - inac_atos
+id: inac_atos_clientselfservice
+theme: inac_atos
+region: header
+weight: -7
+provider: null
+plugin: 'block_content:03936b14-3410-48a5-9e57-31f7f96a9fbb'
+settings:
+  id: 'block_content:03936b14-3410-48a5-9e57-31f7f96a9fbb'
+  label: 'Client Self-Service'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

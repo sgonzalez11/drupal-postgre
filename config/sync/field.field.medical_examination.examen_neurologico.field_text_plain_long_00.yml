@@ -1,0 +1,19 @@
+uuid: 7438e2a9-765d-4e94-b1d4-3d12df421ab1
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_neurologico
+    - field.storage.medical_examination.field_text_plain_long_00
+id: medical_examination.examen_neurologico.field_text_plain_long_00
+field_name: field_text_plain_long_00
+entity_type: medical_examination
+bundle: examen_neurologico
+label: 'Historia neurológica'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

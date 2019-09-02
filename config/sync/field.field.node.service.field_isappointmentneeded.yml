@@ -1,0 +1,23 @@
+uuid: 3d84d3ee-c7c2-46f8-b290-767998c1998e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_isappointmentneeded
+    - node.type.service
+id: node.service.field_isappointmentneeded
+field_name: field_isappointmentneeded
+entity_type: node
+bundle: service
+label: 'Is an Appointment Needed?'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

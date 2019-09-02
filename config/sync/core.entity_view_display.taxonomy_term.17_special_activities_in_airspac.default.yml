@@ -1,0 +1,32 @@
+uuid: 0324d388-0706-4b4d-aca9-e8a4cc0ebd6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.17_special_activities_in_airspac.field_taxonomy_number
+    - taxonomy.vocabulary.17_special_activities_in_airspac
+  module:
+    - text
+id: taxonomy_term.17_special_activities_in_airspac.default
+targetEntityType: taxonomy_term
+bundle: 17_special_activities_in_airspac
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_taxonomy_number:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,23 @@
+uuid: 9e1ea70c-1b0a-4d55-8866-875378a7685d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_taxonomy_number
+    - taxonomy.vocabulary.1091_language_of_the_reporter_s_
+id: taxonomy_term.1091_language_of_the_reporter_s_.field_taxonomy_number
+field_name: field_taxonomy_number
+entity_type: taxonomy_term
+bundle: 1091_language_of_the_reporter_s_
+label: 'taxonomy number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

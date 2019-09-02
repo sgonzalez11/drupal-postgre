@@ -1,0 +1,11 @@
+uuid: b6d4260b-9d31-425c-ab3f-bcc7e11ba9f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.inac_licence_application
+id: webform_submission.inac_licence_application
+target_entity_type_id: webform_submission
+target_bundle: inac_licence_application
+default_langcode: site_default
+language_alterable: false

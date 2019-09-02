@@ -1,0 +1,21 @@
+uuid: c04b0245-3791-4f07-a5ce-15aa0842965f
+langcode: en
+status: true
+dependencies:
+  module:
+    - eauthority_amos
+    - options
+id: medical_assessment.medical_assessment.class
+field_name: class
+entity_type: medical_assessment
+bundle: medical_assessment
+label: 'Certificate Class'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: list_string

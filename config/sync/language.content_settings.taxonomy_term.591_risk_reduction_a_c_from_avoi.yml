@@ -1,0 +1,11 @@
+uuid: 31d1c11d-e305-4c2c-beb0-c10ea4c438a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.591_risk_reduction_a_c_from_avoi
+id: taxonomy_term.591_risk_reduction_a_c_from_avoi
+target_entity_type_id: taxonomy_term
+target_bundle: 591_risk_reduction_a_c_from_avoi
+default_langcode: site_default
+language_alterable: false

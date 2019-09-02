@@ -1,0 +1,20 @@
+uuid: 7caedb87-4ea9-4ab9-bed3-b283c404ca81
+langcode: en
+status: true
+dependencies:
+  module:
+    - eauthority
+id: customer_profiles.customer_profiles.user_id
+field_name: user_id
+entity_type: customer_profiles
+bundle: customer_profiles
+label: 'Authored by'
+description: 'The user ID of author of the Customer Profiles entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

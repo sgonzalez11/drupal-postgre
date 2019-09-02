@@ -1,0 +1,14 @@
+uuid: 4e19ac84-d564-4663-9979-c308e18461db
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.amo_administrative
+  module:
+    - user
+id: user_add_role_action.amo_administrative
+label: 'Add the AMO Administrative role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: amo_administrative

@@ -1,0 +1,25 @@
+uuid: 77e01098-5706-48f3-829f-630c1579a4c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_number
+    - node.type.document_parameter
+id: node.document_parameter.field_number
+field_name: field_number
+entity_type: node
+bundle: document_parameter
+label: Number
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

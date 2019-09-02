@@ -1,0 +1,27 @@
+uuid: e89a236a-e66f-4246-b6dc-4b4c22eab18a
+langcode: en
+status: true
+dependencies:
+  module:
+    - eauthority_amos
+    - options
+id: medical_examination.field_text_list_t_correccion
+field_name: field_text_list_t_correccion
+entity_type: medical_examination
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: convencional
+      label: Convencional
+    -
+      value: contacto
+      label: Contacto
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

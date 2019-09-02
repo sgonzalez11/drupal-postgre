@@ -1,0 +1,11 @@
+uuid: d93b02b5-d7ff-4e2a-a1bd-b99ca176e7d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.402_flight_crew_category
+id: taxonomy_term.402_flight_crew_category
+target_entity_type_id: taxonomy_term
+target_bundle: 402_flight_crew_category
+default_langcode: site_default
+language_alterable: false

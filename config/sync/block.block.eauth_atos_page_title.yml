@@ -1,7 +1,9 @@
-uuid: 846e4755-cb69-4a38-ba34-788e4803414c
+uuid: e7b99088-4ac4-4794-848d-b20e3524965d
 langcode: en
-status: true
+status: false
 dependencies:
+  module:
+    - system
   theme:
     - eauth_atos
 _core:
@@ -9,7 +11,7 @@ _core:
 id: eauth_atos_page_title
 theme: eauth_atos
 region: content
-weight: -50
+weight: 2
 provider: null
 plugin: page_title_block
 settings:
@@ -17,4 +19,9 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

@@ -1,0 +1,21 @@
+uuid: 973ff011-7fe8-4444-a891-a007012861f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_cardiovascular
+    - field.storage.medical_examination.field_text_list_08
+  module:
+    - options
+id: medical_examination.examen_cardiovascular.field_text_list_08
+field_name: field_text_list_08
+entity_type: medical_examination
+bundle: examen_cardiovascular
+label: 'Auscultación Cardiaca '
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

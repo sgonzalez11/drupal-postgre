@@ -1,0 +1,18 @@
+uuid: 4fd02ea4-0d1b-4711-8fd1-ec79ee5e1b77
+langcode: es
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_cardiovascular
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: medical_examination.examen_cardiovascular
+target_entity_type_id: medical_examination
+target_bundle: examen_cardiovascular
+default_langcode: site_default
+language_alterable: false

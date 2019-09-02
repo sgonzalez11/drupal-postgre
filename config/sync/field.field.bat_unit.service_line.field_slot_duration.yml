@@ -1,0 +1,23 @@
+uuid: a0fa0e62-b27a-4c1d-a55a-9a5129740b83
+langcode: es
+status: true
+dependencies:
+  config:
+    - bat_unit.unit_bundle.service_line
+    - field.storage.bat_unit.field_slot_duration
+id: bat_unit.service_line.field_slot_duration
+field_name: field_slot_duration
+entity_type: bat_unit
+bundle: service_line
+label: 'Slot Duration'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,21 @@
+uuid: 07aed065-ce05-4a0f-af48-e90161f2f60a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cost_information
+    - node.type.service
+  module:
+    - text
+id: node.service.field_cost_information
+field_name: field_cost_information
+entity_type: node
+bundle: service
+label: 'Cost Information'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,11 @@
+uuid: f9f0738a-2152-4401-b613-a88344e3dd3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.454_state_o_area_of_occurrence
+id: taxonomy_term.454_state_o_area_of_occurrence
+target_entity_type_id: taxonomy_term
+target_bundle: 454_state_o_area_of_occurrence
+default_langcode: site_default
+language_alterable: false

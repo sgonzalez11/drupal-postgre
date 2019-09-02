@@ -1,0 +1,20 @@
+uuid: de0596ec-0e96-4e18-91c2-b241a2376e09
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_psicologico_y_psicomotor
+id: medical_examination.examen_psicologico_y_psicomotor.user_id
+field_name: user_id
+entity_type: medical_examination
+bundle: examen_psicologico_y_psicomotor
+label: 'Authored by'
+description: 'The user ID of author of the Medical Examination entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,30 @@
+uuid: 32e667e0-64b0-434c-8839-0bb0efb212c1
+langcode: es
+status: true
+dependencies:
+  config:
+    - fixed_block_content.fixed_block_content.atos_footer_es
+  module:
+    - domain
+    - fixed_block_content
+  theme:
+    - inac_atos
+id: atosfooteres_2
+theme: inac_atos
+region: footer
+weight: 0
+provider: null
+plugin: 'fixed_block_content:atos_footer_es'
+settings:
+  id: 'fixed_block_content:atos_footer_es'
+  label: 'ATOs Footer ES'
+  provider: fixed_block_content
+  label_display: '0'
+  view_mode: ''
+visibility:
+  domain:
+    id: domain
+    domains:
+      atos_portal: atos_portal
+    negate: false
+    context_mapping: {  }

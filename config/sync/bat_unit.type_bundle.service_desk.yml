@@ -1,0 +1,9 @@
+uuid: 5c852c94-529b-492e-bc6e-a4af6cdf3f53
+langcode: en
+status: true
+dependencies: {  }
+name: 'Service Center'
+type: service_desk
+default_event_value_field_ids:
+  availability_example: ''
+  appointment: field_event_state

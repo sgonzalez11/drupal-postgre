@@ -1,0 +1,11 @@
+uuid: a376fce8-fcf6-490d-8caa-0fcc874904f1
+langcode: es
+status: true
+dependencies:
+  config:
+    - webform.webform.contact_us_webform_no_paddings
+id: webform_submission.contact_us_webform_no_paddings
+target_entity_type_id: webform_submission
+target_bundle: contact_us_webform_no_paddings
+default_langcode: site_default
+language_alterable: false

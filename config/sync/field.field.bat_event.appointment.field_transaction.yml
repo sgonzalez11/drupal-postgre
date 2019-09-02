@@ -1,0 +1,32 @@
+uuid: c2f35c21-75f0-4bfd-a6f5-97692372c65c
+langcode: es
+status: true
+dependencies:
+  config:
+    - bat_event.event_type.appointment
+    - eauthority_transactions.transaction_type.licence_application
+    - eauthority_transactions.transaction_type.medical_certificate_application
+    - eauthority_transactions.transaction_type.standard
+    - field.storage.bat_event.field_transaction
+id: bat_event.appointment.field_transaction
+field_name: field_transaction
+entity_type: bat_event
+bundle: appointment
+label: Transaction
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:transaction'
+  handler_settings:
+    target_bundles:
+      licence_application: licence_application
+      medical_certificate_application: medical_certificate_application
+      standard: standard
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: licence_application
+field_type: entity_reference

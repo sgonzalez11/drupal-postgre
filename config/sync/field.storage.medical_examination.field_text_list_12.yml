@@ -1,0 +1,30 @@
+uuid: 986a80e3-d79a-451a-9404-88fb025e4653
+langcode: en
+status: true
+dependencies:
+  module:
+    - eauthority_amos
+    - options
+id: medical_examination.field_text_list_12
+field_name: field_text_list_12
+entity_type: medical_examination
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: si
+      label: SI
+    -
+      value: 'no'
+      label: 'NO'
+    -
+      value: ne
+      label: NE
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

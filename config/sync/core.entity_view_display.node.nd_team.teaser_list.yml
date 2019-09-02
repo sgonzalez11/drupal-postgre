@@ -1,12 +1,10 @@
-uuid: de66d0be-a669-4d36-81f7-7705d105e269
+uuid: 09903642-97d1-40ae-b695-3161dc391476
 langcode: es
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser_list
     - field.field.node.nd_team.body
-    - field.field.node.nd_team.field_domain_access
-    - field.field.node.nd_team.field_domain_all_affiliates
     - field.field.node.nd_team.field_image
     - field.field.node.nd_team.field_position
     - field.field.node.nd_team.field_social_links
@@ -22,8 +20,6 @@ mode: teaser_list
 content: {  }
 hidden:
   body: true
-  field_domain_access: true
-  field_domain_all_affiliates: true
   field_image: true
   field_position: true
   field_social_links: true

@@ -1,0 +1,11 @@
+uuid: a0b20f07-7c2b-4ed1-a016-cff71733f10d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.latitude_longuitude
+id: taxonomy_term.latitude_longuitude
+target_entity_type_id: taxonomy_term
+target_bundle: latitude_longuitude
+default_langcode: site_default
+language_alterable: false

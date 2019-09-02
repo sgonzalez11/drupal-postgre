@@ -1,0 +1,11 @@
+uuid: f3d8b6a8-9938-4cf7-baf7-a97c087b90ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.17_special_activities_in_airspac
+id: taxonomy_term.17_special_activities_in_airspac
+target_entity_type_id: taxonomy_term
+target_bundle: 17_special_activities_in_airspac
+default_langcode: site_default
+language_alterable: false

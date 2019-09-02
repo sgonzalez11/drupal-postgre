@@ -1,0 +1,14 @@
+uuid: 7a61e67c-b324-4f6b-b542-9c3a07929c39
+langcode: es
+status: true
+dependencies:
+  config:
+    - domain.record.admin_portal
+  module:
+    - domain_access
+id: domain_access_add_action.admin_portal
+label: 'Add selected content to the eAuthority Admin Portal domain'
+type: node
+plugin: domain_access_add_action
+configuration:
+  domain_id: admin_portal

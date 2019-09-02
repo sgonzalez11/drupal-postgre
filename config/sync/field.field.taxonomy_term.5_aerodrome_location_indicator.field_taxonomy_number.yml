@@ -1,0 +1,23 @@
+uuid: 5825f105-29a5-41f7-96e1-a9a76765e5af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_taxonomy_number
+    - taxonomy.vocabulary.5_aerodrome_location_indicator
+id: taxonomy_term.5_aerodrome_location_indicator.field_taxonomy_number
+field_name: field_taxonomy_number
+entity_type: taxonomy_term
+bundle: 5_aerodrome_location_indicator
+label: 'taxonomy number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

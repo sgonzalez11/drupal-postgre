@@ -1,0 +1,24 @@
+uuid: 0b42a35c-3511-4e84-a0bc-27701ffe3e19
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_original
+field_name: field_original
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Muestra
+      label: Muestra
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

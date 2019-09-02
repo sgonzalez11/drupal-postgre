@@ -1,0 +1,20 @@
+uuid: e046c097-5c2f-4117-86d9-f1983455bce7
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_otorrinolaringologico
+  module:
+    - options
+id: medical_examination.examen_otorrinolaringologico.medical_examination_type
+field_name: medical_examination_type
+entity_type: medical_examination
+bundle: examen_otorrinolaringologico
+label: 'Examiation Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

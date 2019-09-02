@@ -1,0 +1,32 @@
+uuid: 91d3df3b-3574-46bf-b817-ed36d9a522ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.400_flight_crew_license_license.field_taxonomy_number
+    - taxonomy.vocabulary.400_flight_crew_license_license
+  module:
+    - text
+id: taxonomy_term.400_flight_crew_license_license.default
+targetEntityType: taxonomy_term
+bundle: 400_flight_crew_license_license
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_taxonomy_number:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,11 @@
+uuid: 27af5254-c7ca-46a4-bd86-1b2ea0bcad17
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.21_aircraft_make_model_series
+id: taxonomy_term.21_aircraft_make_model_series
+target_entity_type_id: taxonomy_term
+target_bundle: 21_aircraft_make_model_series
+default_langcode: site_default
+language_alterable: false

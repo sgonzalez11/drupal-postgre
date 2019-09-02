@@ -1,0 +1,9 @@
+uuid: ae1e7794-c9a1-41bb-af9a-1457674a128f
+langcode: es
+status: true
+dependencies: {  }
+id: amos_portal_platform
+domain_id: amos_portal
+pattern: amos-portal.initializing-fk5ohoq-bf4vp4joan5wy.us-2.platformsh.site
+redirect: 0
+environment: default

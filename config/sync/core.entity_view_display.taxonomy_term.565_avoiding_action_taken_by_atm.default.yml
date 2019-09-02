@@ -1,0 +1,32 @@
+uuid: 26e4975b-f0bf-4a9f-b833-ca0a5a0ccd58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.565_avoiding_action_taken_by_atm.field_taxonomy_number
+    - taxonomy.vocabulary.565_avoiding_action_taken_by_atm
+  module:
+    - text
+id: taxonomy_term.565_avoiding_action_taken_by_atm.default
+targetEntityType: taxonomy_term
+bundle: 565_avoiding_action_taken_by_atm
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_taxonomy_number:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  langcode: true

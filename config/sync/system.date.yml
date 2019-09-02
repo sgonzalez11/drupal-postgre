@@ -1,8 +1,8 @@
 country:
-  default: AR
+  default: VE
 first_day: 0
 timezone:
-  default: America/Argentina/Mendoza
+  default: America/Argentina/Buenos_Aires
   user:
     configurable: true
     warn: false

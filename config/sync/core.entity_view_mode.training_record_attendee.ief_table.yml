@@ -1,0 +1,10 @@
+uuid: 73ed0bb6-075d-4064-a6ac-aac68f6aff87
+langcode: en
+status: true
+dependencies:
+  module:
+    - eauthority_atos
+id: training_record_attendee.ief_table
+label: 'Inline Entity Form Table'
+targetEntityType: training_record_attendee
+cache: true

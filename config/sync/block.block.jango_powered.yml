@@ -1,6 +1,6 @@
-uuid: 2f5fb140-fb08-44cd-bf37-8c914719f1b8
+uuid: 0209333f-f51e-4510-b0ff-e095d5d9d3fe
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -11,7 +11,7 @@ _core:
 id: jango_powered
 theme: jango
 region: header
-weight: 10
+weight: -7
 provider: null
 plugin: system_powered_by_block
 settings:

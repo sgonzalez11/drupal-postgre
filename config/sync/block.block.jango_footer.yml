@@ -1,6 +1,6 @@
-uuid: b65ed4ab-ea9b-41ef-a526-a8304faf3f63
+uuid: f6563e06-1d53-42a5-ad6c-d3574601212d
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.footer
@@ -13,7 +13,7 @@ _core:
 id: jango_footer
 theme: jango
 region: header
-weight: 0
+weight: -7
 provider: null
 plugin: 'system_menu_block:footer'
 settings:

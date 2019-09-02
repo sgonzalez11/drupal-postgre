@@ -1,0 +1,19 @@
+uuid: 604542b6-227b-4c7e-b439-7532b31a2ffc
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_neurologico
+    - field.storage.medical_examination.field_text_plain_long_03
+id: medical_examination.examen_neurologico.field_text_plain_long_03
+field_name: field_text_plain_long_03
+entity_type: medical_examination
+bundle: examen_neurologico
+label: 'Reflejos osteo-tendinosos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

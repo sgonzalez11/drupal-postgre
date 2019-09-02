@@ -1,0 +1,9 @@
+uuid: 6b851fad-8ea8-4652-b229-9661a6d2909c
+langcode: en
+status: true
+dependencies: {  }
+id: admin_portal_lndo_site_8080
+domain_id: admin_portal
+pattern: 'admin-portal.lndo.site:8080'
+redirect: 0
+environment: default

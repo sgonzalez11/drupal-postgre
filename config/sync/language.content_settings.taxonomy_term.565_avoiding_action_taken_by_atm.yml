@@ -1,0 +1,11 @@
+uuid: bf56f8c4-f377-4a81-91f7-8579f0f6e403
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.565_avoiding_action_taken_by_atm
+id: taxonomy_term.565_avoiding_action_taken_by_atm
+target_entity_type_id: taxonomy_term
+target_bundle: 565_avoiding_action_taken_by_atm
+default_langcode: site_default
+language_alterable: false

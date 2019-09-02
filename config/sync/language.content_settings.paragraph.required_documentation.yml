@@ -1,0 +1,11 @@
+uuid: 881ba5de-e688-4100-83a0-6688960cd305
+langcode: es
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.required_documentation
+id: paragraph.required_documentation
+target_entity_type_id: paragraph
+target_bundle: required_documentation
+default_langcode: site_default
+language_alterable: false

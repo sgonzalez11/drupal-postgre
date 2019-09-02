@@ -1,0 +1,9 @@
+uuid: 31085c7e-9911-4ab2-8aed-e32cc3e2945a
+langcode: en
+status: true
+dependencies: {  }
+name: '127 - Weather conditions'
+vid: 127_weather_conditions
+description: ''
+hierarchy: 0
+weight: 0

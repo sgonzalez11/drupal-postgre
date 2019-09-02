@@ -1,4 +1,4 @@
-uuid: c1f41337-8a36-47cf-ad61-48f75243f09c
+uuid: 7452b502-4cee-4adc-8f51-357d6b322ad7
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: inac_amos_local_tasks
 theme: inac_amos
 region: content
-weight: -40
+weight: -5
 provider: null
 plugin: local_tasks_block
 settings:

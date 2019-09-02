@@ -1,0 +1,20 @@
+uuid: b82f9fa4-e651-43c9-bc33-6ae2f36300c9
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - jango
+id: jango_searchform
+theme: jango
+region: header
+weight: -6
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  provider: search
+  label_display: '0'
+visibility: {  }

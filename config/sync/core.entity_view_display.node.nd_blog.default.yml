@@ -1,14 +1,11 @@
-uuid: 74394a93-7494-4532-b9bd-707c2ff92284
+uuid: 02887c57-f943-4e14-a403-d2565ef62db1
 langcode: es
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment.default
     - field.field.node.nd_blog.body
     - field.field.node.nd_blog.field_blog_category
     - field.field.node.nd_blog.field_comments
-    - field.field.node.nd_blog.field_domain_access
-    - field.field.node.nd_blog.field_domain_all_affiliates
     - field.field.node.nd_blog.field_images
     - field.field.node.nd_blog.field_tags
     - field.field.node.nd_blog.field_video
@@ -35,7 +32,7 @@ content:
     region: content
   field_comments:
     weight: 4
-    label: hidden
+    label: above
     settings:
       view_mode: default
       pager_id: 0
@@ -68,7 +65,5 @@ content:
     region: content
 hidden:
   field_blog_category: true
-  field_domain_access: true
-  field_domain_all_affiliates: true
   langcode: true
   links: true

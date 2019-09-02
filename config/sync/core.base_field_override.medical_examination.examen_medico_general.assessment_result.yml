@@ -1,0 +1,22 @@
+uuid: 663cf868-9a0f-452b-8913-3cbba871ee4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - eauthority_amos.medical_examination_type.examen_medico_general
+  module:
+    - options
+id: medical_examination.examen_medico_general.assessment_result
+field_name: assessment_result
+entity_type: medical_examination
+bundle: examen_medico_general
+label: 'Assessment Result'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: list_string

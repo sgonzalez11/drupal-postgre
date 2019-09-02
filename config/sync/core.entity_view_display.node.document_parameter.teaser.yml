@@ -1,0 +1,25 @@
+uuid: 73421b1c-c99c-4fe8-88cb-dff04cc59efb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.document_parameter.field_number
+    - field.field.node.document_parameter.field_prefix
+    - node.type.document_parameter
+  module:
+    - user
+id: node.document_parameter.teaser
+targetEntityType: node
+bundle: document_parameter
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_number: true
+  field_prefix: true
+  langcode: true

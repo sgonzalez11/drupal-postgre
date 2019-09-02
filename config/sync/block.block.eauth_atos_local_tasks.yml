@@ -1,4 +1,4 @@
-uuid: 963f25ff-f76a-4f6d-9bd7-486ddae81f11
+uuid: da6a4da5-49f3-4244-872a-b69a396a4994
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: eauth_atos_local_tasks
 theme: eauth_atos
 region: content
-weight: -40
+weight: -1
 provider: null
 plugin: local_tasks_block
 settings:
