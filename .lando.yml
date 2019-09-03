@@ -6,6 +6,12 @@ config:
   database: postgres
   conf:
     php: php.ini
+proxy:
+  appserver:
+      - customers-portal-postgre.lndo.site
+      - amos-portal-postgre.lndo.site
+      - atos-portal-postgre.lndo.site
+      - admin-portal-postgre.lndo.site
   
 
 
